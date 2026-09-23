@@ -24,6 +24,16 @@ def _mes_largo(mes: str | None) -> str:
     return f"{MESES[m - 1]} de {y}"
 
 
+def _ventana_txt(meses: list[str]) -> str:
+    """«julio–septiembre de 2026», o con los dos años si la ventana cruza el cambio de año."""
+    if not meses:
+        return "—"
+    (y0, m0), (y1, m1) = (map(int, meses[0].split("-")), map(int, meses[-1].split("-")))
+    if y0 == y1:
+        return f"{MESES[m0 - 1]}–{MESES[m1 - 1]} de {y1}"
+    return f"{MESES[m0 - 1]} de {y0}–{MESES[m1 - 1]} de {y1}"
+
+
 def _num(x: float, dec: int = 1) -> str:
     s = f"{x:,.{dec}f}"
     return s.replace(",", "·").replace(".", ",").replace("·", ".")
@@ -119,7 +129,7 @@ def construir() -> None:
         "confirmadas": sum(a["estado"] == "confirmada" for a in acts),
         "sin_expediente": sum(a.get("cruce") == "sin_expediente" for a in acts),
         "ha": _num(sum(a["ha"] for a in acts), 1),
-        "ventana": " y ".join(_mes_largo(m) for m in (ej.get("ventana") or [])[-2:]) if ej else "—",
+        "ventana": _ventana_txt(ej.get("ventana") or []),
         "evaluable": f"{round(100 * ej.get('fraccion_evaluable', 0))} %" if ej else "—",
         "expedientes_desde": reg.get("expedientes_desde") or "—",
         "actualizado": (reg.get("actualizado") or ahora)[:10],
@@ -275,7 +285,7 @@ footer{max-width:1440px;margin:0 auto;padding:16px 16px 40px;font-size:13px;colo
     <div class="cifra"><b>__CONFIRMADAS__</b><span>confirmadas</span></div>
     <div class="cifra alarma"><b>__SIN_EXPEDIENTE__</b><span>sin expediente conocido</span></div>
     <div class="cifra"><b>__HA__</b><span>hectáreas afectadas</span></div>
-    <div class="cifra meta"><b class="dato">__VENTANA__</b><span>últimos meses comparados · __EVALUABLE__ de la zona con cielo suficiente</span></div>
+    <div class="cifra meta"><b class="dato">__VENTANA__</b><span>ventana comparada · __EVALUABLE__ de la zona con cielo suficiente</span></div>
     <div class="cifra meta"><b class="dato">__ACTUALIZADO__</b><span>última actualización</span></div>
   </div>
 </header>
@@ -308,6 +318,7 @@ footer{max-width:1440px;margin:0 auto;padding:16px 16px 40px;font-size:13px;colo
     <h3>Qué no ve</h3>
     <p>Todo lo que ocupe menos de la unidad mínima: una casa aislada, una pista estrecha o un vallado. Tampoco ve lo que ocurre bajo cubierta arbórea sin quitarla, ni los cambios en zonas que no eran vegetación densa (roquedo, arenales, láminas de agua), ni los meses de nieve o de nube persistente, que se quedan sin evaluar. Las alertas en tierras de cultivo pueden ser rotaciones.</p>
     <h3>Estados</h3>
+    <p>Las alertas marcadas como «detectable desde» salieron al reconstruir las ventanas anteriores a la puesta en marcha, con la fecha en que se habrían visto.</p>
     <p><strong>Provisional</strong>: visto una vez. <strong>Confirmada</strong>: sigue ahí en la ventana de un mes posterior. <strong>Descartada</strong>: la vegetación volvió antes de confirmarse. <strong>Revertida</strong>: volvió después.</p>
   </div>
   <div>
@@ -338,7 +349,7 @@ const pnoa = L.tileLayer("https://www.ign.es/wmts/pnoa-ma?layer=OI.OrthoimageCov
 const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",
   {maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'});
 osm.addTo(mapa);
-const capaNatura = L.geoJSON(D.espacios,{style:()=>({color:css("--natura"),weight:1,fillColor:css("--natura"),fillOpacity:.10}),
+const capaNatura = L.geoJSON(D.espacios,{style:()=>({color:css("--natura"),weight:1,fillColor:css("--natura"),fillOpacity:.16}),
   onEachFeature:(f,l)=>l.bindTooltip(esc(f.properties.nombre)+" · "+esc(f.properties.tipo),{sticky:true})}).addTo(mapa);
 L.control.layers({"Mapa (OpenStreetMap)":osm,"Ortofoto PNOA":pnoa},{"Red Natura 2000":capaNatura},{collapsed:true}).addTo(mapa);
 mapa.on("zoomend",()=>{ if(mapa.getZoom()>=15 && mapa.hasLayer(osm)){ mapa.removeLayer(osm); pnoa.addTo(mapa);} });
@@ -375,7 +386,7 @@ function ficha(p){
     <dl class="medidas">
       <div><dt>NDVI antes → ahora</dt><dd>${num(p.ndvi_ref,2)} → ${num(p.ndvi_actual,2)}</dd></div>
       <div><dt>Vegetación vista por última vez</dt><dd>${mes(p.ultima_vegetacion)}</dd></div>
-      <div><dt>Primera detección</dt><dd>${fecha(p.detectada)}</dd></div>
+      <div><dt>${p.reconstruida ? "Detectable desde" : "Primera detección"}</dt><dd>${fecha(p.detectada)}</dd></div>
       <div><dt>Uso anterior (CORINE 2018)</dt><dd style="font-family:inherit">${esc(p.cubierta_previa?.nombre || "—")}</dd></div>
     </dl>
     ${ex}
@@ -428,8 +439,7 @@ for (const id of ["f-estado","f-cruce","f-clase"]) document.getElementById(id).a
 filtrar();
 const h = location.hash.slice(1);
 if (h){ if(!capas[h]){ document.getElementById("f-estado").value="todas"; filtrar(); } if(capas[h]) seleccionar(h,true); }
-else if (todas.length){ const b = capaAlertas.getLayers().length ? L.featureGroup(capaAlertas.getLayers()).getBounds() : capaNatura.getBounds(); mapa.fitBounds(b.isValid()?b:capaNatura.getBounds(),{padding:[20,20]}); }
-else mapa.fitBounds(capaNatura.getBounds());
+else mapa.fitBounds(capaNatura.getBounds(),{padding:[10,10]});
 </script>
 </body>
 </html>

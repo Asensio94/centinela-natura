@@ -82,7 +82,7 @@ def ultima_vegetacion(geom_utm, mes_fin: str, meses_atras: int = 14) -> str | No
 
 
 def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: list[dict],
-             hoy: date | None = None) -> dict:
+             hoy: date | None = None, retro: bool = False) -> dict:
     hoy = hoy or date.today()
     reg = cargar()
     reg["ejecuciones"][mes_fin] = stats
@@ -121,6 +121,8 @@ def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: l
             "geometry": _geojson(c.geom), "espacios": zona.espacios_de(c.geom),
             "municipios": zona.municipios_de(c.geom),
             "ultima_vegetacion": ultima_vegetacion(c.geom, deteccion.meses_ventana(mes_fin)[0]),
+            # Encontrada al reconstruir ventanas pasadas, no vista en su día.
+            "reconstruida": retro,
         })
         geoms.append(c.geom)
         tocadas.add(len(alertas) - 1)

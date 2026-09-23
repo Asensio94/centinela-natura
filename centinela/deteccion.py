@@ -21,7 +21,8 @@ from . import compuestos, config, zona
 _q = lambda v: int(round((v + 1) * 100))          # NDVI -> valor guardado en el compuesto
 
 
-def meses_ventana(mes_fin: str, anios_atras: int = 0, n: int = config.VENTANA_MESES) -> list[str]:
+def meses_ventana(mes_fin: str, anios_atras: int = 0, n: int | None = None) -> list[str]:
+    n = n or config.VENTANA_MESES
     y, m = map(int, mes_fin.split("-"))
     y -= anios_atras
     out = []

@@ -87,36 +87,55 @@ def _caja(geom_utm) -> GeoBox:
     return GeoBox.from_bbox((cx - h, cy - h, cx + h, cy + h), crs=config.CRS, resolution=r)
 
 
-def _mejor_escena(items, gb: GeoBox, dentro: np.ndarray, max_pruebas: int = 10):
-    """La escena más reciente con el cambio y su entorno despejados."""
+def _mejor_escena(items, gb: GeoBox, dentro: np.ndarray, max_dias: int = 16):
+    """La escena más reciente con el cambio y su entorno despejados.
+
+    La capa de nubes de todas las fechas candidatas se lee de una vez y en paralelo: son
+    unos pocos kilobytes por fecha, y leerlas de una en una costaba más en esperas de red
+    que en datos.
+    """
+    if not items:
+        return None
     por_dia: dict = {}
     for it in items:
         por_dia.setdefault(it.datetime.date(), []).append(it)
-    # Primero los días con poca nube de escena, y dentro de ellos los más recientes.
-    dias = sorted(por_dia, key=lambda d: (min(i.properties["eo:cloud_cover"] for i in por_dia[d]) > 40,
-                                          -d.toordinal()))
-    mejor = None
-    for d in dias[:max_pruebas]:
-        ds = load(por_dia[d], bands=["scl"], geobox=gb, groupby="solar_day", resampling="nearest",
-                  fail_on_error=False).isel(time=0)
-        ok = np.isin(ds["scl"].values, config.SCL_VALIDAS)
+    dias = sorted(por_dia, key=lambda d: min(i.properties["eo:cloud_cover"] for i in por_dia[d]))[:max_dias]
+    sel = [i for d in dias for i in por_dia[d]]
+    ds = load(sel, bands=["scl"], geobox=gb, groupby="solar_day", resampling="nearest",
+              chunks={}, fail_on_error=False)
+    scl = ds["scl"].compute(scheduler="threads", num_workers=config.DASK_HILOS)
+    candidatos = []
+    for k, t in enumerate(scl["time"].values):
+        ok = np.isin(scl.values[k], config.SCL_VALIDAS)
         f_dentro = float(ok[dentro].mean()) if dentro.any() else 0.0
-        if f_dentro >= 0.95 and ok.mean() >= 0.85:
-            return d, por_dia[d]
-        if mejor is None or f_dentro > mejor[0]:
-            mejor = (f_dentro, d, por_dia[d])
-    if mejor and mejor[0] >= 0.8:
-        return mejor[1], mejor[2]
-    return None
+        candidatos.append((f_dentro, float(ok.mean()), np.datetime64(t, "D").astype(object)))
+    # La más reciente entre las despejadas; si no hay ninguna, la menos nublada que valga.
+    limpias = [c for c in candidatos if c[0] >= 0.95 and c[1] >= 0.85]
+    if limpias:
+        d = max(limpias, key=lambda c: c[2])[2]
+    else:
+        f, _, d = max(candidatos, key=lambda c: (c[0], c[2]))
+        if f < 0.8:
+            return None
+    return d, por_dia[d]
 
 
 def _cargar(items, gb) -> dict:
-    ds = load(items, bands=BANDAS, geobox=gb, groupby="solar_day", resampling="nearest",
-              fail_on_error=False).isel(time=0)
-    # Escala 1e-4 y sin desplazamiento: ver stac.offset_aplicado.
-    out = {b: ds[b].values.astype("float32") * 1e-4 for b in BANDAS if b != "scl"}
-    for b in out.values():
-        b[b <= 0] = np.nan
+    """Reflectancias de un día, con el desplazamiento de cada escena restado si hace falta."""
+    grupos: dict[int, list] = {}
+    for it in items:
+        grupos.setdefault(stac.desplazamiento_nd(it), []).append(it)
+    out: dict = {}
+    for resta, grupo in grupos.items():
+        ds = load(grupo, bands=BANDAS, geobox=gb, groupby="solar_day", resampling="nearest",
+                  fail_on_error=False).isel(time=0)
+        for b in BANDAS:
+            if b == "scl":
+                continue
+            v = ds[b].values.astype("float32")
+            v[v <= resta] = np.nan                  # 0 es sin dato
+            v = (v - resta) * 1e-4
+            out[b] = v if b not in out else np.where(np.isnan(out[b]), v, out[b])
     return out
 
 

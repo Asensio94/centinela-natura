@@ -64,31 +64,35 @@ def release():
     almacen.asegurar_release()
 
 
-def _detectar(mes_fin: str, registros=None):
-    from . import alertas, almacen, deteccion, expedientes
+def _detectar(mes_fin: str, registros=None, retro: bool = False):
+    from . import alertas, almacen, deteccion, expedientes, stac
     faltan = almacen.bajar(deteccion.meses_necesarios(mes_fin))
     if faltan:
         con.print(f"[yellow]{mes_fin}: faltan compuestos {faltan}; no se detecta")
         return None
     cambios, stats, capas = deteccion.detectar(mes_fin)
     con.print(stats)
+    # Fecha a la que se habría visto el cambio: hoy, o el último día de la ventana si se
+    # está reconstruyendo el pasado.
+    hoy = min(date.today(), stac.rango_mes(mes_fin)[1])
     return alertas.procesar(mes_fin, cambios, stats, capas,
-                            registros if registros is not None else expedientes.cargar())
+                            registros if registros is not None else expedientes.cargar(),
+                            hoy=hoy, retro=retro)
 
 
 @app.command()
-def detectar(meses_fin: list[str]):
+def detectar(meses_fin: list[str], retro: bool = False):
     """Detecta cambios en las ventanas que acaban en esos meses, en orden."""
     from . import expedientes
     reg = expedientes.cargar()
     for mes in sorted(meses_fin):
-        _detectar(mes, reg)
+        _detectar(mes, reg, retro)
 
 
 @app.command()
 def historico(desde: str, hasta: str):
     """Recorre mes a mes un periodo, como si el centinela hubiera estado vigilando."""
-    detectar(_meses(desde, hasta))
+    detectar(_meses(desde, hasta), retro=True)
 
 
 @app.command()

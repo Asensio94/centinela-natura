@@ -39,28 +39,42 @@ def _bloques():
 
 
 def _bloque(items, ys, xs) -> tuple[np.ndarray, np.ndarray]:
+    """NDVI máximo y observaciones válidas de un trozo de la malla.
+
+    Las escenas se cargan por grupos según el desplazamiento que haya que restarles, porque
+    `load` junta en un mismo día escenas de teselas distintas y no deja corregir cada una.
+    Cada grupo da su máximo y su recuento, y se combinan al final.
+    """
     gb = zona.malla()[ys, xs]
-    ds = load(items, bands=["red", "nir", "scl"], geobox=gb, groupby="solar_day",
-              resampling="nearest", chunks={"x": BLOQUE, "y": BLOQUE, "time": 1},
-              fail_on_error=False)
-    red = ds["red"].astype("float32")
-    nir = ds["nir"].astype("float32")
-    ok = ds["scl"].isin(list(config.SCL_VALIDAS)) & (red > 0) & (nir > 0)
-    ndvi = ((nir - red) / (nir + red)).where(ok)
-    mx = ndvi.max("time", skipna=True)
-    n = ok.sum("time")
-    mx, n = (v.compute(scheduler="threads", num_workers=config.DASK_HILOS) for v in (mx, n))
-    return mx.values, n.values
+    grupos: dict[int, list] = {}
+    for it in items:
+        grupos.setdefault(stac.desplazamiento_nd(it), []).append(it)
+    mx_tot = n_tot = None
+    for resta, grupo in grupos.items():
+        ds = load(grupo, bands=["red", "nir", "scl"], geobox=gb, groupby="solar_day",
+                  resampling="nearest", chunks={"x": BLOQUE, "y": BLOQUE, "time": 1},
+                  fail_on_error=False)
+        # El 0 es sin dato: se mira antes de restar.
+        ok = ds["scl"].isin(list(config.SCL_VALIDAS)) & (ds["red"] > resta) & (ds["nir"] > resta)
+        red = ds["red"].astype("float32") - resta
+        nir = ds["nir"].astype("float32") - resta
+        ndvi = ((nir - red) / (nir + red)).where(ok)
+        mx, n = ndvi.max("time", skipna=True), ok.sum("time")
+        mx, n = (v.compute(scheduler="threads", num_workers=config.DASK_HILOS).values
+                 for v in (mx, n))
+        # Donde dos teselas se solapan el mismo día en grupos distintos, la pasada cuenta
+        # dos veces; es una franja estrecha y solo en los meses con escenas mezcladas.
+        mx_tot = mx if mx_tot is None else np.fmax(mx_tot, mx)
+        n_tot = n if n_tot is None else n_tot + n
+    return mx_tot, n_tot
 
 
 def construir(mes: str) -> dict:
     t0 = time.time()
     items = stac.escenas_mes(mes)
-    malos = [i.id for i in items if not stac.offset_aplicado(i)]
-    if malos:
-        # El NDVI se calcula sobre los niveles digitales tal cual, lo que solo es válido si
-        # ninguna escena arrastra el desplazamiento de -1000. Mejor parar que sesgar.
-        raise RuntimeError(f"{len(malos)} escenas sin offset aplicado, p. ej. {malos[0]}")
+    corregidas = sum(1 for i in items if stac.desplazamiento_nd(i))
+    if corregidas:
+        con.log(f"{mes}: {corregidas} escenas con el desplazamiento de -1000 sin restar; se resta aquí")
     gb, m = zona.malla(), zona.mascara()
     ndvi_q = np.full(gb.shape, config.NDVI_NODATA, dtype="uint8")
     nobs = np.zeros(gb.shape, dtype="uint8")
@@ -76,7 +90,7 @@ def construir(mes: str) -> dict:
             con.log(f"{mes} bloque {k}/{len(bloques)}")
     ndvi_q[~m] = config.NDVI_NODATA
     nobs[~m] = 0
-    meta = {"mes": mes, "escenas": len(items), "fechas": fechas,
+    meta = {"mes": mes, "escenas": len(items), "corregidas": corregidas, "fechas": fechas,
             "pixeles_con_dato": int((ndvi_q != config.NDVI_NODATA).sum()),
             "pixeles_zona": int(m.sum()), "segundos": round(time.time() - t0)}
     escribir(mes, ndvi_q, nobs, meta)

@@ -56,3 +56,19 @@ def offset_aplicado(item: Item) -> bool:
     """
     baseline = str(item.properties.get("s2:processing_baseline", "00.00"))
     return baseline < "04.00" or bool(item.properties.get("earthsearch:boa_offset_applied", False))
+
+
+def desplazamiento_nd(item: Item) -> int:
+    """Niveles digitales que hay que restar a las bandas de reflectancia de una escena.
+
+    Cero si Earth Search ya lo restó. Si no (pasa, por ejemplo, con las escenas de
+    Sentinel-2C de su puesta en marcha, de diciembre de 2024 a marzo de 2025), se toma del
+    offset que declara el propio activo: -0,1 con escala 1e-4 son 1000 niveles.
+    """
+    if offset_aplicado(item):
+        return 0
+    try:
+        b = item.assets["red"].extra_fields["raster:bands"][0]
+        return int(round(-b["offset"] / b["scale"]))
+    except (KeyError, IndexError, TypeError, ZeroDivisionError):
+        return 1000

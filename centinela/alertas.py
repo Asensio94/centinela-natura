@@ -4,7 +4,9 @@ Una alerta nace provisional la primera vez que aparece un cambio. Pasa a confirm
 cambio sigue ahí en la ventana de un mes posterior: con ventanas que se solapan, eso quiere
 decir que el suelo lleva al menos un mes más sin vegetación. Si la vegetación vuelve antes
 de confirmarse, se descarta, porque lo normal es que fuera una siega tardía, un cultivo o
-un error de nubes. Si vuelve después de confirmada, pasa a revertida. Las alertas no se
+un error de nubes; también se descarta si no se vuelve a ver en ninguna ventana hasta la
+primera que ya no comparte meses con la suya. Si vuelve después de confirmada, pasa a
+revertida. Las alertas no se
 borran nunca: el registro es acumulativo y cada cambio de estado lleva su fecha.
 """
 from __future__ import annotations
@@ -14,6 +16,7 @@ import time
 from datetime import date, datetime, timezone
 
 import numpy as np
+from shapely import make_valid
 from shapely.geometry import mapping, shape
 from shapely.ops import unary_union
 from rich.console import Console
@@ -42,7 +45,9 @@ def guardar(reg: dict) -> None:
 
 
 def _geom_utm(a: dict):
-    return zona.a_utm(shape(a["geometry"]))
+    # El GeoJSON va redondeado a 6 decimales en grados: al volver a UTM algún anillo puede
+    # quedar cruzado, y shapely no une geometrías inválidas.
+    return make_valid(zona.a_utm(shape(a["geometry"])))
 
 
 def _geojson(geom_utm) -> dict:
@@ -55,6 +60,12 @@ def _nuevo_id(reg: dict, mes: str) -> str:
     pref = f"CN-{mes.replace('-', '')}-"
     n = sum(1 for a in reg["alertas"] if a["id"].startswith(pref))
     return f"{pref}{n + 1:03d}"
+
+
+def _meses_entre(a: str, b: str) -> int:
+    ya, ma = map(int, a.split("-"))
+    yb, mb = map(int, b.split("-"))
+    return (yb - ya) * 12 + mb - ma
 
 
 def ultima_vegetacion(geom_utm, mes_fin: str, meses_atras: int = 14) -> str | None:
@@ -121,21 +132,24 @@ def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: l
     for c in sorted(cambios, key=lambda c: -c.pixeles):
         idx = [i for i, g in enumerate(geoms) if g.intersects(c.geom)]
         if idx:
-            i = idx[0]
-            a = alertas[i]
+            # Un cambio puede tocar varias alertas: todas se dan por vistas en esta ventana,
+            # y solo la primera crece si el cambio es mayor.
             tocadas.update(idx)
-            if mes_fin not in a["meses"]:
-                a["meses"] = sorted(set(a["meses"]) | {mes_fin})
-            a["ultima"] = max(a["meses"])
-            if a["estado"] in ("provisional", "descartada", "revertida") and len(a["meses"]) >= 2 \
-                    and a["ultima"] > a["primera"]:
-                a["historial"].append({"fecha": hoy.isoformat(), "estado": "confirmada"})
-                a["estado"] = "confirmada"
+            for i in idx:
+                a = alertas[i]
+                if mes_fin not in a["meses"]:
+                    a["meses"] = sorted(set(a["meses"]) | {mes_fin})
+                a["ultima"] = max(a["meses"])
+                if a["estado"] in ("provisional", "descartada", "revertida") and len(a["meses"]) >= 2 \
+                        and a["ultima"] > a["primera"]:
+                    a["historial"].append({"fecha": hoy.isoformat(), "estado": "confirmada"})
+                    a["estado"] = "confirmada"
+                a["ndvi_actual"] = c.ndvi_actual
+            i, a = idx[0], alertas[idx[0]]
             if c.pixeles > a["pixeles"]:
-                g = unary_union([geoms[i], c.geom])
+                g = unary_union([geoms[i], make_valid(c.geom)])
                 geoms[i] = g
                 a.update(geometry=_geojson(g), pixeles=c.pixeles, ha=c.ha)
-            a["ndvi_actual"] = c.ndvi_actual
             continue
         aid = _nuevo_id(reg, mes_fin)
         cen = zona.a_geo(c.geom.representative_point())
@@ -164,7 +178,14 @@ def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: l
             nuevo = "descartada" if a["estado"] == "provisional" else "revertida"
             a["estado"] = nuevo
             a["ndvi_actual"] = ndvi
-            a["historial"].append({"fecha": hoy.isoformat(), "estado": nuevo, "ventana": mes_fin})
+            a["historial"].append({"fecha": hoy.isoformat(), "estado": nuevo, "ventana": mes_fin,
+                                   "motivo": "volvió la vegetación"})
+        elif a["estado"] == "provisional" and _meses_entre(a["ultima"], mes_fin) >= config.VENTANA_MESES:
+            # Ni se ha vuelto a ver ni se ha recuperado del todo, y la ventana actual ya no
+            # comparte ningún mes con la suya: no se puede confirmar.
+            a["estado"] = "descartada"
+            a["historial"].append({"fecha": hoy.isoformat(), "estado": "descartada", "ventana": mes_fin,
+                                   "motivo": "no se volvió a ver"})
 
     if analizar:
         analizar_pendientes(alertas)

@@ -43,7 +43,9 @@ puede rehacer y explicar a mano desde las imágenes.
    desnudo (BSI), superficie artificial oscura o pérdida de vegetación. El uso anterior se
    toma de CORINE 2018.
 5. **Ciclo de vida.** Provisional → confirmada si sigue en la ventana de un mes posterior.
-   Si la vegetación vuelve, descartada (antes de confirmar) o revertida (después). Nada se
+   Si la vegetación vuelve, descartada (antes de confirmar) o revertida (después). Una
+   provisional que no se vuelve a ver hasta la primera ventana que no se solapa con la
+   suya también se descarta. Nada se
    borra: `data/alertas.json` es un registro acumulativo con su historial.
 6. **Cruce.** El municipio (límites de OpenStreetMap) se busca entre los anuncios y
    resoluciones de Cantabria del observatorio. Coincidir en municipio no prueba que sea la

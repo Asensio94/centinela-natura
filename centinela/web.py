@@ -62,6 +62,20 @@ def _geojson_alertas(reg: dict) -> dict:
     return {"type": "FeatureCollection", "features": feats}
 
 
+def _ligera(gj: dict) -> dict:
+    """La copia que va dentro de la página: polígonos simplificados a un píxel (unos 9 m).
+
+    El alertas.geojson descargable conserva los polígonos enteros, con sus escalones de
+    píxel; en el mapa no se distinguen y multiplican el peso de la página.
+    """
+    feats = []
+    for f in gj["features"]:
+        g = shape(f["geometry"]).simplify(0.00009, preserve_topology=True)
+        geo = json.loads(json.dumps(mapping(g)), parse_float=lambda s: round(float(s), 5))
+        feats.append({**f, "geometry": geo})
+    return {**gj, "features": feats}
+
+
 ESTADOS = {
     "provisional": "Provisional",
     "confirmada": "Confirmada",
@@ -120,7 +134,7 @@ def construir() -> None:
     ult = reg.get("ultima_ventana")
     ej = reg["ejecuciones"].get(ult, {}) if ult else {}
     datos = {
-        "alertas": gj, "espacios": esp,
+        "alertas": _ligera(gj), "espacios": esp,
         "clases": clasificacion.CLASES, "estados": ESTADOS, "cruces": expedientes.ESTADOS,
         "observatorio": expedientes.OBSERVATORIO_WEB,
     }
@@ -322,7 +336,7 @@ footer{max-width:1440px;margin:0 auto;padding:16px 16px 40px;font-size:13px;colo
     <p>Todo lo que ocupe menos de la unidad mínima: una casa aislada, una pista estrecha o un vallado. Tampoco ve lo que ocurre bajo cubierta arbórea sin quitarla, ni los cambios en zonas que no eran vegetación densa (roquedo, arenales, láminas de agua), ni las orillas que el agua cubre y descubre (embalses, marismas), ni los meses de nieve, sombra invernal o nube persistente, que se quedan sin evaluar. Las alertas en tierras de cultivo pueden ser rotaciones.</p>
     <h3>Estados</h3>
     <p>Las alertas marcadas como «detectable desde» salieron al reconstruir las ventanas anteriores a la puesta en marcha, con la fecha en que se habrían visto.</p>
-    <p><strong>Provisional</strong>: visto una vez. <strong>Confirmada</strong>: sigue ahí en la ventana de un mes posterior. <strong>Descartada</strong>: la vegetación volvió antes de confirmarse. <strong>Revertida</strong>: volvió después.</p>
+    <p><strong>Provisional</strong>: visto una vez. <strong>Confirmada</strong>: sigue ahí en la ventana de un mes posterior. <strong>Descartada</strong>: la vegetación volvió antes de confirmarse, o no se volvió a ver. <strong>Revertida</strong>: volvió después.</p>
   </div>
   <div>
     <h2>Parámetros</h2>

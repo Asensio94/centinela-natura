@@ -53,6 +53,10 @@ CLC = {
 VERSION = 2
 # Coberturas CORINE que ya eran agua: agua «nueva» sobre ellas es el nivel que sube.
 CLC_AGUA = {"411", "421", "423", "511", "512", "521", "522"}
+# Embalses y lagos: su orilla es agua, pasto o barro según el nivel, y el barro mojado
+# (oscuro, sin infrarrojo) pasa por quemado. Ahí cualquier clase es el nivel. En marismas
+# y estuarios no, porque un relleno es justo lo que hay que ver.
+CLC_EMBALSE = {"512"}
 CLASES = {
     "agua": "Lámina de agua nueva",
     "quemado": "Superficie quemada",

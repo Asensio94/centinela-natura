@@ -99,12 +99,34 @@ def ultima_vegetacion(geom_utm, mes_fin: str, meses_atras: int = 14) -> str | No
 # vieja junto a una clase nueva.
 CAMPOS_ANALISIS = ("cubierta_previa", "analisis_v", "clase", "clase_nombre", "clase_nota",
                    "indices_antes", "indices_despues", "fecha_antes", "fecha_despues",
-                   "foto_antes", "foto_despues")
+                   "foto_antes", "foto_despues", "ventana_fotos")
 
 
 def _nivel_del_agua(a: dict) -> bool:
-    """Agua nueva donde CORINE ya cartografiaba agua: es el nivel, no una obra."""
-    return a.get("clase") == "agua" and (a.get("cubierta_previa") or {}).get("codigo") in clasificacion.CLC_AGUA
+    """Cambio en la orilla de un embalse, o agua nueva donde CORINE ya cartografiaba agua."""
+    cod = (a.get("cubierta_previa") or {}).get("codigo")
+    return cod in clasificacion.CLC_EMBALSE or (a.get("clase") == "agua" and cod in clasificacion.CLC_AGUA)
+
+
+def _pendiente(a: dict) -> bool:
+    if a["estado"] not in ACTIVAS:
+        return False
+    if a.get("analisis_v") != clasificacion.VERSION:
+        return True
+    # Sin fotos en su ventana (nieve, nube persistente): se reintenta cada vez que se vuelve
+    # a ver en una ventana nueva.
+    return not a.get("foto_despues") and a.get("ventana_fotos") != a["ultima"]
+
+
+def _ventanas_fotos(a: dict) -> list[str]:
+    """La ventana en que nació y, si no dio fotos, la última en que se ha visto.
+
+    La última solo sirve si su «antes», un año atrás, sigue siendo anterior al cambio.
+    """
+    vs = [a["primera"]] if a.get("analisis_v") != clasificacion.VERSION else []
+    if a["ultima"] != a["primera"] and _meses_entre(a["primera"], a["ultima"]) < 12:
+        vs.append(a["ultima"])
+    return vs
 
 
 def analizar_pendientes(alertas: list[dict], hoy: date, minutos: float = ANALISIS_MINUTOS) -> int:
@@ -113,23 +135,32 @@ def analizar_pendientes(alertas: list[dict], hoy: date, minutos: float = ANALISI
     Van primero las que no tienen análisis y, dentro de cada grupo, las más grandes.
     """
     t0, hechas = time.monotonic(), 0
-    pendientes = [a for a in alertas if a["estado"] in ACTIVAS
-                  and a.get("analisis_v") != clasificacion.VERSION]
+    pendientes = [a for a in alertas if _pendiente(a)]
     for a in sorted(pendientes, key=lambda a: ("clase" in a, -a["pixeles"])):
         if time.monotonic() - t0 > minutos * 60:
             con.log(f"[yellow]{len(pendientes) - hechas} alertas sin analizar; siguen mañana")
             break
         hechas += 1
-        try:
-            res = clasificacion.analizar(a["id"], _geom_utm(a), a["primera"])
-        except Exception as e:                      # una escena corrupta no para la vigilancia
-            con.log(f"[yellow]{a['id']}: sin análisis ({e})")
+        res = None
+        for v in _ventanas_fotos(a):
+            try:
+                res = clasificacion.analizar(a["id"], _geom_utm(a), v)
+            except Exception as e:                  # una escena corrupta no para la vigilancia
+                con.log(f"[yellow]{a['id']}: sin análisis en {v} ({e})")
+                continue
+            res["ventana_fotos"] = v
+            if res.get("foto_despues"):
+                break
+        if res is None:
+            a["ventana_fotos"] = a["ultima"]
             continue
         for k in CAMPOS_ANALISIS:
             a.pop(k, None)
         a.update(res)
         a["clase_nombre"] = clasificacion.CLASES[a["clase"]]
-        if _nivel_del_agua(a):
+    # Sin descargas: vale también para las analizadas antes de existir la regla.
+    for a in alertas:
+        if a["estado"] in ACTIVAS and "clase" in a and _nivel_del_agua(a):
             a["estado"] = "descartada"
             a["historial"].append({"fecha": hoy.isoformat(), "estado": "descartada",
                                    "motivo": "oscilación del nivel del agua"})

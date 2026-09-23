@@ -38,7 +38,8 @@ puede rehacer y explicar a mano desde las imágenes.
    en [`centinela/config.py`](centinela/config.py) con su justificación.
 4. **Análisis.** Para cada alerta nueva se busca la escena despejada más verde del año
    anterior y la más verde de la ventana actual (su mejor momento, que es lo que compara
-   el detector), se publican las dos fotos y se clasifica por
+   el detector); si la nieve o las nubes no dejan ninguna escena en esa ventana, se usa la
+   última en que se ha vuelto a ver. Se publican las dos fotos y se clasifica por
    reglas: agua nueva (MNDWI), quemado (caída de NBR > 0,27, Key y Benson 2006, con el
    infrarrojo hundido y el visible oscuro, que lo separan del suelo removido), suelo
    desnudo (BSI), superficie artificial oscura o pérdida de vegetación. El uso anterior se
@@ -46,8 +47,8 @@ puede rehacer y explicar a mano desde las imágenes.
 5. **Ciclo de vida.** Provisional → confirmada si sigue en la ventana de un mes posterior.
    Si la vegetación vuelve, descartada (antes de confirmar) o revertida (después). Una
    provisional que no se vuelve a ver hasta la primera ventana que no se solapa con la
-   suya también se descarta, igual que el agua nueva sobre lo que CORINE ya cartografiaba
-   como agua (el nivel de un embalse o una marisma). Nada se
+   suya también se descarta, igual que cualquier cambio en lo que CORINE cartografía como embalse o lago y el agua
+   nueva sobre marismas y estuarios: es el nivel, que sube y baja. Nada se
    borra: `data/alertas.json` es un registro acumulativo con su historial.
 6. **Cruce.** El municipio (límites de OpenStreetMap) se busca entre los anuncios y
    resoluciones de Cantabria del observatorio. Coincidir en municipio no prueba que sea la

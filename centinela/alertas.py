@@ -6,8 +6,8 @@ decir que el suelo lleva al menos un mes más sin vegetación. Si la vegetación
 de confirmarse, se descarta, porque lo normal es que fuera una siega tardía, un cultivo o
 un error de nubes; también se descarta si no se vuelve a ver en ninguna ventana hasta la
 primera que ya no comparte meses con la suya. Si vuelve después de confirmada, pasa a
-revertida. Las alertas no se
-borran nunca: el registro es acumulativo y cada cambio de estado lleva su fecha.
+revertida. Las alertas no se borran nunca: el registro es acumulativo y cada cambio de
+estado lleva su fecha.
 """
 from __future__ import annotations
 
@@ -95,11 +95,27 @@ def ultima_vegetacion(geom_utm, mes_fin: str, meses_atras: int = 14) -> str | No
     return None
 
 
-def analizar_pendientes(alertas: list[dict], minutos: float = ANALISIS_MINUTOS) -> int:
-    """Fotos y clase para las alertas activas que aún no las tienen, las más grandes primero."""
+# Campos que escribe el análisis: se borran antes de rehacerlo para que no quede una foto
+# vieja junto a una clase nueva.
+CAMPOS_ANALISIS = ("cubierta_previa", "analisis_v", "clase", "clase_nombre", "clase_nota",
+                   "indices_antes", "indices_despues", "fecha_antes", "fecha_despues",
+                   "foto_antes", "foto_despues")
+
+
+def _nivel_del_agua(a: dict) -> bool:
+    """Agua nueva donde CORINE ya cartografiaba agua: es el nivel, no una obra."""
+    return a.get("clase") == "agua" and (a.get("cubierta_previa") or {}).get("codigo") in clasificacion.CLC_AGUA
+
+
+def analizar_pendientes(alertas: list[dict], hoy: date, minutos: float = ANALISIS_MINUTOS) -> int:
+    """Fotos y clase para las alertas activas sin analizar o analizadas con reglas viejas.
+
+    Van primero las que no tienen análisis y, dentro de cada grupo, las más grandes.
+    """
     t0, hechas = time.monotonic(), 0
-    pendientes = [a for a in alertas if "clase" not in a and a["estado"] in ACTIVAS]
-    for a in sorted(pendientes, key=lambda a: -a["pixeles"]):
+    pendientes = [a for a in alertas if a["estado"] in ACTIVAS
+                  and a.get("analisis_v") != clasificacion.VERSION]
+    for a in sorted(pendientes, key=lambda a: ("clase" in a, -a["pixeles"])):
         if time.monotonic() - t0 > minutos * 60:
             con.log(f"[yellow]{len(pendientes) - hechas} alertas sin analizar; siguen mañana")
             break
@@ -109,8 +125,14 @@ def analizar_pendientes(alertas: list[dict], minutos: float = ANALISIS_MINUTOS) 
         except Exception as e:                      # una escena corrupta no para la vigilancia
             con.log(f"[yellow]{a['id']}: sin análisis ({e})")
             continue
+        for k in CAMPOS_ANALISIS:
+            a.pop(k, None)
         a.update(res)
         a["clase_nombre"] = clasificacion.CLASES[a["clase"]]
+        if _nivel_del_agua(a):
+            a["estado"] = "descartada"
+            a["historial"].append({"fecha": hoy.isoformat(), "estado": "descartada",
+                                   "motivo": "oscilación del nivel del agua"})
     return hechas
 
 
@@ -141,7 +163,7 @@ def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: l
                     a["meses"] = sorted(set(a["meses"]) | {mes_fin})
                 a["ultima"] = max(a["meses"])
                 if a["estado"] in ("provisional", "descartada", "revertida") and len(a["meses"]) >= 2 \
-                        and a["ultima"] > a["primera"]:
+                        and a["ultima"] > a["primera"] and not _nivel_del_agua(a):
                     a["historial"].append({"fecha": hoy.isoformat(), "estado": "confirmada"})
                     a["estado"] = "confirmada"
                 a["ndvi_actual"] = c.ndvi_actual
@@ -188,7 +210,7 @@ def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: l
                                    "motivo": "no se volvió a ver"})
 
     if analizar:
-        analizar_pendientes(alertas)
+        analizar_pendientes(alertas, hoy)
 
     for a in alertas:
         cr = expedientes.cruzar(a["municipios"], registros)

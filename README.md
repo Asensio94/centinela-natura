@@ -37,7 +37,8 @@ puede rehacer y explicar a mano desde las imágenes.
    orillas de embalse y marismas, que alternan agua y pasto con el nivel. Los umbrales están
    en [`centinela/config.py`](centinela/config.py) con su justificación.
 4. **Análisis.** Para cada alerta nueva se busca la escena despejada más verde del año
-   anterior y la más reciente de después, se publican las dos fotos y se clasifica por
+   anterior y la más verde de la ventana actual (su mejor momento, que es lo que compara
+   el detector), se publican las dos fotos y se clasifica por
    reglas: agua nueva (MNDWI), quemado (caída de NBR > 0,27, Key y Benson 2006, con el
    infrarrojo hundido y el visible oscuro, que lo separan del suelo removido), suelo
    desnudo (BSI), superficie artificial oscura o pérdida de vegetación. El uso anterior se
@@ -45,7 +46,8 @@ puede rehacer y explicar a mano desde las imágenes.
 5. **Ciclo de vida.** Provisional → confirmada si sigue en la ventana de un mes posterior.
    Si la vegetación vuelve, descartada (antes de confirmar) o revertida (después). Una
    provisional que no se vuelve a ver hasta la primera ventana que no se solapa con la
-   suya también se descarta. Nada se
+   suya también se descarta, igual que el agua nueva sobre lo que CORINE ya cartografiaba
+   como agua (el nivel de un embalse o una marisma). Nada se
    borra: `data/alertas.json` es un registro acumulativo con su historial.
 6. **Cruce.** El municipio (límites de OpenStreetMap) se busca entre los anuncios y
    resoluciones de Cantabria del observatorio. Coincidir en municipio no prueba que sea la

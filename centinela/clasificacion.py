@@ -48,6 +48,11 @@ CLC = {
     "421": "marisma", "423": "zona intermareal", "511": "curso de agua", "512": "lámina de agua",
     "521": "laguna costera", "522": "estuario",
 }
+# Sube cuando cambian las reglas de fotos o clases: las alertas activas analizadas con
+# una versión anterior se vuelven a analizar.
+VERSION = 2
+# Coberturas CORINE que ya eran agua: agua «nueva» sobre ellas es el nivel que sube.
+CLC_AGUA = {"411", "421", "423", "511", "512", "521", "522"}
 CLASES = {
     "agua": "Lámina de agua nueva",
     "quemado": "Superficie quemada",
@@ -88,13 +93,14 @@ def _caja(geom_utm) -> GeoBox:
     return GeoBox.from_bbox((cx - h, cy - h, cx + h, cy + h), crs=config.CRS, resolution=r)
 
 
-def _mejor_escena(items, gb: GeoBox, dentro: np.ndarray, verde: bool = False, max_dias: int = 16):
-    """La escena con el cambio y su entorno despejados que mejor cuenta lo que pasó.
+def _mejor_escena(items, gb: GeoBox, dentro: np.ndarray, max_dias: int = 16):
+    """La escena despejada de NDVI más alto en el cambio: su mejor momento de la ventana.
 
-    Despejada quiere decir lo mismo que en los compuestos (`compuestos.valida`): sin nube,
-    sin nieve y con señal. Para después, la más reciente. Para antes (`verde`), la de NDVI más alto en el cambio:
-    la referencia es el máximo de la ventana, y si el cambio ocurrió dentro de ella la
-    escena más reciente ya lo enseñaría hecho.
+    Despejada quiere decir lo mismo que en los compuestos (`compuestos.valida`). Elegir la
+    más verde reproduce lo que mide el detector, que compara máximos. Antes, así la foto
+    no enseña ya hecho un cambio ocurrido dentro de la ventana de referencia. Después,
+    cualquier escena de la ventana es posterior al cambio (su máximo ya es bajo), y la más
+    verde descarta de paso la nube que la SCL deja pasar, que hunde el NDVI.
 
     Las bandas de todas las fechas candidatas se leen de una vez y en paralelo: son unos
     pocos kilobytes por fecha, y leerlas de una en una costaba más en esperas de red que en
@@ -121,13 +127,13 @@ def _mejor_escena(items, gb: GeoBox, dentro: np.ndarray, verde: bool = False, ma
             ok = (b["red"] > 0) & compuestos.valida(ds["scl"].values[k], b["green"], b["nir"], b["swir16"])
         f_dentro = float(ok[dentro].mean()) if dentro.any() else 0.0
         ndvi = -1.0
-        if verde and (ok & dentro).any():
+        if (ok & dentro).any():
             v = _nd(b["nir"], b["red"])[ok & dentro]
             ndvi = float(np.median(v)) if v.size else -1.0
         candidatos.append((f_dentro, float(ok.mean()), dia, ndvi))
     limpias = [c for c in candidatos if c[0] >= 0.95 and c[1] >= 0.85]
     if limpias:
-        d = max(limpias, key=lambda c: c[3] if verde else c[2])[2]
+        d = max(limpias, key=lambda c: (c[3], c[2]))[2]
     else:
         # De reserva, la menos nublada; si ni así se ve el entorno, mejor sin foto.
         f, f_caja, d, _ = max(candidatos, key=lambda c: (c[0], c[2]))
@@ -212,7 +218,7 @@ def analizar(alerta_id: str, geom_utm, mes_fin: str) -> dict:
     gb = _caja(geom_utm)
     dentro = rasterize(Geometry(geom_utm, config.CRS), gb).values.astype(bool)
     bbox_geo = zona.a_geo(geom_utm.envelope.buffer(50)).bounds
-    res: dict = {"cubierta_previa": cubierta_previa(geom_utm)}
+    res: dict = {"cubierta_previa": cubierta_previa(geom_utm), "analisis_v": VERSION}
 
     def escenas(anios_atras):
         ms = meses_ventana(mes_fin, anios_atras)
@@ -221,7 +227,7 @@ def analizar(alerta_id: str, geom_utm, mes_fin: str) -> dict:
         return stac.buscar(bbox_geo, ini, fin)
 
     esc_d = _mejor_escena(escenas(0), gb, dentro)
-    esc_a = _mejor_escena(escenas(1), gb, dentro, verde=True)
+    esc_a = _mejor_escena(escenas(1), gb, dentro)
     if not esc_d or not esc_a:
         res["clase"] = "vegetacion"
         res["clase_nota"] = "sin escena despejada para las fotos"

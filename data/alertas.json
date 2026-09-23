@@ -33485,7 +33485,29 @@
    },
    "analisis_v": 2,
    "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
+   "indices_antes": {
+    "ndvi": 0.719,
+    "mndwi": -0.485,
+    "nbr": 0.458,
+    "bsi": -0.158,
+    "nir": 0.469,
+    "swir22": 0.177,
+    "brillo": 0.081
+   },
+   "indices_despues": {
+    "ndvi": 0.305,
+    "mndwi": -0.43,
+    "nbr": -0.009,
+    "bsi": 0.115,
+    "nir": 0.326,
+    "swir22": 0.329,
+    "brillo": 0.154
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-09-12",
+   "foto_antes": "chips/CN-202511-029_antes.jpg",
+   "foto_despues": "chips/CN-202511-029_despues.jpg",
+   "ventana_fotos": "2026-09",
    "clase_nombre": "Pérdida de vegetación"
   },
   {
@@ -34851,9 +34873,31 @@
     "nombre": "landas y matorral"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.773,
+    "mndwi": -0.529,
+    "nbr": 0.518,
+    "bsi": -0.191,
+    "nir": 0.429,
+    "swir22": 0.133,
+    "brillo": 0.058
+   },
+   "indices_despues": {
+    "ndvi": 0.229,
+    "mndwi": -0.531,
+    "nbr": -0.178,
+    "bsi": 0.234,
+    "nir": 0.166,
+    "swir22": 0.242,
+    "brillo": 0.087
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-07-04",
+   "foto_antes": "chips/CN-202511-032_antes.jpg",
+   "foto_despues": "chips/CN-202511-032_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202511-033",
@@ -35197,7 +35241,7 @@
   },
   {
    "id": "CN-202511-035",
-   "estado": "confirmada",
+   "estado": "descartada",
    "primera": "2025-11",
    "ultima": "2026-03",
    "meses": [
@@ -35219,6 +35263,11 @@
     {
      "fecha": "2026-03-31",
      "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-09-23",
+     "estado": "descartada",
+     "motivo": "oscilación del nivel del agua"
     }
    ],
    "pixeles": 26,
@@ -36635,9 +36684,31 @@
     "nombre": "landas y matorral"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.754,
+    "mndwi": -0.526,
+    "nbr": 0.466,
+    "bsi": -0.195,
+    "nir": 0.409,
+    "swir22": 0.153,
+    "brillo": 0.062
+   },
+   "indices_despues": {
+    "ndvi": 0.169,
+    "mndwi": -0.415,
+    "nbr": -0.134,
+    "bsi": 0.162,
+    "nir": 0.266,
+    "swir22": 0.346,
+    "brillo": 0.166
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-07-04",
+   "foto_antes": "chips/CN-202511-036_antes.jpg",
+   "foto_despues": "chips/CN-202511-036_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CN-202511-037",
@@ -37876,7 +37947,29 @@
    },
    "analisis_v": 2,
    "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
+   "indices_antes": {
+    "ndvi": 0.725,
+    "mndwi": -0.469,
+    "nbr": 0.479,
+    "bsi": -0.18,
+    "nir": 0.504,
+    "swir22": 0.178,
+    "brillo": 0.085
+   },
+   "indices_despues": {
+    "ndvi": 0.348,
+    "mndwi": -0.456,
+    "nbr": 0.052,
+    "bsi": 0.103,
+    "nir": 0.332,
+    "swir22": 0.295,
+    "brillo": 0.141
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-09-12",
+   "foto_antes": "chips/CN-202511-043_antes.jpg",
+   "foto_despues": "chips/CN-202511-043_despues.jpg",
+   "ventana_fotos": "2026-09",
    "clase_nombre": "Pérdida de vegetación"
   },
   {
@@ -73579,9 +73672,31 @@
     "nombre": "landas y matorral"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.768,
+    "mndwi": -0.587,
+    "nbr": 0.506,
+    "bsi": -0.151,
+    "nir": 0.293,
+    "swir22": 0.095,
+    "brillo": 0.037
+   },
+   "indices_despues": {
+    "ndvi": 0.423,
+    "mndwi": -0.611,
+    "nbr": -0.029,
+    "bsi": 0.172,
+    "nir": 0.22,
+    "swir22": 0.228,
+    "brillo": 0.077
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-07-29",
+   "foto_antes": "chips/CN-202601-067_antes.jpg",
+   "foto_despues": "chips/CN-202601-067_despues.jpg",
+   "ventana_fotos": "2026-07",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202601-068",
@@ -77790,9 +77905,31 @@
     "nombre": "landas y matorral"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.778,
+    "mndwi": -0.577,
+    "nbr": 0.517,
+    "bsi": -0.166,
+    "nir": 0.339,
+    "swir22": 0.109,
+    "brillo": 0.043
+   },
+   "indices_despues": {
+    "ndvi": 0.407,
+    "mndwi": -0.616,
+    "nbr": -0.008,
+    "bsi": 0.179,
+    "nir": 0.241,
+    "swir22": 0.242,
+    "brillo": 0.084
+   },
+   "fecha_antes": "2025-06-29",
+   "fecha_despues": "2026-06-19",
+   "foto_antes": "chips/CN-202601-088_antes.jpg",
+   "foto_despues": "chips/CN-202601-088_despues.jpg",
+   "ventana_fotos": "2026-06",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202601-089",
@@ -100298,9 +100435,31 @@
     "nombre": "landas y matorral"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.804,
+    "mndwi": -0.595,
+    "nbr": 0.558,
+    "bsi": -0.22,
+    "nir": 0.336,
+    "swir22": 0.095,
+    "brillo": 0.036
+   },
+   "indices_despues": {
+    "ndvi": 0.348,
+    "mndwi": -0.614,
+    "nbr": -0.115,
+    "bsi": 0.214,
+    "nir": 0.144,
+    "swir22": 0.179,
+    "brillo": 0.053
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-09-22",
+   "foto_antes": "chips/CN-202602-008_antes.jpg",
+   "foto_despues": "chips/CN-202602-008_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202602-009",
@@ -105947,9 +106106,31 @@
     "nombre": "landas y matorral"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.79,
+    "mndwi": -0.582,
+    "nbr": 0.539,
+    "bsi": -0.204,
+    "nir": 0.344,
+    "swir22": 0.103,
+    "brillo": 0.039
+   },
+   "indices_despues": {
+    "ndvi": 0.388,
+    "mndwi": -0.604,
+    "nbr": -0.044,
+    "bsi": 0.188,
+    "nir": 0.166,
+    "swir22": 0.186,
+    "brillo": 0.06
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-09-22",
+   "foto_antes": "chips/CN-202602-021_antes.jpg",
+   "foto_despues": "chips/CN-202602-021_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202602-022",
@@ -111987,9 +112168,31 @@
     "nombre": "landas y matorral"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.817,
+    "mndwi": -0.609,
+    "nbr": 0.568,
+    "bsi": -0.226,
+    "nir": 0.331,
+    "swir22": 0.093,
+    "brillo": 0.034
+   },
+   "indices_despues": {
+    "ndvi": 0.322,
+    "mndwi": -0.595,
+    "nbr": -0.126,
+    "bsi": 0.214,
+    "nir": 0.139,
+    "swir22": 0.181,
+    "brillo": 0.056
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-09-22",
+   "foto_antes": "chips/CN-202603-002_antes.jpg",
+   "foto_despues": "chips/CN-202603-002_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202603-003",
@@ -114723,9 +114926,31 @@
     "nombre": "vegetación escasa"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.782,
+    "mndwi": -0.573,
+    "nbr": 0.545,
+    "bsi": -0.217,
+    "nir": 0.402,
+    "swir22": 0.117,
+    "brillo": 0.047
+   },
+   "indices_despues": {
+    "ndvi": 0.402,
+    "mndwi": -0.597,
+    "nbr": 0.002,
+    "bsi": 0.156,
+    "nir": 0.19,
+    "swir22": 0.186,
+    "brillo": 0.062
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-09-22",
+   "foto_antes": "chips/CN-202603-004_antes.jpg",
+   "foto_despues": "chips/CN-202603-004_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202603-005",
@@ -116905,9 +117130,31 @@
     "nombre": "landas y matorral"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.742,
+    "mndwi": -0.571,
+    "nbr": 0.487,
+    "bsi": -0.151,
+    "nir": 0.328,
+    "swir22": 0.113,
+    "brillo": 0.047
+   },
+   "indices_despues": {
+    "ndvi": 0.321,
+    "mndwi": -0.552,
+    "nbr": -0.069,
+    "bsi": 0.173,
+    "nir": 0.144,
+    "swir22": 0.169,
+    "brillo": 0.059
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-09-22",
+   "foto_antes": "chips/CN-202603-011_antes.jpg",
+   "foto_despues": "chips/CN-202603-011_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202603-012",
@@ -119068,9 +119315,31 @@
     "nombre": "vegetación escasa"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.817,
+    "mndwi": -0.554,
+    "nbr": 0.587,
+    "bsi": -0.255,
+    "nir": 0.428,
+    "swir22": 0.11,
+    "brillo": 0.045
+   },
+   "indices_despues": {
+    "ndvi": 0.452,
+    "mndwi": -0.622,
+    "nbr": 0.008,
+    "bsi": 0.174,
+    "nir": 0.194,
+    "swir22": 0.19,
+    "brillo": 0.056
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-09-22",
+   "foto_antes": "chips/CN-202603-012_antes.jpg",
+   "foto_despues": "chips/CN-202603-012_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202603-013",
@@ -119309,9 +119578,31 @@
     "nombre": "vegetación escasa"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.663,
+    "mndwi": -0.601,
+    "nbr": 0.375,
+    "bsi": -0.065,
+    "nir": 0.281,
+    "swir22": 0.128,
+    "brillo": 0.048
+   },
+   "indices_despues": {
+    "ndvi": 0.292,
+    "mndwi": -0.582,
+    "nbr": -0.112,
+    "bsi": 0.216,
+    "nir": 0.14,
+    "swir22": 0.177,
+    "brillo": 0.059
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-09-22",
+   "foto_antes": "chips/CN-202603-013_antes.jpg",
+   "foto_despues": "chips/CN-202603-013_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202603-014",
@@ -122876,9 +123167,31 @@
     "nombre": "landas y matorral"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.776,
+    "mndwi": -0.597,
+    "nbr": 0.51,
+    "bsi": -0.185,
+    "nir": 0.324,
+    "swir22": 0.104,
+    "brillo": 0.038
+   },
+   "indices_despues": {
+    "ndvi": 0.34,
+    "mndwi": -0.618,
+    "nbr": -0.126,
+    "bsi": 0.234,
+    "nir": 0.149,
+    "swir22": 0.193,
+    "brillo": 0.058
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-09-12",
+   "foto_antes": "chips/CN-202603-028_antes.jpg",
+   "foto_despues": "chips/CN-202603-028_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202603-029",
@@ -125668,9 +125981,31 @@
     "nombre": "vegetación escasa"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.701,
+    "mndwi": -0.59,
+    "nbr": 0.359,
+    "bsi": -0.066,
+    "nir": 0.279,
+    "swir22": 0.13,
+    "brillo": 0.047
+   },
+   "indices_despues": {
+    "ndvi": 0.199,
+    "mndwi": -0.547,
+    "nbr": -0.222,
+    "bsi": 0.257,
+    "nir": 0.157,
+    "swir22": 0.246,
+    "brillo": 0.087
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-07-04",
+   "foto_antes": "chips/CN-202603-038_antes.jpg",
+   "foto_despues": "chips/CN-202603-038_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202603-039",
@@ -126200,9 +126535,31 @@
     "nombre": "landas y matorral"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.829,
+    "mndwi": -0.534,
+    "nbr": 0.635,
+    "bsi": -0.313,
+    "nir": 0.449,
+    "swir22": 0.1,
+    "brillo": 0.044
+   },
+   "indices_despues": {
+    "ndvi": 0.334,
+    "mndwi": -0.594,
+    "nbr": -0.085,
+    "bsi": 0.202,
+    "nir": 0.165,
+    "swir22": 0.194,
+    "brillo": 0.063
+   },
+   "fecha_antes": "2025-07-09",
+   "fecha_despues": "2026-09-12",
+   "foto_antes": "chips/CN-202603-041_antes.jpg",
+   "foto_despues": "chips/CN-202603-041_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202603-042",
@@ -128234,9 +128591,31 @@
     "nombre": "landas y matorral"
    },
    "analisis_v": 2,
-   "clase": "vegetacion",
-   "clase_nota": "sin escena despejada para las fotos",
-   "clase_nombre": "Pérdida de vegetación"
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.671,
+    "mndwi": -0.573,
+    "nbr": 0.42,
+    "bsi": -0.085,
+    "nir": 0.275,
+    "swir22": 0.111,
+    "brillo": 0.047
+   },
+   "indices_despues": {
+    "ndvi": 0.324,
+    "mndwi": -0.689,
+    "nbr": -0.129,
+    "bsi": 0.285,
+    "nir": 0.126,
+    "swir22": 0.162,
+    "brillo": 0.047
+   },
+   "fecha_antes": "2025-04-10",
+   "fecha_despues": "2026-03-01",
+   "foto_antes": "chips/CN-202603-050_antes.jpg",
+   "foto_despues": "chips/CN-202603-050_despues.jpg",
+   "ventana_fotos": "2026-04",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CN-202603-051",
@@ -128748,7 +129127,7 @@
   },
   {
    "id": "CN-202604-002",
-   "estado": "confirmada",
+   "estado": "descartada",
    "primera": "2026-04",
    "ultima": "2026-09",
    "meses": [
@@ -128768,6 +129147,11 @@
     {
      "fecha": "2026-05-31",
      "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-09-23",
+     "estado": "descartada",
+     "motivo": "oscilación del nivel del agua"
     }
    ],
    "pixeles": 782,
@@ -143867,7 +144251,7 @@
   },
   {
    "id": "CN-202604-034",
-   "estado": "confirmada",
+   "estado": "descartada",
    "primera": "2026-04",
    "ultima": "2026-09",
    "meses": [
@@ -143887,6 +144271,11 @@
     {
      "fecha": "2026-05-31",
      "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-09-23",
+     "estado": "descartada",
+     "motivo": "oscilación del nivel del agua"
     }
    ],
    "pixeles": 1048,
@@ -151640,7 +152029,7 @@
   },
   {
    "id": "CN-202605-021",
-   "estado": "confirmada",
+   "estado": "descartada",
    "primera": "2026-05",
    "ultima": "2026-07",
    "meses": [
@@ -151657,6 +152046,11 @@
     {
      "fecha": "2026-06-30",
      "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-09-23",
+     "estado": "descartada",
+     "motivo": "oscilación del nivel del agua"
     }
    ],
    "pixeles": 92,
@@ -152064,7 +152458,7 @@
   },
   {
    "id": "CN-202605-022",
-   "estado": "confirmada",
+   "estado": "descartada",
    "primera": "2026-05",
    "ultima": "2026-07",
    "meses": [
@@ -152081,6 +152475,11 @@
     {
      "fecha": "2026-06-30",
      "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-09-23",
+     "estado": "descartada",
+     "motivo": "oscilación del nivel del agua"
     }
    ],
    "pixeles": 170,
@@ -173237,5 +173636,5 @@
  },
  "expedientes_desde": "2026-07-10",
  "ultima_ventana": "2026-09",
- "actualizado": "2026-09-23T18:13:30+00:00"
+ "actualizado": "2026-09-23T18:26:17+00:00"
 }

@@ -151,6 +151,9 @@ def _metodo() -> str:
         ("Satélite", "Sentinel-2 L2A (Copernicus), servido por Earth Search en AWS"),
         ("Resolución", f"{c.RESOLUCION_M} m por píxel, malla fija en WGS84 / UTM 30N"),
         ("Píxeles válidos", "clases 4 a 7 de la capa SCL de Sen2Cor: vegetación, suelo, agua y sin clasificar"),
+        ("Nieve", f"fuera si NDSI > {_num(c.NIEVE_NDSI_MIN, 1)}, infrarrojo > {_num(c.NIEVE_NIR_MIN, 2)} y verde > {_num(c.NIEVE_VERDE_MIN, 2)} (SNOMAP, Hall et al. 1995)"),
+        ("Sombra", f"fuera si el infrarrojo cercano es < {_num(c.NIR_SENAL_MIN, 2)}, salvo el agua"),
+        ("Orillas de embalse y marismas", f"sin evaluar donde hubo agua un mes entero en los {c.AGUA_MESES_ATRAS} meses anteriores"),
         ("Compuesto mensual", "NDVI máximo de cada píxel en el mes"),
         ("Ventana", f"{c.VENTANA_MESES} meses, comparada con la misma ventana de los {c.ANIOS_REFERENCIA} años anteriores"),
         ("Vegetación de referencia", f"NDVI máximo ≥ {_num(c.NDVI_REF_MIN, 2)} en todos los años de referencia"),
@@ -312,11 +315,11 @@ footer{max-width:1440px;margin:0 auto;padding:16px 16px 40px;font-size:13px;colo
     <p>La zona vigilada son los __N_ESPACIOS__ espacios de la Red Natura 2000 que tocan Cantabria, ZEC y ZEPA juntas, recortados al límite de la comunidad: __ZONA_HA__ hectáreas en una malla fija de 10 metros.</p>
     <p>Cada día se rehace el mes en curso con todas las pasadas de Sentinel-2. De cada píxel se guarda el NDVI más alto del mes, que es el momento más verde que ha tenido. Las nubes bajan el NDVI, así que el máximo las ignora. Un prado segado vuelve a crecer en semanas, así que el máximo de varios meses lo sigue viendo verde. Solo el suelo que ha perdido la vegetación durante toda la ventana tiene el máximo bajo.</p>
     <p>La ventana actual se compara con la misma época de los años anteriores. Un píxel es cambio si fue vegetación densa todos esos años y ahora, en su mejor momento, no lo es. Los píxeles contiguos forman un polígono, que tiene que superar la unidad mínima.</p>
-    <p>Para cada alerta nueva se busca la escena más limpia de antes y la de después, se publican las dos y con sus bandas se decide el tipo: agua, quemado, suelo desnudo, superficie oscura o pérdida de vegetación sin más. Son reglas con umbrales publicados en la literatura. No interviene ningún modelo entrenado ni ninguna inteligencia artificial, y cualquier alerta se puede rehacer a mano desde las imágenes.</p>
+    <p>Para cada alerta nueva se busca la escena despejada más verde de antes y la más reciente de después, se publican las dos y con sus bandas se decide el tipo: agua, quemado, suelo desnudo, superficie oscura o pérdida de vegetación sin más. Son reglas con umbrales publicados en la literatura. No interviene ningún modelo entrenado ni ninguna inteligencia artificial, y cualquier alerta se puede rehacer a mano desde las imágenes.</p>
     <h3>Cruce con expedientes</h3>
     <p>El municipio de cada alerta se busca entre los anuncios y resoluciones que ha leído el <a href="https://asensio94.github.io/observatorio-alegaciones/">observatorio de alegaciones</a>, que en Cantabria cubre desde el __EXPEDIENTES_DESDE__. Un expediente en el mismo municipio no prueba que sea esa obra. «Sin expediente conocido» quiere decir que no consta ninguno publicado en ese tiempo, no que la obra carezca de permiso: muchas licencias municipales y autorizaciones forestales no pasan por los boletines.</p>
     <h3>Qué no ve</h3>
-    <p>Todo lo que ocupe menos de la unidad mínima: una casa aislada, una pista estrecha o un vallado. Tampoco ve lo que ocurre bajo cubierta arbórea sin quitarla, ni los cambios en zonas que no eran vegetación densa (roquedo, arenales, láminas de agua), ni los meses de nieve o de nube persistente, que se quedan sin evaluar. Las alertas en tierras de cultivo pueden ser rotaciones.</p>
+    <p>Todo lo que ocupe menos de la unidad mínima: una casa aislada, una pista estrecha o un vallado. Tampoco ve lo que ocurre bajo cubierta arbórea sin quitarla, ni los cambios en zonas que no eran vegetación densa (roquedo, arenales, láminas de agua), ni las orillas que el agua cubre y descubre (embalses, marismas), ni los meses de nieve, sombra invernal o nube persistente, que se quedan sin evaluar. Las alertas en tierras de cultivo pueden ser rotaciones.</p>
     <h3>Estados</h3>
     <p>Las alertas marcadas como «detectable desde» salieron al reconstruir las ventanas anteriores a la puesta en marcha, con la fecha en que se habrían visto.</p>
     <p><strong>Provisional</strong>: visto una vez. <strong>Confirmada</strong>: sigue ahí en la ventana de un mes posterior. <strong>Descartada</strong>: la vegetación volvió antes de confirmarse. <strong>Revertida</strong>: volvió después.</p>

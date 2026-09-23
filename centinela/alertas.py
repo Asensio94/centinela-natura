@@ -10,6 +10,7 @@ borran nunca: el registro es acumulativo y cada cambio de estado lleva su fecha.
 from __future__ import annotations
 
 import json
+import time
 from datetime import date, datetime, timezone
 
 import numpy as np
@@ -24,7 +25,9 @@ ACTIVAS = ("provisional", "confirmada")
 # NDVI a partir del cual se da por recuperada la vegetación de una alerta: bastante por
 # encima del umbral de detección para que un píxel que oscila en el límite no vaya y venga.
 NDVI_RECUPERADA = config.NDVI_ACTUAL_MAX + 0.15
-ANALISIS_POR_EJECUCION = 60
+# Tiempo de análisis por ejecución (cada alerta lleva de 10 a 20 s de descargas). Lo que
+# no quepa se analiza al día siguiente; las más grandes van primero.
+ANALISIS_MINUTOS = 45
 
 
 def cargar() -> dict:
@@ -81,8 +84,32 @@ def ultima_vegetacion(geom_utm, mes_fin: str, meses_atras: int = 14) -> str | No
     return None
 
 
+def analizar_pendientes(alertas: list[dict], minutos: float = ANALISIS_MINUTOS) -> int:
+    """Fotos y clase para las alertas activas que aún no las tienen, las más grandes primero."""
+    t0, hechas = time.monotonic(), 0
+    pendientes = [a for a in alertas if "clase" not in a and a["estado"] in ACTIVAS]
+    for a in sorted(pendientes, key=lambda a: -a["pixeles"]):
+        if time.monotonic() - t0 > minutos * 60:
+            con.log(f"[yellow]{len(pendientes) - hechas} alertas sin analizar; siguen mañana")
+            break
+        hechas += 1
+        try:
+            res = clasificacion.analizar(a["id"], _geom_utm(a), a["primera"])
+        except Exception as e:                      # una escena corrupta no para la vigilancia
+            con.log(f"[yellow]{a['id']}: sin análisis ({e})")
+            continue
+        a.update(res)
+        a["clase_nombre"] = clasificacion.CLASES[a["clase"]]
+    return hechas
+
+
 def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: list[dict],
-             hoy: date | None = None, retro: bool = False) -> dict:
+             hoy: date | None = None, retro: bool = False, analizar: bool = True) -> dict:
+    """Actualiza el registro con los cambios de una ventana.
+
+    Al reconstruir el pasado (`analizar=False`) las fotos se dejan para el final: muchas
+    alertas se descartan unas ventanas después y analizarlas sería tiempo perdido.
+    """
     hoy = hoy or date.today()
     reg = cargar()
     reg["ejecuciones"][mes_fin] = stats
@@ -139,16 +166,8 @@ def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: l
             a["ndvi_actual"] = ndvi
             a["historial"].append({"fecha": hoy.isoformat(), "estado": nuevo, "ventana": mes_fin})
 
-    # Fotos y clase para las que aún no las tienen, las más grandes primero.
-    pendientes = [a for a in alertas if "clase" not in a and a["estado"] in ACTIVAS]
-    for a in sorted(pendientes, key=lambda a: -a["pixeles"])[:ANALISIS_POR_EJECUCION]:
-        try:
-            res = clasificacion.analizar(a["id"], _geom_utm(a), a["primera"])
-        except Exception as e:                      # una escena corrupta no para la vigilancia
-            con.log(f"[yellow]{a['id']}: sin análisis ({e})")
-            continue
-        a.update(res)
-        a["clase_nombre"] = clasificacion.CLASES[a["clase"]]
+    if analizar:
+        analizar_pendientes(alertas)
 
     for a in alertas:
         cr = expedientes.cruzar(a["municipios"], registros)

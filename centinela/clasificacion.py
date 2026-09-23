@@ -129,8 +129,9 @@ def _mejor_escena(items, gb: GeoBox, dentro: np.ndarray, verde: bool = False, ma
     if limpias:
         d = max(limpias, key=lambda c: c[3] if verde else c[2])[2]
     else:
-        f, _, d, _ = max(candidatos, key=lambda c: (c[0], c[2]))
-        if f < 0.8:
+        # De reserva, la menos nublada; si ni así se ve el entorno, mejor sin foto.
+        f, f_caja, d, _ = max(candidatos, key=lambda c: (c[0], c[2]))
+        if f < 0.8 or f_caja < 0.6:
             return None
     return d, por_dia[d]
 

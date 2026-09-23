@@ -20,20 +20,28 @@ puede rehacer y explicar a mano desde las imágenes.
    147.000 ha. Se rasterizan sobre una malla fija de 10 m en WGS84 / UTM 30N, alineada con
    la de las teselas de Sentinel-2, para que cada píxel sea un píxel original de la escena.
 2. **Compuesto mensual.** Con todas las pasadas del mes se guarda, para cada píxel, el NDVI
-   máximo sobre observaciones válidas según la capa SCL (vegetación, suelo, agua y sin
-   clasificar) y cuántas hubo. Las nubes bajan el NDVI y el máximo las ignora; un prado
+   máximo sobre observaciones válidas y cuántas hubo. Válida es una observación de
+   vegetación, suelo, agua o sin clasificar según la capa SCL que además no sea nieve
+   (prueba SNOMAP de Hall et al. 1995, que la SCL deja pasar) ni sombra de relieve
+   (infrarrojo cercano casi nulo). Las escenas que Earth Search publica sin restar el
+   desplazamiento de -1000 de la baseline 04.00 (las primeras de Sentinel-2C) se
+   corrigen al leerlas. Las nubes bajan el NDVI y el máximo las ignora; un prado
    segado rebrota en semanas y el máximo de varios meses lo ve verde. Los compuestos
    (GeoTIFF de dos bandas en un byte) se guardan como ficheros de la release
    [`compuestos`](https://github.com/Asensio94/centinela-natura/releases/tag/compuestos).
 3. **Detección.** El máximo de la ventana actual (varios meses) se compara con el de la
    misma ventana en los dos años anteriores. Un píxel es cambio si fue vegetación densa
    todos los años de referencia y ahora, en su mejor momento, no lo es. Los píxeles
-   contiguos forman un polígono que tiene que superar la unidad mínima. Los umbrales están
+   contiguos forman un polígono que tiene que superar la unidad mínima. No se evalúan los
+   píxeles que estuvieron cubiertos de agua un mes entero en los dos años anteriores: son
+   orillas de embalse y marismas, que alternan agua y pasto con el nivel. Los umbrales están
    en [`centinela/config.py`](centinela/config.py) con su justificación.
-4. **Análisis.** Para cada alerta nueva se busca la escena más limpia de antes y de después,
-   se publican las dos fotos y se clasifica por reglas: agua nueva (MNDWI), quemado (caída
-   de NBR > 0,27, Key y Benson 2006), suelo desnudo (BSI), superficie artificial oscura o
-   pérdida de vegetación. El uso anterior se toma de CORINE 2018.
+4. **Análisis.** Para cada alerta nueva se busca la escena despejada más verde del año
+   anterior y la más reciente de después, se publican las dos fotos y se clasifica por
+   reglas: agua nueva (MNDWI), quemado (caída de NBR > 0,27, Key y Benson 2006, con el
+   infrarrojo hundido y el visible oscuro, que lo separan del suelo removido), suelo
+   desnudo (BSI), superficie artificial oscura o pérdida de vegetación. El uso anterior se
+   toma de CORINE 2018.
 5. **Ciclo de vida.** Provisional → confirmada si sigue en la ventana de un mes posterior.
    Si la vegetación vuelve, descartada (antes de confirmar) o revertida (después). Nada se
    borra: `data/alertas.json` es un registro acumulativo con su historial.
@@ -46,7 +54,8 @@ puede rehacer y explicar a mano desde las imágenes.
 
 Nada por debajo de la unidad mínima (una vivienda aislada, una pista estrecha), nada bajo
 cubierta arbórea que no se quite, ningún cambio en lo que no era vegetación densa (roquedo,
-arenal, agua) y ningún píxel sin observaciones suficientes (nieve, nube persistente). En
+arenal, agua), ninguna orilla que el agua cubra y descubra, y ningún píxel sin
+observaciones suficientes (nieve, sombra invernal en laderas norte, nube persistente). En
 tierras de cultivo, una rotación puede parecer un cambio.
 
 ## Automatización

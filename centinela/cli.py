@@ -65,6 +65,7 @@ def release():
 
 
 def _detectar(mes_fin: str, registros=None, retro: bool = False):
+    """Una ventana. Reconstruyendo el pasado (`retro`) las fotos se dejan para el final."""
     from . import alertas, almacen, deteccion, expedientes, stac
     faltan = almacen.bajar(deteccion.meses_necesarios(mes_fin))
     if faltan:
@@ -78,7 +79,7 @@ def _detectar(mes_fin: str, registros=None, retro: bool = False):
     hoy = min(date.today(), stac.rango_mes(mes_fin)[1])
     return alertas.procesar(mes_fin, cambios, stats, capas,
                             registros if registros is not None else expedientes.cargar(),
-                            hoy=hoy, retro=retro)
+                            hoy=hoy, retro=retro, analizar=not retro)
 
 
 @app.command()

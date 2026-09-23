@@ -38,6 +38,25 @@ def meses_necesarios(mes_fin: str) -> list[str]:
     return sorted({mm for a in range(config.ANIOS_REFERENCIA + 1) for mm in meses_ventana(mes_fin, a)})
 
 
+def meses_agua(mes_fin: str) -> list[str]:
+    """Meses anteriores a la ventana en los que se busca agua previa."""
+    ini = meses_ventana(mes_fin)[0]
+    return meses_ventana(ini, n=config.AGUA_MESES_ATRAS + 1)[:-1]
+
+
+def _agua_previa(mes_fin: str, m: np.ndarray) -> tuple[np.ndarray, int]:
+    """True donde algún mes anterior fue agua todo el mes. Tolera meses que no estén."""
+    agua = np.zeros(int(m.sum()), dtype=bool)
+    usados = 0
+    for mes in meses_agua(mes_fin):
+        if not compuestos.ruta(mes).exists():
+            continue
+        q = compuestos.leer(mes)[0][m]
+        agua |= (q < _q(0.0)) & (q != config.NDVI_NODATA)
+        usados += 1
+    return agua, usados
+
+
 def _ventana(meses: list[str], m: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
     """Máximo y observaciones de la ventana, solo en los píxeles de la zona (vector 1D)."""
     mx = np.full(int(m.sum()), -1, dtype="int16")
@@ -72,12 +91,15 @@ def detectar(mes_fin: str) -> tuple[list[Cambio], dict, dict]:
     ok = (cur >= 0) & (ncur >= config.OBS_MIN)
     for r, nr in refs:
         ok &= (r >= 0) & (nr >= config.OBS_MIN)
+    agua, meses_agua_usados = _agua_previa(mes_fin, m)
+    ok &= ~agua
     flag1 = (ok & (refmin >= _q(config.NDVI_REF_MIN)) & (cur <= _q(config.NDVI_ACTUAL_MAX))
              & (refmin - cur >= round(config.CAIDA_MIN * 100)))
 
     stats = {"mes_fin": mes_fin, "ventana": meses_ventana(mes_fin),
              "pixeles_zona": int(m.sum()), "pixeles_evaluables": int(ok.sum()),
              "fraccion_evaluable": round(float(ok.mean()), 3),
+             "pixeles_agua_previa": int(agua.sum()), "meses_agua": meses_agua_usados,
              "pixeles_candidatos": int(flag1.sum())}
 
     flag = np.zeros(m.shape, dtype=bool)

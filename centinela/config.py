@@ -61,6 +61,16 @@ DASK_HILOS = 8
 # topográfica: su NDVI no es fiable. Sen2Cor clasifica con umbrales físicos, no con un
 # modelo entrenado.
 SCL_VALIDAS = (4, 5, 6, 7)
+SCL_AGUA = 6
+# La SCL deja pasar nieve y sombra de relieve en invierno, así que cada observación pasa
+# además dos pruebas. Nieve: la de SNOMAP (Hall et al. 1995), NDSI alto con verde e
+# infrarrojo cercano claros. Señal: por debajo de este infrarrojo cercano el NDVI es el
+# cociente de dos números casi nulos (sombra de ladera) y vale cualquier cosa; el agua,
+# que es oscura de verdad, se acepta aparte para que una balsa nueva se vea.
+NIEVE_NDSI_MIN = 0.4
+NIEVE_NIR_MIN = 0.11
+NIEVE_VERDE_MIN = 0.10
+NIR_SENAL_MIN = 0.04
 
 # --- Compuestos mensuales ------------------------------------------------------------
 # Cada mes se guarda el NDVI máximo de cada píxel (compuesto de valor máximo, Holben
@@ -88,6 +98,11 @@ OBS_MIN = 3                 # observaciones válidas mínimas en cada ventana
 # Unidad mínima: 20 píxeles de 10 m, 0,2 ha. Una vivienda aislada no se ve; una obra con
 # su explanación, una pista ancha, una cantera o una balsa sí.
 UMA_PIXELES = 20
+# Orillas de embalse y marismas: un píxel que ha estado cubierto de agua un mes entero
+# (NDVI máximo del mes por debajo de 0) en este número de meses antes de la ventana
+# alterna agua y pasto con el nivel, y no se evalúa. Una balsa nueva sí se ve, porque su
+# agua cae dentro de la ventana, no antes.
+AGUA_MESES_ATRAS = 24
 # El mes anterior se vuelve a calcular durante los primeros días del siguiente, para que
 # entren las escenas que Earth Search publica con retraso.
 DIAS_CIERRE_MES = 6

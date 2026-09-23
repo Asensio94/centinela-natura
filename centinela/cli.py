@@ -70,6 +70,7 @@ def _detectar(mes_fin: str, registros=None, retro: bool = False):
     if faltan:
         con.print(f"[yellow]{mes_fin}: faltan compuestos {faltan}; no se detecta")
         return None
+    almacen.bajar(deteccion.meses_agua(mes_fin))   # los que no haya se saltan
     cambios, stats, capas = deteccion.detectar(mes_fin)
     con.print(stats)
     # Fecha a la que se habría visto el cambio: hoy, o el último día de la ventana si se

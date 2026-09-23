@@ -38,6 +38,18 @@ def _bloques():
                 yield ys, xs
 
 
+def valida(scl, verde, nir, swir16):
+    """Observaciones que cuentan, sobre reflectancias ya escaladas (numpy o xarray).
+
+    Clase SCL aceptada, sin nieve según SNOMAP y con señal en el infrarrojo cercano, salvo
+    el agua, que se acepta tal cual.
+    """
+    clase = (scl == 4) | (scl == 5) | (scl == 7)
+    ndsi = (verde - swir16) / (verde + swir16)
+    nieve = (ndsi > config.NIEVE_NDSI_MIN) & (nir > config.NIEVE_NIR_MIN) & (verde > config.NIEVE_VERDE_MIN)
+    return (clase & ~nieve & (nir >= config.NIR_SENAL_MIN)) | (scl == config.SCL_AGUA)
+
+
 def _bloque(items, ys, xs) -> tuple[np.ndarray, np.ndarray]:
     """NDVI máximo y observaciones válidas de un trozo de la malla.
 
@@ -51,13 +63,14 @@ def _bloque(items, ys, xs) -> tuple[np.ndarray, np.ndarray]:
         grupos.setdefault(stac.desplazamiento_nd(it), []).append(it)
     mx_tot = n_tot = None
     for resta, grupo in grupos.items():
-        ds = load(grupo, bands=["red", "nir", "scl"], geobox=gb, groupby="solar_day",
-                  resampling="nearest", chunks={"x": BLOQUE, "y": BLOQUE, "time": 1},
-                  fail_on_error=False)
+        ds = load(grupo, bands=["green", "red", "nir", "swir16", "scl"], geobox=gb,
+                  groupby="solar_day", resampling="nearest",
+                  chunks={"x": BLOQUE, "y": BLOQUE, "time": 1}, fail_on_error=False)
+        b = {k: (ds[k].astype("float32") - resta) * 1e-4 for k in ("green", "red", "nir", "swir16")}
         # El 0 es sin dato: se mira antes de restar.
-        ok = ds["scl"].isin(list(config.SCL_VALIDAS)) & (ds["red"] > resta) & (ds["nir"] > resta)
-        red = ds["red"].astype("float32") - resta
-        nir = ds["nir"].astype("float32") - resta
+        hay = (ds["red"] > resta) & (ds["nir"] > resta) & (ds["green"] > resta) & (ds["swir16"] > resta)
+        ok = hay & valida(ds["scl"], b["green"], b["nir"], b["swir16"])
+        red, nir = b["red"], b["nir"]
         ndvi = ((nir - red) / (nir + red)).where(ok)
         mx, n = ndvi.max("time", skipna=True), ok.sum("time")
         mx, n = (v.compute(scheduler="threads", num_workers=config.DASK_HILOS).values

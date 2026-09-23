@@ -7,7 +7,8 @@ literatura, no un clasificador entrenado:
 
 - agua nueva: MNDWI > 0 (Xu 2006) con NDVI bajo;
 - quemado: caída de NBR > 0,27, el umbral de severidad moderada de Key y Benson (2006),
-  con el infrarrojo oscuro, que es lo que separa la ceniza del suelo desnudo;
+  con el infrarrojo cercano hundido y el visible oscuro, que es lo que separa la ceniza
+  del suelo desnudo de una explanación;
 - suelo desnudo o movimiento de tierras: índice de suelo desnudo (BSI) positivo;
 - superficie oscura: NDVI bajo, sin agua y con reflectancia baja en todo el espectro
   (asfalto, placas solares, cubiertas);
@@ -26,7 +27,7 @@ from odc.stac import load
 from PIL import Image
 from scipy.ndimage import binary_erosion
 
-from . import config, stac, zona
+from . import compuestos, config, stac, zona
 from .deteccion import meses_ventana
 
 BANDAS = ["blue", "green", "red", "nir", "swir16", "swir22", "scl"]
@@ -87,12 +88,17 @@ def _caja(geom_utm) -> GeoBox:
     return GeoBox.from_bbox((cx - h, cy - h, cx + h, cy + h), crs=config.CRS, resolution=r)
 
 
-def _mejor_escena(items, gb: GeoBox, dentro: np.ndarray, max_dias: int = 16):
-    """La escena más reciente con el cambio y su entorno despejados.
+def _mejor_escena(items, gb: GeoBox, dentro: np.ndarray, verde: bool = False, max_dias: int = 16):
+    """La escena con el cambio y su entorno despejados que mejor cuenta lo que pasó.
 
-    La capa de nubes de todas las fechas candidatas se lee de una vez y en paralelo: son
-    unos pocos kilobytes por fecha, y leerlas de una en una costaba más en esperas de red
-    que en datos.
+    Despejada quiere decir lo mismo que en los compuestos (`compuestos.valida`): sin nube,
+    sin nieve y con señal. Para después, la más reciente. Para antes (`verde`), la de NDVI más alto en el cambio:
+    la referencia es el máximo de la ventana, y si el cambio ocurrió dentro de ella la
+    escena más reciente ya lo enseñaría hecho.
+
+    Las bandas de todas las fechas candidatas se leen de una vez y en paralelo: son unos
+    pocos kilobytes por fecha, y leerlas de una en una costaba más en esperas de red que en
+    datos.
     """
     if not items:
         return None
@@ -101,20 +107,29 @@ def _mejor_escena(items, gb: GeoBox, dentro: np.ndarray, max_dias: int = 16):
         por_dia.setdefault(it.datetime.date(), []).append(it)
     dias = sorted(por_dia, key=lambda d: min(i.properties["eo:cloud_cover"] for i in por_dia[d]))[:max_dias]
     sel = [i for d in dias for i in por_dia[d]]
-    ds = load(sel, bands=["scl"], geobox=gb, groupby="solar_day", resampling="nearest",
+    bandas = ["scl", "green", "red", "nir", "swir16"]
+    ds = load(sel, bands=bandas, geobox=gb, groupby="solar_day", resampling="nearest",
               chunks={}, fail_on_error=False)
-    scl = ds["scl"].compute(scheduler="threads", num_workers=config.DASK_HILOS)
+    ds = ds.compute(scheduler="threads", num_workers=config.DASK_HILOS)
     candidatos = []
-    for k, t in enumerate(scl["time"].values):
-        ok = np.isin(scl.values[k], config.SCL_VALIDAS)
+    for k, t in enumerate(ds["time"].values):
+        dia = np.datetime64(t, "D").astype(object)
+        resta = max((stac.desplazamiento_nd(i) for i in por_dia.get(dia, [])), default=0)
+        b = {n: (ds[n].values[k].astype("float32") - resta) * 1e-4
+             for n in ("green", "red", "nir", "swir16")}
+        with np.errstate(divide="ignore", invalid="ignore"):
+            ok = (b["red"] > 0) & compuestos.valida(ds["scl"].values[k], b["green"], b["nir"], b["swir16"])
         f_dentro = float(ok[dentro].mean()) if dentro.any() else 0.0
-        candidatos.append((f_dentro, float(ok.mean()), np.datetime64(t, "D").astype(object)))
-    # La más reciente entre las despejadas; si no hay ninguna, la menos nublada que valga.
+        ndvi = -1.0
+        if verde and (ok & dentro).any():
+            v = _nd(b["nir"], b["red"])[ok & dentro]
+            ndvi = float(np.median(v)) if v.size else -1.0
+        candidatos.append((f_dentro, float(ok.mean()), dia, ndvi))
     limpias = [c for c in candidatos if c[0] >= 0.95 and c[1] >= 0.85]
     if limpias:
-        d = max(limpias, key=lambda c: c[2])[2]
+        d = max(limpias, key=lambda c: c[3] if verde else c[2])[2]
     else:
-        f, _, d = max(candidatos, key=lambda c: (c[0], c[2]))
+        f, _, d, _ = max(candidatos, key=lambda c: (c[0], c[2]))
         if f < 0.8:
             return None
     return d, por_dia[d]
@@ -165,7 +180,11 @@ def clase(antes: dict, despues: dict) -> str:
         return "vegetacion"
     if despues["mndwi"] > 0 and despues["ndvi"] < 0.15:
         return "agua"
-    if antes["nbr"] - despues["nbr"] > 0.27 and despues["nir"] < 0.18 and despues["swir22"] < 0.20:
+    # Quemado: caída de NBR de severidad moderada o más, con el infrarrojo cercano hundido
+    # y el visible todavía oscuro. Una explanación también baja el NBR, pero aclara la
+    # superficie: el brillo es lo que separa la ceniza y la vegetación chamuscada del suelo.
+    if (antes["nbr"] - despues["nbr"] > 0.27 and despues["nir"] < 0.8 * antes["nir"]
+            and despues["brillo"] < 0.10):
         return "quemado"
     if despues["bsi"] > 0.05 and despues["ndvi"] < 0.25:
         return "suelo"
@@ -201,7 +220,7 @@ def analizar(alerta_id: str, geom_utm, mes_fin: str) -> dict:
         return stac.buscar(bbox_geo, ini, fin)
 
     esc_d = _mejor_escena(escenas(0), gb, dentro)
-    esc_a = _mejor_escena(escenas(1), gb, dentro)
+    esc_a = _mejor_escena(escenas(1), gb, dentro, verde=True)
     if not esc_d or not esc_a:
         res["clase"] = "vegetacion"
         res["clase_nota"] = "sin escena despejada para las fotos"

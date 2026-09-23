@@ -1,0 +1,96 @@
+name: Vigilancia diaria
+
+# Una pasada al día: rehace el compuesto del mes en curso con las escenas nuevas, busca
+# cambios, analiza los nuevos, los cruza con los expedientes del observatorio y publica.
+#
+# A las 07:10 UTC: las escenas de la mañana anterior ya están en el catálogo y el
+# observatorio de alegaciones ya ha leído el BOE y el BOC del día.
+on:
+  schedule:
+    - cron: "10 7 * * *"
+  workflow_dispatch:
+    inputs:
+      historico_desde:
+        description: "Recorrer antes las ventanas desde este mes (AAAA-MM), para rellenar el registro"
+        required: false
+        default: ""
+
+permissions:
+  contents: write           # para guardar alertas y fotos, subir compuestos y publicar
+
+concurrency:
+  group: vigilancia
+  cancel-in-progress: false
+
+env:
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  vigilar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+
+      - run: pip install -r requirements.txt
+
+      - name: Rellenar el registro con ventanas pasadas
+        if: inputs.historico_desde != ''
+        run: |
+          hasta=$(date -u -d "$(date -u +%Y-%m-01) -1 day" +%Y-%m)
+          python -m centinela historico ${{ inputs.historico_desde }} "$hasta"
+
+      - name: Rehacer el mes, detectar y generar la web
+        run: python -m centinela diario
+
+      - name: Guardar alertas y fotos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/alertas.json data/chips
+          if git diff --cached --quiet; then
+            echo "Sin cambios en el registro."
+          else
+            git commit -q -m "Vigilancia del $(date -u +%Y-%m-%d)"
+            git pull -q --rebase --autostash origin main
+            git push -q origin HEAD:main
+          fi
+
+      - name: Publicar la web
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          # La rama gh-pages es un único commit huérfano que se reemplaza cada día: la
+          # historia de verdad está en data/alertas.json, en main.
+          cd site
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Web del $(date -u +%Y-%m-%d)"
+          git push -q --force "https://x-access-token:$TOKEN@github.com/$REPO.git" HEAD:gh-pages
+
+      - name: Resumen de la ejecución
+        if: always()
+        run: |
+          python - >> "$GITHUB_STEP_SUMMARY" <<'PY'
+          import json, pathlib
+          p = pathlib.Path("data/alertas.json")
+          print("### Centinela Natura\n")
+          if not p.exists():
+              print("Sin registro de alertas."); raise SystemExit
+          r = json.loads(p.read_text(encoding="utf-8"))
+          act = [a for a in r["alertas"] if a["estado"] in ("provisional", "confirmada")]
+          ej = r["ejecuciones"].get(r.get("ultima_ventana"), {})
+          print(f"Ventana {' · '.join(ej.get('ventana', []))}: {ej.get('cambios', 0)} cambios, "
+                f"{round(100 * ej.get('fraccion_evaluable', 0))} % de la zona evaluable.\n")
+          print(f"**{len(act)} alertas activas**, {sum(a.get('cruce') == 'sin_expediente' for a in act)} sin expediente conocido.\n")
+          for a in sorted(act, key=lambda a: a["detectada"], reverse=True)[:15]:
+              print(f"- `{a['id']}` {a['estado']} · {a.get('clase_nombre', 'sin analizar')} · "
+                    f"{a['ha']} ha · {', '.join(a['municipios'])}")
+          print("\nhttps://asensio94.github.io/centinela-natura/")
+          PY

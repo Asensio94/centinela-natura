@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+data/compuestos/
+data/cache/
+site/
+publicar/

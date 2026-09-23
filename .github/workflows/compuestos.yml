@@ -1,0 +1,61 @@
+name: Compuestos mensuales
+
+# Construye de golpe los compuestos de un periodo, un mes por trabajo y varios a la vez.
+# Sirve para el arranque (hacen falta dos años de referencia antes de poder detectar nada)
+# y para rehacer el histórico si cambia la forma de calcularlos. El día a día no lo usa:
+# la vigilancia diaria ya rehace el mes en curso.
+on:
+  workflow_dispatch:
+    inputs:
+      desde:
+        description: "Primer mes (AAAA-MM)"
+        required: true
+        default: "2023-07"
+      hasta:
+        description: "Último mes (AAAA-MM)"
+        required: true
+      rehacer:
+        description: "Rehacer también los meses que ya están en la release"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write           # para subir los GeoTIFF a la release
+
+env:
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      meses: ${{ steps.m.outputs.meses }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      # La release se crea aquí y no en cada trabajo de la matriz, que si no la crearían
+      # varios a la vez.
+      - run: python -m centinela release
+      - id: m
+        run: |
+          flag=$([ "${{ inputs.rehacer }}" = "true" ] && echo "--no-solo-faltan" || echo "--solo-faltan")
+          echo "meses=$(python -m centinela matriz ${{ inputs.desde }} ${{ inputs.hasta }} $flag)" >> "$GITHUB_OUTPUT"
+
+  construir:
+    needs: plan
+    if: needs.plan.outputs.meses != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        mes: ${{ fromJSON(needs.plan.outputs.meses) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - run: python -m centinela compuesto ${{ matrix.mes }} --subir

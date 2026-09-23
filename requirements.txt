@@ -1,0 +1,14 @@
+pystac-client==0.9.0
+odc-stac==0.5.3
+odc-geo==0.5.3
+rasterio==1.5.1
+xarray==2026.7.0
+dask==2026.8.0
+numpy==2.5.3
+scipy==1.18.1
+shapely==2.1.2
+pyproj==3.8.0
+requests==2.34.2
+pillow==12.3.0
+typer==0.27.2
+rich==15.0.0

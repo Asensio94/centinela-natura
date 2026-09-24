@@ -181,7 +181,8 @@ def parcelas_de(geom_utm) -> dict:
     hallado.sort(key=lambda p: -p["ha_alerta"])
     fr = shapely.union_all(cubierto).area / area if cubierto else 0.0
     return {"parcelas": hallado[:MAX_PARCELAS], "n_parcelas": len(hallado),
-            # Lo que no cae en ninguna parcela es dominio público sin parcelar: cauces,
-            # carreteras, caminos y, en la costa, el dominio marítimo-terrestre.
+            # Lo que no cae en ninguna parcela es dominio público sin parcelar (cauces,
+            # carreteras, caminos, dominio marítimo-terrestre) o terreno sin catastrar,
+            # como algunos huecos de alta montaña en Liébana.
             "fraccion_parcelada": round(min(fr, 1.0), 3),
             "catastro_fecha": max(actualizado) if actualizado else None}

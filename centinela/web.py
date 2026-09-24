@@ -400,13 +400,13 @@ function ficha(p){
     </div>` : `<p class="nota">${esc(p.clase_nota || "Las fotos se generan en la próxima pasada con cielo despejado.")}</p>`;
   const ha = x => num(x, x < 10 ? 2 : 0);
   const parc = !p.parcelas ? `<p class="nota">Las parcelas catastrales se consultan en la próxima ejecución.</p>`
-    : !p.parcelas.length ? `<p class="nota">No cae en ninguna parcela catastral: es dominio público sin parcelar.</p>`
+    : !p.parcelas.length ? `<p class="nota">No cae en ninguna parcela del Catastro: dominio público o terreno sin catastrar.</p>`
     : `<div class="parcelas"><h3>Parcelas catastrales</h3><ul>${p.parcelas.map(c=>`<li>
         <a class="dato" href="${D.sede.replace("{}",encodeURIComponent(c.refcat))}">${esc(c.refcat)}</a>
         <span>${c.tipo==="rustica" ? `polígono ${c.poligono}, parcela ${c.parcela}` : "urbana"}${c.descuento ? " (camino o cauce público)" : ""}</span>
         <span class="dato">${ha(c.ha_alerta)} de ${ha(c.ha_parcela)} ha</span></li>`).join("")}</ul>
       ${p.n_parcelas > p.parcelas.length ? `<p class="nota">Y ${p.n_parcelas-p.parcelas.length} parcelas más.</p>` : ""}
-      ${p.fraccion_parcelada < .95 ? `<p class="nota">El ${Math.round(100*(1-p.fraccion_parcelada))} % del cambio cae fuera de toda parcela: cauces, caminos, carreteras o costa.</p>` : ""}</div>`;
+      ${p.fraccion_parcelada < .95 ? `<p class="nota">El ${Math.round(100*(1-p.fraccion_parcelada))} % del cambio cae fuera de toda parcela: cauces, caminos, carreteras, costa o terreno sin catastrar.</p>` : ""}</div>`;
   const ctx = p.expedientes_municipio ? ` En ${esc(p.municipios.join(", "))} hay ${p.expedientes_municipio === 1 ? "un expediente que no identifica" : p.expedientes_municipio+" expedientes que no identifican"} parcelas y no se pueden cruzar.` : "";
   const ex = (p.expedientes||[]).length ? `<ul class="exped">${p.expedientes.map(x=>`<li><a href="${esc(x.url)}">${esc(x.titulo)}</a><br><span class="dato">${esc(x.fuente)} · ${fecha(x.fecha)}${x.sentido_etiqueta && x.grupo==="resoluciones" ? " · "+esc(x.sentido_etiqueta):""} · cita ${x.parcelas.map(esc).join(", ")}</span></li>`).join("")}</ul>`
     : p.parcelas ? `<p class="nota">Ningún anuncio ni resolución leído por el <a href="${D.observatorio}">observatorio</a> cita estas parcelas.${ctx}</p>` : "";

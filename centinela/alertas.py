@@ -21,7 +21,7 @@ from shapely.geometry import mapping, shape
 from shapely.ops import unary_union
 from rich.console import Console
 
-from . import clasificacion, compuestos, config, deteccion, expedientes, zona
+from . import catastro, clasificacion, compuestos, config, deteccion, expedientes, zona
 
 con = Console()
 ACTIVAS = ("provisional", "confirmada")
@@ -31,6 +31,7 @@ NDVI_RECUPERADA = config.NDVI_ACTUAL_MAX + 0.15
 # Tiempo de análisis por ejecución (cada alerta lleva de 10 a 20 s de descargas). Lo que
 # no quepa se analiza al día siguiente; las más grandes van primero.
 ANALISIS_MINUTOS = 45
+CATASTRO_MINUTOS = 20
 
 
 def cargar() -> dict:
@@ -167,6 +168,36 @@ def analizar_pendientes(alertas: list[dict], hoy: date, minutos: float = ANALISI
     return hechas
 
 
+def parcelas_pendientes(alertas: list[dict], minutos: float = CATASTRO_MINUTOS) -> int:
+    """Parcelas catastrales de las alertas que no las tienen o que han crecido desde entonces.
+
+    Las descartadas no se consultan: no se publican como cambio.
+    """
+    t0, hechas = time.monotonic(), 0
+    pend = [a for a in alertas if a["estado"] != "descartada" and a.get("parcelas_px") != a["pixeles"]]
+    for a in sorted(pend, key=lambda a: -a["pixeles"]):
+        if time.monotonic() - t0 > minutos * 60:
+            con.log(f"[yellow]{len(pend) - hechas} alertas sin parcelas; siguen mañana")
+            break
+        try:
+            a.update(catastro.parcelas_de(_geom_utm(a)), parcelas_px=a["pixeles"])
+            hechas += 1
+        except Exception as e:                      # sin Catastro, la vigilancia sigue
+            con.log(f"[yellow]{a['id']}: sin parcelas ({e})")
+    return hechas
+
+
+def cruzar(reg: dict, registros: list[dict]) -> None:
+    """Cruza todas las alertas con las parcelas que citan los expedientes."""
+    hs = expedientes.huellas(registros)
+    for a in reg["alertas"]:
+        cr = expedientes.cruzar(a, registros, hs)
+        a["cruce"] = cr["estado"]
+        a["expedientes"] = cr["expedientes"]
+        a["expedientes_municipio"] = cr["en_municipio"]
+    reg["expedientes_desde"] = expedientes.cobertura(registros)
+
+
 def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: list[dict],
              hoy: date | None = None, retro: bool = False, analizar: bool = True) -> dict:
     """Actualiza el registro con los cambios de una ventana.
@@ -202,7 +233,7 @@ def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: l
             if c.pixeles > a["pixeles"]:
                 g = unary_union([geoms[i], make_valid(c.geom)])
                 geoms[i] = g
-                a.update(geometry=_geojson(g), pixeles=c.pixeles, ha=c.ha)
+                a.update(geometry=_geojson(g), pixeles=c.pixeles, ha=round(g.area / 1e4, 2))
             continue
         aid = _nuevo_id(reg, mes_fin)
         cen = zona.a_geo(c.geom.representative_point())
@@ -242,13 +273,9 @@ def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: l
 
     if analizar:
         analizar_pendientes(alertas, hoy)
+        parcelas_pendientes(alertas)
 
-    for a in alertas:
-        cr = expedientes.cruzar(a["municipios"], registros)
-        a["cruce"] = cr["estado"]
-        a["expedientes"] = cr["expedientes"]
-
-    reg["expedientes_desde"] = expedientes.cobertura(registros)
+    cruzar(reg, registros)
     reg["ultima_ventana"] = max(reg["ejecuciones"])
     guardar(reg)
     con.log(f"{mes_fin}: {len(cambios)} cambios, {nuevas} alertas nuevas, {len(alertas)} en total")

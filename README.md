@@ -50,10 +50,18 @@ puede rehacer y explicar a mano desde las imágenes.
    suya también se descarta, igual que cualquier cambio en lo que CORINE cartografía como embalse o lago y el agua
    nueva sobre marismas y estuarios: es el nivel, que sube y baja. Nada se
    borra: `data/alertas.json` es un registro acumulativo con su historial.
-6. **Cruce.** El municipio (límites de OpenStreetMap) se busca entre los anuncios y
-   resoluciones de Cantabria del observatorio. Coincidir en municipio no prueba que sea la
-   misma obra, y no constar en los boletines no prueba que no tenga permiso: muchas
-   licencias municipales y autorizaciones forestales no se publican.
+6. **Parcelas.** Cada alerta se superpone a la cartografía catastral: de ahí salen las
+   parcelas que toca, cuánto ocupa en cada una y qué parte cae fuera de toda parcela
+   (cauces, caminos, costa). Se usa la descarga INSPIRE por municipio del Catastro y no su
+   WFS, que limita cada consulta a un kilómetro cuadrado y corta la conexión desde Actions.
+   INSPIRE no trae titulares ni ningún dato personal.
+7. **Cruce.** De los anuncios y resoluciones de Cantabria del observatorio se sacan las
+   parcelas que citan, con expresiones fijas: referencias catastrales de 14 o 20
+   caracteres y pares «polígono X, parcela Y» del municipio del expediente. Quedan en
+   [`data/expedientes_parcelas.json`](data/expedientes_parcelas.json), que se puede
+   revisar a mano. Una alerta tiene expediente si alguno cita una de sus parcelas;
+   si es una resolución favorable, se marca como tal. Los expedientes del municipio que
+   no identifican parcelas se cuentan aparte, porque no se pueden cruzar.
 
 ## Qué no ve
 
@@ -62,6 +70,11 @@ cubierta arbórea que no se quite, ningún cambio en lo que no era vegetación d
 arenal, agua), ninguna orilla que el agua cubra y descubra, y ningún píxel sin
 observaciones suficientes (nieve, sombra invernal en laderas norte, nube persistente). En
 tierras de cultivo, una rotación puede parecer un cambio.
+
+En el cruce, una parcela de monte puede tener cientos de hectáreas: coincidir en ella no
+prueba que sea la misma obra. Y «sin expediente conocido» no prueba que falte el permiso:
+muchas licencias municipales y autorizaciones forestales no se publican, parte de los
+anuncios solo dan el municipio, y el observatorio lee Cantabria desde julio de 2026.
 
 ## Automatización
 
@@ -80,6 +93,7 @@ datos abiertos de AWS sin clave.
 python -m venv .venv && .venv/Scripts/pip install -r requirements.txt
 python -m centinela compuesto 2026-08          # un mes, en data/compuestos
 python -m centinela detectar 2026-08           # baja de la release lo que falte y detecta
+python -m centinela parcelas                   # parcelas catastrales y cruce
 python -m centinela publicar                   # web en site/
 ```
 
@@ -87,5 +101,6 @@ python -m centinela publicar                   # web en site/
 
 Contiene datos modificados de Copernicus Sentinel, servidos por Earth Search (Element 84).
 Red Natura 2000 y CORINE Land Cover 2018: Agencia Europea de Medio Ambiente. Municipios y
-límite regional: © colaboradores de OpenStreetMap, ODbL. Ortofoto PNOA en la web:
+límite regional: © colaboradores de OpenStreetMap, ODbL. Parcelas: © Dirección General
+del Catastro, servicio de descargas INSPIRE. Ortofoto PNOA en la web:
 CC BY 4.0 scne.es. Código bajo licencia MIT.

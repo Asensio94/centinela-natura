@@ -116,6 +116,18 @@ def diario(subir: bool = True, hoy: str = ""):
 
 
 @app.command()
+def parcelas(minutos: float = 120):
+    """Busca las parcelas catastrales de las alertas que no las tienen y rehace el cruce."""
+    from . import alertas, expedientes
+    reg = alertas.cargar()
+    for a in reg["alertas"]:                     # superficie de la geometría unida
+        a["ha"] = round(alertas._geom_utm(a).area / 1e4, 2)
+    con.print(f"{alertas.parcelas_pendientes(reg['alertas'], minutos)} alertas consultadas")
+    alertas.cruzar(reg, expedientes.cargar())
+    alertas.guardar(reg)
+
+
+@app.command()
 def publicar():
     """Genera la web en site/ a partir de data/alertas.json."""
     from . import web

@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from shapely.geometry import mapping, shape
 
 from . import alertas as al
-from . import clasificacion, config, expedientes, zona
+from . import catastro, clasificacion, config, expedientes, zona
 
 REPO_URL = "https://github.com/Asensio94/centinela-natura"
 WEB_URL = "https://asensio94.github.io/centinela-natura/"
@@ -94,6 +94,8 @@ def _atom(reg: dict, ahora: str) -> str:
         titulo = f"{a.get('clase_nombre', 'Cambio')}: {_num(a['ha'], 2)} ha en {esp} ({mun})"
         resumen = (f"{ESTADOS[a['estado']]}. {expedientes.ESTADOS.get(a.get('cruce', ''), '')}. "
                    f"NDVI de {_num(a['ndvi_ref'], 2)} a {_num(a['ndvi_actual'], 2)}.")
+        if a.get("parcelas"):
+            resumen += " Parcelas: " + ", ".join(p["refcat"] for p in a["parcelas"][:5]) + "."
         actualizado = a["historial"][-1]["fecha"]
         entradas.append(f"""  <entry>
     <id>{WEB_URL}#{a['id']}</id>
@@ -136,7 +138,7 @@ def construir() -> None:
     datos = {
         "alertas": _ligera(gj), "espacios": esp,
         "clases": clasificacion.CLASES, "estados": ESTADOS, "cruces": expedientes.ESTADOS,
-        "observatorio": expedientes.OBSERVATORIO_WEB,
+        "observatorio": expedientes.OBSERVATORIO_WEB, "sede": catastro.SEDE,
     }
     resumen = {
         "activas": len(acts),
@@ -242,7 +244,7 @@ main{max-width:1440px;margin:0 auto;padding:0 16px;display:grid;grid-template-co
 .lista{display:grid;gap:14px;padding-bottom:40px}
 .filtros{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--linea);position:sticky;top:0;background:var(--suelo);z-index:5}
 .filtros label{font-size:13px;color:var(--gris);display:flex;gap:6px;align-items:center}
-.filtros select{font:14px "Source Serif 4",serif;background:var(--papel);color:var(--tinta);border:1px solid var(--linea);padding:4px 6px}
+.filtros select{max-width:min(260px,62vw);font:14px "Source Serif 4",serif;background:var(--papel);color:var(--tinta);border:1px solid var(--linea);padding:4px 6px}
 .cuenta{margin-left:auto;font-size:13px;color:var(--gris)}
 .ficha{background:var(--papel);border:1px solid var(--linea);box-shadow:var(--sombra);padding:14px 16px 16px;display:grid;gap:10px;scroll-margin-top:60px}
 .ficha.sel{border-color:var(--sobreimpresion);box-shadow:0 0 0 1px var(--sobreimpresion),var(--sombra)}
@@ -268,6 +270,12 @@ dl.medidas dd{margin:0;font:500 15px "IBM Plex Mono",monospace;font-variant-nume
 .exped li{padding-left:12px;border-left:2px solid var(--linea)}
 .exped .dato{font-size:12px;color:var(--gris)}
 .nota{font-size:13.5px;color:var(--gris);margin:0}
+.parcelas{display:grid;gap:6px}
+.parcelas h3{margin:0;font:600 12px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.09em;color:var(--gris)}
+.parcelas ul{margin:0;padding:0;list-style:none;display:grid;gap:3px;font-size:14px}
+.parcelas li{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline}
+.parcelas li .dato{font-size:12.5px;color:var(--gris)}
+.parcelas li a.dato{color:var(--tinta)}
 .acciones{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px}
 .acciones button{font:inherit;background:none;border:0;padding:0;color:inherit;text-decoration:underline;text-decoration-color:var(--sobreimpresion);text-underline-offset:3px;cursor:pointer}
 .vacio{padding:28px 16px;border:1px dashed var(--linea);color:var(--gris);text-align:center}
@@ -331,7 +339,8 @@ footer{max-width:1440px;margin:0 auto;padding:16px 16px 40px;font-size:13px;colo
     <p>La ventana actual se compara con la misma época de los años anteriores. Un píxel es cambio si fue vegetación densa todos esos años y ahora, en su mejor momento, no lo es. Los píxeles contiguos forman un polígono, que tiene que superar la unidad mínima.</p>
     <p>Para cada alerta nueva se busca la escena despejada más verde de antes y la más verde de después, su mejor momento, que es lo que compara el detector, se publican las dos (si la nieve o las nubes no dejan ver la ventana en que nació, se usa la última en que se ha visto) y con sus bandas se decide el tipo: agua, quemado, suelo desnudo, superficie oscura o pérdida de vegetación sin más. Son reglas con umbrales publicados en la literatura. No interviene ningún modelo entrenado ni ninguna inteligencia artificial, y cualquier alerta se puede rehacer a mano desde las imágenes.</p>
     <h3>Cruce con expedientes</h3>
-    <p>El municipio de cada alerta se busca entre los anuncios y resoluciones que ha leído el <a href="https://asensio94.github.io/observatorio-alegaciones/">observatorio de alegaciones</a>, que en Cantabria cubre desde el __EXPEDIENTES_DESDE__. Un expediente en el mismo municipio no prueba que sea esa obra. «Sin expediente conocido» quiere decir que no consta ninguno publicado en ese tiempo, no que la obra carezca de permiso: muchas licencias municipales y autorizaciones forestales no pasan por los boletines.</p>
+    <p>Cada alerta se superpone a la cartografía del Catastro para saber qué parcelas toca. De los anuncios y resoluciones de Cantabria que ha leído el <a href="https://asensio94.github.io/observatorio-alegaciones/">observatorio de alegaciones</a>, que cubre desde el __EXPEDIENTES_DESDE__, se sacan las parcelas que citan: referencias catastrales y pares «polígono, parcela» del municipio del expediente. La alerta tiene expediente si alguno cita una de sus parcelas. En monte una sola parcela puede tener cientos de hectáreas, así que coincidir en ella no prueba que sea la misma obra.</p>
+    <p>«Sin expediente conocido» quiere decir que ningún texto publicado en ese tiempo cita sus parcelas, no que la obra carezca de permiso: muchas licencias municipales y autorizaciones forestales no pasan por los boletines, y parte de los anuncios solo dan el municipio. Esos se cuentan aparte en cada alerta.</p>
     <h3>Qué no ve</h3>
     <p>Todo lo que ocupe menos de la unidad mínima: una casa aislada, una pista estrecha o un vallado. Tampoco ve lo que ocurre bajo cubierta arbórea sin quitarla, ni los cambios en zonas que no eran vegetación densa (roquedo, arenales, láminas de agua), ni las orillas que el agua cubre y descubre (embalses, marismas), ni los meses de nieve, sombra invernal o nube persistente, que se quedan sin evaluar. Las alertas en tierras de cultivo pueden ser rotaciones.</p>
     <h3>Estados</h3>
@@ -347,7 +356,7 @@ footer{max-width:1440px;margin:0 auto;padding:16px 16px 40px;font-size:13px;colo
 </section>
 
 <footer>
-  Contiene datos modificados de Copernicus Sentinel procesados por Earth Search (Element 84) · Límites de la Red Natura 2000 y CORINE Land Cover 2018: Agencia Europea de Medio Ambiente · Municipios: © colaboradores de OpenStreetMap (ODbL) · Ortofoto PNOA: CC BY 4.0 scne.es · Expedientes: observatorio de alegaciones ambientales, a partir del BOE y el BOC.
+  Contiene datos modificados de Copernicus Sentinel procesados por Earth Search (Element 84) · Límites de la Red Natura 2000 y CORINE Land Cover 2018: Agencia Europea de Medio Ambiente · Municipios: © colaboradores de OpenStreetMap (ODbL) · Ortofoto PNOA: CC BY 4.0 scne.es · Parcelas: © Dirección General del Catastro · Expedientes: observatorio de alegaciones ambientales, a partir del BOE y el BOC.
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -380,7 +389,7 @@ for (const [k,v] of Object.entries(D.cruces)) document.getElementById("f-cruce")
 for (const [k,v] of Object.entries(D.clases)) document.getElementById("f-clase").insertAdjacentHTML("beforeend",`<option value="${k}">${esc(v)}</option>`);
 
 const ordenEstado = {confirmada:0,provisional:1,revertida:2,descartada:3};
-const ordenCruce = {sin_expediente:0,tramitacion:1,resolucion:2};
+const ordenCruce = {sin_expediente:0,pendiente:1,tramitacion:2,resolucion:3};
 
 function ficha(p){
   const esp = p.espacios.map(e=>`${esc(e.nombre)} <span class="dato">${esc(e.codigo)}</span>`).join(" · ") || "Red Natura 2000";
@@ -389,8 +398,18 @@ function ficha(p){
       <figure><img loading="lazy" src="${p.foto_antes}" alt="Imagen de satélite antes del cambio, ${fecha(p.fecha_antes)}"><figcaption>Antes · ${fecha(p.fecha_antes)}</figcaption></figure>
       <figure><img loading="lazy" src="${p.foto_despues}" alt="Imagen de satélite después del cambio, ${fecha(p.fecha_despues)}"><figcaption>Después · ${fecha(p.fecha_despues)}</figcaption></figure>
     </div>` : `<p class="nota">${esc(p.clase_nota || "Las fotos se generan en la próxima pasada con cielo despejado.")}</p>`;
-  const ex = (p.expedientes||[]).length ? `<ul class="exped">${p.expedientes.map(x=>`<li><a href="${esc(x.url)}">${esc(x.titulo)}</a><br><span class="dato">${esc(x.fuente)} · ${fecha(x.fecha)}${x.sentido_etiqueta && x.grupo==="resoluciones" ? " · "+esc(x.sentido_etiqueta):""}</span></li>`).join("")}</ul>`
-    : `<p class="nota">Ningún anuncio ni resolución de ${esc(p.municipios.join(", "))} en los boletines leídos por el <a href="${D.observatorio}">observatorio</a>.</p>`;
+  const ha = x => num(x, x < 10 ? 2 : 0);
+  const parc = !p.parcelas ? `<p class="nota">Las parcelas catastrales se consultan en la próxima ejecución.</p>`
+    : !p.parcelas.length ? `<p class="nota">No cae en ninguna parcela catastral: es dominio público sin parcelar.</p>`
+    : `<div class="parcelas"><h3>Parcelas catastrales</h3><ul>${p.parcelas.map(c=>`<li>
+        <a class="dato" href="${D.sede.replace("{}",encodeURIComponent(c.refcat))}">${esc(c.refcat)}</a>
+        <span>${c.tipo==="rustica" ? `polígono ${c.poligono}, parcela ${c.parcela}` : "urbana"}${c.descuento ? " (camino o cauce público)" : ""}</span>
+        <span class="dato">${ha(c.ha_alerta)} de ${ha(c.ha_parcela)} ha</span></li>`).join("")}</ul>
+      ${p.n_parcelas > p.parcelas.length ? `<p class="nota">Y ${p.n_parcelas-p.parcelas.length} parcelas más.</p>` : ""}
+      ${p.fraccion_parcelada < .95 ? `<p class="nota">El ${Math.round(100*(1-p.fraccion_parcelada))} % del cambio cae fuera de toda parcela: cauces, caminos, carreteras o costa.</p>` : ""}</div>`;
+  const ctx = p.expedientes_municipio ? ` En ${esc(p.municipios.join(", "))} hay ${p.expedientes_municipio === 1 ? "un expediente que no identifica" : p.expedientes_municipio+" expedientes que no identifican"} parcelas y no se pueden cruzar.` : "";
+  const ex = (p.expedientes||[]).length ? `<ul class="exped">${p.expedientes.map(x=>`<li><a href="${esc(x.url)}">${esc(x.titulo)}</a><br><span class="dato">${esc(x.fuente)} · ${fecha(x.fecha)}${x.sentido_etiqueta && x.grupo==="resoluciones" ? " · "+esc(x.sentido_etiqueta):""} · cita ${x.parcelas.map(esc).join(", ")}</span></li>`).join("")}</ul>`
+    : p.parcelas ? `<p class="nota">Ningún anuncio ni resolución leído por el <a href="${D.observatorio}">observatorio</a> cita estas parcelas.${ctx}</p>` : "";
   return `<article class="ficha" id="${p.id}" data-id="${p.id}">
     <header>
       <span class="sello ${p.estado}">${esc(D.estados[p.estado])}</span>
@@ -406,6 +425,7 @@ function ficha(p){
       <div><dt>${p.reconstruida ? "Detectable desde" : "Primera detección"}</dt><dd>${fecha(p.detectada)}</dd></div>
       <div><dt>Uso anterior (CORINE 2018)</dt><dd style="font-family:inherit">${esc(p.cubierta_previa?.nombre || "—")}</dd></div>
     </dl>
+    ${parc}
     ${ex}
     <div class="acciones">
       <button type="button" data-zoom="${p.id}">Ver en la ortofoto</button>

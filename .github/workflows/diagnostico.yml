@@ -5,12 +5,16 @@ jobs:
   red:
     runs-on: ubuntu-latest
     steps:
-      - name: Catastro INSPIRE y Sede
+      - name: Catastro
         run: |
+          set +e
           for u in \
-            "https://ovc.catastro.meh.es/INSPIRE/wfsCP.aspx?service=WFS&version=2.0.0&request=GetFeature&typeNames=CP:CadastralParcel&srsName=EPSG::25830&bbox=376000,4778000,376500,4778500" \
+            "https://ovc.catastro.meh.es/INSPIRE/wfsCP.aspx?service=WFS&version=2.0.0&request=GetCapabilities" \
+            "http://ovc.catastro.meh.es/INSPIRE/wfsCP.aspx?service=WFS&version=2.0.0&request=GetCapabilities" \
+            "https://www.catastro.hacienda.gob.es/INSPIRE/CadastralParcels/ES.SDGC.CP.atom.xml" \
+            "http://www.catastro.minhap.es/INSPIRE/CadastralParcels/ES.SDGC.CP.atom.xml" \
             "https://www1.sedecatastro.gob.es/Cartografia/mapa.aspx?refcat=39013A00700281" \
-            "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCallejero.asmx/Consulta_DNPRC?Provincia=&Municipio=&RC=39013A00700281"; do
-            curl -s -o /tmp/r -w "%{http_code} %{size_download}B %{time_total}s  $u\n" --max-time 30 "$u" || echo "FALLO $u"
-            head -c 300 /tmp/r; echo
+            "https://www.boe.es/"; do
+            curl -sS -o /tmp/r -w "%{http_code} %{size_download}B %{time_total}s" --max-time 30 "$u"; echo "  rc=$?  $u"
           done
+          curl -v --max-time 20 -o /dev/null "https://ovc.catastro.meh.es/INSPIRE/wfsCP.aspx" 2>&1 | grep -E "^\*" | head -25

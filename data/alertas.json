@@ -15250,7 +15250,7 @@
    "pixeles": 1898,
    "ha": 19.58,
    "ndvi_ref": 0.645,
-   "ndvi_actual": 0.229,
+   "ndvi_actual": 0.23,
    "obs_actual": 8,
    "centro": [
     43.23033,
@@ -29302,7 +29302,7 @@
    "pixeles": 49,
    "ha": 0.49,
    "ndvi_ref": 0.651,
-   "ndvi_actual": 0.229,
+   "ndvi_actual": 0.23,
    "obs_actual": 7,
    "centro": [
     43.2277,
@@ -31336,7 +31336,7 @@
    "pixeles": 33,
    "ha": 0.33,
    "ndvi_ref": 0.689,
-   "ndvi_actual": 0.291,
+   "ndvi_actual": 0.294,
    "obs_actual": 7,
    "centro": [
     43.22773,
@@ -33840,7 +33840,7 @@
    "pixeles": 32,
    "ha": 0.32,
    "ndvi_ref": 0.641,
-   "ndvi_actual": 0.229,
+   "ndvi_actual": 0.23,
    "obs_actual": 10,
    "centro": [
     43.22658,
@@ -35254,7 +35254,7 @@
    "pixeles": 28,
    "ha": 0.28,
    "ndvi_ref": 0.633,
-   "ndvi_actual": 0.229,
+   "ndvi_actual": 0.23,
    "obs_actual": 6,
    "centro": [
     43.232,
@@ -37321,7 +37321,7 @@
    "pixeles": 23,
    "ha": 0.23,
    "ndvi_ref": 0.62,
-   "ndvi_actual": 0.229,
+   "ndvi_actual": 0.23,
    "obs_actual": 8,
    "centro": [
     43.23099,
@@ -38207,7 +38207,7 @@
    "pixeles": 20,
    "ha": 0.2,
    "ndvi_ref": 0.666,
-   "ndvi_actual": 0.273,
+   "ndvi_actual": 0.272,
    "obs_actual": 8,
    "centro": [
     43.22374,
@@ -85900,7 +85900,7 @@
    "pixeles": 8343,
    "ha": 85.03,
    "ndvi_ref": 0.664,
-   "ndvi_actual": 0.324,
+   "ndvi_actual": 0.314,
    "obs_actual": 3,
    "centro": [
     43.15862,
@@ -109264,7 +109264,7 @@
    "pixeles": 1323,
    "ha": 13.23,
    "ndvi_ref": 0.739,
-   "ndvi_actual": 0.284,
+   "ndvi_actual": 0.282,
    "obs_actual": 3,
    "centro": [
     43.15516,
@@ -112111,7 +112111,7 @@
    "pixeles": 388,
    "ha": 3.88,
    "ndvi_ref": 0.763,
-   "ndvi_actual": 0.31,
+   "ndvi_actual": 0.311,
    "obs_actual": 3,
    "centro": [
     43.15891,
@@ -113879,7 +113879,7 @@
    "pixeles": 753,
    "ha": 8.69,
    "ndvi_ref": 0.7,
-   "ndvi_actual": 0.343,
+   "ndvi_actual": 0.344,
    "obs_actual": 3,
    "centro": [
     43.16386,
@@ -118387,7 +118387,7 @@
    "pixeles": 767,
    "ha": 8.32,
    "ndvi_ref": 0.654,
-   "ndvi_actual": 0.327,
+   "ndvi_actual": 0.332,
    "obs_actual": 3,
    "centro": [
     43.15922,
@@ -120589,7 +120589,7 @@
    "pixeles": 58,
    "ha": 0.58,
    "ndvi_ref": 0.647,
-   "ndvi_actual": 0.309,
+   "ndvi_actual": 0.311,
    "obs_actual": 3,
    "centro": [
     43.16015,
@@ -127760,7 +127760,7 @@
    "pixeles": 26,
    "ha": 0.26,
    "ndvi_ref": 0.745,
-   "ndvi_actual": 0.31,
+   "ndvi_actual": 0.311,
    "obs_actual": 3,
    "centro": [
     43.15797,
@@ -127952,7 +127952,7 @@
    "pixeles": 26,
    "ha": 0.26,
    "ndvi_ref": 0.722,
-   "ndvi_actual": 0.315,
+   "ndvi_actual": 0.317,
    "obs_actual": 3,
    "centro": [
     43.15684,
@@ -128592,7 +128592,7 @@
    "pixeles": 24,
    "ha": 0.24,
    "ndvi_ref": 0.635,
-   "ndvi_actual": 0.319,
+   "ndvi_actual": 0.324,
    "obs_actual": 3,
    "centro": [
     43.15735,
@@ -129219,7 +129219,7 @@
    "pixeles": 22,
    "ha": 0.22,
    "ndvi_ref": 0.732,
-   "ndvi_actual": 0.3,
+   "ndvi_actual": 0.302,
    "obs_actual": 3,
    "centro": [
     43.15262,
@@ -130577,7 +130577,7 @@
    "pixeles": 782,
    "ha": 11.33,
    "ndvi_ref": 0.673,
-   "ndvi_actual": 0.306,
+   "ndvi_actual": 0.307,
    "obs_actual": 11,
    "centro": [
     42.99317,
@@ -134865,7 +134865,7 @@
    "pixeles": 76,
    "ha": 0.76,
    "ndvi_ref": 0.656,
-   "ndvi_actual": 0.333,
+   "ndvi_actual": 0.334,
    "obs_actual": 6,
    "centro": [
     43.15728,
@@ -145951,7 +145951,7 @@
    "pixeles": 1048,
    "ha": 10.48,
    "ndvi_ref": 0.689,
-   "ndvi_actual": 0.306,
+   "ndvi_actual": 0.307,
    "obs_actual": 12,
    "centro": [
     42.99769,
@@ -147463,7 +147463,7 @@
    "pixeles": 42,
    "ha": 0.42,
    "ndvi_ref": 0.634,
-   "ndvi_actual": 0.31,
+   "ndvi_actual": 0.311,
    "obs_actual": 5,
    "centro": [
     43.1618,
@@ -151477,7 +151477,7 @@
    "pixeles": 36,
    "ha": 0.36,
    "ndvi_ref": 0.618,
-   "ndvi_actual": 0.273,
+   "ndvi_actual": 0.272,
    "obs_actual": 7,
    "centro": [
     43.22436,
@@ -155695,7 +155695,7 @@
    "pixeles": 139,
    "ha": 1.39,
    "ndvi_ref": 0.687,
-   "ndvi_actual": 0.273,
+   "ndvi_actual": 0.275,
    "obs_actual": 13,
    "centro": [
     42.99943,
@@ -156347,7 +156347,7 @@
    "pixeles": 183,
    "ha": 1.83,
    "ndvi_ref": 0.669,
-   "ndvi_actual": 0.295,
+   "ndvi_actual": 0.296,
    "obs_actual": 16,
    "centro": [
     43.26179,
@@ -157831,7 +157831,7 @@
    "pixeles": 76,
    "ha": 0.76,
    "ndvi_ref": 0.688,
-   "ndvi_actual": 0.333,
+   "ndvi_actual": 0.334,
    "obs_actual": 9,
    "centro": [
     43.09687,
@@ -158816,7 +158816,7 @@
    "pixeles": 54,
    "ha": 0.57,
    "ndvi_ref": 0.642,
-   "ndvi_actual": 0.242,
+   "ndvi_actual": 0.243,
    "obs_actual": 9,
    "centro": [
     43.09361,
@@ -165755,7 +165755,7 @@
    "pixeles": 29,
    "ha": 0.29,
    "ndvi_ref": 0.747,
-   "ndvi_actual": 0.277,
+   "ndvi_actual": 0.278,
    "obs_actual": 11,
    "centro": [
     43.22667,
@@ -166173,7 +166173,7 @@
    "pixeles": 854,
    "ha": 8.54,
    "ndvi_ref": 0.72,
-   "ndvi_actual": 0.227,
+   "ndvi_actual": 0.229,
    "obs_actual": 15,
    "centro": [
     43.21164,
@@ -168520,7 +168520,7 @@
    "pixeles": 117,
    "ha": 1.17,
    "ndvi_ref": 0.682,
-   "ndvi_actual": 0.3,
+   "ndvi_actual": 0.308,
    "obs_actual": 16,
    "centro": [
     43.20963,
@@ -168959,7 +168959,7 @@
    "pixeles": 111,
    "ha": 1.11,
    "ndvi_ref": 0.673,
-   "ndvi_actual": 0.27,
+   "ndvi_actual": 0.272,
    "obs_actual": 16,
    "centro": [
     43.21201,
@@ -169290,7 +169290,7 @@
    "pixeles": 89,
    "ha": 0.89,
    "ndvi_ref": 0.662,
-   "ndvi_actual": 0.322,
+   "ndvi_actual": 0.323,
    "obs_actual": 16,
    "centro": [
     43.2101,
@@ -169613,7 +169613,7 @@
    "pixeles": 86,
    "ha": 0.86,
    "ndvi_ref": 0.716,
-   "ndvi_actual": 0.293,
+   "ndvi_actual": 0.298,
    "obs_actual": 16,
    "centro": [
     43.21058,
@@ -170192,7 +170192,7 @@
    "pixeles": 53,
    "ha": 0.53,
    "ndvi_ref": 0.777,
-   "ndvi_actual": 0.309,
+   "ndvi_actual": 0.312,
    "obs_actual": 15,
    "centro": [
     43.21077,
@@ -170471,7 +170471,7 @@
    "pixeles": 44,
    "ha": 0.44,
    "ndvi_ref": 0.722,
-   "ndvi_actual": 0.282,
+   "ndvi_actual": 0.287,
    "obs_actual": 16,
    "centro": [
     43.20984,
@@ -171036,7 +171036,7 @@
    "pixeles": 37,
    "ha": 0.37,
    "ndvi_ref": 0.705,
-   "ndvi_actual": 0.294,
+   "ndvi_actual": 0.296,
    "obs_actual": 16,
    "centro": [
     43.20928,
@@ -171233,7 +171233,7 @@
    "pixeles": 49,
    "ha": 0.52,
    "ndvi_ref": 0.691,
-   "ndvi_actual": 0.316,
+   "ndvi_actual": 0.318,
    "obs_actual": 12,
    "centro": [
     43.26014,
@@ -172139,7 +172139,7 @@
    "pixeles": 22,
    "ha": 0.22,
    "ndvi_ref": 0.805,
-   "ndvi_actual": 0.187,
+   "ndvi_actual": 0.192,
    "obs_actual": 12,
    "centro": [
     43.45642,
@@ -172612,7 +172612,7 @@
    "pixeles": 21,
    "ha": 0.21,
    "ndvi_ref": 0.705,
-   "ndvi_actual": 0.308,
+   "ndvi_actual": 0.312,
    "obs_actual": 16,
    "centro": [
     43.20961,
@@ -175195,7 +175195,7 @@
    "pixeles": 27,
    "ha": 0.27,
    "ndvi_ref": 0.656,
-   "ndvi_actual": 0.328,
+   "ndvi_actual": 0.33,
    "obs_actual": 18,
    "centro": [
     42.97161,
@@ -175407,7 +175407,7 @@
    "pixeles": 21,
    "ha": 0.21,
    "ndvi_ref": 0.69,
-   "ndvi_actual": 0.306,
+   "ndvi_actual": 0.307,
    "obs_actual": 12,
    "centro": [
     43.2401,
@@ -176162,16 +176162,16 @@
     "2026-09"
    ],
    "pixeles_zona": 14699109,
-   "pixeles_evaluables": 13964135,
+   "pixeles_evaluables": 13964395,
    "fraccion_evaluable": 0.95,
    "pixeles_agua_previa": 703157,
    "meses_agua": 24,
-   "pixeles_candidatos": 19897,
-   "cambios": 84,
-   "ha_cambios": 175.9
+   "pixeles_candidatos": 19472,
+   "cambios": 81,
+   "ha_cambios": 171.4
   }
  },
  "expedientes_desde": "2026-07-10",
  "ultima_ventana": "2026-09",
- "actualizado": "2026-09-24T12:48:34+00:00"
+ "actualizado": "2026-09-25T12:49:16+00:00"
 }

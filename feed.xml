@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Centinela Natura: alertas en la Red Natura 2000 de Cantabria</title>
+  <id>https://asensio94.github.io/centinela-natura/</id>
+  <link href="https://asensio94.github.io/centinela-natura/"/>
+  <link rel="self" href="https://asensio94.github.io/centinela-natura/feed.xml"/>
+  <updated>2026-10-03T12:38:46Z</updated>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-001</id>
+    <title>Superficie quemada: 2,84 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-001"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,82 a 0,32. Parcelas: 39083A50600007, 39083A02500011, 39083A02500002.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-002</id>
+    <title>Superficie quemada: 2,35 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-002"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,76 a 0,31. Parcelas: 39015A02100228.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-003</id>
+    <title>Superficie quemada: 1,44 ha en Desfiladero de la Hermida, Liébana (Lamasón, Peñarrubia)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-003"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,81 a 0,29. Parcelas: 39049A00200122.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-004</id>
+    <title>Superficie quemada: 1,20 ha en Valles altos del Nansa y Saja y Alto Campoo (Cabuérniga)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-004"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,69 a 0,33. Parcelas: 39014A01200004.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-005</id>
+    <title>Superficie quemada: 0,87 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-005"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,69 a 0,33. Parcelas: 39015A04600310.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-006</id>
+    <title>Superficie quemada: 0,84 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-006"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,68 a 0,32. Parcelas: 39083A02800666.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-007</id>
+    <title>Pérdida de vegetación: 0,81 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-007"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,66 a 0,33. Parcelas: 39015A02600460.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-008</id>
+    <title>Superficie quemada: 0,78 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-008"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,68 a 0,31. Parcelas: 39015A04600310.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-009</id>
+    <title>Pérdida de vegetación: 0,77 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-009"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,65 a 0,32. Parcelas: 39015A03100001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-010</id>
+    <title>Superficie quemada: 0,68 ha en Liébana, Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-010"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,66 a 0,31. Parcelas: 39022A00700671.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-011</id>
+    <title>Pérdida de vegetación: 0,61 ha en Montaña oriental (Vega de Pas)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-011"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,75 a 0,31. Parcelas: 39097A01400339.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-012</id>
+    <title>Superficie quemada: 0,53 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-012"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,65 a 0,33. Parcelas: 39015A03100001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-013</id>
+    <title>Pérdida de vegetación: 0,51 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-013"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,66 a 0,32. Parcelas: 39015A02600460.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-014</id>
+    <title>Superficie quemada: 0,51 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-014"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,68 a 0,33. Parcelas: 39015A02600460.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-015</id>
+    <title>Superficie quemada: 0,49 ha en Liébana, Liébana (Vega de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-015"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,68 a 0,31. Parcelas: 39096A03900313.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-016</id>
+    <title>Pérdida de vegetación: 0,46 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-016"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,64 a 0,32. Parcelas: 39015A02600460.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-017</id>
+    <title>Superficie quemada: 0,43 ha en Sierra del Escudo (Luena)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-017"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,68 a 0,33. Parcelas: 39039A00900796.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-018</id>
+    <title>Superficie quemada: 0,42 ha en Montaña oriental (Vega de Pas)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-018"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,75 a 0,33. Parcelas: 39097A01300086.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-019</id>
+    <title>Superficie quemada: 0,41 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-019"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,62 a 0,31. Parcelas: 39015A02200728.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-020</id>
+    <title>Superficie quemada: 0,41 ha en Sierra del Escudo (Luena)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-020"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,76 a 0,32. Parcelas: 39039A00700581, 39039A00700582, 39039A00700576, 39039A00701398.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-021</id>
+    <title>Superficie quemada: 0,40 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-021"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,70 a 0,34. Parcelas: 39015A02600399.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-022</id>
+    <title>Superficie quemada: 0,38 ha en Liébana, Liébana (Camaleño, Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-022"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,67 a 0,32. Parcelas: 39015A04600310.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-023</id>
+    <title>Superficie quemada: 0,37 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-023"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,72 a 0,34. Parcelas: 39083A02500018.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-024</id>
+    <title>Superficie quemada: 0,36 ha en Embalse del Ebro (Campoo de Yuso)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-024"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,67 a 0,33. Parcelas: 39017A40100010, 39017A40100007, 39017A40100008, 39017A40100011, 39017A40100009.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-025</id>
+    <title>Superficie quemada: 0,35 ha en Montaña oriental (Vega de Pas)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-025"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,80 a 0,34. Parcelas: 39097A01400338.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-026</id>
+    <title>Superficie quemada: 0,35 ha en Liébana (Cabezón de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-026"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,63 a 0,30. Parcelas: 39013A00200434, 39013A00100261, 39013A00200435, 39013A00200436, 39013A00100287.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-027</id>
+    <title>Pérdida de vegetación: 0,33 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-027"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,65 a 0,33. Parcelas: 39015A03100001, 39015A02600460, 39015A03109002.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-028</id>
+    <title>Superficie quemada: 0,33 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-028"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,70 a 0,33. Parcelas: 39015A02100228.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-029</id>
+    <title>Superficie quemada: 0,32 ha en Valles altos del Nansa y Saja y Alto Campoo (Los Tojos, Hermandad de Campoo de Suso)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-029"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,81 a 0,32. Parcelas: 39086A01900031.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-030</id>
+    <title>Superficie quemada: 0,31 ha en Liébana, Rio Deva (Cabezón de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-030"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,72 a 0,34. Parcelas: 39013A03000045, 39013A03000076.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-031</id>
+    <title>Superficie quemada: 0,28 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-031"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,65 a 0,32. Parcelas: 39015A04600310.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-032</id>
+    <title>Pérdida de vegetación: 0,28 ha en Montaña oriental (San Roque de Riomiera)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-032"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,77 a 0,30. Parcelas: 39072A00900001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-033</id>
+    <title>Superficie quemada: 0,28 ha en Liébana (Cabezón de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-033"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,63 a 0,29. Parcelas: 39013A00100283, 39013A00100276, 39013A00100277, 39013A00100275.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-034</id>
+    <title>Superficie quemada: 0,28 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-034"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,70 a 0,34. Parcelas: 39015A02600399.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-035</id>
+    <title>Superficie quemada: 0,28 ha en Sierra del Cordel y cabeceras del Nansa y del Saja, Valles altos del Nansa y Saja y Alto Campoo (Mancomunidad de Campoo-Cabuérniga)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-035"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,75 a 0,32. Parcelas: 39103A00100027.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-036</id>
+    <title>Superficie quemada: 0,27 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-036"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,76 a 0,33. Parcelas: 39015A02600399.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-037</id>
+    <title>Superficie quemada: 0,27 ha en Valles altos del Nansa y Saja y Alto Campoo (Hermandad de Campoo de Suso)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-037"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,66 a 0,34. Parcelas: 39032A06900019.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-038</id>
+    <title>Superficie quemada: 0,27 ha en Embalse del Ebro (Campoo de Yuso)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-038"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,65 a 0,32. Parcelas: 39017A00705001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-039</id>
+    <title>Superficie quemada: 0,26 ha en Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-039"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,75 a 0,33. Parcelas: 39022A04600006, 39022A04600011, 39022A04600020.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-040</id>
+    <title>Superficie quemada: 0,26 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-040"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,70 a 0,34. Parcelas: 39015A02600399.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-041</id>
+    <title>Superficie quemada: 0,26 ha en Sierra de Híjar, Valles altos del Nansa y Saja y Alto Campoo (Hermandad de Campoo de Suso)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-041"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,64 a 0,31. Parcelas: 39032A06700056.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-042</id>
+    <title>Superficie quemada: 0,25 ha en Sierra del Escudo (Luena)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-042"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,77 a 0,34. Parcelas: 39039A00901570, 39039A00900794.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-043</id>
+    <title>Pérdida de vegetación: 0,24 ha en Liébana, Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-043"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,69 a 0,31. Parcelas: 39022A00600004.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-044</id>
+    <title>Superficie quemada: 0,24 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-044"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,67 a 0,34. Parcelas: 39083A02800677.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-045</id>
+    <title>Superficie quemada: 0,24 ha en Montaña oriental (Vega de Pas)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-045"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,71 a 0,33. Parcelas: 39097A01400140.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-046</id>
+    <title>Superficie quemada: 0,24 ha en Liébana, Liébana (Vega de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-046"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,76 a 0,34. Parcelas: 39096A03900313.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-047</id>
+    <title>Pérdida de vegetación: 0,24 ha en Embalse del Ebro (Campoo de Yuso)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-047"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,66 a 0,34. Parcelas: 39017A30205699, 39017A30200012.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-048</id>
+    <title>Superficie quemada: 0,24 ha en Embalse del Ebro (Campoo de Yuso)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-048"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,63 a 0,31. Parcelas: 39017A00805008, 39017A00806429, 39017A00805029, 39017A00805009.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-049</id>
+    <title>Suelo desnudo o movimiento de tierras: 0,24 ha en Río y Embalse del Ebro (Valderredible)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-049"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,64 a 0,23. Parcelas: 39094A20100068.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-050</id>
+    <title>Pérdida de vegetación: 0,23 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-050"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,70 a 0,32. Parcelas: 39015A01500201.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-051</id>
+    <title>Pérdida de vegetación: 0,22 ha en Liébana, Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-051"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,69 a 0,33. Parcelas: 39022A00600004.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-052</id>
+    <title>Superficie quemada: 0,22 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-052"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,84 a 0,34. Parcelas: 39083A02200004.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-053</id>
+    <title>Suelo desnudo o movimiento de tierras: 0,22 ha en Sierra del Cordel y cabeceras del Nansa y del Saja, Valles altos del Nansa y Saja y Alto Campoo (Polaciones)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-053"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,76 a 0,27. Parcelas: 39053A01200707, 39053A01200504, 39053A01200708.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-054</id>
+    <title>Superficie quemada: 0,22 ha en Valles altos del Nansa y Saja y Alto Campoo (Hermandad de Campoo de Suso)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-054"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,65 a 0,32. Parcelas: 39032A06900001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-055</id>
+    <title>Pérdida de vegetación: 0,22 ha en Liébana, Liébana (Vega de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-055"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,65 a 0,23. Parcelas: 39096A04200077.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-056</id>
+    <title>Pérdida de vegetación: 0,22 ha en Embalse del Ebro (Campoo de Yuso)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-056"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,66 a 0,33. Parcelas: 39017A10700064.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-057</id>
+    <title>Superficie quemada: 0,21 ha en Liébana, Liébana (Tresviso)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-057"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,67 a 0,32. Parcelas: 39088A00100283, 39088A00100281, 39088A00100282.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-058</id>
+    <title>Superficie quemada: 0,21 ha en Desfiladero de la Hermida, Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-058"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,78 a 0,34. Parcelas: 39022A05900146, 39022A05900255, 39022A05900252.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-059</id>
+    <title>Superficie quemada: 0,21 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-059"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,68 a 0,33. Parcelas: 39015A02400218.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-060</id>
+    <title>Superficie quemada: 0,21 ha en Liébana, Rio Deva (Cabezón de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-060"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,70 a 0,32. Parcelas: 39013A02300169.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-061</id>
+    <title>Superficie quemada: 0,21 ha en Liébana, Liébana (Vega de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-061"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,64 a 0,31. Parcelas: 39096A04100247, 39096A04100244, 39096A04100249.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-062</id>
+    <title>Superficie quemada: 0,20 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-062"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,68 a 0,29. Parcelas: 39083A00700001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-063</id>
+    <title>Superficie quemada: 0,20 ha en Liébana (Cabezón de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-063"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,72 a 0,31. Parcelas: 39013A00100340, 39013A00100657, 39013A00100335.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-064</id>
+    <title>Superficie quemada: 0,20 ha en Montaña oriental (Vega de Pas)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-064"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,66 a 0,33. Parcelas: 39097A01300019.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202610-065</id>
+    <title>Suelo desnudo o movimiento de tierras: 0,20 ha en Río y Embalse del Ebro (Valderredible)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202610-065"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,79 a 0,26. Parcelas: 39094A18105042.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202609-001</id>
+    <title>Superficie quemada: 8,45 ha en Sierra del Cordel y cabeceras del Nansa y del Saja, Valles altos del Nansa y Saja y Alto Campoo (Mancomunidad de Campoo-Cabuérniga)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202609-001"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,80 a 0,34. Parcelas: 39103A00100035.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202609-002</id>
+    <title>Suelo desnudo o movimiento de tierras: 1,79 ha en Hoces del Ebro (Valderredible)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202609-002"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,72 a 0,19. Parcelas: 39094A13100078, 39094A13100082, 39094A13100083.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202609-003</id>
+    <title>Suelo desnudo o movimiento de tierras: 1,30 ha en Hoces del Ebro (Valderredible)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202609-003"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,73 a 0,23. Parcelas: 39094A13100046, 39094A13100054.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202609-004</id>
+    <title>Suelo desnudo o movimiento de tierras: 0,95 ha en Hoces del Ebro (Valderredible)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202609-004"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,70 a 0,26. Parcelas: 39094A13100087, 39094A13100086, 39094A13100088, 39094A13100089.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202609-005</id>
+    <title>Pérdida de vegetación: 0,36 ha en Hoces del Ebro (Valderredible)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202609-005"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,69 a 0,31. Parcelas: 39094A13100235.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202609-006</id>
+    <title>Pérdida de vegetación: 0,27 ha en Embalse del Ebro (Las Rozas de Valdearroyo)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202609-006"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,66 a 0,33. Parcelas: 39065A01100253, 39065A01100254.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202609-007</id>
+    <title>Pérdida de vegetación: 0,21 ha en Desfiladero de la Hermida, Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202609-007"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,69 a 0,30. Parcelas: 39022A01200262.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202609-008</id>
+    <title>Superficie quemada: 0,20 ha en Sierra del Cordel y cabeceras del Nansa y del Saja, Valles altos del Nansa y Saja y Alto Campoo (Mancomunidad de Campoo-Cabuérniga)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202609-008"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,80 a 0,35. Parcelas: 39103A00100035.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202609-009</id>
+    <title>Superficie quemada: 0,20 ha en Sierra del Cordel y cabeceras del Nansa y del Saja, Valles altos del Nansa y Saja y Alto Campoo (Mancomunidad de Campoo-Cabuérniga)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202609-009"/>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,81 a 0,32. Parcelas: 39103A00100033.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-001</id>
+    <title>Superficie quemada: 8,54 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-001"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,72 a 0,27. Parcelas: 39083A00700001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-002</id>
+    <title>Superficie quemada: 1,84 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-002"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,68 a 0,30. Parcelas: 39083A00700001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-003</id>
+    <title>Superficie quemada: 1,11 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-003"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,67 a 0,27. Parcelas: 39083A00700001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-004</id>
+    <title>Superficie quemada: 0,89 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-004"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,66 a 0,32. Parcelas: 39083A00700001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-005</id>
+    <title>Superficie quemada: 0,86 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-005"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,72 a 0,29. Parcelas: 39083A00700001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-006</id>
+    <title>Suelo desnudo o movimiento de tierras: 0,75 ha en Hoces del Ebro (Valderredible)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-006"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,77 a 0,28. Parcelas: 39094A13100209.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-007</id>
+    <title>Superficie quemada: 0,53 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-007"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,78 a 0,31. Parcelas: 39083A00700001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-008</id>
+    <title>Superficie quemada: 0,48 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-008"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,72 a 0,29. Parcelas: 39083A00700001, 39083A00700026.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-009</id>
+    <title>Superficie quemada: 0,42 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-009"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,66 a 0,25. Parcelas: 39083A00700001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-010</id>
+    <title>Superficie quemada: 0,37 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-010"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,70 a 0,30. Parcelas: 39083A00700001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-011</id>
+    <title>Pérdida de vegetación: 0,52 ha en Desfiladero de la Hermida, Liébana (Peñarrubia)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-011"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,69 a 0,31. Parcelas: 39049A00900816.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-012</id>
+    <title>Pérdida de vegetación: 0,36 ha en Desfiladero de la Hermida, Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-012"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,70 a 0,31. Parcelas: 39022A01200261.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-013</id>
+    <title>Superficie quemada: 0,23 ha en Hoces del Ebro (Valderredible)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-013"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,69 a 0,32. Parcelas: 39094A13100033.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-014</id>
+    <title>Suelo desnudo o movimiento de tierras: 0,28 ha en Marismas de Santoña, Victoria y Joyel y Ría de Ajo (Argoños)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-014"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,81 a 0,20. Parcelas: 0119010VP6101N, 0119007VP6101N, 0119002VP6101N.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-015</id>
+    <title>Superficie quemada: 1,85 ha en Sierra del Cordel y cabeceras del Nansa y del Saja, Valles altos del Nansa y Saja y Alto Campoo (Mancomunidad de Campoo-Cabuérniga)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-015"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,81 a 0,32. Parcelas: 39103A00100033.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-016</id>
+    <title>Superficie quemada: 0,27 ha en Montaña oriental (Soba)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-016"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,70 a 0,31. Parcelas: 39083A00700001.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202608-017</id>
+    <title>Pérdida de vegetación: 0,20 ha en Embalse del Ebro (Campoo de Yuso)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202608-017"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <summary>Provisional. Sin expediente conocido. NDVI de 0,78 a 0,34. Parcelas: 39017A10700065.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202607-001</id>
+    <title>Superficie quemada: 0,68 ha en Sierra de Peña Sagra, Valles altos del Nansa y Saja y Alto Campoo (Rionansa, Polaciones)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202607-001"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,77 a 0,33. Parcelas: 39063A01000006, 39053A01000418.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202607-002</id>
+    <title>Superficie quemada: 0,67 ha en Liébana, Liébana (Vega de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202607-002"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,73 a 0,24. Parcelas: 39096A01700189.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202607-003</id>
+    <title>Pérdida de vegetación: 1,68 ha en Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202607-003"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,85 a 0,29. Parcelas: 39022A04200127, 39022A04209086.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202607-004</id>
+    <title>Pérdida de vegetación: 0,60 ha en Desfiladero de la Hermida, Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202607-004"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,64 a 0,28. Parcelas: 39022A01200261.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202607-006</id>
+    <title>Pérdida de vegetación: 0,40 ha en Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202607-006"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,78 a 0,32. Parcelas: 39022A04200127, 39022A04209086.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202607-007</id>
+    <title>Pérdida de vegetación: 0,29 ha en Liébana, Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202607-007"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,75 a 0,28. Parcelas: 39022A00600003.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202607-008</id>
+    <title>Pérdida de vegetación: 0,20 ha en Liébana (Cillorigo de Liébana)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202607-008"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,79 a 0,29. Parcelas: 39022A04200127, 39022A04209086.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202606-004</id>
+    <title>Pérdida de vegetación: 1,83 ha en Desfiladero de la Hermida, Liébana (Peñarrubia)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202606-004"/>
+    <updated>2026-07-31T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,67 a 0,30. Parcelas: 39049A00900816.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/#CN-202606-006</id>
+    <title>Superficie quemada: 0,76 ha en Liébana, Liébana (Camaleño)</title>
+    <link href="https://asensio94.github.io/centinela-natura/#CN-202606-006"/>
+    <updated>2026-07-31T00:00:00Z</updated>
+    <summary>Confirmada. Sin expediente conocido. NDVI de 0,69 a 0,32. Parcelas: 39015A01500201.</summary>
+  </entry>
+</feed>

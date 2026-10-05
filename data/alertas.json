@@ -20984,7 +20984,7 @@
    "pixeles": 358,
    "ha": 4.17,
    "ndvi_ref": 0.7,
-   "ndvi_actual": 0.296,
+   "ndvi_actual": 0.298,
    "obs_actual": 11,
    "centro": [
     42.96878,
@@ -27520,7 +27520,7 @@
    "pixeles": 479,
    "ha": 5.67,
    "ndvi_ref": 0.872,
-   "ndvi_actual": 0.275,
+   "ndvi_actual": 0.293,
    "obs_actual": 13,
    "centro": [
     43.14217,
@@ -70513,7 +70513,7 @@
    "pixeles": 68,
    "ha": 0.9,
    "ndvi_ref": 0.675,
-   "ndvi_actual": 0.314,
+   "ndvi_actual": 0.316,
    "obs_actual": 3,
    "centro": [
     42.98927,
@@ -86382,7 +86382,7 @@
    "pixeles": 8343,
    "ha": 85.03,
    "ndvi_ref": 0.664,
-   "ndvi_actual": 0.329,
+   "ndvi_actual": 0.334,
    "obs_actual": 3,
    "centro": [
     43.15862,
@@ -112596,7 +112596,7 @@
    "pixeles": 388,
    "ha": 3.88,
    "ndvi_ref": 0.763,
-   "ndvi_actual": 0.311,
+   "ndvi_actual": 0.308,
    "obs_actual": 3,
    "centro": [
     43.15891,
@@ -116570,7 +116570,7 @@
    "pixeles": 188,
    "ha": 1.88,
    "ndvi_ref": 0.774,
-   "ndvi_actual": 0.32,
+   "ndvi_actual": 0.321,
    "obs_actual": 4,
    "centro": [
     43.13874,
@@ -118547,7 +118547,7 @@
    "pixeles": 88,
    "ha": 0.88,
    "ndvi_ref": 0.735,
-   "ndvi_actual": 0.31,
+   "ndvi_actual": 0.312,
    "obs_actual": 3,
    "centro": [
     43.15311,
@@ -118876,7 +118876,7 @@
    "pixeles": 767,
    "ha": 8.32,
    "ndvi_ref": 0.654,
-   "ndvi_actual": 0.319,
+   "ndvi_actual": 0.324,
    "obs_actual": 3,
    "centro": [
     43.15922,
@@ -121079,7 +121079,7 @@
    "pixeles": 58,
    "ha": 0.58,
    "ndvi_ref": 0.647,
-   "ndvi_actual": 0.311,
+   "ndvi_actual": 0.315,
    "obs_actual": 3,
    "centro": [
     43.16015,
@@ -122772,7 +122772,7 @@
    "pixeles": 49,
    "ha": 0.49,
    "ndvi_ref": 0.726,
-   "ndvi_actual": 0.31,
+   "ndvi_actual": 0.312,
    "obs_actual": 3,
    "centro": [
     43.1522,
@@ -128435,7 +128435,7 @@
    "pixeles": 26,
    "ha": 0.26,
    "ndvi_ref": 0.745,
-   "ndvi_actual": 0.311,
+   "ndvi_actual": 0.322,
    "obs_actual": 3,
    "centro": [
     43.15797,
@@ -128628,7 +128628,7 @@
    "pixeles": 26,
    "ha": 0.26,
    "ndvi_ref": 0.722,
-   "ndvi_actual": 0.314,
+   "ndvi_actual": 0.316,
    "obs_actual": 3,
    "centro": [
     43.15684,
@@ -129270,7 +129270,7 @@
    "pixeles": 24,
    "ha": 0.24,
    "ndvi_ref": 0.635,
-   "ndvi_actual": 0.325,
+   "ndvi_actual": 0.328,
    "obs_actual": 3,
    "centro": [
     43.15735,
@@ -129898,7 +129898,7 @@
    "pixeles": 22,
    "ha": 0.22,
    "ndvi_ref": 0.732,
-   "ndvi_actual": 0.302,
+   "ndvi_actual": 0.3,
    "obs_actual": 3,
    "centro": [
     43.15262,
@@ -148146,7 +148146,7 @@
    "pixeles": 42,
    "ha": 0.42,
    "ndvi_ref": 0.634,
-   "ndvi_actual": 0.311,
+   "ndvi_actual": 0.308,
    "obs_actual": 5,
    "centro": [
     43.1618,
@@ -161341,7 +161341,7 @@
    "pixeles": 51,
    "ha": 0.61,
    "ndvi_ref": 0.797,
-   "ndvi_actual": 0.301,
+   "ndvi_actual": 0.304,
    "obs_actual": 15,
    "centro": [
     43.1585,
@@ -166521,7 +166521,7 @@
    "pixeles": 40,
    "ha": 0.4,
    "ndvi_ref": 0.778,
-   "ndvi_actual": 0.317,
+   "ndvi_actual": 0.316,
    "obs_actual": 15,
    "centro": [
     43.15828,
@@ -173140,7 +173140,7 @@
    "pixeles": 33,
    "ha": 0.36,
    "ndvi_ref": 0.704,
-   "ndvi_actual": 0.313,
+   "ndvi_actual": 0.314,
    "obs_actual": 10,
    "centro": [
     43.24217,
@@ -186547,7 +186547,7 @@
    "pixeles": 32,
    "ha": 0.32,
    "ndvi_ref": 0.807,
-   "ndvi_actual": 0.324,
+   "ndvi_actual": 0.328,
    "obs_actual": 9,
    "centro": [
     43.09499,
@@ -188396,7 +188396,7 @@
    "pixeles": 27,
    "ha": 0.27,
    "ndvi_ref": 0.649,
-   "ndvi_actual": 0.317,
+   "ndvi_actual": 0.322,
    "obs_actual": 10,
    "centro": [
     43.03712,
@@ -190749,7 +190749,7 @@
    "pixeles": 24,
    "ha": 0.24,
    "ndvi_ref": 0.644,
-   "ndvi_actual": 0.232,
+   "ndvi_actual": 0.266,
    "obs_actual": 12,
    "centro": [
     42.79167,
@@ -191635,7 +191635,7 @@
    "pixeles": 22,
    "ha": 0.22,
    "ndvi_ref": 0.764,
-   "ndvi_actual": 0.266,
+   "ndvi_actual": 0.271,
    "obs_actual": 10,
    "centro": [
     43.10271,
@@ -194473,16 +194473,16 @@
     "2026-10"
    ],
    "pixeles_zona": 14699109,
-   "pixeles_evaluables": 12425984,
+   "pixeles_evaluables": 12426845,
    "fraccion_evaluable": 0.845,
    "pixeles_agua_previa": 701790,
    "meses_agua": 24,
-   "pixeles_candidatos": 24178,
-   "cambios": 121,
-   "ha_cambios": 190.9
+   "pixeles_candidatos": 22966,
+   "cambios": 118,
+   "ha_cambios": 181.7
   }
  },
  "expedientes_desde": "2026-07-10",
  "ultima_ventana": "2026-10",
- "actualizado": "2026-10-04T13:22:05+00:00"
+ "actualizado": "2026-10-05T16:10:25+00:00"
 }

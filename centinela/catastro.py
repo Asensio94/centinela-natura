@@ -121,7 +121,8 @@ def _leer_gml(f) -> tuple[list[str], list[float], list]:
         if ref and polis:
             g = shapely.make_valid(shapely.MultiPolygon(polis) if len(polis) > 1 else polis[0])
             refs.append(ref)
-            areas.append(float(el.findtext(_CP + "areaValue") or 0))
+            # Algunas parcelas vienen sin superficie: se mide la geometría.
+            areas.append(float(el.findtext(_CP + "areaValue") or 0) or g.area)
             geoms.append(g)
         el.clear()
     return refs, areas, geoms

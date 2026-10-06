@@ -34,6 +34,11 @@ def _ventana_txt(meses: list[str]) -> str:
     return f"{MESES[m0 - 1]} de {y0}–{MESES[m1 - 1]} de {y1}"
 
 
+def _fecha_txt(f: str) -> str:
+    y, m, d = map(int, f.split("-"))
+    return f"{d} de {MESES[m - 1]} de {y}"
+
+
 def _num(x: float, dec: int = 1) -> str:
     s = f"{x:,.{dec}f}"
     return s.replace(",", "·").replace(".", ",").replace("·", ".")
@@ -81,6 +86,7 @@ ESTADOS = {
     "confirmada": "Confirmada",
     "revertida": "Revertida",
     "descartada": "Descartada",
+    "fusionada": "Fusionada",
 }
 
 
@@ -135,20 +141,24 @@ def construir() -> None:
     acts = [a for a in reg["alertas"] if a["estado"] in al.ACTIVAS]
     ult = reg.get("ultima_ventana")
     ej = reg["ejecuciones"].get(ult, {}) if ult else {}
+    # En la página no van las fusionadas: un enlace antiguo a una de ellas lleva a la que
+    # la absorbió. El alertas.geojson descargable sí las conserva.
+    visibles = {**gj, "features": [f for f in gj["features"] if f["properties"]["estado"] != "fusionada"]}
     datos = {
-        "alertas": _ligera(gj), "espacios": esp,
+        "alertas": _ligera(visibles), "espacios": esp,
+        "redir": {a["id"]: a["fusionada_en"] for a in reg["alertas"] if a.get("fusionada_en")},
         "clases": clasificacion.CLASES, "estados": ESTADOS, "cruces": expedientes.ESTADOS,
         "observatorio": expedientes.OBSERVATORIO_WEB, "sede": catastro.SEDE,
     }
     resumen = {
         "activas": len(acts),
         "confirmadas": sum(a["estado"] == "confirmada" for a in acts),
-        "sin_expediente": sum(a.get("cruce") == "sin_expediente" for a in acts),
+        "con_expediente": sum(a.get("cruce") in ("resolucion", "tramitacion") for a in acts),
         "ha": _num(sum(a["ha"] for a in acts), 1),
         "ventana": _ventana_txt(ej.get("ventana") or []),
         "evaluable": f"{round(100 * ej.get('fraccion_evaluable', 0))} %" if ej else "—",
         "expedientes_desde": reg.get("expedientes_desde") or "—",
-        "actualizado": (reg.get("actualizado") or ahora)[:10],
+        "actualizado": _fecha_txt((reg.get("actualizado") or ahora)[:10]),
         "zona_ha": _num(zona.mascara().sum() * config.PIXEL_HA, 0),
         "n_espacios": len(esp["features"]),
     }
@@ -237,7 +247,6 @@ h1 .cruz{color:var(--sobreimpresion)}
 .cifra{padding:10px 18px 10px 0;margin-right:18px;display:grid;gap:2px}
 .cifra b{font:600 30px/1 "IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
 .cifra span{font-size:12.5px;color:var(--gris)}
-.cifra.alarma b{color:var(--sin)}
 .cifra.meta b{font-size:17px;line-height:1.75}
 main{max-width:1440px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(360px,1fr);gap:18px;align-items:start}
 #mapa{position:sticky;top:12px;height:calc(100vh - 24px);min-height:420px;border:1px solid var(--linea);background:var(--papel)}
@@ -275,6 +284,8 @@ dl.medidas dd{margin:0;font:500 15px "IBM Plex Mono",monospace;font-variant-nume
 .parcelas ul{margin:0;padding:0;list-style:none;display:grid;gap:3px;font-size:14px}
 .parcelas li{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline}
 .parcelas li .dato{font-size:12.5px;color:var(--gris)}
+.parcelas details summary{cursor:pointer;font-size:13px;color:var(--gris);width:max-content}
+.parcelas details[open] summary{margin-bottom:3px}
 .parcelas li a.dato{color:var(--tinta)}
 .acciones{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px}
 .acciones button{font:inherit;background:none;border:0;padding:0;color:inherit;text-decoration:underline;text-decoration-color:var(--sobreimpresion);text-underline-offset:3px;cursor:pointer}
@@ -308,10 +319,9 @@ footer{max-width:1440px;margin:0 auto;padding:16px 16px 40px;font-size:13px;colo
   <div class="cifras">
     <div class="cifra"><b>__ACTIVAS__</b><span>alertas activas</span></div>
     <div class="cifra"><b>__CONFIRMADAS__</b><span>confirmadas</span></div>
-    <div class="cifra alarma"><b>__SIN_EXPEDIENTE__</b><span>sin expediente conocido</span></div>
     <div class="cifra"><b>__HA__</b><span>hectáreas afectadas</span></div>
-    <div class="cifra meta"><b class="dato">__VENTANA__</b><span>ventana comparada · __EVALUABLE__ de la zona con cielo suficiente</span></div>
-    <div class="cifra meta"><b class="dato">__ACTUALIZADO__</b><span>última actualización</span></div>
+    <div class="cifra"><b>__CON_EXPEDIENTE__</b><span>con un expediente que cita sus parcelas</span></div>
+    <div class="cifra meta"><b class="dato">__VENTANA__</b><span>ventana comparada · __EVALUABLE__ de la zona con cielo suficiente · actualizado el __ACTUALIZADO__</span></div>
   </div>
 </header>
 
@@ -345,7 +355,7 @@ footer{max-width:1440px;margin:0 auto;padding:16px 16px 40px;font-size:13px;colo
     <p>Todo lo que ocupe menos de la unidad mínima: una casa aislada, una pista estrecha o un vallado. Tampoco ve lo que ocurre bajo cubierta arbórea sin quitarla, ni los cambios en zonas que no eran vegetación densa (roquedo, arenales, láminas de agua), ni las orillas que el agua cubre y descubre (embalses, marismas), ni los meses de nieve, sombra invernal o nube persistente, que se quedan sin evaluar. Las alertas en tierras de cultivo pueden ser rotaciones.</p>
     <h3>Estados</h3>
     <p>Las alertas marcadas como «detectable desde» salieron al reconstruir las ventanas anteriores a la puesta en marcha, con la fecha en que se habrían visto.</p>
-    <p><strong>Provisional</strong>: visto una vez. <strong>Confirmada</strong>: sigue ahí en la ventana de un mes posterior. <strong>Descartada</strong>: la vegetación volvió antes de confirmarse, no se volvió a ver, o estaba en la orilla de un embalse o era agua nueva sobre lo que ya era agua (cambios del nivel). <strong>Revertida</strong>: volvió después.</p>
+    <p><strong>Provisional</strong>: visto una vez. <strong>Confirmada</strong>: sigue ahí en la ventana de un mes posterior. <strong>Descartada</strong>: la vegetación volvió antes de confirmarse, no se volvió a ver, o estaba en la orilla de un embalse o era agua nueva sobre lo que ya era agua (cambios del nivel). <strong>Revertida</strong>: volvió después. <strong>Fusionada</strong>: era un trozo de otra alerta. Cuando la nieve o las nubes dejan parte de un cambio sin evaluar, sale en trozos que luego crecen hasta tocarse. Si están a menos de 15 metros y nacieron en ventanas que se solapan, se unen en la más antigua. Las fusionadas no se muestran aquí, pero siguen en el registro, y su enlace lleva a la alerta que las absorbió.</p>
   </div>
   <div>
     <h2>Parámetros</h2>
@@ -385,8 +395,14 @@ const capas = {};
 const todas = D.alertas.features;
 const capaAlertas = L.layerGroup().addTo(mapa);
 
-for (const [k,v] of Object.entries(D.cruces)) document.getElementById("f-cruce").insertAdjacentHTML("beforeend",`<option value="${k}">${esc(v)}</option>`);
-for (const [k,v] of Object.entries(D.clases)) document.getElementById("f-clase").insertAdjacentHTML("beforeend",`<option value="${k}">${esc(v)}</option>`);
+// Las opciones llevan cuántas alertas activas hay en cada una; las vacías no se ofrecen.
+const activa = p => p.estado==="provisional" || p.estado==="confirmada";
+function opciones(sel, nombres, campo){
+  const n = {}; for (const f of todas) if (activa(f.properties)) n[f.properties[campo]] = (n[f.properties[campo]]||0)+1;
+  for (const [k,v] of Object.entries(nombres)) if (n[k]) document.getElementById(sel).insertAdjacentHTML("beforeend",`<option value="${k}">${esc(v)} (${n[k]})</option>`);
+}
+opciones("f-cruce", D.cruces, "cruce");
+opciones("f-clase", D.clases, "clase");
 
 const ordenEstado = {confirmada:0,provisional:1,revertida:2,descartada:3};
 const ordenCruce = {sin_expediente:0,pendiente:1,tramitacion:2,resolucion:3};
@@ -399,21 +415,25 @@ function ficha(p){
       <figure><img loading="lazy" src="${p.foto_despues}" alt="Imagen de satélite después del cambio, ${fecha(p.fecha_despues)}"><figcaption>Después · ${fecha(p.fecha_despues)}</figcaption></figure>
     </div>` : `<p class="nota">${esc(p.clase_nota || "Las fotos se generan en la próxima pasada con cielo despejado.")}</p>`;
   const ha = x => num(x, x < 10 ? 2 : 0);
-  const parc = !p.parcelas ? `<p class="nota">Las parcelas catastrales se consultan en la próxima ejecución.</p>`
-    : !p.parcelas.length ? `<p class="nota">No cae en ninguna parcela del Catastro: dominio público o terreno sin catastrar.</p>`
-    : `<div class="parcelas"><h3>Parcelas catastrales</h3><ul>${p.parcelas.map(c=>`<li>
+  const linea = c => `<li>
         <a class="dato" href="${D.sede.replace("{}",encodeURIComponent(c.refcat))}">${esc(c.refcat)}</a>
         <span>${c.tipo==="rustica" ? `polígono ${c.poligono}, parcela ${c.parcela}` : "urbana"}${c.descuento ? " (camino o cauce público)" : ""}</span>
-        <span class="dato">${ha(c.ha_alerta)} de ${ha(c.ha_parcela)} ha</span></li>`).join("")}</ul>
-      ${p.n_parcelas > p.parcelas.length ? `<p class="nota">Y ${p.n_parcelas-p.parcelas.length} parcelas más.</p>` : ""}
+        <span class="dato">${ha(c.ha_alerta)} ha de una parcela de ${ha(c.ha_parcela)}</span></li>`;
+  const lista = p.parcelas || [], resto = lista.slice(3), mas = (p.n_parcelas||0) - lista.length;
+  const parc = !p.parcelas ? `<p class="nota">Las parcelas catastrales se consultan en la próxima ejecución.</p>`
+    : !lista.length ? `<p class="nota">No cae en ninguna parcela del Catastro: dominio público o terreno sin catastrar.</p>`
+    : `<div class="parcelas"><h3>Parcelas catastrales</h3><ul>${lista.slice(0,3).map(linea).join("")}</ul>
+      ${resto.length ? `<details><summary>${resto.length + Math.max(mas,0)} parcelas más</summary><ul>${resto.map(linea).join("")}</ul>${mas>0 ? `<p class="nota">Y ${mas} con menos superficie.</p>` : ""}</details>` : ""}
       ${p.fraccion_parcelada < .95 ? `<p class="nota">El ${Math.round(100*(1-p.fraccion_parcelada))} % del cambio cae fuera de toda parcela: cauces, caminos, carreteras, costa o terreno sin catastrar.</p>` : ""}</div>`;
-  const ctx = p.expedientes_municipio ? ` En ${esc(p.municipios.join(", "))} hay ${p.expedientes_municipio === 1 ? "un expediente que no identifica" : p.expedientes_municipio+" expedientes que no identifican"} parcelas y no se pueden cruzar.` : "";
+  const nm = p.expedientes_municipio;
+  const ctx = nm ? ` En ${esc(p.municipios.join(", "))} ${nm===1 ? "hay otro expediente que no identifica parcelas y no se puede cruzar" : `hay ${nm} expedientes más que no identifican parcelas y no se pueden cruzar`}.` : "";
   const ex = (p.expedientes||[]).length ? `<ul class="exped">${p.expedientes.map(x=>`<li><a href="${esc(x.url)}">${esc(x.titulo)}</a><br><span class="dato">${esc(x.fuente)} · ${fecha(x.fecha)}${x.sentido_etiqueta && x.grupo==="resoluciones" ? " · "+esc(x.sentido_etiqueta):""} · cita ${x.parcelas.map(esc).join(", ")}</span></li>`).join("")}</ul>`
     : p.parcelas ? `<p class="nota">Ningún anuncio ni resolución leído por el <a href="${D.observatorio}">observatorio</a> cita estas parcelas.${ctx}</p>` : "";
+  const unidas = (p.unidas||[]).length ? `<p class="nota">Reúne ${p.unidas.length+1} trozos del mismo cambio que se detectaron por separado (${p.unidas.map(esc).join(", ")}).</p>` : "";
   return `<article class="ficha" id="${p.id}" data-id="${p.id}">
     <header>
       <span class="sello ${p.estado}">${esc(D.estados[p.estado])}</span>
-      <span class="sello ${p.cruce}">${esc(D.cruces[p.cruce]||"")}</span>
+      ${p.cruce==="resolucion"||p.cruce==="tramitacion" ? `<span class="sello ${p.cruce}">${esc(D.cruces[p.cruce])}</span>` : ""}
       <span class="id dato">${p.id}</span>
       <h2>${esc(titulo)}</h2>
     </header>
@@ -425,6 +445,7 @@ function ficha(p){
       <div><dt>${p.reconstruida ? "Detectable desde" : "Primera detección"}</dt><dd>${fecha(p.detectada)}</dd></div>
       <div><dt>Uso anterior (CORINE 2018)</dt><dd style="font-family:inherit">${esc(p.cubierta_previa?.nombre || "—")}</dd></div>
     </dl>
+    ${unidas}
     ${parc}
     ${ex}
     <div class="acciones">
@@ -461,22 +482,30 @@ function filtrar(){
   }
 }
 
-function seleccionar(id, zoom){
+function seleccionar(id, zoom, animar=true){
   document.querySelectorAll(".ficha.sel").forEach(e=>e.classList.remove("sel"));
   const el = document.getElementById(id);
   if (el){ el.classList.add("sel"); if(!zoom) el.scrollIntoView({block:"start"}); }
-  if (zoom && capas[id]){ mapa.fitBounds(capas[id].getBounds(),{maxZoom:17,padding:[40,40]}); if(mapa.hasLayer(osm)){mapa.removeLayer(osm); pnoa.addTo(mapa);} }
+  if (zoom && capas[id]){ mapa.fitBounds(capas[id].getBounds(),{maxZoom:17,padding:[40,40],animate:animar}); if(mapa.hasLayer(osm)){mapa.removeLayer(osm); pnoa.addTo(mapa);} }
   history.replaceState(null,"","#"+id);
 }
 
 document.getElementById("fichas").addEventListener("click",e=>{
-  const b = e.target.closest("[data-zoom]"); if (b) seleccionar(b.dataset.zoom,true);
+  const b = e.target.closest("[data-zoom]"); if (b){ tocado = true; seleccionar(b.dataset.zoom,true); }
 });
 for (const id of ["f-estado","f-cruce","f-clase"]) document.getElementById(id).addEventListener("change",filtrar);
 filtrar();
-const h = location.hash.slice(1);
-if (h){ if(!capas[h]){ document.getElementById("f-estado").value="todas"; filtrar(); } if(capas[h]) seleccionar(h,true); }
-else mapa.fitBounds(capaNatura.getBounds(),{padding:[10,10]});
+// El mapa se encuadra cuando ya tiene su tamaño: si la página aún no ha acabado de
+// maquetar, Leaflet calcula el zoom para un contenedor sin altura. Mientras nadie lo
+// toque, se vuelve a encuadrar cada vez que el contenedor cambia de tamaño, y sin
+// animación: un invalidateSize a mitad de la animación la deja en un zoom intermedio.
+let h = location.hash.slice(1), tocado = false;
+if (D.redir[h]) { h = D.redir[h]; history.replaceState(null,"","#"+h); }
+if (h && !capas[h]) { document.getElementById("f-estado").value="todas"; filtrar(); }
+const encuadrar = () => capas[h] ? seleccionar(h,true,false) : mapa.fitBounds(capaNatura.getBounds(),{padding:[10,10],animate:false});
+for (const ev of ["mousedown","touchstart","wheel","keydown"]) document.getElementById("mapa").addEventListener(ev,()=>{tocado=true},{passive:true});
+encuadrar();
+new ResizeObserver(()=>{ mapa.invalidateSize(); if(!tocado) encuadrar(); }).observe(document.getElementById("mapa"));
 </script>
 </body>
 </html>

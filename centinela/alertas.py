@@ -8,6 +8,10 @@ un error de nubes; también se descarta si no se vuelve a ver en ninguna ventana
 primera que ya no comparte meses con la suya. Si vuelve después de confirmada, pasa a
 revertida. Las alertas no se borran nunca: el registro es acumulativo y cada cambio de
 estado lleva su fecha.
+
+Un mismo cambio puede salir en trozos cuando la nieve o las nubes dejan parte de sus
+píxeles sin evaluar. Los trozos que acaban tocándose se unen en la alerta más antigua, y
+las demás quedan como «fusionadas», con el identificador de la que las absorbió.
 """
 from __future__ import annotations
 
@@ -16,7 +20,7 @@ import time
 from datetime import date, datetime, timezone
 
 import numpy as np
-from shapely import make_valid
+from shapely import STRtree, make_valid
 from shapely.geometry import mapping, shape
 from shapely.ops import unary_union
 from rich.console import Console
@@ -32,6 +36,8 @@ NDVI_RECUPERADA = config.NDVI_ACTUAL_MAX + 0.15
 # no quepa se analiza al día siguiente; las más grandes van primero.
 ANALISIS_MINUTOS = 45
 CATASTRO_MINUTOS = 20
+# Hueco máximo entre dos trozos del mismo cambio: píxel y medio.
+FUSION_M = 15
 
 
 def cargar() -> dict:
@@ -171,10 +177,11 @@ def analizar_pendientes(alertas: list[dict], hoy: date, minutos: float = ANALISI
 def parcelas_pendientes(alertas: list[dict], minutos: float = CATASTRO_MINUTOS) -> int:
     """Parcelas catastrales de las alertas que no las tienen o que han crecido desde entonces.
 
-    Las descartadas no se consultan: no se publican como cambio.
+    Las descartadas y las fusionadas no se consultan: no se publican como cambio.
     """
     t0, hechas = time.monotonic(), 0
-    pend = [a for a in alertas if a["estado"] != "descartada" and a.get("parcelas_px") != a["pixeles"]]
+    pend = [a for a in alertas if a["estado"] not in ("descartada", "fusionada")
+            and a.get("parcelas_px") != a["pixeles"]]
     for a in sorted(pend, key=lambda a: -a["pixeles"]):
         if time.monotonic() - t0 > minutos * 60:
             con.log(f"[yellow]{len(pend) - hechas} alertas sin parcelas; siguen mañana")
@@ -185,6 +192,64 @@ def parcelas_pendientes(alertas: list[dict], minutos: float = CATASTRO_MINUTOS) 
         except Exception as e:                      # sin Catastro, la vigilancia sigue
             con.log(f"[yellow]{a['id']}: sin parcelas ({e})")
     return hechas
+
+
+def fusionar(alertas: list[dict], hoy: date) -> int:
+    """Une las alertas activas que son trozos del mismo cambio. Devuelve cuántas absorbe.
+
+    Dos alertas se unen si están a menos de FUSION_M y nacieron en ventanas que se solapan.
+    Una obra nueva junto a una quema de hace un año sigue siendo otra alerta.
+    """
+    act = [a for a in alertas if a["estado"] in ACTIVAS]
+    geoms = [_geom_utm(a) for a in act]
+    padre = list(range(len(act)))
+
+    def raiz(i):
+        while padre[i] != i:
+            padre[i] = padre[padre[i]]
+            i = padre[i]
+        return i
+
+    arbol = STRtree(geoms)
+    for i, j in zip(*arbol.query(geoms, predicate="dwithin", distance=FUSION_M)):
+        if i < j and abs(_meses_entre(act[i]["primera"], act[j]["primera"])) < config.VENTANA_MESES:
+            padre[raiz(i)] = raiz(j)
+    grupos: dict[int, list[int]] = {}
+    for i in range(len(act)):
+        grupos.setdefault(raiz(i), []).append(i)
+
+    absorbidas = 0
+    for grupo in grupos.values():
+        if len(grupo) < 2:
+            continue
+        grupo.sort(key=lambda i: (act[i]["primera"], act[i]["detectada"], -act[i]["pixeles"]))
+        s, otras = act[grupo[0]], [act[i] for i in grupo[1:]]
+        g = make_valid(unary_union([geoms[i] for i in grupo]))
+        peso = [geoms[i].area for i in grupo]
+        media = lambda k: round(float(np.average([act[i][k] for i in grupo], weights=peso)), 3)
+        ids = [o["id"] for o in otras]
+        if s["estado"] == "provisional" and any(o["estado"] == "confirmada" for o in otras):
+            s["estado"] = "confirmada"
+            s["historial"].append({"fecha": hoy.isoformat(), "estado": "confirmada"})
+        s["meses"] = sorted(set().union(*(act[i]["meses"] for i in grupo)))
+        s.update(geometry=_geojson(g), pixeles=round(g.area / 100), ha=round(g.area / 1e4, 2),
+                 ultima=max(s["meses"]), ndvi_ref=media("ndvi_ref"), ndvi_actual=media("ndvi_actual"),
+                 espacios=zona.espacios_de(g), municipios=zona.municipios_de(g),
+                 unidas=sorted(set(s.get("unidas", [])) | set(ids)
+                               | {x for o in otras for x in o.get("unidas", [])}),
+                 # Otra geometría: fotos y clase se rehacen en este mismo pase.
+                 analisis_v=None)
+        s["historial"].append({"fecha": hoy.isoformat(), "estado": s["estado"],
+                               "motivo": "unida con " + ", ".join(ids)})
+        for o in otras:
+            o["estado"], o["fusionada_en"] = "fusionada", s["id"]
+            o.pop("unidas", None)
+            o["historial"].append({"fecha": hoy.isoformat(), "estado": "fusionada",
+                                   "motivo": f"trozo del mismo cambio que {s['id']}"})
+        absorbidas += len(otras)
+    if absorbidas:
+        con.log(f"{absorbidas} alertas unidas a otras por ser trozos del mismo cambio")
+    return absorbidas
 
 
 def cruzar(reg: dict, registros: list[dict]) -> None:
@@ -214,7 +279,8 @@ def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: l
     nuevas = 0
 
     for c in sorted(cambios, key=lambda c: -c.pixeles):
-        idx = [i for i, g in enumerate(geoms) if g.intersects(c.geom)]
+        idx = [i for i, g in enumerate(geoms)
+               if alertas[i]["estado"] != "fusionada" and g.intersects(c.geom)]
         if idx:
             # Un cambio puede tocar varias alertas: todas se dan por vistas en esta ventana,
             # y solo la primera crece si el cambio es mayor.
@@ -271,6 +337,7 @@ def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: l
             a["historial"].append({"fecha": hoy.isoformat(), "estado": "descartada", "ventana": mes_fin,
                                    "motivo": "no se volvió a ver"})
 
+    fusionar(alertas, hoy)
     if analizar:
         analizar_pendientes(alertas, hoy)
         parcelas_pendientes(alertas)

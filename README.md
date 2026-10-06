@@ -50,6 +50,10 @@ puede rehacer y explicar a mano desde las imágenes.
    suya también se descarta, igual que cualquier cambio en lo que CORINE cartografía como embalse o lago y el agua
    nueva sobre marismas y estuarios: es el nivel, que sube y baja. Nada se
    borra: `data/alertas.json` es un registro acumulativo con su historial.
+   Cuando la nieve o las nubes dejan parte de un cambio sin evaluar, sale en trozos que
+   luego crecen hasta tocarse: dos alertas a menos de 15 m nacidas en ventanas que se
+   solapan se unen en la más antigua, y las otras quedan como `fusionada`, con
+   `fusionada_en`. La unida rehace fotos, clase y parcelas.
 6. **Parcelas.** Cada alerta se superpone a la cartografía catastral: de ahí salen las
    parcelas que toca, cuánto ocupa en cada una y qué parte cae fuera de toda parcela
    (cauces, caminos, costa). Se usa la descarga INSPIRE por municipio del Catastro y no su

@@ -27,7 +27,7 @@ HABILITANTES = {"favorable", "condicionada", "parcial", "sin_eia"}
 # Parcelas citadas por cada expediente. Se versiona: los textos no cambian y así no hay que
 # volver a pedirlos. Si cambian las reglas de extracción, sube HUELLA_V.
 HUELLAS_JSON = config.DATA_DIR / "expedientes_parcelas.json"
-HUELLA_V = 1
+HUELLA_V = 3
 
 # Referencia de 14 caracteres, sola o con los 6 de control (20). Rústica: provincia y
 # municipio, sector, polígono y parcela. Urbana: manzana y hoja, con letras y cifras.
@@ -85,8 +85,13 @@ def cobertura(registros: list[dict]) -> str | None:
 def extraer(texto: str) -> dict:
     """Referencias catastrales y pares polígono-parcela que cita un texto."""
     t = unicodedata.normalize("NFKC", texto or "")
-    refs = sorted({m.group(1) for m in _REF.finditer(t)})
-    rust = sorted({(m.group(1), int(m.group(2)), int(m.group(3))) for m in _RUST.finditer(t)})
+    rm = list(_RUST.finditer(t))
+    rust = sorted({(m.group(1), int(m.group(2)), int(m.group(3))) for m in rm})
+    # Con la letra de sector estropeada, la cola de una rústica de 20 caracteres parece una
+    # urbana («39036?008003820000MP»): esas no cuentan.
+    cola = lambda m: not m.group(1)[5].isalpha() and any(
+        r.start() < m.start(1) and m.end(1) <= r.end() for r in rm)
+    refs = sorted({m.group(1) for m in _REF.finditer(t) if not cola(m)})
     pp = set()
     for m in _POL_PAR.finditer(t):
         pp |= {(int(m.group(1)), int(x)) for x in re.findall(r"\d+", m.group(2))}

@@ -1113,7 +1113,7 @@
    "fraccion_parcelada": 0.997,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 113,
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   },
   {
    "id": "CN-202509-003",
@@ -29736,7 +29736,7 @@
    "fraccion_parcelada": 1.0,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 65,
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   },
   {
    "id": "CN-202511-023",
@@ -79602,7 +79602,7 @@
    "fraccion_parcelada": 0.992,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 25,
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   },
   {
    "id": "CN-202601-094",
@@ -81019,7 +81019,7 @@
    "fraccion_parcelada": 0.997,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 59,
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   },
   {
    "id": "CN-202601-100",
@@ -177639,7 +177639,7 @@
    "fraccion_parcelada": 0.975,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 75,
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   },
   {
    "id": "CN-202608-007",
@@ -179769,7 +179769,7 @@
    "fraccion_parcelada": 0.915,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 23,
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   },
   {
    "id": "CN-202608-014",
@@ -182140,7 +182140,7 @@
    "fraccion_parcelada": 0.995,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 179,
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   },
   {
    "id": "CN-202609-003",
@@ -182488,7 +182488,7 @@
    "fraccion_parcelada": 1.0,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 130,
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   },
   {
    "id": "CN-202609-004",
@@ -182845,7 +182845,7 @@
    "fraccion_parcelada": 0.998,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 95,
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   },
   {
    "id": "CN-202609-005",
@@ -183061,7 +183061,7 @@
    "fraccion_parcelada": 0.999,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 36,
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   },
   {
    "id": "CN-202609-006",
@@ -197523,7 +197523,7 @@
    "parcelas_px": 24,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   },
   {
    "id": "CN-202610-050",
@@ -200804,7 +200804,7 @@
    "parcelas_px": 20,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 1
+   "expedientes_municipio": 2
   }
  ],
  "ejecuciones": {
@@ -201035,5 +201035,5 @@
  },
  "expedientes_desde": "2026-07-10",
  "ultima_ventana": "2026-10",
- "actualizado": "2026-10-08T10:03:44+00:00"
+ "actualizado": "2026-10-08T14:35:13+00:00"
 }

@@ -5,6 +5,7 @@ import html
 import json
 import shutil
 from datetime import datetime, timezone
+from pathlib import Path
 
 from shapely.geometry import mapping, shape
 
@@ -15,6 +16,8 @@ REPO_URL = "https://github.com/Asensio94/centinela-natura"
 WEB_URL = "https://asensio94.github.io/centinela-natura/"
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
          "septiembre", "octubre", "noviembre", "diciembre"]
+# Shared stylesheet of the sibling projects, copied verbatim; it is inlined first in <style>.
+COMMON_CSS = (Path(__file__).with_name("common.css")).read_text(encoding="utf-8")
 
 
 def _mes_largo(mes: str | None) -> str:
@@ -163,6 +166,7 @@ def construir() -> None:
         "n_espacios": len(esp["features"]),
     }
     html_txt = (PLANTILLA
+                .replace("__COMMON_CSS__", COMMON_CSS)
                 .replace("__DATOS__", json.dumps(datos, ensure_ascii=False).replace("</", "<\\/"))
                 .replace("__METODO__", _metodo()))
     for k, v in resumen.items():
@@ -201,66 +205,52 @@ PLANTILLA = r"""<!doctype html>
 <title>Centinela Natura</title>
 <meta name="description" content="Cambios físicos del terreno en la Red Natura 2000 de Cantabria, detectados con Sentinel-2 y cruzados con los expedientes publicados.">
 <link rel="alternate" type="application/atom+xml" title="Alertas del Centinela Natura" href="feed.xml">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d2a24'/%3E%3Cpath d='M16 6v20M6 16h20' stroke='%23e0338a' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23e0338a' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23221d1a'/%3E%3Cpath d='M16 6v20M6 16h20' stroke='%2362b88a' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2362b88a' stroke-width='2.5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <style>
+__COMMON_CSS__
+:root{--accent:#2f7a55;--accent-dark:#62b88a}
+
+/* Own tokens: the neutral ones point at the common ones; the ones with meaning stay here. */
 :root{
-  --suelo:#eef1ec; --papel:#f8faf6; --tinta:#1b2721; --gris:#5a6860; --linea:#cfd8d1;
-  --sobreimpresion:#c21f78; --natura:#2f7a55; --natura-f:rgba(47,122,85,.10);
+  --suelo:var(--ground); --papel:var(--paper); --tinta:var(--ink); --gris:var(--muted); --linea:var(--line);
+  --sombra:var(--shadow);
+  --sobreimpresion:#c21f78; --natura-f:rgba(47,122,85,.10);
   --provisional:#a86a08; --confirmada:#b3261e; --apagado:#6d7d73;
-  --sin:#b3261e; --tram:#2856a3; --reso:#2f7a55;
-  --sombra:0 1px 0 rgba(27,39,33,.06), 0 6px 18px -10px rgba(27,39,33,.25);
+  --sin:#b3261e; --tram:#2856a3; --reso:var(--natura);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --suelo:#121915; --papel:#18211c; --tinta:#e3ebe5; --gris:#9aaba1; --linea:#2c3a32;
-    --sobreimpresion:#f0509f; --natura:#62b88a; --natura-f:rgba(98,184,138,.12);
+    --sobreimpresion:#f0509f; --natura-f:rgba(98,184,138,.12);
     --provisional:#e0a23a; --confirmada:#f06b5f; --apagado:#8a9a90;
-    --sin:#f06b5f; --tram:#7ea6ec; --reso:#62b88a;
-    --sombra:0 1px 0 rgba(0,0,0,.3), 0 8px 22px -12px rgba(0,0,0,.7);
+    --sin:#f06b5f; --tram:#7ea6ec;
   }
 }
 :root[data-theme="dark"]{
-  --suelo:#121915; --papel:#18211c; --tinta:#e3ebe5; --gris:#9aaba1; --linea:#2c3a32;
-  --sobreimpresion:#f0509f; --natura:#62b88a; --natura-f:rgba(98,184,138,.12);
+  --sobreimpresion:#f0509f; --natura-f:rgba(98,184,138,.12);
   --provisional:#e0a23a; --confirmada:#f06b5f; --apagado:#8a9a90;
-  --sin:#f06b5f; --tram:#7ea6ec; --reso:#62b88a;
-  --sombra:0 1px 0 rgba(0,0,0,.3), 0 8px 22px -12px rgba(0,0,0,.7);
+  --sin:#f06b5f; --tram:#7ea6ec;
 }
-*{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--suelo);color:var(--tinta);font:17px/1.55 "Source Serif 4",Georgia,serif}
-a{color:inherit;text-decoration-color:var(--sobreimpresion);text-underline-offset:3px}
-a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--sobreimpresion);outline-offset:2px}
-.rotulo{font-family:"Barlow Condensed","Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
-.dato{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
-header.cabecera{padding:28px 16px 18px;max-width:1440px;margin:0 auto;display:grid;gap:14px}
-.marca{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-h1{margin:0;font:700 clamp(40px,6vw,64px)/.9 "Barlow Condensed","Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.02em}
-h1 .cruz{color:var(--sobreimpresion)}
-.marca .rotulo{color:var(--gris);font-size:14px}
-.lede{margin:0;max-width:68ch;color:var(--tinta);font-size:18px;text-wrap:pretty}
-.cifras{display:flex;flex-wrap:wrap;gap:0;border-top:1.5px solid var(--tinta);border-bottom:1px solid var(--linea)}
-.cifra{padding:10px 18px 10px 0;margin-right:18px;display:grid;gap:2px}
-.cifra b{font:600 30px/1 "IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
-.cifra span{font-size:12.5px;color:var(--gris)}
-.cifra.meta b{font-size:17px;line-height:1.75}
+.dato{font-family:var(--font-data);font-variant-numeric:tabular-nums}
+.site-header .label{color:var(--muted);font-size:14px}
+.site-header .lede{text-wrap:pretty}
+.figures div.meta b{font-size:17px;line-height:1.75}
 main{max-width:1440px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(360px,1fr);gap:18px;align-items:start}
 #mapa{position:sticky;top:12px;height:calc(100vh - 24px);min-height:420px;border:1px solid var(--linea);background:var(--papel)}
 .lista{display:grid;gap:14px;padding-bottom:40px}
 .filtros{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--linea);position:sticky;top:0;background:var(--suelo);z-index:5}
 .filtros label{font-size:13px;color:var(--gris);display:flex;gap:6px;align-items:center}
-.filtros select{max-width:min(260px,62vw);font:14px "Source Serif 4",serif;background:var(--papel);color:var(--tinta);border:1px solid var(--linea);padding:4px 6px}
+.filtros select{max-width:min(260px,62vw);font:14px var(--font-text);background:var(--papel);color:var(--tinta);border:1px solid var(--linea);padding:4px 6px}
 .cuenta{margin-left:auto;font-size:13px;color:var(--gris)}
-.ficha{background:var(--papel);border:1px solid var(--linea);box-shadow:var(--sombra);padding:14px 16px 16px;display:grid;gap:10px;scroll-margin-top:60px}
-.ficha.sel{border-color:var(--sobreimpresion);box-shadow:0 0 0 1px var(--sobreimpresion),var(--sombra)}
+.ficha{display:grid;gap:10px;padding:14px 16px 16px;scroll-margin-top:60px}
+.ficha.sel{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),var(--sombra)}
 .ficha header{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
-.ficha h2{margin:0;font:600 22px/1.15 "Barlow Condensed","Arial Narrow",sans-serif;letter-spacing:.01em;flex:1 1 100%;text-wrap:balance}
+.ficha h2{margin:0;font:600 22px/1.15 var(--font-title);letter-spacing:.01em;flex:1 1 100%;text-wrap:balance}
 .id{font-size:12px;color:var(--gris)}
-.sello{font:600 12px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.09em;padding:4px 7px 3px;border:1.5px solid currentColor}
 .sello.provisional{color:var(--provisional)} .sello.confirmada{color:var(--confirmada)}
 .sello.revertida,.sello.descartada{color:var(--apagado)}
 .sello.sin_expediente{color:var(--sin);background:color-mix(in srgb,var(--sin) 10%,transparent)}
@@ -274,54 +264,51 @@ main{max-width:1440px;margin:0 auto;padding:0 16px;display:grid;grid-template-co
 dl.medidas{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px 12px}
 dl.medidas div{display:grid;gap:1px}
 dl.medidas dt{font-size:11.5px;color:var(--gris)}
-dl.medidas dd{margin:0;font:500 15px "IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+dl.medidas dd{margin:0;font:500 15px var(--font-data);font-variant-numeric:tabular-nums}
 .exped{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14.5px}
 .exped li{padding-left:12px;border-left:2px solid var(--linea)}
 .exped .dato{font-size:12px;color:var(--gris)}
 .nota{font-size:13.5px;color:var(--gris);margin:0}
 .parcelas{display:grid;gap:6px}
-.parcelas h3{margin:0;font:600 12px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.09em;color:var(--gris)}
+.parcelas h3{margin:0;font:600 12px/1 var(--font-title);text-transform:uppercase;letter-spacing:.09em;color:var(--gris)}
 .parcelas ul{margin:0;padding:0;list-style:none;display:grid;gap:3px;font-size:14px}
 .parcelas li{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline}
 .parcelas li .dato{font-size:12.5px;color:var(--gris)}
-.parcelas details summary{cursor:pointer;font-size:13px;color:var(--gris);width:max-content}
+.parcelas details summary{cursor:pointer;font-size:13px;color:var(--gris);width:max-content;max-width:100%}
 .parcelas details[open] summary{margin-bottom:3px}
 .parcelas li a.dato{color:var(--tinta)}
 .acciones{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px}
-.acciones button{font:inherit;background:none;border:0;padding:0;color:inherit;text-decoration:underline;text-decoration-color:var(--sobreimpresion);text-underline-offset:3px;cursor:pointer}
+.acciones button{font:inherit;background:none;border:0;padding:0;color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px;cursor:pointer}
 .vacio{padding:28px 16px;border:1px dashed var(--linea);color:var(--gris);text-align:center}
-section.metodo{max-width:1440px;margin:24px auto 0;padding:26px 16px 40px;border-top:1.5px solid var(--tinta);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
-section.metodo h2{margin:0 0 6px;font:700 28px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.03em}
-section.metodo h3{margin:18px 0 4px;font:600 18px/1.2 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.06em}
-section.metodo p{margin:0 0 10px;max-width:66ch}
-table.params{border-collapse:collapse;width:100%;font-size:14.5px}
-table.params th,table.params td{text-align:left;vertical-align:top;padding:7px 10px 7px 0;border-bottom:1px solid var(--linea)}
-table.params th{font-weight:600;width:38%}
-footer{max-width:1440px;margin:0 auto;padding:16px 16px 40px;font-size:13px;color:var(--gris);border-top:1px solid var(--linea)}
-.leaflet-container{background:var(--papel);font:13px "Source Serif 4",serif}
+.method{margin-top:24px;padding-bottom:40px;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.method p{margin:0 0 10px}
+.method ol{margin:0 0 10px;padding-left:1.4em;display:grid;gap:6px}
+table.params th{width:38%}
+.leaflet-container{background:var(--papel);font:13px var(--font-text)}
 .leaflet-control-layers,.leaflet-bar a{background:var(--papel);color:var(--tinta)}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--papel);color:var(--tinta)}
 @media (max-width: 900px){
   main{grid-template-columns:1fr}
   #mapa{position:relative;top:0;height:56vh}
-  section.metodo{grid-template-columns:1fr}
+  .method{grid-template-columns:1fr}
+}
+@media (max-width: 640px){
+  table.params th{white-space:normal}
 }
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<header class="cabecera">
-  <div class="marca">
-    <h1>Centinela<span class="cruz">+</span>Natura</h1>
-    <span class="rotulo">Red Natura 2000 · Cantabria · Sentinel-2</span>
-  </div>
+<header class="site-header">
+  <h1>Centinela <span>Natura</span></h1>
+  <p class="label">Red Natura 2000 · Cantabria · Sentinel-2</p>
   <p class="lede">Cambios físicos del terreno dentro de los espacios protegidos: obras, explanaciones, balsas, cortas o quemas. Se detectan cada día en imágenes de satélite con reglas fijas y se cruzan con los expedientes que se publican en el BOE y en el Boletín Oficial de Cantabria.</p>
-  <div class="cifras">
-    <div class="cifra"><b>__ACTIVAS__</b><span>alertas activas</span></div>
-    <div class="cifra"><b>__CONFIRMADAS__</b><span>confirmadas</span></div>
-    <div class="cifra"><b>__HA__</b><span>hectáreas afectadas</span></div>
-    <div class="cifra"><b>__CON_EXPEDIENTE__</b><span>con un expediente que cita sus parcelas</span></div>
-    <div class="cifra meta"><b class="dato">__VENTANA__</b><span>ventana comparada · __EVALUABLE__ de la zona con cielo suficiente · actualizado el __ACTUALIZADO__</span></div>
+  <div class="figures">
+    <div><b>__ACTIVAS__</b><span>alertas activas</span></div>
+    <div><b>__CONFIRMADAS__</b><span>confirmadas</span></div>
+    <div><b>__HA__</b><span>hectáreas afectadas</span></div>
+    <div><b>__CON_EXPEDIENTE__</b><span>con un expediente que cita sus parcelas</span></div>
+    <div class="meta"><b>__VENTANA__</b><span>ventana comparada · __EVALUABLE__ de la zona con cielo suficiente · actualizado el __ACTUALIZADO__</span></div>
   </div>
 </header>
 
@@ -341,32 +328,48 @@ footer{max-width:1440px;margin:0 auto;padding:16px 16px 40px;font-size:13px;colo
   </div>
 </main>
 
-<section class="metodo" id="metodo">
+<section class="method" id="metodo">
   <div>
-    <h2>Cómo vigila</h2>
-    <p>La zona vigilada son los __N_ESPACIOS__ espacios de la Red Natura 2000 que tocan Cantabria, ZEC y ZEPA juntas, recortados al límite de la comunidad: __ZONA_HA__ hectáreas en una malla fija de 10 metros.</p>
-    <p>Cada día se rehace el mes en curso con todas las pasadas de Sentinel-2. De cada píxel se guarda el NDVI más alto del mes, que es el momento más verde que ha tenido. Las nubes bajan el NDVI, así que el máximo las ignora. Un prado segado vuelve a crecer en semanas, así que el máximo de varios meses lo sigue viendo verde. Solo el suelo que ha perdido la vegetación durante toda la ventana tiene el máximo bajo.</p>
-    <p>La ventana actual se compara con la misma época de los años anteriores. Un píxel es cambio si fue vegetación densa todos esos años y ahora, en su mejor momento, no lo es. Los píxeles contiguos forman un polígono, que tiene que superar la unidad mínima.</p>
-    <p>Para cada alerta nueva se busca la escena despejada más verde de antes y la más verde de después, su mejor momento, que es lo que compara el detector, se publican las dos (si la nieve o las nubes no dejan ver la ventana en que nació, se usa la última en que se ha visto) y con sus bandas se decide el tipo: agua, quemado, suelo desnudo, superficie oscura o pérdida de vegetación sin más. Son reglas con umbrales publicados en la literatura. No interviene ningún modelo entrenado ni ninguna inteligencia artificial, y cualquier alerta se puede rehacer a mano desde las imágenes.</p>
-    <h3>Cruce con expedientes</h3>
-    <p>Cada alerta se superpone a la cartografía del Catastro para saber qué parcelas toca. De los anuncios y resoluciones de Cantabria que ha leído el <a href="https://asensio94.github.io/observatorio-alegaciones/">observatorio de alegaciones</a>, que cubre desde el __EXPEDIENTES_DESDE__, se sacan las parcelas que citan: referencias catastrales y pares «polígono, parcela» del municipio del expediente. La alerta tiene expediente si alguno cita una de sus parcelas. En monte una sola parcela puede tener cientos de hectáreas, así que coincidir en ella no prueba que sea la misma obra.</p>
+    <h2>Cómo se calcula</h2>
+    <ol>
+      <li><strong>Zona.</strong> La zona vigilada son los __N_ESPACIOS__ espacios de la Red Natura 2000 que tocan Cantabria, ZEC y ZEPA juntas, recortados al límite de la comunidad: __ZONA_HA__ hectáreas en una malla fija de 10 metros.</li>
+      <li><strong>Compuesto mensual.</strong> Cada día se rehace el mes en curso con todas las pasadas de Sentinel-2. De cada píxel se guarda el NDVI más alto del mes, que es el momento más verde que ha tenido. Las nubes bajan el NDVI, así que el máximo las ignora. Un prado segado vuelve a crecer en semanas, así que el máximo de varios meses lo sigue viendo verde. Solo el suelo que ha perdido la vegetación durante toda la ventana tiene el máximo bajo.</li>
+      <li><strong>Detección.</strong> La ventana actual se compara con la misma época de los años anteriores. Un píxel es cambio si fue vegetación densa todos esos años y ahora, en su mejor momento, no lo es. Los píxeles contiguos forman un polígono, que tiene que superar la unidad mínima.</li>
+      <li><strong>Fotos y tipo.</strong> Para cada alerta nueva se busca la escena despejada más verde de antes y la más verde de después, su mejor momento, que es lo que compara el detector, y se publican las dos (si la nieve o las nubes no dejan ver la ventana en que nació, se usa la última en que se ha visto). Con sus bandas se decide el tipo: agua, quemado, suelo desnudo, superficie oscura o pérdida de vegetación sin más. Son reglas con umbrales publicados en la literatura. No interviene ningún modelo entrenado, y cualquier alerta se puede rehacer a mano desde las imágenes.</li>
+      <li><strong>Parcelas.</strong> Cada alerta se superpone a la cartografía del Catastro para saber qué parcelas toca.</li>
+      <li><strong>Cruce con expedientes.</strong> De los anuncios y resoluciones de Cantabria que ha leído el <a href="https://asensio94.github.io/observatorio-alegaciones/">observatorio de alegaciones</a>, que cubre desde el __EXPEDIENTES_DESDE__, se sacan las parcelas que citan: referencias catastrales y pares «polígono, parcela» del municipio del expediente. La alerta tiene expediente si alguno cita una de sus parcelas. En monte una sola parcela puede tener cientos de hectáreas, así que coincidir en ella no prueba que sea la misma obra.</li>
+    </ol>
     <p>«Sin expediente conocido» quiere decir que ningún texto publicado en ese tiempo cita sus parcelas, no que la obra carezca de permiso: muchas licencias municipales y autorizaciones forestales no pasan por los boletines, y parte de los anuncios solo dan el municipio. Esos se cuentan aparte en cada alerta.</p>
-    <h3>Qué no ve</h3>
-    <p>Todo lo que ocupe menos de la unidad mínima: una casa aislada, una pista estrecha o un vallado. Tampoco ve lo que ocurre bajo cubierta arbórea sin quitarla, ni los cambios en zonas que no eran vegetación densa (roquedo, arenales, láminas de agua), ni las orillas que el agua cubre y descubre (embalses, marismas), ni los meses de nieve, sombra invernal o nube persistente, que se quedan sin evaluar. Las alertas en tierras de cultivo pueden ser rotaciones.</p>
     <h3>Estados</h3>
     <p>Las alertas marcadas como «detectable desde» salieron al reconstruir las ventanas anteriores a la puesta en marcha, con la fecha en que se habrían visto.</p>
     <p><strong>Provisional</strong>: visto una vez. <strong>Confirmada</strong>: sigue ahí en la ventana de un mes posterior. <strong>Descartada</strong>: la vegetación volvió antes de confirmarse, no se volvió a ver, o estaba en la orilla de un embalse o era agua nueva sobre lo que ya era agua (cambios del nivel). <strong>Revertida</strong>: volvió después. <strong>Fusionada</strong>: era un trozo de otra alerta. Cuando la nieve o las nubes dejan parte de un cambio sin evaluar, sale en trozos que luego crecen hasta tocarse. Si están a menos de 15 metros y nacieron en ventanas que se solapan, se unen en la más antigua. Las fusionadas no se muestran aquí, pero siguen en el registro, y su enlace lleva a la alerta que las absorbió.</p>
+    <h3>Validación</h3>
+    <p>Pendiente: todavía no se ha contrastado con otra fuente. Cada alerta publica las dos fotos que compara el detector, para que se pueda comprobar a simple vista.</p>
+    <h3>Qué no ve</h3>
+    <p>Todo lo que ocupe menos de la unidad mínima: una casa aislada, una pista estrecha o un vallado. Tampoco ve lo que ocurre bajo cubierta arbórea sin quitarla, ni los cambios en zonas que no eran vegetación densa (roquedo, arenales, láminas de agua), ni las orillas que el agua cubre y descubre (embalses, marismas), ni los meses de nieve, sombra invernal o nube persistente, que se quedan sin evaluar. Las alertas en tierras de cultivo pueden ser rotaciones.</p>
   </div>
   <div>
-    <h2>Parámetros</h2>
+    <h3>Parámetros</h3>
     __METODO__
     <h3>Datos abiertos</h3>
     <p><a href="alertas.geojson">alertas.geojson</a> con todas las alertas y su historial · <a href="feed.xml">fuente Atom</a> de las activas · compuestos mensuales en GeoTIFF en las <a href="https://github.com/Asensio94/centinela-natura/releases/tag/compuestos">releases del repositorio</a> · <a href="https://github.com/Asensio94/centinela-natura">código</a>.</p>
   </div>
 </section>
 
-<footer>
-  Contiene datos modificados de Copernicus Sentinel procesados por Earth Search (Element 84) · Límites de la Red Natura 2000 y CORINE Land Cover 2018: Agencia Europea de Medio Ambiente · Municipios: © colaboradores de OpenStreetMap (ODbL) · Ortofoto PNOA: CC BY 4.0 scne.es · Parcelas: © Dirección General del Catastro · Expedientes: observatorio de alegaciones ambientales, a partir del BOE y el BOC.
+<footer class="site-footer">
+  <p class="principle">Datos públicos, reglas a la vista y cada cifra enlazada a su fuente. Indicios, no veredictos.</p>
+  <p>Contiene datos modificados de Copernicus Sentinel procesados por Earth Search (Element 84) · Límites de la Red Natura 2000 y CORINE Land Cover 2018: Agencia Europea de Medio Ambiente · Municipios: © colaboradores de OpenStreetMap (ODbL) · Ortofoto PNOA: CC BY 4.0 scne.es · Parcelas: © Dirección General del Catastro · Expedientes: observatorio de alegaciones ambientales, a partir del BOE y el BOC · Código bajo licencia MIT.</p>
+  <nav aria-label="Proyectos hermanos"><ul class="siblings">
+    <li><a href="https://asensio94.github.io/observatorio-alegaciones/">Observatorio de alegaciones</a></li>
+    <li><a href="https://asensio94.github.io/vigia-incendios/">Vigía de incendios</a></li>
+    <li aria-current="page"><a href="https://asensio94.github.io/centinela-natura/">Centinela Natura</a></li>
+    <li><a href="https://asensio94.github.io/vigilancia-humedales/">Vigilancia de humedales</a></li>
+    <li><a href="https://asensio94.github.io/sub-nocte/">Sub Nocte</a></li>
+    <li><a href="https://asensio94.github.io/riesgo-tendidos-aves/">Riesgo de tendidos para aves</a></li>
+    <li><a href="https://asensio94.github.io/grafo-promotores/">Grafo de promotores</a></li>
+    <li><a href="https://asensio94.github.io/cartera-cotizadas/">Cartera de las cotizadas</a></li>
+    <li><a href="https://asensio94.github.io/cuaderno-campo/">Cuaderno de campo</a></li>
+  </ul></nav>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -430,10 +433,10 @@ function ficha(p){
   const ex = (p.expedientes||[]).length ? `<ul class="exped">${p.expedientes.map(x=>`<li><a href="${esc(x.url)}">${esc(x.titulo)}</a><br><span class="dato">${esc(x.fuente)} · ${fecha(x.fecha)}${x.sentido_etiqueta && x.grupo==="resoluciones" ? " · "+esc(x.sentido_etiqueta):""} · cita ${x.parcelas.map(esc).join(", ")}</span></li>`).join("")}</ul>`
     : p.parcelas ? `<p class="nota">Ningún anuncio ni resolución leído por el <a href="${D.observatorio}">observatorio</a> cita estas parcelas.${ctx}</p>` : "";
   const unidas = (p.unidas||[]).length ? `<p class="nota">Reúne ${p.unidas.length+1} trozos del mismo cambio que se detectaron por separado (${p.unidas.map(esc).join(", ")}).</p>` : "";
-  return `<article class="ficha" id="${p.id}" data-id="${p.id}">
+  return `<article class="card ficha" id="${p.id}" data-id="${p.id}">
     <header>
-      <span class="sello ${p.estado}">${esc(D.estados[p.estado])}</span>
-      ${p.cruce==="resolucion"||p.cruce==="tramitacion" ? `<span class="sello ${p.cruce}">${esc(D.cruces[p.cruce])}</span>` : ""}
+      <span class="badge sello ${p.estado}">${esc(D.estados[p.estado])}</span>
+      ${p.cruce==="resolucion"||p.cruce==="tramitacion" ? `<span class="badge sello ${p.cruce}">${esc(D.cruces[p.cruce])}</span>` : ""}
       <span class="id dato">${p.id}</span>
       <h2>${esc(titulo)}</h2>
     </header>

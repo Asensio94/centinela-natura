@@ -67,7 +67,12 @@ puede rehacer y explicar a mano desde las imágenes.
    si es una resolución favorable, se marca como tal. Los expedientes del municipio que
    no identifican parcelas se cuentan aparte, porque no se pueden cruzar.
 
-## Qué no ve
+## Contraste / validación
+
+Pendiente: todavía no se ha contrastado con otra fuente. Cada alerta publica las dos fotos
+que compara el detector, para que se pueda comprobar a simple vista.
+
+## Límites
 
 Nada por debajo de la unidad mínima (una vivienda aislada, una pista estrecha), nada bajo
 cubierta arbórea que no se quite, ningún cambio en lo que no era vegetación densa (roquedo,
@@ -80,7 +85,17 @@ prueba que sea la misma obra. Y «sin expediente conocido» no prueba que falte 
 muchas licencias municipales y autorizaciones forestales no se publican, parte de los
 anuncios solo dan el municipio, y el observatorio lee Cantabria desde julio de 2026.
 
-## Automatización
+## Uso
+
+```bash
+python -m venv .venv && .venv/Scripts/pip install -r requirements.txt
+python -m centinela compuesto 2026-08          # un mes, en data/compuestos
+python -m centinela detectar 2026-08           # baja de la release lo que falte y detecta
+python -m centinela parcelas                   # parcelas catastrales y cruce
+python -m centinela publicar                   # web en site/
+```
+
+### Automatización
 
 - [`diario.yml`](.github/workflows/diario.yml): cada día rehace el mes en curso (y el
   anterior los primeros días), detecta, analiza, cruza, guarda el registro en `main` y
@@ -91,15 +106,17 @@ anuncios solo dan el municipio, y el observatorio lee Cantabria desde julio de 2
 Coste cero: GitHub Actions y Pages en un repositorio público, Sentinel-2 del programa de
 datos abiertos de AWS sin clave.
 
-## Uso local
+## Datos que se guardan
 
-```bash
-python -m venv .venv && .venv/Scripts/pip install -r requirements.txt
-python -m centinela compuesto 2026-08          # un mes, en data/compuestos
-python -m centinela detectar 2026-08           # baja de la release lo que falte y detecta
-python -m centinela parcelas                   # parcelas catastrales y cruce
-python -m centinela publicar                   # web en site/
-```
+| Fichero | Contenido |
+|---|---|
+| `data/alertas.json` | Registro acumulativo de alertas, cada una con su historial de estados, y las ejecuciones de cada ventana. Nada se borra. |
+| `data/expedientes_parcelas.json` | Parcelas que cita cada anuncio o resolución del observatorio, revisables a mano. |
+| `data/chips/` | Fotos de antes y después de cada alerta (JPG). |
+| `data/zonas/` | Límites de los espacios Natura 2000 (`espacios.geojson`), de la comunidad (`region.geojson`) y de los municipios (`municipios.geojson`). |
+| `data/compuestos/` | Caché local de los compuestos mensuales; no se versiona, la copia buena está en la release `compuestos`. |
+| `data/cache/` | Caché local de descargas del Catastro y del observatorio; no se versiona. |
+| `site/` | La web generada (`index.html`, `alertas.geojson`, `feed.xml`, `espacios.geojson` y las fotos); no se versiona en `main`, se publica en `gh-pages`. |
 
 ## Fuentes y licencias
 
@@ -108,3 +125,5 @@ Red Natura 2000 y CORINE Land Cover 2018: Agencia Europea de Medio Ambiente. Mun
 límite regional: © colaboradores de OpenStreetMap, ODbL. Parcelas: © Dirección General
 del Catastro, servicio de descargas INSPIRE. Ortofoto PNOA en la web:
 CC BY 4.0 scne.es. Código bajo licencia MIT.
+
+Forma parte de un conjunto de proyectos hermanos: [Observatorio de alegaciones](https://asensio94.github.io/observatorio-alegaciones/) · [Vigía de incendios](https://asensio94.github.io/vigia-incendios/) · [Vigilancia de humedales](https://asensio94.github.io/vigilancia-humedales/) · [Sub Nocte](https://asensio94.github.io/sub-nocte/) · [Riesgo de tendidos para aves](https://asensio94.github.io/riesgo-tendidos-aves/) · [Grafo de promotores](https://asensio94.github.io/grafo-promotores/) · [Cartera de las cotizadas](https://asensio94.github.io/cartera-cotizadas/) · [Cuaderno de campo](https://asensio94.github.io/cuaderno-campo/).

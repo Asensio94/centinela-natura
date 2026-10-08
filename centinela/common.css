@@ -1,4 +1,4 @@
-/* common.css v1 — shared look of the nine open-data projects (vigia-incendios is the reference).
+/* common.css v1.1 — shared look of the nine open-data projects (vigia-incendios is the reference).
    Copy this file verbatim into each repo; change it in all repos at once, never in one.
    Each repo sets only --accent and --accent-dark below it and adds its own rules after it.
 
@@ -41,6 +41,9 @@ img,svg{max-width:100%}
 .site-header{max-width:1440px;margin:0 auto;padding:28px 16px 18px;display:grid;gap:14px}
 .site-header h1{margin:0;font:700 clamp(40px,6vw,64px)/.9 var(--font-title);text-transform:uppercase;letter-spacing:.02em}
 .site-header h1 span{color:var(--accent)}
+/* Logo: the robin from logo.py before the title; same shape everywhere, breast in the accent. */
+.logo{display:inline-block;width:1.05em;height:1.05em;margin-right:.16em;vertical-align:-.13em;color:var(--ink);overflow:visible}
+.logo .logo-breast{fill:var(--accent)}
 .site-header .lede{margin:0;max-width:72ch;font-size:18px}
 .figures{display:flex;flex-wrap:wrap;gap:12px 28px;margin:0;padding:12px 0 0;border-top:1px solid var(--line)}
 .figures div{display:grid;gap:2px}

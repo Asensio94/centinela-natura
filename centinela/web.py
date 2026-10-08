@@ -11,6 +11,7 @@ from shapely.geometry import mapping, shape
 
 from . import alertas as al
 from . import catastro, clasificacion, config, expedientes, zona
+from .logo import LOGO_SVG, favicon_link
 
 REPO_URL = "https://github.com/Asensio94/centinela-natura"
 WEB_URL = "https://asensio94.github.io/centinela-natura/"
@@ -166,6 +167,8 @@ def construir() -> None:
         "n_espacios": len(esp["features"]),
     }
     html_txt = (PLANTILLA
+                .replace("__LOGO__", LOGO_SVG)
+                .replace("__FAVICON__", favicon_link("#2f7a55", "#62b88a"))
                 .replace("__COMMON_CSS__", COMMON_CSS)
                 .replace("__DATOS__", json.dumps(datos, ensure_ascii=False).replace("</", "<\\/"))
                 .replace("__METODO__", _metodo()))
@@ -205,7 +208,7 @@ PLANTILLA = r"""<!doctype html>
 <title>Centinela Natura</title>
 <meta name="description" content="Cambios físicos del terreno en la Red Natura 2000 de Cantabria, detectados con Sentinel-2 y cruzados con los expedientes publicados.">
 <link rel="alternate" type="application/atom+xml" title="Alertas del Centinela Natura" href="feed.xml">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23221d1a'/%3E%3Cpath d='M16 6v20M6 16h20' stroke='%2362b88a' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2362b88a' stroke-width='2.5'/%3E%3C/svg%3E">
+__FAVICON__
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -300,7 +303,7 @@ table.params th{width:38%}
 </head>
 <body>
 <header class="site-header">
-  <h1>Centinela <span>Natura</span></h1>
+  <h1>__LOGO__Centinela <span>Natura</span></h1>
   <p class="label">Red Natura 2000 · Cantabria · Sentinel-2</p>
   <p class="lede">Cambios físicos del terreno dentro de los espacios protegidos: obras, explanaciones, balsas, cortas o quemas. Se detectan cada día en imágenes de satélite con reglas fijas y se cruzan con los expedientes que se publican en el BOE y en el Boletín Oficial de Cantabria.</p>
   <div class="figures">

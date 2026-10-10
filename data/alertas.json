@@ -159662,7 +159662,7 @@
    "fraccion_parcelada": 0.825,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 21,
-   "expedientes_municipio": 0
+   "expedientes_municipio": 1
   },
   {
    "id": "CN-202605-019",
@@ -179971,7 +179971,7 @@
    "fraccion_parcelada": 0.979,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 23,
-   "expedientes_municipio": 0
+   "expedientes_municipio": 1
   },
   {
    "id": "CN-202608-015",
@@ -183880,7 +183880,7 @@
    "pixeles": 284,
    "ha": 2.84,
    "ndvi_ref": 0.816,
-   "ndvi_actual": 0.318,
+   "ndvi_actual": 0.315,
    "obs_actual": 16,
    "centro": [
     43.21663,
@@ -186177,7 +186177,7 @@
    "pixeles": 84,
    "ha": 0.84,
    "ndvi_ref": 0.684,
-   "ndvi_actual": 0.322,
+   "ndvi_actual": 0.318,
    "obs_actual": 16,
    "centro": [
     43.22991,
@@ -201024,16 +201024,16 @@
     "2026-10"
    ],
    "pixeles_zona": 14699109,
-   "pixeles_evaluables": 12426845,
+   "pixeles_evaluables": 12426896,
    "fraccion_evaluable": 0.845,
    "pixeles_agua_previa": 701790,
    "meses_agua": 24,
-   "pixeles_candidatos": 22966,
-   "cambios": 118,
-   "ha_cambios": 181.7
+   "pixeles_candidatos": 22734,
+   "cambios": 116,
+   "ha_cambios": 180.0
   }
  },
  "expedientes_desde": "2026-07-10",
  "ultima_ventana": "2026-10",
- "actualizado": "2026-10-09T14:22:07+00:00"
+ "actualizado": "2026-10-10T13:37:17+00:00"
 }

@@ -10,7 +10,7 @@ from pathlib import Path
 from shapely.geometry import mapping, shape
 
 from . import alertas as al
-from . import catastro, clasificacion, config, expedientes, zona
+from . import catastro, clasificacion, config, expedientes, signals, zona
 from .logo import LOGO_SVG, favicon_link
 
 REPO_URL = "https://github.com/Asensio94/centinela-natura"
@@ -134,13 +134,17 @@ def construir() -> None:
     (site / "chips").mkdir(parents=True)
     for p in config.CHIPS_DIR.glob("*.jpg"):
         shutil.copy2(p, site / "chips" / p.name)
-    ahora = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+    now = datetime.now(timezone.utc)
+    ahora = now.isoformat(timespec="seconds").replace("+00:00", "Z")
 
     gj = _geojson_alertas(reg)
     (site / "alertas.geojson").write_text(json.dumps(gj, ensure_ascii=False), encoding="utf-8")
     (site / "feed.xml").write_text(_atom(reg, ahora), encoding="utf-8")
     esp = _espacios_web()
     (site / "espacios.geojson").write_text(json.dumps(esp, ensure_ascii=False), encoding="utf-8")
+    # The current alerts in the sibling projects' common format, for Estado de las IBA.
+    doc = signals.document(gj, [f["properties"]["codigo"] for f in esp["features"]], now, WEB_URL)
+    (site / "signals.json").write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")
 
     acts = [a for a in reg["alertas"] if a["estado"] in al.ACTIVAS]
     ult = reg.get("ultima_ventana")

@@ -93,6 +93,7 @@ python -m centinela compuesto 2026-08          # un mes, en data/compuestos
 python -m centinela detectar 2026-08           # baja de la release lo que falte y detecta
 python -m centinela parcelas                   # parcelas catastrales y cruce
 python -m centinela publicar                   # web en site/
+python -m pytest                               # pruebas
 ```
 
 ### Automatización
@@ -116,7 +117,7 @@ datos abiertos de AWS sin clave.
 | `data/zonas/` | Límites de los espacios Natura 2000 (`espacios.geojson`), de la comunidad (`region.geojson`) y de los municipios (`municipios.geojson`). |
 | `data/compuestos/` | Caché local de los compuestos mensuales; no se versiona, la copia buena está en la release `compuestos`. |
 | `data/cache/` | Caché local de descargas del Catastro y del observatorio; no se versiona. |
-| `site/` | La web generada (`index.html`, `alertas.geojson`, `feed.xml`, `espacios.geojson` y las fotos); no se versiona en `main`, se publica en `gh-pages`. |
+| `site/` | La web generada (`index.html`, `alertas.geojson`, `feed.xml`, `espacios.geojson` y las fotos); no se versiona en `main`, se publica en `gh-pages`. También `signals.json`: las alertas activas en el formato común de los proyectos hermanos, el que lee [Estado de las IBA](https://github.com/Asensio94/estado-iba). |
 
 ## Fuentes y licencias
 

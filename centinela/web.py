@@ -373,6 +373,7 @@ table.params th{width:38%}
     <li><a href="https://asensio94.github.io/cartera-cotizadas/">Cartera de las cotizadas</a></li>
     <li><a href="https://asensio94.github.io/cuaderno-campo/">Cuaderno de campo</a></li>
     <li><a href="https://asensio94.github.io/caudal-ecologico/">Caudal ecológico</a></li>
+    <li><a href="https://asensio94.github.io/estado-iba/">Estado de las IBA</a></li>
   </ul></nav>
 </footer>
 

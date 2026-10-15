@@ -6,10 +6,15 @@ root of the web; each current alert is one `land_change` signal.
 
 Built from the same records as alertas.geojson, and with nothing they do not already publish:
 no cadastral parcels, so no owners either.
+
+Each country builds its part (`document`) and leaves it in its cache; the published file joins
+the parts of every country (`combine`). Every signal says its `country`; French
+municipalities go with their INSEE code, Spanish ones by name only.
 """
 from __future__ import annotations
 
 from datetime import datetime
+from pathlib import Path
 
 from . import config
 
@@ -26,14 +31,16 @@ def signal(p: dict, web_url: str) -> dict:
     return {
         "id": p["id"],
         "kind": "land_change",
+        "country": config.PAIS,
         "date": p["detectada"],
         "title": p.get("clase_nombre") or "Cambio de cubierta",
         "url": f"{web_url}#{p['id']}",
         "sites": [{"code": e["codigo"]} for e in p.get("espacios") or []],
-        # Only names here: the hub turns them into INE codes with the IGN layer.
-        "municipalities": [],
+        # Spain: only names; the hub turns them into INE codes with the IGN layer. France:
+        # the INSEE codes (5 characters, 2A004), which the cadastre layer already carries.
+        "municipalities": list(p.get("municipios_insee") or []),
         "municipality_names": list(p.get("municipios") or []),
-        "provinces": [config.REGION],            # Cantabria is a single province
+        "provinces": [config.REGION],            # Cantabria and the 64 are one province each
         "precision": "pixeles",
         "deadline": None,
         "status": p["estado"],
@@ -61,4 +68,29 @@ def document(alertas: dict, sites: list[str], now: datetime, web_url: str) -> di
         "generated": now.strftime("%Y-%m-%dT%H:%MZ"),
         "coverage": {"label": config.REGION, "sites": sorted(set(sites)), "note": COVERAGE_NOTE},
         "signals": signals,
+    }
+
+
+def parts() -> list[Path]:
+    """The part of every country that has built its web, Spain first."""
+    out = []
+    for k, p in config.PAISES.items():
+        d = config.ROOT / "data" / p["subdir"] / "cache" if p["subdir"] else config.ROOT / "data" / "cache"
+        if (d / "signals.json").exists():
+            out.append(d / "signals.json")
+    return out
+
+
+def combine(docs: list[dict], now: datetime) -> dict:
+    """One file from the parts of each country. With a single part, that part as it is."""
+    if len(docs) == 1:
+        return docs[0]
+    return {
+        "source": "centinela-natura",
+        "version": 1,
+        "generated": now.strftime("%Y-%m-%dT%H:%MZ"),
+        "coverage": {"label": " · ".join(d["coverage"]["label"] for d in docs),
+                     "sites": sorted({s for d in docs for s in d["coverage"]["sites"]}),
+                     "note": COVERAGE_NOTE},
+        "signals": [s for d in docs for s in d["signals"]],
     }

@@ -87,7 +87,7 @@ una capa más:
 3. **Uso declarado.** El [Registre parcellaire graphique](https://geoservices.ign.fr/rpg)
    (RPG) del IGN: las parcelas que los agricultores declaran a la PAC, anonimizadas. Se
    lee el cultivo declarado el año anterior al cambio: si era pradera permanente (grupos
-   17 y 18), la alerta se marca «retournement de prairie permanente», que en Natura 2000 la
+   17 y 18), la alerta se marca «sur prairie permanente déclarée», cuyo labrado en Natura 2000 la
    PAC restringe (BCAE 9); si era otro cultivo, «agricole (rotation)», la rotación normal
    de una explotación que en España podía parecer un cambio. No se guarda el identificador
    de la parcela PAC.

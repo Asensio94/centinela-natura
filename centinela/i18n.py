@@ -174,7 +174,7 @@ _FR_METODO = """    <h2>Comment c’est calculé</h2>
       <li><strong>Détection.</strong> La fenêtre actuelle est comparée à la même période des années précédentes. Un pixel change s’il était en végétation dense toutes ces années et ne l’est plus, même à son meilleur moment. Les pixels voisins forment un polygone, qui doit dépasser l’unité minimale.</li>
       <li><strong>Photos et type.</strong> Pour chaque nouvelle alerte, on cherche la scène dégagée la plus verte d’avant et la plus verte d’après, ce que compare le détecteur, et on publie les deux. Leurs bandes décident du type~: eau, brûlis, sol nu, surface sombre ou simple perte de végétation. Ce sont des règles à seuils publiés dans la littérature. Aucun modèle entraîné n’intervient, et chaque alerte peut être refaite à la main à partir des images.</li>
       <li><strong>Parcelles.</strong> Chaque alerte est superposée au plan cadastral informatisé (PCI vectoriel de la DGFiP, publié par Etalab, édition du __CATASTRO_FECHA__) pour savoir quelles parcelles elle touche. Le cadastre ouvert ne contient aucun propriétaire.</li>
-      <li><strong>Usage agricole déclaré.</strong> L’alerte est superposée au Registre parcellaire graphique (RPG) de la dernière campagne PAC déclarée avant le changement. Si plus de la moitié de l’alerte tombe dans des parcelles déclarées, le changement est agricole~: «~terre en rotation~» quand la culture principale est une terre arable ou une prairie temporaire, ce qui peut être un labour normal~; «~retournement de prairie permanente~» quand c’est une prairie permanente ou une estive, dont le retournement dans les sites Natura 2000 est encadré par la PAC (BCAE~9).</li>
+      <li><strong>Usage agricole déclaré.</strong> L’alerte est superposée au Registre parcellaire graphique (RPG) de la dernière campagne PAC déclarée avant le changement. Si plus de la moitié de l’alerte tombe dans des parcelles déclarées, le changement est agricole~: «~terre en rotation~» quand la culture principale est une terre arable ou une prairie temporaire, ce qui peut être un labour normal~; «~sur prairie permanente déclarée~» quand c’est une prairie permanente ou une estive. Son retournement dans les sites Natura 2000 est encadré par la PAC (BCAE~9), mais une perte de végétation sur une prairie permanente peut aussi être un dessèchement d’été ou un écobuage~: l’alerte ne dit pas lequel, les images avant et après aident à trancher, et un dessèchement redevient vert à l’automne et l’alerte est alors écartée ou résorbée.</li>
       <li><strong>Croisement avec les autorisations d’urbanisme.</strong> Sitadel, le fichier des autorisations d’urbanisme du ministère (SDES), donne pour chaque permis de construire, déclaration préalable, permis d’aménager ou de démolir jusqu’à trois parcelles cadastrales. L’alerte a une autorisation connue si l’une d’elles est une de ses parcelles et qu’elle date des trois ans précédant la fenêtre ou d’après. Le fichier gardé couvre depuis le __EXPEDIENTES_DESDE__.</li>
     </ol>
     <p>«~Sans autorisation connue~» veut dire qu’aucune autorisation d’urbanisme de Sitadel ne cite ses parcelles, pas que les travaux sont illégaux~: beaucoup de travaux en zone naturelle ne relèvent pas de l’urbanisme (voir plus bas), Sitadel ne donne que trois parcelles par autorisation et presque jamais le préfixe de section. Le nombre d’autres autorisations dans la même commune sur la période est indiqué dans chaque alerte.</p>
@@ -286,7 +286,7 @@ FR = _fr({
         "uso_titulo": "Usage déclaré (RPG {a})",
         "uso_sin": "Pas de parcelle déclarée à la PAC sous l’alerte.",
         "uso_frac": "{n}~% de l’alerte dans des parcelles déclarées",
-        "uso_nota_pp": "Prairie permanente~: son retournement dans un site Natura 2000 est encadré par la PAC (BCAE~9).",
+        "uso_nota_pp": "Prairie permanente~: son retournement dans un site Natura 2000 est encadré par la PAC (BCAE~9). Le changement peut aussi être un dessèchement d’été ou un écobuage~; comparez les images.",
         "uso_nota_rot": "Terre en rotation~: le changement peut être un labour normal.",
         "etat": {"2": "autorisée", "4": "annulée", "5": "travaux commencés", "6": "travaux terminés"},
         "dest": {"1": "habitation", "2": "hôtel", "3": "bureaux", "4": "commerce", "6": "industrie",
@@ -312,7 +312,7 @@ CLASES = {
            "vegetacion": "Perte de végétation"},
 }
 USOS = {
-    "fr": {"rotacion": "Agricole (rotation)", "pradera_permanente": "Retournement de prairie permanente",
+    "fr": {"rotacion": "Agricole (rotation)", "pradera_permanente": "Sur prairie permanente déclarée",
            "sin_declarar": "Hors RPG"},
 }
 CLC = {

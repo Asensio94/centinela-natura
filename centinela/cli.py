@@ -13,6 +13,12 @@ app = typer.Typer(add_completion=False, no_args_is_help=True)
 con = Console()
 
 
+@app.callback()
+def principal(pais: str = typer.Option("ES", help="País vigilado: ES (Cantabria) o FR (Pyrénées-Atlantiques).")):
+    """Vigilancia de cambios del terreno en la Red Natura 2000 con Sentinel-2."""
+    config.activar(pais.upper())
+
+
 def _meses(desde: str, hasta: str) -> list[str]:
     y, m = map(int, desde.split("-"))
     out = []
@@ -49,11 +55,11 @@ def compuesto(meses: list[str], subir: bool = False):
 @app.command()
 def matriz(desde: str, hasta: str, solo_faltan: bool = True):
     """Imprime la lista de meses en JSON para la matriz de Actions."""
-    from . import almacen
+    from . import almacen, compuestos
     meses = _meses(desde, hasta)
     if solo_faltan:
         hay = almacen.disponibles()
-        meses = [m for m in meses if f"ndvi_{m}.tif" not in hay]
+        meses = [m for m in meses if compuestos.ruta(m).name not in hay]
     print(json.dumps(meses))
 
 
@@ -78,15 +84,15 @@ def _detectar(mes_fin: str, registros=None, retro: bool = False):
     # está reconstruyendo el pasado.
     hoy = min(date.today(), stac.rango_mes(mes_fin)[1])
     return alertas.procesar(mes_fin, cambios, stats, capas,
-                            registros if registros is not None else expedientes.cargar(),
+                            registros if registros is not None else alertas.permisos().cargar(),
                             hoy=hoy, retro=retro, analizar=not retro)
 
 
 @app.command()
 def detectar(meses_fin: list[str], retro: bool = False):
     """Detecta cambios en las ventanas que acaban en esos meses, en orden."""
-    from . import expedientes
-    reg = expedientes.cargar()
+    from . import alertas
+    reg = alertas.permisos().cargar()
     for mes in sorted(meses_fin):
         _detectar(mes, reg, retro)
 
@@ -123,7 +129,7 @@ def parcelas(minutos: float = 120):
     for a in reg["alertas"]:                     # superficie de la geometría unida
         a["ha"] = round(alertas._geom_utm(a).area / 1e4, 2)
     con.print(f"{alertas.parcelas_pendientes(reg['alertas'], minutos)} alertas consultadas")
-    alertas.cruzar(reg, expedientes.cargar())
+    alertas.cruzar(reg, alertas.permisos().cargar())
     alertas.guardar(reg)
 
 

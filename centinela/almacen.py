@@ -29,8 +29,8 @@ def disponibles() -> set[str]:
 def asegurar_release() -> None:
     if _gh("release", "view", config.RELEASE_TAG, check=False).returncode != 0:
         _gh("release", "create", config.RELEASE_TAG, "--title", "Compuestos mensuales de NDVI",
-            "--notes", "NDVI máximo mensual sobre la Red Natura 2000 de Cantabria (malla de 10 m, "
-            "config.CRS). Banda 1: NDVI = valor/100 - 1, 255 sin dato. Banda 2: observaciones "
+            "--notes", "NDVI máximo mensual sobre la Red Natura 2000 de Cantabria (ndvi_AAAA-MM.tif) "
+            "y de los Pirineos Atlánticos (ndvi_FR64_AAAA-MM.tif), malla de 10 m en config.CRS. Banda 1: NDVI = valor/100 - 1, 255 sin dato. Banda 2: observaciones "
             "válidas. Se regeneran solos; ver el README.", "--latest=false")
 
 

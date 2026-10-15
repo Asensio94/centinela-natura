@@ -9,30 +9,70 @@ from __future__ import annotations
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "data"
-ZONAS_DIR = DATA_DIR / "zonas"
-COMPUESTOS_DIR = DATA_DIR / "compuestos"   # caché local; la copia buena vive en la release
-CHIPS_DIR = DATA_DIR / "chips"
-CACHE_DIR = DATA_DIR / "cache"
-SITE_DIR = ROOT / "site"
-ALERTAS_JSON = DATA_DIR / "alertas.json"
-
-for _d in (ZONAS_DIR, COMPUESTOS_DIR, CHIPS_DIR, CACHE_DIR):
-    _d.mkdir(parents=True, exist_ok=True)
+COMPUESTOS_DIR = ROOT / "data" / "compuestos"   # caché local; la copia buena vive en la release
 
 # --- Ámbito -----------------------------------------------------------------------
-# Empieza por Cantabria porque es donde el observatorio de alegaciones lee también el
-# boletín autonómico, y el cruce con expedientes es la mitad del valor del centinela.
-REGION = "Cantabria"
-REGION_QUERY = "Cantabria, España"
-# Los espacios con código ES13 son los de Cantabria (el prefijo es su código NUTS 2);
-# los ES0000 son ZEPA o espacios compartidos que también la tocan. Todos se recortan
-# después con el límite de la comunidad.
-NATURA_CODIGOS_LIKE = "ES13%"
-NATURA_CODIGOS_EXTRA = (
-    "ES0000003", "ES0000143", "ES0000198", "ES0000248", "ES0000249",
-    "ES0000250", "ES0000251", "ES0000252", "ES0000253",
-)
+# Cada país es una zona vigilada con sus datos aparte. Un proceso vigila un solo país:
+# `python -m centinela --pais FR diario`. España queda donde siempre estuvo (data/,
+# site/, compuestos sin prefijo); los demás países van en su subcarpeta.
+#
+# España empieza por Cantabria porque es donde el observatorio de alegaciones lee también
+# el boletín autonómico, y el cruce con expedientes es la mitad del valor del centinela.
+# Francia, por los Pirineos Atlánticos: atlánticos como Cantabria (prados, bosque, landas),
+# así que los umbrales de NDVI valen igual, y en el mismo huso UTM 30N, así que la malla
+# es la misma. Las autorizaciones de urbanismo francesas (Sitadel) traen la parcela.
+PAISES = {
+    "ES": {
+        "region": "Cantabria",
+        "region_query": "Cantabria, España",
+        # Los espacios con código ES13 son los de Cantabria (el prefijo es su código
+        # NUTS 2); los ES0000 son ZEPA o espacios compartidos que también la tocan. Todos
+        # se recortan después con el límite de la comunidad.
+        "natura_where": "SITECODE LIKE 'ES13%' OR SITECODE IN ({})".format(",".join(
+            f"'{c}'" for c in ("ES0000003", "ES0000143", "ES0000198", "ES0000248", "ES0000249",
+                               "ES0000250", "ES0000251", "ES0000252", "ES0000253"))),
+        "subdir": "",
+        "prefijo_compuesto": "",
+        "prefijo_id": "CN",
+    },
+    "FR": {
+        "region": "Pyrénées-Atlantiques",
+        "departamento": "64",
+        # Los SITECODE franceses no llevan el departamento (FR72… era la antigua región de
+        # Aquitania y hay espacios compartidos con las Landas y los Altos Pirineos): se
+        # piden los de Francia que tocan la caja del departamento y se recortan después.
+        "natura_where": "MS = 'FR'",
+        "subdir": "fr",
+        "prefijo_compuesto": "FR64_",
+        "prefijo_id": "CF",
+    },
+}
+
+PAIS = "ES"
+
+
+def activar(pais: str) -> None:
+    """Fija el país que vigila este proceso: rutas de datos y ámbito."""
+    global PAIS, REGION, REGION_QUERY, NATURA_WHERE, DATA_DIR, ZONAS_DIR, CHIPS_DIR, CACHE_DIR
+    global SITE_DIR, ALERTAS_JSON, PREFIJO_COMPUESTO, PREFIJO_ID
+    if pais not in PAISES:
+        raise ValueError(f"país desconocido: {pais}")
+    p = PAISES[pais]
+    PAIS = pais
+    REGION, REGION_QUERY = p["region"], p.get("region_query")
+    NATURA_WHERE = p["natura_where"]
+    DATA_DIR = ROOT / "data" / p["subdir"] if p["subdir"] else ROOT / "data"
+    ZONAS_DIR = DATA_DIR / "zonas"
+    CHIPS_DIR = DATA_DIR / "chips"
+    CACHE_DIR = DATA_DIR / "cache"
+    SITE_DIR = ROOT / "site" / p["subdir"] if p["subdir"] else ROOT / "site"
+    ALERTAS_JSON = DATA_DIR / "alertas.json"
+    PREFIJO_COMPUESTO, PREFIJO_ID = p["prefijo_compuesto"], p["prefijo_id"]
+    for d in (ZONAS_DIR, COMPUESTOS_DIR, CHIPS_DIR, CACHE_DIR):
+        d.mkdir(parents=True, exist_ok=True)
+
+
+activar("ES")
 # La EEA sirve las ZEC y las ZEPA en capas distintas: la 0 son los espacios de la
 # Directiva Hábitats y la 1 los de la Directiva Aves. Pidiendo solo la 0 se pierden
 # todas las ZEPA que no coinciden con una ZEC, que en Cantabria son ocho.

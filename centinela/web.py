@@ -1,4 +1,10 @@
-"""La web pública: mapa, fichas de alerta, fuente Atom y metodología generada desde config."""
+"""La web pública: mapa, fichas de alerta, fuente Atom y metodología generada desde config.
+
+Una página por país, en su idioma: Cantabria en site/, en castellano; los Pirineos
+Atlánticos en site/fr/, en francés. La plantilla es la misma y los textos salen de
+i18n.py. Los ficheros de datos que se publican al lado (alertas.geojson, signals.json)
+llevan claves y nombres canónicos, no dependen del idioma de la página.
+"""
 from __future__ import annotations
 
 import html
@@ -10,47 +16,84 @@ from pathlib import Path
 from shapely.geometry import mapping, shape
 
 from . import alertas as al
-from . import catastro, clasificacion, config, expedientes, signals, zona
+from . import cadastre, catastro, clasificacion, config, i18n, signals, sitadel, zona
 from .logo import LOGO_SVG, favicon_link
 
 REPO_URL = "https://github.com/Asensio94/centinela-natura"
 WEB_URL = "https://asensio94.github.io/centinela-natura/"
-MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
-         "septiembre", "octubre", "noviembre", "diciembre"]
 # Shared stylesheet of the sibling projects, copied verbatim; it is inlined first in <style>.
 COMMON_CSS = (Path(__file__).with_name("common.css")).read_text(encoding="utf-8")
+# Encuadre inicial del mapa, antes de ajustarse a los espacios.
+VISTA = {"ES": [43.2, -4.05], "FR": [43.2, -0.8]}
+ORTO = {
+    "ES": {"url": "https://www.ign.es/wmts/pnoa-ma?layer=OI.OrthoimageCoverage&style=default&tilematrixset=GoogleMapsCompatible&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/jpeg&TileMatrix={z}&TileCol={x}&TileRow={y}",
+           "maxZoom": 20, "nombre": "Ortofoto PNOA",
+           "atribucion": 'Ortofoto PNOA <a href="https://www.scne.es/">CC BY 4.0 scne.es</a>'},
+    "FR": {"url": "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image/jpeg",
+           "maxZoom": 19, "nombre": "Orthophotos IGN",
+           "atribucion": 'Orthophotos <a href="https://geoservices.ign.fr/">IGN</a>, Licence Ouverte 2.0'},
+}
+# Enlace entre las páginas de los dos países, con el nombre en el idioma de cada página.
+PAISES_NAV = {
+    "es": ("Países", {"ES": "España (Cantabria)", "FR": "Francia (Pirineos Atlánticos)"}),
+    "fr": ("Pays", {"ES": "Espagne (Cantabrie)", "FR": "France (Pyrénées-Atlantiques)"}),
+}
+# Nombres canónicos de los estados, los que van en los datos.
+ESTADOS = i18n.ES["estados"]
+
+
+def _lang() -> str:
+    return i18n.lang_of(config.PAIS)
+
+
+def _t() -> dict:
+    return i18n.UI[_lang()]
+
+
+def web_url() -> str:
+    sub = config.PAISES[config.PAIS]["subdir"]
+    return WEB_URL + (f"{sub}/" if sub else "")
+
+
+def _clases() -> dict:
+    return i18n.CLASES.get(_lang(), clasificacion.CLASES)
+
+
+def _cruces() -> dict:
+    return i18n.CRUCES[_lang()]
 
 
 def _mes_largo(mes: str | None) -> str:
     if not mes:
         return "—"
     y, m = map(int, mes.split("-"))
-    return f"{MESES[m - 1]} de {y}"
+    return f"{i18n.MESES[_lang()][m - 1]}{_t()['js']['de']}{y}"
 
 
 def _ventana_txt(meses: list[str]) -> str:
     """«julio–septiembre de 2026», o con los dos años si la ventana cruza el cambio de año."""
     if not meses:
         return "—"
+    M, de = i18n.MESES[_lang()], _t()["js"]["de"]
     (y0, m0), (y1, m1) = (map(int, meses[0].split("-")), map(int, meses[-1].split("-")))
     if y0 == y1:
-        return f"{MESES[m0 - 1]}–{MESES[m1 - 1]} de {y1}"
-    return f"{MESES[m0 - 1]} de {y0}–{MESES[m1 - 1]} de {y1}"
+        return f"{M[m0 - 1]}–{M[m1 - 1]}{de}{y1}"
+    return f"{M[m0 - 1]}{de}{y0}–{M[m1 - 1]}{de}{y1}"
 
 
 def _fecha_txt(f: str) -> str:
     y, m, d = map(int, f.split("-"))
-    return f"{d} de {MESES[m - 1]} de {y}"
+    de = _t()["js"]["de"]
+    return f"{d}{de}{i18n.MESES[_lang()][m - 1]}{de}{y}"
 
 
 def _num(x: float, dec: int = 1) -> str:
-    s = f"{x:,.{dec}f}"
-    return s.replace(",", "·").replace(".", ",").replace("·", ".")
+    return i18n.num(x, _lang(), dec)
 
 
 def _espacios_web() -> dict:
     """Límites simplificados para pintar en el mapa (el original pesa 2,6 MB)."""
-    fc = json.loads(zona.ESPACIOS_GEOJSON.read_text(encoding="utf-8"))
+    fc = json.loads(zona.espacios_geojson().read_text(encoding="utf-8"))
     feats = []
     for f in fc["features"]:
         if f["properties"]["ha"] < 5:           # astillas de borde con la comunidad vecina
@@ -66,7 +109,9 @@ def _geojson_alertas(reg: dict) -> dict:
     for a in reg["alertas"]:
         p = {k: v for k, v in a.items() if k != "geometry"}
         p["estado_nombre"] = ESTADOS[a["estado"]]
-        p["cruce_nombre"] = expedientes.ESTADOS.get(a.get("cruce", ""), "")
+        p["cruce_nombre"] = al.permisos().ESTADOS.get(a.get("cruce", ""), "")
+        if config.PAIS == "FR":                  # código INSEE de cada commune, en su orden
+            p["municipios_insee"] = zona.codigos_de(a["municipios"])
         feats.append({"type": "Feature", "geometry": a["geometry"], "properties": p})
     return {"type": "FeatureCollection", "features": feats}
 
@@ -85,66 +130,92 @@ def _ligera(gj: dict) -> dict:
     return {**gj, "features": feats}
 
 
-ESTADOS = {
-    "provisional": "Provisional",
-    "confirmada": "Confirmada",
-    "revertida": "Revertida",
-    "descartada": "Descartada",
-    "fusionada": "Fusionada",
-}
-
-
 def _atom(reg: dict, ahora: str) -> str:
+    t, url = _t(), web_url()
     activas = [a for a in reg["alertas"] if a["estado"] in al.ACTIVAS]
     activas.sort(key=lambda a: a["detectada"], reverse=True)
     entradas = []
     for a in activas[:100]:
-        esp = ", ".join(e["nombre"] for e in a["espacios"]) or "Red Natura 2000"
+        esp = ", ".join(e["nombre"] for e in a["espacios"]) or t["js"]["natura"]
         mun = ", ".join(a["municipios"])
-        titulo = f"{a.get('clase_nombre', 'Cambio')}: {_num(a['ha'], 2)} ha en {esp} ({mun})"
-        resumen = (f"{ESTADOS[a['estado']]}. {expedientes.ESTADOS.get(a.get('cruce', ''), '')}. "
-                   f"NDVI de {_num(a['ndvi_ref'], 2)} a {_num(a['ndvi_actual'], 2)}.")
+        clase = _clases().get(a.get("clase")) or a.get("clase_nombre")
+        titulo = f"{clase or t['cambio']}: {_num(a['ha'], 2)} ha {t['en']} {esp} ({mun})"
+        resumen = (f"{t['estados'][a['estado']]}. {_cruces().get(a.get('cruce', ''), '')}. "
+                   + t["ndvi_de_a"].format(a=_num(a['ndvi_ref'], 2), b=_num(a['ndvi_actual'], 2)))
         if a.get("parcelas"):
-            resumen += " Parcelas: " + ", ".join(p["refcat"] for p in a["parcelas"][:5]) + "."
+            resumen += t["parcelas_feed"].format(lista=", ".join(p["refcat"] for p in a["parcelas"][:5]))
         actualizado = a["historial"][-1]["fecha"]
         entradas.append(f"""  <entry>
-    <id>{WEB_URL}#{a['id']}</id>
+    <id>{url}#{a['id']}</id>
     <title>{html.escape(titulo)}</title>
-    <link href="{WEB_URL}#{a['id']}"/>
+    <link href="{url}#{a['id']}"/>
     <updated>{actualizado}T00:00:00Z</updated>
     <summary>{html.escape(resumen)}</summary>
   </entry>""")
     return f"""<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Centinela Natura: alertas en la Red Natura 2000 de {config.REGION}</title>
-  <id>{WEB_URL}</id>
-  <link href="{WEB_URL}"/>
-  <link rel="self" href="{WEB_URL}feed.xml"/>
+  <title>{html.escape(t['feed_title'].format(region=config.REGION))}</title>
+  <id>{url}</id>
+  <link href="{url}"/>
+  <link rel="self" href="{url}feed.xml"/>
   <updated>{ahora}</updated>
 {chr(10).join(entradas)}
 </feed>
 """
 
 
+def _vaciar(site: Path) -> None:
+    """Borra la web del país activo sin tocar la de los otros países, que va dentro de la
+    de España (site/fr/)."""
+    otros = {p["subdir"] for k, p in config.PAISES.items() if k != config.PAIS and p["subdir"]}
+    if not site.exists():
+        return
+    for hijo in site.iterdir():
+        if hijo.name in otros:
+            continue
+        shutil.rmtree(hijo) if hijo.is_dir() else hijo.unlink()
+
+
+def _paises_nav() -> str:
+    """Enlaces a la página de cada país; la de España está en la raíz y las demás debajo."""
+    etiqueta, nombres = PAISES_NAV[_lang()]
+    enlaces = []
+    for k, p in config.PAISES.items():
+        if k == config.PAIS:
+            enlaces.append(f'<a href="./" aria-current="page">{nombres[k]}</a>')
+            continue
+        sub = config.PAISES[config.PAIS]["subdir"]
+        destino = ("../" if sub else "") + (f"{p['subdir']}/" if p["subdir"] else "")
+        enlaces.append(f'<a href="{destino}">{nombres[k]}</a>')
+    return f'<nav class="paises label" aria-label="{etiqueta}">{" · ".join(enlaces)}</nav>'
+
+
 def construir() -> None:
     reg = al.cargar()
     site = config.SITE_DIR
-    if site.exists():
-        shutil.rmtree(site)
+    _vaciar(site)
     (site / "chips").mkdir(parents=True)
     for p in config.CHIPS_DIR.glob("*.jpg"):
         shutil.copy2(p, site / "chips" / p.name)
     now = datetime.now(timezone.utc)
     ahora = now.isoformat(timespec="seconds").replace("+00:00", "Z")
+    t, lang = _t(), _lang()
 
     gj = _geojson_alertas(reg)
     (site / "alertas.geojson").write_text(json.dumps(gj, ensure_ascii=False), encoding="utf-8")
     (site / "feed.xml").write_text(_atom(reg, ahora), encoding="utf-8")
     esp = _espacios_web()
     (site / "espacios.geojson").write_text(json.dumps(esp, ensure_ascii=False), encoding="utf-8")
-    # The current alerts in the sibling projects' common format, for Estado de las IBA.
-    doc = signals.document(gj, [f["properties"]["codigo"] for f in esp["features"]], now, WEB_URL)
-    (site / "signals.json").write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")
+    if config.PAIS == "FR" and sitadel.ruta().exists():
+        shutil.copy2(sitadel.ruta(), site / sitadel.ruta().name)
+    # The current alerts in the sibling projects' common format, for Estado de las IBA. Each
+    # country leaves its part in its cache; the published file, at the root of the web,
+    # joins the parts of every country.
+    doc = signals.document(gj, [f["properties"]["codigo"] for f in esp["features"]], now, web_url())
+    (config.CACHE_DIR / "signals.json").write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")
+    partes = {k: json.loads(f.read_text(encoding="utf-8")) for k, f in signals.parts().items()}
+    (config.ROOT / "site" / "signals.json").write_text(
+        json.dumps(signals.combine(partes, now), ensure_ascii=False), encoding="utf-8")
 
     acts = [a for a in reg["alertas"] if a["estado"] in al.ACTIVAS]
     ult = reg.get("ultima_ventana")
@@ -155,22 +226,39 @@ def construir() -> None:
     datos = {
         "alertas": _ligera(visibles), "espacios": esp,
         "redir": {a["id"]: a["fusionada_en"] for a in reg["alertas"] if a.get("fusionada_en")},
-        "clases": clasificacion.CLASES, "estados": ESTADOS, "cruces": expedientes.ESTADOS,
-        "observatorio": expedientes.OBSERVATORIO_WEB, "sede": catastro.SEDE,
+        "clases": _clases(), "estados": t["estados"], "cruces": _cruces(),
+        "usos": i18n.USOS.get(lang), "clc": i18n.CLC.get(lang),
+        "observatorio": al.permisos().OBSERVATORIO_WEB,
+        "sede": cadastre.SEDE if config.PAIS == "FR" else catastro.SEDE,
+        "t": t["js"], "meses": i18n.MESES[lang], "meses_cortos": i18n.MESES_CORTOS[lang], "cambio": t["cambio"],
+        "vista": VISTA[config.PAIS], "orto": ORTO[config.PAIS],
     }
+    fechas_cat = [a["catastro_fecha"] for a in reg["alertas"] if a.get("catastro_fecha")]
+    desde = reg.get("expedientes_desde")
     resumen = {
         "activas": len(acts),
         "confirmadas": sum(a["estado"] == "confirmada" for a in acts),
         "con_expediente": sum(a.get("cruce") in ("resolucion", "tramitacion") for a in acts),
         "ha": _num(sum(a["ha"] for a in acts), 1),
         "ventana": _ventana_txt(ej.get("ventana") or []),
-        "evaluable": f"{round(100 * ej.get('fraccion_evaluable', 0))} %" if ej else "—",
-        "expedientes_desde": reg.get("expedientes_desde") or "—",
+        "evaluable": i18n.pct(ej.get("fraccion_evaluable", 0), lang) if ej else "—",
+        # En España, la fecha tal cual; en Francia, escrita.
+        "expedientes_desde": (_fecha_txt(desde) if lang != "es" else desde) if desde else "—",
+        "catastro_fecha": _fecha_txt(max(fechas_cat)) if fechas_cat else "—",
         "actualizado": _fecha_txt((reg.get("actualizado") or ahora)[:10]),
         "zona_ha": _num(zona.mascara().sum() * config.PIXEL_HA, 0),
         "n_espacios": len(esp["features"]),
     }
-    html_txt = (PLANTILLA
+    textos = {k: t[k] for k in ("html_lang", "description", "feed_alt", "label", "lede", "fig_activas",
+                                "fig_confirmadas", "fig_ha", "fig_expediente", "fig_meta", "mapa_aria",
+                                "filtros", "metodo", "parametros", "datos", "principio", "creditos",
+                                "hermanos", "hermanos_lang")}
+    textos["paises"] = _paises_nav()
+    textos["siblings"] = i18n.SIBLINGS
+    html_txt = PLANTILLA
+    for k, v in textos.items():
+        html_txt = html_txt.replace(f"__T_{k.upper()}__", v)
+    html_txt = (html_txt
                 .replace("__LOGO__", LOGO_SVG)
                 .replace("__FAVICON__", favicon_link("#2f7a55", "#62b88a"))
                 .replace("__COMMON_CSS__", COMMON_CSS)
@@ -183,35 +271,35 @@ def construir() -> None:
 
 
 def _metodo() -> str:
-    c = config
-    filas = [
-        ("Satélite", "Sentinel-2 L2A (Copernicus), servido por Earth Search en AWS"),
-        ("Resolución", f"{c.RESOLUCION_M} m por píxel, malla fija en WGS84 / UTM 30N"),
-        ("Píxeles válidos", "clases 4 a 7 de la capa SCL de Sen2Cor: vegetación, suelo, agua y sin clasificar"),
-        ("Nieve", f"fuera si NDSI > {_num(c.NIEVE_NDSI_MIN, 1)}, infrarrojo > {_num(c.NIEVE_NIR_MIN, 2)} y verde > {_num(c.NIEVE_VERDE_MIN, 2)} (SNOMAP, Hall et al. 1995)"),
-        ("Sombra", f"fuera si el infrarrojo cercano es < {_num(c.NIR_SENAL_MIN, 2)}, salvo el agua"),
-        ("Orillas de embalse y marismas", f"sin evaluar donde hubo agua un mes entero en los {c.AGUA_MESES_ATRAS} meses anteriores"),
-        ("Compuesto mensual", "NDVI máximo de cada píxel en el mes"),
-        ("Ventana", f"{c.VENTANA_MESES} meses, comparada con la misma ventana de los {c.ANIOS_REFERENCIA} años anteriores"),
-        ("Vegetación de referencia", f"NDVI máximo ≥ {_num(c.NDVI_REF_MIN, 2)} en todos los años de referencia"),
-        ("Cambio", f"NDVI máximo actual ≤ {_num(c.NDVI_ACTUAL_MAX, 2)} y caída ≥ {_num(c.CAIDA_MIN, 2)}"),
-        ("Observaciones mínimas", f"{c.OBS_MIN} válidas por píxel en cada ventana"),
-        ("Unidad mínima", f"{c.UMA_PIXELES} píxeles contiguos ({_num(c.UMA_PIXELES * c.PIXEL_HA, 1)} ha)"),
-        ("Vuelta de la vegetación", f"NDVI máximo medio ≥ {_num(al.NDVI_RECUPERADA, 2)} en el polígono"),
-    ]
+    c, f = config, _t()["parametros_filas"]
+    valores = {
+        "satelite": {}, "validos": {}, "compuesto": {},
+        "resolucion": {"r": c.RESOLUCION_M},
+        "nieve": {"ndsi": _num(c.NIEVE_NDSI_MIN, 1), "nir": _num(c.NIEVE_NIR_MIN, 2), "verde": _num(c.NIEVE_VERDE_MIN, 2)},
+        "sombra": {"nir": _num(c.NIR_SENAL_MIN, 2)},
+        "orillas": {"meses": c.AGUA_MESES_ATRAS},
+        "ventana": {"v": c.VENTANA_MESES, "a": c.ANIOS_REFERENCIA},
+        "referencia": {"x": _num(c.NDVI_REF_MIN, 2)},
+        "cambio": {"x": _num(c.NDVI_ACTUAL_MAX, 2), "c": _num(c.CAIDA_MIN, 2)},
+        "obs": {"n": c.OBS_MIN},
+        "uma": {"n": c.UMA_PIXELES, "ha": _num(c.UMA_PIXELES * c.PIXEL_HA, 1)},
+        "vuelta": {"x": _num(al.NDVI_RECUPERADA, 2)},
+        "rpg": {}, "sitadel": {"meses": sitadel.MESES_ANTES},
+    }
+    filas = [(a, b.format(**valores[k])) for k, (a, b) in f.items()]
     tabla = "\n".join(f"<tr><th scope=\"row\">{html.escape(a)}</th><td>{html.escape(b)}</td></tr>"
                       for a, b in filas)
     return f'<table class="params">{tabla}</table>'
 
 
 PLANTILLA = r"""<!doctype html>
-<html lang="es">
+<html lang="__T_HTML_LANG__">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Centinela Natura</title>
-<meta name="description" content="Cambios físicos del terreno en la Red Natura 2000 de Cantabria, detectados con Sentinel-2 y cruzados con los expedientes publicados.">
-<link rel="alternate" type="application/atom+xml" title="Alertas del Centinela Natura" href="feed.xml">
+<meta name="description" content="__T_DESCRIPTION__">
+<link rel="alternate" type="application/atom+xml" title="__T_FEED_ALT__" href="feed.xml">
 __FAVICON__
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -286,6 +374,10 @@ dl.medidas dd{margin:0;font:500 15px var(--font-data);font-variant-numeric:tabul
 .parcelas li a.dato{color:var(--tinta)}
 .acciones{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px}
 .acciones button{font:inherit;background:none;border:0;padding:0;color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px;cursor:pointer}
+.paises{margin:0;font-size:14px;color:var(--muted)}
+.paises a[aria-current]{color:var(--ink);text-decoration:none}
+.uso{font-size:14px;margin:0}
+.uso .dato{font-size:12.5px;color:var(--gris)}
 .vacio{padding:28px 16px;border:1px dashed var(--linea);color:var(--gris);text-align:center}
 .method{margin-top:24px;padding-bottom:40px;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
 .method p{margin:0 0 10px}
@@ -308,27 +400,23 @@ table.params th{width:38%}
 <body>
 <header class="site-header">
   <h1>__LOGO__Centinela <span>Natura</span></h1>
-  <p class="label">Red Natura 2000 · Cantabria · Sentinel-2</p>
-  <p class="lede">Cambios físicos del terreno dentro de los espacios protegidos: obras, explanaciones, balsas, cortas o quemas. Se detectan cada día en imágenes de satélite con reglas fijas y se cruzan con los expedientes que se publican en el BOE y en el Boletín Oficial de Cantabria.</p>
+  <p class="label">__T_LABEL__</p>
+  __T_PAISES__
+  <p class="lede">__T_LEDE__</p>
   <div class="figures">
-    <div><b>__ACTIVAS__</b><span>alertas activas</span></div>
-    <div><b>__CONFIRMADAS__</b><span>confirmadas</span></div>
-    <div><b>__HA__</b><span>hectáreas afectadas</span></div>
-    <div><b>__CON_EXPEDIENTE__</b><span>con un expediente que cita sus parcelas</span></div>
-    <div class="meta"><b>__VENTANA__</b><span>ventana comparada · __EVALUABLE__ de la zona con cielo suficiente · actualizado el __ACTUALIZADO__</span></div>
+    <div><b>__ACTIVAS__</b><span>__T_FIG_ACTIVAS__</span></div>
+    <div><b>__CONFIRMADAS__</b><span>__T_FIG_CONFIRMADAS__</span></div>
+    <div><b>__HA__</b><span>__T_FIG_HA__</span></div>
+    <div><b>__CON_EXPEDIENTE__</b><span>__T_FIG_EXPEDIENTE__</span></div>
+    <div class="meta"><b>__VENTANA__</b><span>__T_FIG_META__</span></div>
   </div>
 </header>
 
 <main>
-  <div id="mapa" role="region" aria-label="Mapa de alertas"></div>
+  <div id="mapa" role="region" aria-label="__T_MAPA_ARIA__"></div>
   <div class="lista">
     <div class="filtros">
-      <label>Estado <select id="f-estado">
-        <option value="activas">Activas</option><option value="confirmada">Confirmadas</option>
-        <option value="provisional">Provisionales</option><option value="cerradas">Revertidas y descartadas</option>
-        <option value="todas">Todas</option></select></label>
-      <label>Expediente <select id="f-cruce"><option value="">Cualquiera</option></select></label>
-      <label>Tipo <select id="f-clase"><option value="">Cualquiera</option></select></label>
+__T_FILTROS__
       <span class="cuenta" id="cuenta" aria-live="polite"></span>
     </div>
     <div id="fichas"></div>
@@ -337,69 +425,44 @@ table.params th{width:38%}
 
 <section class="method" id="metodo">
   <div>
-    <h2>Cómo se calcula</h2>
-    <ol>
-      <li><strong>Zona.</strong> La zona vigilada son los __N_ESPACIOS__ espacios de la Red Natura 2000 que tocan Cantabria, ZEC y ZEPA juntas, recortados al límite de la comunidad: __ZONA_HA__ hectáreas en una malla fija de 10 metros.</li>
-      <li><strong>Compuesto mensual.</strong> Cada día se rehace el mes en curso con todas las pasadas de Sentinel-2. De cada píxel se guarda el NDVI más alto del mes, que es el momento más verde que ha tenido. Las nubes bajan el NDVI, así que el máximo las ignora. Un prado segado vuelve a crecer en semanas, así que el máximo de varios meses lo sigue viendo verde. Solo el suelo que ha perdido la vegetación durante toda la ventana tiene el máximo bajo.</li>
-      <li><strong>Detección.</strong> La ventana actual se compara con la misma época de los años anteriores. Un píxel es cambio si fue vegetación densa todos esos años y ahora, en su mejor momento, no lo es. Los píxeles contiguos forman un polígono, que tiene que superar la unidad mínima.</li>
-      <li><strong>Fotos y tipo.</strong> Para cada alerta nueva se busca la escena despejada más verde de antes y la más verde de después, su mejor momento, que es lo que compara el detector, y se publican las dos (si la nieve o las nubes no dejan ver la ventana en que nació, se usa la última en que se ha visto). Con sus bandas se decide el tipo: agua, quemado, suelo desnudo, superficie oscura o pérdida de vegetación sin más. Son reglas con umbrales publicados en la literatura. No interviene ningún modelo entrenado, y cualquier alerta se puede rehacer a mano desde las imágenes.</li>
-      <li><strong>Parcelas.</strong> Cada alerta se superpone a la cartografía del Catastro para saber qué parcelas toca.</li>
-      <li><strong>Cruce con expedientes.</strong> De los anuncios y resoluciones de Cantabria que ha leído el <a href="https://asensio94.github.io/observatorio-alegaciones/">observatorio de alegaciones</a>, que cubre desde el __EXPEDIENTES_DESDE__, se sacan las parcelas que citan: referencias catastrales y pares «polígono, parcela» del municipio del expediente. La alerta tiene expediente si alguno cita una de sus parcelas. En monte una sola parcela puede tener cientos de hectáreas, así que coincidir en ella no prueba que sea la misma obra.</li>
-    </ol>
-    <p>«Sin expediente conocido» quiere decir que ningún texto publicado en ese tiempo cita sus parcelas, no que la obra carezca de permiso: muchas licencias municipales y autorizaciones forestales no pasan por los boletines, y parte de los anuncios solo dan el municipio. Esos se cuentan aparte en cada alerta.</p>
-    <h3>Estados</h3>
-    <p>Las alertas marcadas como «detectable desde» salieron al reconstruir las ventanas anteriores a la puesta en marcha, con la fecha en que se habrían visto.</p>
-    <p><strong>Provisional</strong>: visto una vez. <strong>Confirmada</strong>: sigue ahí en la ventana de un mes posterior. <strong>Descartada</strong>: la vegetación volvió antes de confirmarse, no se volvió a ver, o estaba en la orilla de un embalse o era agua nueva sobre lo que ya era agua (cambios del nivel). <strong>Revertida</strong>: volvió después. <strong>Fusionada</strong>: era un trozo de otra alerta. Cuando la nieve o las nubes dejan parte de un cambio sin evaluar, sale en trozos que luego crecen hasta tocarse. Si están a menos de 15 metros y nacieron en ventanas que se solapan, se unen en la más antigua. Las fusionadas no se muestran aquí, pero siguen en el registro, y su enlace lleva a la alerta que las absorbió.</p>
-    <h3>Validación</h3>
-    <p>Pendiente: todavía no se ha contrastado con otra fuente. Cada alerta publica las dos fotos que compara el detector, para que se pueda comprobar a simple vista.</p>
-    <h3>Qué no ve</h3>
-    <p>Todo lo que ocupe menos de la unidad mínima: una casa aislada, una pista estrecha o un vallado. Tampoco ve lo que ocurre bajo cubierta arbórea sin quitarla, ni los cambios en zonas que no eran vegetación densa (roquedo, arenales, láminas de agua), ni las orillas que el agua cubre y descubre (embalses, marismas), ni los meses de nieve, sombra invernal o nube persistente, que se quedan sin evaluar. Las alertas en tierras de cultivo pueden ser rotaciones.</p>
+__T_METODO__
   </div>
   <div>
-    <h3>Parámetros</h3>
+    <h3>__T_PARAMETROS__</h3>
     __METODO__
-    <h3>Datos abiertos</h3>
-    <p><a href="alertas.geojson">alertas.geojson</a> con todas las alertas y su historial · <a href="feed.xml">fuente Atom</a> de las activas · compuestos mensuales en GeoTIFF en las <a href="https://github.com/Asensio94/centinela-natura/releases/tag/compuestos">releases del repositorio</a> · <a href="https://github.com/Asensio94/centinela-natura">código</a>.</p>
+__T_DATOS__
   </div>
 </section>
 
 <footer class="site-footer">
-  <p class="principle">Datos públicos, reglas a la vista y cada cifra enlazada a su fuente. Indicios, no veredictos.</p>
-  <p>Contiene datos modificados de Copernicus Sentinel procesados por Earth Search (Element 84) · Límites de la Red Natura 2000 y CORINE Land Cover 2018: Agencia Europea de Medio Ambiente · Municipios: © colaboradores de OpenStreetMap (ODbL) · Ortofoto PNOA: CC BY 4.0 scne.es · Parcelas: © Dirección General del Catastro · Expedientes: observatorio de alegaciones ambientales, a partir del BOE y el BOC · Código bajo licencia MIT.</p>
-  <nav aria-label="Proyectos hermanos"><ul class="siblings">
-    <li><a href="https://asensio94.github.io/observatorio-alegaciones/">Observatorio de alegaciones</a></li>
-    <li><a href="https://asensio94.github.io/vigia-incendios/">Vigía de incendios</a></li>
-    <li aria-current="page"><a href="https://asensio94.github.io/centinela-natura/">Centinela Natura</a></li>
-    <li><a href="https://asensio94.github.io/vigilancia-humedales/">Vigilancia de humedales</a></li>
-    <li><a href="https://asensio94.github.io/sub-nocte/">Sub Nocte</a></li>
-    <li><a href="https://asensio94.github.io/riesgo-tendidos-aves/">Riesgo de tendidos para aves</a></li>
-    <li><a href="https://asensio94.github.io/grafo-promotores/">Grafo de promotores</a></li>
-    <li><a href="https://asensio94.github.io/cartera-cotizadas/">Cartera de las cotizadas</a></li>
-    <li><a href="https://asensio94.github.io/cuaderno-campo/">Cuaderno de campo</a></li>
-    <li><a href="https://asensio94.github.io/caudal-ecologico/">Caudal ecológico</a></li>
-    <li><a href="https://asensio94.github.io/estado-iba/">Estado de las IBA</a></li>
+  <p class="principle">__T_PRINCIPIO__</p>
+  <p>__T_CREDITOS__</p>
+  <nav aria-label="__T_HERMANOS__"><ul class="siblings"__T_HERMANOS_LANG__>
+__T_SIBLINGS__
   </ul></nav>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
 const D = __DATOS__;
+const T = D.t;
+const tr = (s,o) => s.replace(/\{(\w+)\}/g,(m,k)=>o[k]);
 const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
-const MES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
-const mes = m => { if(!m) return "—"; const [y,mm] = m.split("-"); return MES[+mm-1]+" de "+y; };
-const fecha = f => { if(!f) return "—"; const [y,m,d] = f.split("-"); return (+d)+" "+MES[+m-1].slice(0,3)+" "+y; };
-const num = (x,d=1) => x==null ? "—" : x.toLocaleString("es-ES",{minimumFractionDigits:d,maximumFractionDigits:d});
+const MES = D.meses;
+const mes = m => { if(!m) return "—"; const [y,mm] = m.split("-"); return MES[+mm-1]+T.de+y; };
+const fecha = f => { if(!f) return "—"; const [y,m,d] = f.split("-"); return (+d)+" "+D.meses_cortos[+m-1]+" "+y; };
+const num = (x,d=1) => x==null ? "—" : x.toLocaleString(T.locale,{minimumFractionDigits:d,maximumFractionDigits:d});
 const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-const mapa = L.map("mapa",{zoomControl:true,preferCanvas:false}).setView([43.2,-4.05],9);
-const pnoa = L.tileLayer("https://www.ign.es/wmts/pnoa-ma?layer=OI.OrthoimageCoverage&style=default&tilematrixset=GoogleMapsCompatible&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/jpeg&TileMatrix={z}&TileCol={x}&TileRow={y}",
-  {maxZoom:20,attribution:'Ortofoto PNOA <a href="https://www.scne.es/">CC BY 4.0 scne.es</a>'});
+const mapa = L.map("mapa",{zoomControl:true,preferCanvas:false}).setView(D.vista,9);
+const pnoa = L.tileLayer(D.orto.url,
+  {maxZoom:D.orto.maxZoom,attribution:D.orto.atribucion});
 const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",
   {maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'});
 osm.addTo(mapa);
 const capaNatura = L.geoJSON(D.espacios,{style:()=>({color:css("--natura"),weight:1,fillColor:css("--natura"),fillOpacity:.16}),
   onEachFeature:(f,l)=>l.bindTooltip(esc(f.properties.nombre)+" · "+esc(f.properties.tipo),{sticky:true})}).addTo(mapa);
-L.control.layers({"Mapa (OpenStreetMap)":osm,"Ortofoto PNOA":pnoa},{"Red Natura 2000":capaNatura},{collapsed:true}).addTo(mapa);
+L.control.layers({[T.osm]:osm,[D.orto.nombre]:pnoa},{[T.natura]:capaNatura},{collapsed:true}).addTo(mapa);
 mapa.on("zoomend",()=>{ if(mapa.getZoom()>=15 && mapa.hasLayer(osm)){ mapa.removeLayer(osm); pnoa.addTo(mapa);} });
 
 const colorEstado = e => css(e==="confirmada"?"--confirmada":e==="provisional"?"--provisional":"--apagado");
@@ -415,53 +478,59 @@ function opciones(sel, nombres, campo){
 }
 opciones("f-cruce", D.cruces, "cruce");
 opciones("f-clase", D.clases, "clase");
+if (D.usos){ for (const f of todas) f.properties.uso = f.properties.rpg ? f.properties.rpg.uso : ""; opciones("f-uso", D.usos, "uso"); }
 
 const ordenEstado = {confirmada:0,provisional:1,revertida:2,descartada:3};
 const ordenCruce = {sin_expediente:0,pendiente:1,tramitacion:2,resolucion:3};
 
 function ficha(p){
-  const esp = p.espacios.map(e=>`${esc(e.nombre)} <span class="dato">${esc(e.codigo)}</span>`).join(" · ") || "Red Natura 2000";
-  const titulo = (p.clase_nombre || "Cambio en estudio") + " · " + num(p.ha,2) + " ha";
+  const esp = p.espacios.map(e=>`${esc(e.nombre)} <span class="dato">${esc(e.codigo)}</span>`).join(" · ") || T.natura;
+  const titulo = (D.clases[p.clase] || T.en_estudio) + " · " + num(p.ha,2) + " ha";
   const fotos = p.foto_antes ? `<div class="fotos">
-      <figure><img loading="lazy" src="${p.foto_antes}" alt="Imagen de satélite antes del cambio, ${fecha(p.fecha_antes)}"><figcaption>Antes · ${fecha(p.fecha_antes)}</figcaption></figure>
-      <figure><img loading="lazy" src="${p.foto_despues}" alt="Imagen de satélite después del cambio, ${fecha(p.fecha_despues)}"><figcaption>Después · ${fecha(p.fecha_despues)}</figcaption></figure>
-    </div>` : `<p class="nota">${esc(p.clase_nota || "Las fotos se generan en la próxima pasada con cielo despejado.")}</p>`;
+      <figure><img loading="lazy" src="${p.foto_antes}" alt="${tr(T.alt_antes,{f:fecha(p.fecha_antes)})}"><figcaption>${T.antes} · ${fecha(p.fecha_antes)}</figcaption></figure>
+      <figure><img loading="lazy" src="${p.foto_despues}" alt="${tr(T.alt_despues,{f:fecha(p.fecha_despues)})}"><figcaption>${T.despues} · ${fecha(p.fecha_despues)}</figcaption></figure>
+    </div>` : `<p class="nota">${esc((T.notas||{})[p.clase_nota] || p.clase_nota || T.sin_fotos)}</p>`;
   const ha = x => num(x, x < 10 ? 2 : 0);
   const linea = c => `<li>
         <a class="dato" href="${D.sede.replace("{}",encodeURIComponent(c.refcat))}">${esc(c.refcat)}</a>
-        <span>${c.tipo==="rustica" ? `polígono ${c.poligono}, parcela ${c.parcela}` : "urbana"}${c.descuento ? " (camino o cauce público)" : ""}</span>
-        <span class="dato">${ha(c.ha_alerta)} ha de una parcela de ${ha(c.ha_parcela)}</span></li>`;
+        <span>${c.section ? tr(T.section,{s:c.section,n:c.numero})+(c.prefixe!=="000" ? tr(T.prefixe,{p:c.prefixe}) : "") : c.tipo==="rustica" ? `polígono ${c.poligono}, parcela ${c.parcela}` : "urbana"}${c.descuento ? " (camino o cauce público)" : ""}</span>
+        <span class="dato">${tr(T.ha_de,{a:ha(c.ha_alerta),b:ha(c.ha_parcela)})}</span></li>`;
   const lista = p.parcelas || [], resto = lista.slice(3), mas = (p.n_parcelas||0) - lista.length;
-  const parc = !p.parcelas ? `<p class="nota">Las parcelas catastrales se consultan en la próxima ejecución.</p>`
-    : !lista.length ? `<p class="nota">No cae en ninguna parcela del Catastro: dominio público o terreno sin catastrar.</p>`
-    : `<div class="parcelas"><h3>Parcelas catastrales</h3><ul>${lista.slice(0,3).map(linea).join("")}</ul>
-      ${resto.length ? `<details><summary>${resto.length + Math.max(mas,0)} parcelas más</summary><ul>${resto.map(linea).join("")}</ul>${mas>0 ? `<p class="nota">Y ${mas} con menos superficie.</p>` : ""}</details>` : ""}
-      ${p.fraccion_parcelada < .95 ? `<p class="nota">El ${Math.round(100*(1-p.fraccion_parcelada))} % del cambio cae fuera de toda parcela: cauces, caminos, carreteras, costa o terreno sin catastrar.</p>` : ""}</div>`;
+  const parc = !p.parcelas ? `<p class="nota">${T.parc_pend}</p>`
+    : !lista.length ? `<p class="nota">${T.parc_ninguna}</p>`
+    : `<div class="parcelas"><h3>${T.parc_titulo}</h3><ul>${lista.slice(0,3).map(linea).join("")}</ul>
+      ${resto.length ? `<details><summary>${tr(T.parc_mas,{n:resto.length + Math.max(mas,0)})}</summary><ul>${resto.map(linea).join("")}</ul>${mas>0 ? `<p class="nota">${tr(T.parc_menores,{n:mas})}</p>` : ""}</details>` : ""}
+      ${p.fraccion_parcelada < .95 ? `<p class="nota">${tr(T.parc_fuera,{n:Math.round(100*(1-p.fraccion_parcelada))})}</p>` : ""}</div>`;
   const nm = p.expedientes_municipio;
-  const ctx = nm ? ` En ${esc(p.municipios.join(", "))} ${nm===1 ? "hay otro expediente que no identifica parcelas y no se puede cruzar" : `hay ${nm} expedientes más que no identifican parcelas y no se pueden cruzar`}.` : "";
-  const ex = (p.expedientes||[]).length ? `<ul class="exped">${p.expedientes.map(x=>`<li><a href="${esc(x.url)}">${esc(x.titulo)}</a><br><span class="dato">${esc(x.fuente)} · ${fecha(x.fecha)}${x.sentido_etiqueta && x.grupo==="resoluciones" ? " · "+esc(x.sentido_etiqueta):""} · cita ${x.parcelas.map(esc).join(", ")}</span></li>`).join("")}</ul>`
-    : p.parcelas ? `<p class="nota">Ningún anuncio ni resolución leído por el <a href="${D.observatorio}">observatorio</a> cita estas parcelas.${ctx}</p>` : "";
-  const unidas = (p.unidas||[]).length ? `<p class="nota">Reúne ${p.unidas.length+1} trozos del mismo cambio que se detectaron por separado (${p.unidas.map(esc).join(", ")}).</p>` : "";
+  const ctx = nm ? tr(nm===1 ? T.ctx_uno : T.ctx_varios,{m:esc(p.municipios.join(", ")),n:nm}) : "";
+  const ex = (p.expedientes||[]).length ? `<ul class="exped">${p.expedientes.map(x=>`<li><a href="${esc(x.url)}">${esc(x.tipo && T.tipo_dau ? T.tipo_dau[x.tipo]+" "+x.titulo : x.titulo)}</a><br><span class="dato">${esc(x.fuente)} · ${fecha(x.fecha)}${x.etat && T.etat ? " · "+esc(T.etat[x.etat]||x.etat)+(T.dest[x.destination] ? " · "+esc(T.dest[x.destination]) : "") : ""}${x.sentido_etiqueta && x.grupo==="resoluciones" ? " · "+esc(x.sentido_etiqueta):""} · ${T.cita} ${x.parcelas.map(esc).join(", ")}</span></li>`).join("")}</ul>`
+    : p.parcelas ? `<p class="nota">${tr(T.sin_cruce,{url:D.observatorio})}${ctx}</p>` : "";
+  const unidas = (p.unidas||[]).length ? `<p class="nota">${tr(T.unidas,{n:p.unidas.length+1,ids:p.unidas.map(esc).join(", ")})}</p>` : "";
+  const r = p.rpg;
+  const uso = !T.uso_titulo || !r ? "" : `<div class="parcelas"><h3>${tr(T.uso_titulo,{a:r.anio})}</h3>${r.codigo
+    ? `<p class="uso"><strong>${esc(r.libelle)}</strong> <span class="dato">${esc(r.codigo)} · ${tr(T.uso_frac,{n:Math.round(100*r.fraccion)})}</span></p>${r.uso==="pradera_permanente" ? `<p class="nota">${T.uso_nota_pp}</p>` : r.uso==="rotacion" ? `<p class="nota">${T.uso_nota_rot}</p>` : ""}`
+    : `<p class="nota">${T.uso_sin}</p>`}</div>`;
   return `<article class="card ficha" id="${p.id}" data-id="${p.id}">
     <header>
       <span class="badge sello ${p.estado}">${esc(D.estados[p.estado])}</span>
-      ${p.cruce==="resolucion"||p.cruce==="tramitacion" ? `<span class="badge sello ${p.cruce}">${esc(D.cruces[p.cruce])}</span>` : ""}
+      ${p.cruce==="resolucion"||p.cruce==="tramitacion" ? `<span class="badge sello ${p.cruce}">${esc(D.cruces[p.cruce])}</span>` : ""}${D.usos && p.uso && p.uso!=="sin_declarar" ? `
+      <span class="badge sello">${esc(D.usos[p.uso])}</span>` : ""}
       <span class="id dato">${p.id}</span>
       <h2>${esc(titulo)}</h2>
     </header>
     <p class="donde"><strong>${esc(p.municipios.join(", "))}</strong> · ${esp}</p>
     ${fotos}
     <dl class="medidas">
-      <div><dt>NDVI antes → ahora</dt><dd>${num(p.ndvi_ref,2)} → ${num(p.ndvi_actual,2)}</dd></div>
-      <div><dt>Vegetación vista por última vez</dt><dd>${mes(p.ultima_vegetacion)}</dd></div>
-      <div><dt>${p.reconstruida ? "Detectable desde" : "Primera detección"}</dt><dd>${fecha(p.detectada)}</dd></div>
-      <div><dt>Uso anterior (CORINE 2018)</dt><dd style="font-family:inherit">${esc(p.cubierta_previa?.nombre || "—")}</dd></div>
+      <div><dt>${T.ndvi}</dt><dd>${num(p.ndvi_ref,2)} → ${num(p.ndvi_actual,2)}</dd></div>
+      <div><dt>${T.ultima_veg}</dt><dd>${mes(p.ultima_vegetacion)}</dd></div>
+      <div><dt>${p.reconstruida ? T.detectable : T.primera}</dt><dd>${fecha(p.detectada)}</dd></div>
+      <div><dt>${T.corine}</dt><dd style="font-family:inherit">${esc((D.clc && D.clc[p.cubierta_previa?.codigo]) || p.cubierta_previa?.nombre || "—")}</dd></div>
     </dl>
     ${unidas}
-    ${parc}
+    ${parc}${uso ? "\n    "+uso : ""}
     ${ex}
     <div class="acciones">
-      <button type="button" data-zoom="${p.id}">Ver en la ortofoto</button>
+      <button type="button" data-zoom="${p.id}">${T.ver_orto}</button>
       <a href="https://www.openstreetmap.org/?mlat=${p.centro[0]}&mlon=${p.centro[1]}#map=17/${p.centro[0]}/${p.centro[1]}">OpenStreetMap</a>
       <span class="dato" style="color:var(--gris)">${p.centro[0].toFixed(5)}, ${p.centro[1].toFixed(5)}</span>
     </div>
@@ -469,7 +538,7 @@ function ficha(p){
 }
 
 function filtrar(){
-  const fe = document.getElementById("f-estado").value, fc = document.getElementById("f-cruce").value, fk = document.getElementById("f-clase").value;
+  const fe = document.getElementById("f-estado").value, fc = document.getElementById("f-cruce").value, fk = document.getElementById("f-clase").value, fu = document.getElementById("f-uso")?.value;
   const ok = todas.filter(f=>{
     const p = f.properties;
     if (fe==="activas" && !(p.estado==="provisional"||p.estado==="confirmada")) return false;
@@ -477,19 +546,20 @@ function filtrar(){
     if (["confirmada","provisional"].includes(fe) && p.estado!==fe) return false;
     if (fc && p.cruce!==fc) return false;
     if (fk && p.clase!==fk) return false;
+    if (fu && p.uso!==fu) return false;
     return true;
   }).sort((a,b)=>{ const p=a.properties,q=b.properties;
     return (ordenEstado[p.estado]-ordenEstado[q.estado]) || (ordenCruce[p.cruce]-ordenCruce[q.cruce]) || (q.ha-p.ha); });
   document.getElementById("fichas").innerHTML = ok.length ? ok.map(f=>ficha(f.properties)).join("")
-    : `<div class="vacio">No hay alertas con estos filtros.</div>`;
-  document.getElementById("cuenta").textContent = ok.length + (ok.length===1?" alerta":" alertas");
+    : `<div class="vacio">${T.vacio}</div>`;
+  document.getElementById("cuenta").textContent = ok.length + (ok.length===1?T.alerta:T.alertas);
   capaAlertas.clearLayers();
   for (const f of ok){
     const p = f.properties, c = colorEstado(p.estado);
     const l = L.geoJSON(f,{style:{color:css("--sobreimpresion"),weight:2,fillColor:c,fillOpacity:.35}});
     const m = L.circleMarker([p.centro[0],p.centro[1]],{radius:6,color:css("--sobreimpresion"),weight:2,fillColor:c,fillOpacity:.9});
     const g = L.featureGroup([l,m]).on("click",()=>seleccionar(p.id,false));
-    g.bindTooltip(esc((p.clase_nombre||"Cambio")+" · "+num(p.ha,2)+" ha · "+p.municipios[0]));
+    g.bindTooltip(esc((D.clases[p.clase]||D.cambio)+" · "+num(p.ha,2)+" ha · "+p.municipios[0]));
     g.addTo(capaAlertas); capas[p.id] = g;
   }
 }
@@ -505,7 +575,7 @@ function seleccionar(id, zoom, animar=true){
 document.getElementById("fichas").addEventListener("click",e=>{
   const b = e.target.closest("[data-zoom]"); if (b){ tocado = true; seleccionar(b.dataset.zoom,true); }
 });
-for (const id of ["f-estado","f-cruce","f-clase"]) document.getElementById(id).addEventListener("change",filtrar);
+for (const id of ["f-estado","f-cruce","f-clase","f-uso"]) document.getElementById(id)?.addEventListener("change",filtrar);
 filtrar();
 // El mapa se encuadra cuando ya tiene su tamaño: si la página aún no ha acabado de
 // maquetar, Leaflet calcula el zoom para un contenedor sin altura. Mientras nadie lo

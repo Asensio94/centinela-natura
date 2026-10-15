@@ -13,6 +13,8 @@ Todo es determinista: índices espectrales clásicos, compuestos de máximo y re
 umbral. No hay ningún modelo entrenado ni de lenguaje en la cadena, así que cada alerta se
 puede rehacer y explicar a mano desde las imágenes.
 
+> **Estado: activo.** Se actualiza solo y sigue en desarrollo.
+
 ## Cómo funciona
 
 1. **Zona.** Los 30 espacios Natura 2000 que tocan Cantabria (ZEC de la capa 0 y ZEPA de la

@@ -13,6 +13,12 @@ app = typer.Typer(add_completion=False, no_args_is_help=True)
 con = Console()
 
 
+@app.callback()
+def principal(pais: str = typer.Option("ES", help="País vigilado: ES (Cantabria) o FR (Pyrénées-Atlantiques).")):
+    """Vigilancia de cambios del terreno en la Red Natura 2000 con Sentinel-2."""
+    config.activar(pais.upper())
+
+
 def _meses(desde: str, hasta: str) -> list[str]:
     y, m = map(int, desde.split("-"))
     out = []
@@ -49,11 +55,11 @@ def compuesto(meses: list[str], subir: bool = False):
 @app.command()
 def matriz(desde: str, hasta: str, solo_faltan: bool = True):
     """Imprime la lista de meses en JSON para la matriz de Actions."""
-    from . import almacen
+    from . import almacen, compuestos
     meses = _meses(desde, hasta)
     if solo_faltan:
         hay = almacen.disponibles()
-        meses = [m for m in meses if f"ndvi_{m}.tif" not in hay]
+        meses = [m for m in meses if compuestos.ruta(m).name not in hay]
     print(json.dumps(meses))
 
 

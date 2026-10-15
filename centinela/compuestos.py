@@ -24,7 +24,7 @@ BLOQUE = 1024           # píxeles; 10,24 km de lado
 
 
 def ruta(mes: str) -> Path:
-    return config.COMPUESTOS_DIR / f"ndvi_{mes}.tif"
+    return config.COMPUESTOS_DIR / f"ndvi_{config.PREFIJO_COMPUESTO}{mes}.tif"
 
 
 def _bloques():

@@ -64,7 +64,7 @@ def _geojson(geom_utm) -> dict:
 
 
 def _nuevo_id(reg: dict, mes: str) -> str:
-    pref = f"CN-{mes.replace('-', '')}-"
+    pref = f"{config.PREFIJO_ID}-{mes.replace('-', '')}-"
     n = sum(1 for a in reg["alertas"] if a["id"].startswith(pref))
     return f"{pref}{n + 1:03d}"
 

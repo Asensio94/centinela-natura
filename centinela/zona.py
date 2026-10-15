@@ -22,10 +22,16 @@ from shapely.ops import transform, unary_union
 from . import config
 
 UA = {"User-Agent": "centinela-natura/0.1 (+https://github.com/Asensio94/centinela-natura)"}
-ESPACIOS_GEOJSON = config.ZONAS_DIR / "espacios.geojson"      # EPSG:4326, uno por espacio
-REGION_GEOJSON = config.ZONAS_DIR / "region.geojson"
-MUNICIPIOS_GEOJSON = config.ZONAS_DIR / "municipios.geojson"
+# Las rutas dependen del país activo (config.activar), así que se piden al usarlas.
+espacios_geojson = lambda: config.ZONAS_DIR / "espacios.geojson"      # EPSG:4326, uno por espacio
+region_geojson = lambda: config.ZONAS_DIR / "region.geojson"
+municipios_geojson = lambda: config.ZONAS_DIR / "municipios.geojson"
 OVERPASS = "https://overpass-api.de/api/interpreter"
+
+# SITETYPE: A = ZEPA, B = ZEC, C = ambas figuras sobre el mismo polígono. En Francia, ZPS
+# y ZSC (o SIC mientras no se designa).
+TIPOS = {"ES": {"A": "ZEPA", "B": "ZEC", "C": "ZEC y ZEPA"},
+         "FR": {"A": "ZPS", "B": "ZSC", "C": "ZSC et ZPS"}}
 
 _a_utm = Transformer.from_crs("EPSG:4326", config.CRS, always_xy=True).transform
 _a_geo = Transformer.from_crs(config.CRS, "EPSG:4326", always_xy=True).transform
@@ -33,23 +39,28 @@ _a_geo = Transformer.from_crs(config.CRS, "EPSG:4326", always_xy=True).transform
 
 def descargar() -> dict:
     """Baja los espacios y el límite regional y los deja en data/zonas."""
-    codigos = ",".join(f"'{c}'" for c in config.NATURA_CODIGOS_EXTRA)
-    where = f"SITECODE LIKE '{config.NATURA_CODIGOS_LIKE}' OR SITECODE IN ({codigos})"
+    if config.PAIS == "FR":
+        region, n_mun = descargar_communes()
+    else:
+        r = requests.get("https://nominatim.openstreetmap.org/search", headers=UA, timeout=60, params={
+            "q": config.REGION_QUERY, "polygon_geojson": 1, "format": "json", "limit": 1})
+        r.raise_for_status()
+        region = shape(r.json()[0]["geojson"]).buffer(0)
+    params = {"where": config.NATURA_WHERE, "outFields": "SITECODE,SITENAME,SITETYPE",
+              "returnGeometry": "true", "outSR": "4326", "f": "geojson"}
+    if config.PAIS == "FR":
+        # Los de Francia que tocan la caja del departamento; el recorte viene después.
+        x0, y0, x1, y1 = region.bounds
+        params.update(geometry=f"{x0},{y0},{x1},{y1}", geometryType="esriGeometryEnvelope",
+                      inSR="4326", spatialRel="esriSpatialRelIntersects")
     espacios: dict[str, dict] = {}
     for capa in config.NATURA_CAPAS:
-        r = requests.get(config.NATURA_URL.format(capa=capa), timeout=180, params={
-            "where": where, "outFields": "SITECODE,SITENAME,SITETYPE",
-            "returnGeometry": "true", "outSR": "4326", "f": "geojson"})
+        r = requests.get(config.NATURA_URL.format(capa=capa), timeout=180, params=params)
         r.raise_for_status()
         for f in r.json()["features"]:
             p = f["properties"]
             espacios.setdefault(p["SITECODE"], {"props": p, "geoms": []})["geoms"].append(
                 shape(f["geometry"]).buffer(0))
-
-    r = requests.get("https://nominatim.openstreetmap.org/search", headers=UA, timeout=60, params={
-        "q": config.REGION_QUERY, "polygon_geojson": 1, "format": "json", "limit": 1})
-    r.raise_for_status()
-    region = shape(r.json()[0]["geojson"]).buffer(0)
 
     feats = []
     for code, e in sorted(espacios.items()):
@@ -57,18 +68,42 @@ def descargar() -> dict:
         if g.is_empty:
             continue
         p = e["props"]
-        # SITETYPE: A = ZEPA, B = ZEC, C = ambas figuras sobre el mismo polígono.
-        tipo = {"A": "ZEPA", "B": "ZEC", "C": "ZEC y ZEPA"}.get(p.get("SITETYPE"), p.get("SITETYPE"))
+        tipo = TIPOS[config.PAIS].get(p.get("SITETYPE"), p.get("SITETYPE"))
         ha = transform(_a_utm, g).area / 1e4
+        # En Francia el límite del departamento (IGN) y el de los espacios no casan al
+        # metro: los vecinos de las Landas y los Altos Pirineos dejan astillas de una
+        # hectárea o menos que no son espacios del departamento.
+        if config.PAIS == "FR" and ha < 1:
+            continue
         feats.append({"type": "Feature", "geometry": mapping(g.simplify(0.00002)),
                       "properties": {"codigo": code, "nombre": p["SITENAME"], "tipo": tipo,
                                      "ha": round(ha, 1)}})
-    ESPACIOS_GEOJSON.write_text(json.dumps({"type": "FeatureCollection", "features": feats},
+    espacios_geojson().write_text(json.dumps({"type": "FeatureCollection", "features": feats},
                                            ensure_ascii=False), encoding="utf-8")
-    REGION_GEOJSON.write_text(json.dumps({"type": "Feature", "geometry": mapping(region.simplify(0.0002)),
+    region_geojson().write_text(json.dumps({"type": "Feature", "geometry": mapping(region.simplify(0.0002)),
                                           "properties": {"nombre": config.REGION}}), encoding="utf-8")
     return {"espacios": len(feats), "ha": round(sum(f["properties"]["ha"] for f in feats)),
-            "municipios": descargar_municipios()}
+            "municipios": n_mun if config.PAIS == "FR" else descargar_municipios()}
+
+
+def descargar_communes():
+    """Communes del departamento, con su código INSEE, de la API de Découpage administratif.
+
+    Su unión es el límite del departamento. Devuelve ese límite y cuántas communes hay.
+    """
+    dep = config.PAISES["FR"]["departamento"]
+    r = requests.get(f"https://geo.api.gouv.fr/departements/{dep}/communes", headers=UA, timeout=180,
+                     params={"fields": "code,nom,contour", "format": "geojson", "geometry": "contour"})
+    r.raise_for_status()
+    feats, geoms = [], []
+    for f in r.json()["features"]:
+        g = shape(f["geometry"]).buffer(0)
+        geoms.append(g)
+        feats.append({"type": "Feature", "geometry": mapping(g.simplify(0.00005)),
+                      "properties": {"nombre": f["properties"]["nom"], "insee": f["properties"]["code"]}})
+    municipios_geojson().write_text(json.dumps({"type": "FeatureCollection", "features": feats},
+                                               ensure_ascii=False), encoding="utf-8")
+    return unary_union(geoms).buffer(0), len(feats)
 
 
 def descargar_municipios() -> int:
@@ -90,14 +125,14 @@ def descargar_municipios() -> int:
             continue
         feats.append({"type": "Feature", "geometry": mapping(g.simplify(0.00005)),
                       "properties": {"nombre": t.get("name"), "ine": t.get("ine:municipio")}})
-    MUNICIPIOS_GEOJSON.write_text(json.dumps({"type": "FeatureCollection", "features": feats},
+    municipios_geojson().write_text(json.dumps({"type": "FeatureCollection", "features": feats},
                                              ensure_ascii=False), encoding="utf-8")
     return len(feats)
 
 
 @lru_cache
 def municipios() -> list[dict]:
-    fc = json.loads(MUNICIPIOS_GEOJSON.read_text(encoding="utf-8"))
+    fc = json.loads(municipios_geojson().read_text(encoding="utf-8"))
     return [dict(f["properties"], geom=transform(_a_utm, shape(f["geometry"]))) for f in fc["features"]]
 
 
@@ -112,10 +147,16 @@ def municipios_de(geom_utm) -> list[str]:
     return [n for _, n in sorted(hits, reverse=True)]
 
 
+def codigos_de(nombres: list[str]) -> list[str]:
+    """Código oficial (INSEE en Francia) de cada municipio, si la capa lo trae."""
+    cod = {m["nombre"]: m.get("insee") or m.get("ine") for m in municipios()}
+    return [cod[n] for n in nombres if cod.get(n)]
+
+
 @lru_cache
 def espacios() -> list[dict]:
     """Espacios con su geometría en config.CRS (clave 'geom')."""
-    fc = json.loads(ESPACIOS_GEOJSON.read_text(encoding="utf-8"))
+    fc = json.loads(espacios_geojson().read_text(encoding="utf-8"))
     out = []
     for f in fc["features"]:
         d = dict(f["properties"])

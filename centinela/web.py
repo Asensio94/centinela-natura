@@ -50,7 +50,7 @@ def _num(x: float, dec: int = 1) -> str:
 
 def _espacios_web() -> dict:
     """Límites simplificados para pintar en el mapa (el original pesa 2,6 MB)."""
-    fc = json.loads(zona.ESPACIOS_GEOJSON.read_text(encoding="utf-8"))
+    fc = json.loads(zona.espacios_geojson().read_text(encoding="utf-8"))
     feats = []
     for f in fc["features"]:
         if f["properties"]["ha"] < 5:           # astillas de borde con la comunidad vecina

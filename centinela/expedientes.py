@@ -26,7 +26,7 @@ OBSERVATORIO_WEB = "https://asensio94.github.io/observatorio-alegaciones/"
 HABILITANTES = {"favorable", "condicionada", "parcial", "sin_eia"}
 # Parcelas citadas por cada expediente. Se versiona: los textos no cambian y así no hay que
 # volver a pedirlos. Si cambian las reglas de extracción, sube HUELLA_V.
-HUELLAS_JSON = config.DATA_DIR / "expedientes_parcelas.json"
+HUELLAS_JSON = lambda: config.DATA_DIR / "expedientes_parcelas.json"   # según el país activo
 HUELLA_V = 3
 
 # Referencia de 14 caracteres, sola o con los 6 de control (20). Rústica: provincia y
@@ -125,7 +125,7 @@ def _texto(r: dict, boc_dias: dict) -> str | None:
 
 def huellas(registros: list[dict]) -> dict:
     """Parcelas citadas por cada registro. Solo se piden los textos que faltan."""
-    hs = json.loads(HUELLAS_JSON.read_text(encoding="utf-8")) if HUELLAS_JSON.exists() else {}
+    hs = json.loads(HUELLAS_JSON().read_text(encoding="utf-8")) if HUELLAS_JSON().exists() else {}
     boc_dias: dict = {}
     nuevas = 0
     for r in registros:
@@ -137,7 +137,7 @@ def huellas(registros: list[dict]) -> dict:
         hs[r["id"]] = {"v": HUELLA_V, **extraer(t)}
         nuevas += 1
     if nuevas:
-        HUELLAS_JSON.write_text(json.dumps(hs, ensure_ascii=False, indent=0, sort_keys=True), encoding="utf-8")
+        HUELLAS_JSON().write_text(json.dumps(hs, ensure_ascii=False, indent=0, sort_keys=True), encoding="utf-8")
     return hs
 
 

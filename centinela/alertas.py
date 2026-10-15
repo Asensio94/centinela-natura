@@ -25,7 +25,7 @@ from shapely.geometry import mapping, shape
 from shapely.ops import unary_union
 from rich.console import Console
 
-from . import catastro, clasificacion, compuestos, config, deteccion, expedientes, zona
+from . import cadastre, catastro, clasificacion, compuestos, config, deteccion, expedientes, rpg, zona
 
 con = Console()
 ACTIVAS = ("provisional", "confirmada")
@@ -174,6 +174,11 @@ def analizar_pendientes(alertas: list[dict], hoy: date, minutos: float = ANALISI
     return hechas
 
 
+def _catastro():
+    """El catastro del país activo: Sede Electrónica en España, Etalab en Francia."""
+    return cadastre if config.PAIS == "FR" else catastro
+
+
 def parcelas_pendientes(alertas: list[dict], minutos: float = CATASTRO_MINUTOS) -> int:
     """Parcelas catastrales de las alertas que no las tienen o que han crecido desde entonces.
 
@@ -187,7 +192,10 @@ def parcelas_pendientes(alertas: list[dict], minutos: float = CATASTRO_MINUTOS) 
             con.log(f"[yellow]{len(pend) - hechas} alertas sin parcelas; siguen mañana")
             break
         try:
-            a.update(catastro.parcelas_de(_geom_utm(a)), parcelas_px=a["pixeles"])
+            g = _geom_utm(a)
+            a.update(_catastro().parcelas_de(g), parcelas_px=a["pixeles"])
+            if config.PAIS == "FR":                 # uso agrícola declarado antes del cambio
+                a["rpg"] = rpg.uso_de(g, a["primera"])
             hechas += 1
         except Exception as e:                      # sin Catastro, la vigilancia sigue
             con.log(f"[yellow]{a['id']}: sin parcelas ({e})")

@@ -35,8 +35,8 @@ def _fr(v):
         return v.replace("~", NNBSP)
     if isinstance(v, dict):
         return {k: _fr(x) for k, x in v.items()}
-    if isinstance(v, list):
-        return [_fr(x) for x in v]
+    if isinstance(v, (list, tuple)):
+        return type(v)(_fr(x) for x in v)
     return v
 
 
@@ -90,7 +90,6 @@ ES = {
     "description": "Cambios físicos del terreno en la Red Natura 2000 de Cantabria, detectados con Sentinel-2 y cruzados con los expedientes publicados.",
     "feed_alt": "Alertas del Centinela Natura",
     "feed_title": "Centinela Natura: alertas en la Red Natura 2000 de {region}",
-    "paises": "",
     "label": "Red Natura 2000 · Cantabria · Sentinel-2",
     "lede": "Cambios físicos del terreno dentro de los espacios protegidos: obras, explanaciones, balsas, cortas o quemas. Se detectan cada día en imágenes de satélite con reglas fijas y se cruzan con los expedientes que se publican en el BOE y en el Boletín Oficial de Cantabria.",
     "fig_activas": "alertas activas",

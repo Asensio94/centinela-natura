@@ -25,7 +25,7 @@ from shapely.geometry import mapping, shape
 from shapely.ops import unary_union
 from rich.console import Console
 
-from . import cadastre, catastro, clasificacion, compuestos, config, deteccion, expedientes, rpg, zona
+from . import cadastre, catastro, clasificacion, compuestos, config, deteccion, expedientes, rpg, sitadel, zona
 
 con = Console()
 ACTIVAS = ("provisional", "confirmada")
@@ -174,6 +174,11 @@ def analizar_pendientes(alertas: list[dict], hoy: date, minutos: float = ANALISI
     return hechas
 
 
+def permisos():
+    """Registro de autorizaciones del país activo: expedientes publicados en España, Sitadel en Francia."""
+    return sitadel if config.PAIS == "FR" else expedientes
+
+
 def _catastro():
     """El catastro del país activo: Sede Electrónica en España, Etalab en Francia."""
     return cadastre if config.PAIS == "FR" else catastro
@@ -262,13 +267,13 @@ def fusionar(alertas: list[dict], hoy: date) -> int:
 
 def cruzar(reg: dict, registros: list[dict]) -> None:
     """Cruza todas las alertas con las parcelas que citan los expedientes."""
-    hs = expedientes.huellas(registros)
+    hs = permisos().huellas(registros)
     for a in reg["alertas"]:
-        cr = expedientes.cruzar(a, registros, hs)
+        cr = permisos().cruzar(a, registros, hs)
         a["cruce"] = cr["estado"]
         a["expedientes"] = cr["expedientes"]
         a["expedientes_municipio"] = cr["en_municipio"]
-    reg["expedientes_desde"] = expedientes.cobertura(registros)
+    reg["expedientes_desde"] = permisos().cobertura(registros)
 
 
 def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: list[dict],

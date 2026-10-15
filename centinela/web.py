@@ -213,7 +213,7 @@ def construir() -> None:
     # joins the parts of every country.
     doc = signals.document(gj, [f["properties"]["codigo"] for f in esp["features"]], now, web_url())
     (config.CACHE_DIR / "signals.json").write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")
-    partes = [json.loads(f.read_text(encoding="utf-8")) for f in signals.parts()]
+    partes = {k: json.loads(f.read_text(encoding="utf-8")) for k, f in signals.parts().items()}
     (config.ROOT / "site" / "signals.json").write_text(
         json.dumps(signals.combine(partes, now), ensure_ascii=False), encoding="utf-8")
 

@@ -127,15 +127,15 @@ def test_spanish_signals_say_es_and_keep_names_only():
 def test_combined_file_joins_both_countries():
     es = signals.document({"features": [_feature("CN-202609-001", ["Luena"], codigo="ES1300016")]},
                           ["ES1300016"], NOW, "https://x/")
-    assert signals.combine([es], NOW) is es
+    assert signals.combine({"ES": es}, NOW) is es
     config.activar("FR")
     try:
         fr = signals.document({"features": [_feature("CF-202609-001", ["Anglet"], ["64024"])]},
                               ["FR7200787"], NOW, WEB)
     finally:
         config.activar("ES")
-    d = signals.combine([es, fr], NOW)
+    d = signals.combine({"ES": es, "FR": fr}, NOW)
     assert [s["country"] for s in d["signals"]] == ["ES", "FR"]
-    assert d["coverage"]["label"] == "Cantabria · Pyrénées-Atlantiques"
-    assert d["coverage"]["sites"] == ["ES1300016", "FR7200787"]
-    assert d["version"] == 1 and d["source"] == "centinela-natura"
+    assert d["version"] == 2 and d["source"] == "centinela-natura"
+    assert d["coverage"] == {"ES": es["coverage"], "FR": fr["coverage"]}
+    assert d["coverage"]["FR"]["label"] == "Pyrénées-Atlantiques"

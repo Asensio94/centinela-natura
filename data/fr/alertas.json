@@ -2426,7 +2426,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.785,
+    "mndwi": -0.486,
+    "nbr": 0.525,
+    "bsi": -0.201,
+    "nir": 0.401,
+    "swir22": 0.122,
+    "brillo": 0.057
+   },
+   "indices_despues": {
+    "ndvi": 0.237,
+    "mndwi": -0.478,
+    "nbr": 0.072,
+    "bsi": 0.125,
+    "nir": 0.248,
+    "swir22": 0.198,
+    "brillo": 0.099
+   },
+   "fecha_antes": "2024-07-08",
+   "fecha_despues": "2025-07-11",
+   "foto_antes": "chips/CF-202509-007_antes.jpg",
+   "foto_despues": "chips/CF-202509-007_despues.jpg",
+   "ventana_fotos": "2025-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202509-008",
@@ -2836,7 +2866,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.759,
+    "mndwi": -0.546,
+    "nbr": 0.478,
+    "bsi": -0.165,
+    "nir": 0.371,
+    "swir22": 0.134,
+    "brillo": 0.051
+   },
+   "indices_despues": {
+    "ndvi": 0.2,
+    "mndwi": -0.292,
+    "nbr": 0.077,
+    "bsi": 0.066,
+    "nir": 0.306,
+    "swir22": 0.265,
+    "brillo": 0.181
+   },
+   "fecha_antes": "2024-09-14",
+   "fecha_despues": "2025-08-17",
+   "foto_antes": "chips/CF-202509-009_antes.jpg",
+   "foto_despues": "chips/CF-202509-009_despues.jpg",
+   "ventana_fotos": "2025-09",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202509-010",
@@ -5737,7 +5797,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.872,
+    "mndwi": -0.625,
+    "nbr": 0.592,
+    "bsi": -0.262,
+    "nir": 0.374,
+    "swir22": 0.096,
+    "brillo": 0.032
+   },
+   "indices_despues": {
+    "ndvi": 0.249,
+    "mndwi": -0.247,
+    "nbr": 0.202,
+    "bsi": 0.004,
+    "nir": 0.214,
+    "swir22": 0.138,
+    "brillo": 0.118
+   },
+   "fecha_antes": "2024-08-05",
+   "fecha_despues": "2025-08-17",
+   "foto_antes": "chips/CF-202510-004_antes.jpg",
+   "foto_despues": "chips/CF-202510-004_despues.jpg",
+   "ventana_fotos": "2025-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202510-005",
@@ -14675,7 +14765,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "333",
+    "nombre": "vegetación escasa"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.785,
+    "mndwi": -0.519,
+    "nbr": 0.623,
+    "bsi": -0.31,
+    "nir": 0.369,
+    "swir22": 0.086,
+    "brillo": 0.04
+   },
+   "indices_despues": {
+    "ndvi": 0.345,
+    "mndwi": -0.673,
+    "nbr": -0.248,
+    "bsi": 0.309,
+    "nir": 0.065,
+    "swir22": 0.12,
+    "brillo": 0.025
+   },
+   "fecha_antes": "2024-10-04",
+   "fecha_despues": "2025-10-24",
+   "foto_antes": "chips/CF-202512-013_antes.jpg",
+   "foto_despues": "chips/CF-202512-013_despues.jpg",
+   "ventana_fotos": "2025-12",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202512-014",
@@ -14971,7 +15091,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "313",
+    "nombre": "bosque mixto"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.827,
+    "mndwi": -0.589,
+    "nbr": 0.568,
+    "bsi": -0.266,
+    "nir": 0.358,
+    "swir22": 0.098,
+    "brillo": 0.036
+   },
+   "indices_despues": {
+    "ndvi": 0.299,
+    "mndwi": -0.233,
+    "nbr": 0.177,
+    "bsi": 0.03,
+    "nir": 0.21,
+    "swir22": 0.152,
+    "brillo": 0.119
+   },
+   "fecha_antes": "2024-10-04",
+   "fecha_despues": "2025-10-16",
+   "foto_antes": "chips/CF-202512-014_antes.jpg",
+   "foto_despues": "chips/CF-202512-014_despues.jpg",
+   "ventana_fotos": "2025-12",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202512-015",
@@ -15139,7 +15289,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.645,
+    "mndwi": -0.568,
+    "nbr": 0.324,
+    "bsi": -0.038,
+    "nir": 0.287,
+    "swir22": 0.145,
+    "brillo": 0.055
+   },
+   "indices_despues": {
+    "ndvi": 0.271,
+    "mndwi": -0.416,
+    "nbr": 0.14,
+    "bsi": 0.14,
+    "nir": 0.171,
+    "swir22": 0.136,
+    "brillo": 0.08
+   },
+   "fecha_antes": "2024-11-03",
+   "fecha_despues": "2025-11-03",
+   "foto_antes": "chips/CF-202512-015_antes.jpg",
+   "foto_despues": "chips/CF-202512-015_despues.jpg",
+   "ventana_fotos": "2025-12",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202512-016",
@@ -35237,7 +35417,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "121",
+    "nombre": "zona industrial o comercial"
+   },
+   "analisis_v": 2,
+   "clase": "oscuro",
+   "indices_antes": {
+    "ndvi": 0.244,
+    "mndwi": -0.25,
+    "nbr": 0.048,
+    "bsi": 0.024,
+    "nir": 0.121,
+    "swir22": 0.111,
+    "brillo": 0.071
+   },
+   "indices_despues": {
+    "ndvi": 0.182,
+    "mndwi": -0.202,
+    "nbr": 0.137,
+    "bsi": 0.049,
+    "nir": 0.122,
+    "swir22": 0.088,
+    "brillo": 0.075
+   },
+   "fecha_antes": "2024-12-25",
+   "fecha_despues": "2026-01-11",
+   "foto_antes": "chips/CF-202602-021_antes.jpg",
+   "foto_despues": "chips/CF-202602-021_despues.jpg",
+   "ventana_fotos": "2026-02",
+   "clase_nombre": "Superficie artificial oscura"
   },
   {
    "id": "CF-202602-022",
@@ -36277,7 +36487,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.698,
+    "mndwi": -0.717,
+    "nbr": 0.459,
+    "bsi": -0.073,
+    "nir": 0.237,
+    "swir22": 0.089,
+    "brillo": 0.025
+   },
+   "indices_despues": {
+    "ndvi": 0.271,
+    "mndwi": -0.508,
+    "nbr": 0.13,
+    "bsi": 0.162,
+    "nir": 0.17,
+    "swir22": 0.127,
+    "brillo": 0.066
+   },
+   "fecha_antes": "2024-12-28",
+   "fecha_despues": "2025-12-28",
+   "foto_antes": "chips/CF-202602-026_antes.jpg",
+   "foto_despues": "chips/CF-202602-026_despues.jpg",
+   "ventana_fotos": "2026-02",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202602-027",
@@ -37314,7 +37554,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "311",
+    "nombre": "bosque de frondosas"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.699,
+    "mndwi": -0.502,
+    "nbr": 0.462,
+    "bsi": -0.2,
+    "nir": 0.256,
+    "swir22": 0.096,
+    "brillo": 0.047
+   },
+   "indices_despues": {
+    "ndvi": 0.155,
+    "mndwi": -0.21,
+    "nbr": 0.071,
+    "bsi": 0.054,
+    "nir": 0.107,
+    "swir22": 0.094,
+    "brillo": 0.083
+   },
+   "fecha_antes": "2025-01-19",
+   "fecha_despues": "2026-02-23",
+   "foto_antes": "chips/CF-202602-031_antes.jpg",
+   "foto_despues": "chips/CF-202602-031_despues.jpg",
+   "ventana_fotos": "2026-02",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202602-032",
@@ -48965,7 +49235,7 @@
   },
   {
    "id": "CF-202604-002",
-   "estado": "confirmada",
+   "estado": "descartada",
    "primera": "2026-04",
    "ultima": "2026-09",
    "meses": [
@@ -48985,6 +49255,11 @@
     {
      "fecha": "2026-05-31",
      "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-10-16",
+     "estado": "descartada",
+     "motivo": "oscilación del nivel del agua"
     }
    ],
    "pixeles": 39,
@@ -49176,7 +49451,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "512",
+    "nombre": "lámina de agua"
+   },
+   "analisis_v": 2,
+   "clase": "agua",
+   "indices_antes": {
+    "ndvi": 0.85,
+    "mndwi": -0.454,
+    "nbr": 0.641,
+    "bsi": -0.342,
+    "nir": 0.365,
+    "swir22": 0.077,
+    "brillo": 0.041
+   },
+   "indices_despues": {
+    "ndvi": 0.072,
+    "mndwi": 0.03,
+    "nbr": 0.266,
+    "bsi": -0.028,
+    "nir": 0.092,
+    "swir22": 0.059,
+    "brillo": 0.075
+   },
+   "fecha_antes": "2025-04-29",
+   "fecha_despues": "2026-04-22",
+   "foto_antes": "chips/CF-202604-002_antes.jpg",
+   "foto_despues": "chips/CF-202604-002_despues.jpg",
+   "ventana_fotos": "2026-04",
+   "clase_nombre": "Lámina de agua nueva"
   },
   {
    "id": "CF-202604-003",
@@ -52465,7 +52770,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.785,
+    "mndwi": -0.6,
+    "nbr": 0.52,
+    "bsi": -0.19,
+    "nir": 0.336,
+    "swir22": 0.109,
+    "brillo": 0.039
+   },
+   "indices_despues": {
+    "ndvi": 0.353,
+    "mndwi": -0.585,
+    "nbr": -0.147,
+    "bsi": 0.201,
+    "nir": 0.182,
+    "swir22": 0.245,
+    "brillo": 0.073
+   },
+   "fecha_antes": "2025-05-29",
+   "fecha_despues": "2026-05-27",
+   "foto_antes": "chips/CF-202605-006_antes.jpg",
+   "foto_despues": "chips/CF-202605-006_despues.jpg",
+   "ventana_fotos": "2026-05",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202605-007",
@@ -53370,7 +53705,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.742,
+    "mndwi": -0.598,
+    "nbr": 0.465,
+    "bsi": -0.137,
+    "nir": 0.328,
+    "swir22": 0.12,
+    "brillo": 0.043
+   },
+   "indices_despues": {
+    "ndvi": 0.319,
+    "mndwi": -0.545,
+    "nbr": -0.08,
+    "bsi": 0.183,
+    "nir": 0.232,
+    "swir22": 0.276,
+    "brillo": 0.092
+   },
+   "fecha_antes": "2025-05-29",
+   "fecha_despues": "2026-05-27",
+   "foto_antes": "chips/CF-202605-009_antes.jpg",
+   "foto_despues": "chips/CF-202605-009_despues.jpg",
+   "ventana_fotos": "2026-05",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202605-010",
@@ -54002,7 +54367,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "131",
+    "nombre": "extracción minera"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.736,
+    "mndwi": -0.438,
+    "nbr": 0.495,
+    "bsi": -0.266,
+    "nir": 0.299,
+    "swir22": 0.1,
+    "brillo": 0.048
+   },
+   "indices_despues": {
+    "ndvi": 0.196,
+    "mndwi": -0.244,
+    "nbr": 0.101,
+    "bsi": 0.049,
+    "nir": 0.202,
+    "swir22": 0.173,
+    "brillo": 0.124
+   },
+   "fecha_antes": "2025-05-12",
+   "fecha_despues": "2026-05-22",
+   "foto_antes": "chips/CF-202605-012_antes.jpg",
+   "foto_despues": "chips/CF-202605-012_despues.jpg",
+   "ventana_fotos": "2026-05",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202605-013",
@@ -54777,7 +55172,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.851,
+    "mndwi": -0.465,
+    "nbr": 0.611,
+    "bsi": -0.35,
+    "nir": 0.5,
+    "swir22": 0.118,
+    "brillo": 0.05
+   },
+   "indices_despues": {
+    "ndvi": 0.189,
+    "mndwi": -0.214,
+    "nbr": 0.199,
+    "bsi": 0.034,
+    "nir": 0.264,
+    "swir22": 0.18,
+    "brillo": 0.155
+   },
+   "fecha_antes": "2025-04-29",
+   "fecha_despues": "2026-05-22",
+   "foto_antes": "chips/CF-202605-016_antes.jpg",
+   "foto_despues": "chips/CF-202605-016_despues.jpg",
+   "ventana_fotos": "2026-05",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202606-001",
@@ -58974,7 +59399,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "112",
+    "nombre": "tejido urbano discontinuo"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.831,
+    "mndwi": -0.43,
+    "nbr": 0.576,
+    "bsi": -0.319,
+    "nir": 0.497,
+    "swir22": 0.13,
+    "brillo": 0.062
+   },
+   "indices_despues": {
+    "ndvi": 0.167,
+    "mndwi": -0.15,
+    "nbr": 0.148,
+    "bsi": 0.009,
+    "nir": 0.289,
+    "swir22": 0.21,
+    "brillo": 0.188
+   },
+   "fecha_antes": "2025-06-18",
+   "fecha_despues": "2026-04-24",
+   "foto_antes": "chips/CF-202606-009_antes.jpg",
+   "foto_despues": "chips/CF-202606-009_despues.jpg",
+   "ventana_fotos": "2026-06",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202606-010",
@@ -62015,7 +62470,37 @@
     "groupe": "Prairies temporaires",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.79,
+    "mndwi": -0.526,
+    "nbr": 0.581,
+    "bsi": -0.268,
+    "nir": 0.443,
+    "swir22": 0.117,
+    "brillo": 0.054
+   },
+   "indices_despues": {
+    "ndvi": 0.142,
+    "mndwi": -0.362,
+    "nbr": 0.124,
+    "bsi": 0.181,
+    "nir": 0.23,
+    "swir22": 0.181,
+    "brillo": 0.123
+   },
+   "fecha_antes": "2025-05-29",
+   "fecha_despues": "2026-05-07",
+   "foto_antes": "chips/CF-202607-007_antes.jpg",
+   "foto_despues": "chips/CF-202607-007_despues.jpg",
+   "ventana_fotos": "2026-07",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202607-008",
@@ -67182,7 +67667,37 @@
     "groupe": "Autres céréales",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.413,
+    "mndwi": -0.481,
+    "nbr": 0.277,
+    "bsi": 0.06,
+    "nir": 0.225,
+    "swir22": 0.126,
+    "brillo": 0.072
+   },
+   "indices_despues": {
+    "ndvi": 0.335,
+    "mndwi": -0.59,
+    "nbr": 0.074,
+    "bsi": 0.201,
+    "nir": 0.215,
+    "swir22": 0.184,
+    "brillo": 0.077
+   },
+   "fecha_antes": "2025-06-16",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202608-010_antes.jpg",
+   "foto_despues": "chips/CF-202608-010_despues.jpg",
+   "ventana_fotos": "2026-08",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202608-011",
@@ -67603,7 +68118,37 @@
     "groupe": "Prairies temporaires",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.865,
+    "mndwi": -0.546,
+    "nbr": 0.649,
+    "bsi": -0.326,
+    "nir": 0.441,
+    "swir22": 0.094,
+    "brillo": 0.041
+   },
+   "indices_despues": {
+    "ndvi": 0.26,
+    "mndwi": -0.432,
+    "nbr": 0.036,
+    "bsi": 0.167,
+    "nir": 0.292,
+    "swir22": 0.272,
+    "brillo": 0.131
+   },
+   "fecha_antes": "2025-06-28",
+   "fecha_despues": "2026-08-22",
+   "foto_antes": "chips/CF-202608-012_antes.jpg",
+   "foto_despues": "chips/CF-202608-012_despues.jpg",
+   "ventana_fotos": "2026-08",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202608-013",
@@ -68005,7 +68550,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.681,
+    "mndwi": -0.525,
+    "nbr": 0.412,
+    "bsi": -0.084,
+    "nir": 0.317,
+    "swir22": 0.132,
+    "brillo": 0.054
+   },
+   "indices_despues": {
+    "ndvi": 0.313,
+    "mndwi": -0.42,
+    "nbr": 0.064,
+    "bsi": 0.099,
+    "nir": 0.405,
+    "swir22": 0.357,
+    "brillo": 0.177
+   },
+   "fecha_antes": "2025-08-25",
+   "fecha_despues": "2026-07-23",
+   "foto_antes": "chips/CF-202608-013_antes.jpg",
+   "foto_despues": "chips/CF-202608-013_despues.jpg",
+   "ventana_fotos": "2026-08",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202608-014",
@@ -68228,7 +68803,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.731,
+    "mndwi": -0.557,
+    "nbr": 0.427,
+    "bsi": -0.092,
+    "nir": 0.368,
+    "swir22": 0.148,
+    "brillo": 0.058
+   },
+   "indices_despues": {
+    "ndvi": 0.244,
+    "mndwi": -0.328,
+    "nbr": 0.174,
+    "bsi": 0.079,
+    "nir": 0.365,
+    "swir22": 0.261,
+    "brillo": 0.19
+   },
+   "fecha_antes": "2025-07-16",
+   "fecha_despues": "2026-08-19",
+   "foto_antes": "chips/CF-202608-014_antes.jpg",
+   "foto_despues": "chips/CF-202608-014_despues.jpg",
+   "ventana_fotos": "2026-08",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202608-015",
@@ -68424,7 +69029,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.898,
+    "mndwi": -0.565,
+    "nbr": 0.69,
+    "bsi": -0.39,
+    "nir": 0.404,
+    "swir22": 0.074,
+    "brillo": 0.029
+   },
+   "indices_despues": {
+    "ndvi": 0.308,
+    "mndwi": -0.374,
+    "nbr": 0.111,
+    "bsi": 0.087,
+    "nir": 0.234,
+    "swir22": 0.188,
+    "brillo": 0.106
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-08-29",
+   "foto_antes": "chips/CF-202608-015_antes.jpg",
+   "foto_despues": "chips/CF-202608-015_despues.jpg",
+   "ventana_fotos": "2026-08",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202608-016",
@@ -68585,7 +69220,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.796,
+    "mndwi": -0.46,
+    "nbr": 0.653,
+    "bsi": -0.337,
+    "nir": 0.372,
+    "swir22": 0.077,
+    "brillo": 0.044
+   },
+   "indices_despues": {
+    "ndvi": 0.258,
+    "mndwi": -0.397,
+    "nbr": 0.022,
+    "bsi": 0.14,
+    "nir": 0.233,
+    "swir22": 0.222,
+    "brillo": 0.116
+   },
+   "fecha_antes": "2025-08-04",
+   "fecha_despues": "2026-08-29",
+   "foto_antes": "chips/CF-202608-016_antes.jpg",
+   "foto_despues": "chips/CF-202608-016_despues.jpg",
+   "ventana_fotos": "2026-08",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202608-017",
@@ -68869,7 +69534,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.774,
+    "mndwi": -0.464,
+    "nbr": 0.554,
+    "bsi": -0.256,
+    "nir": 0.454,
+    "swir22": 0.125,
+    "brillo": 0.067
+   },
+   "indices_despues": {
+    "ndvi": 0.248,
+    "mndwi": -0.321,
+    "nbr": 0.128,
+    "bsi": 0.084,
+    "nir": 0.288,
+    "swir22": 0.221,
+    "brillo": 0.147
+   },
+   "fecha_antes": "2025-06-18",
+   "fecha_despues": "2026-06-21",
+   "foto_antes": "chips/CF-202608-017_antes.jpg",
+   "foto_despues": "chips/CF-202608-017_despues.jpg",
+   "ventana_fotos": "2026-08",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202608-018",
@@ -69091,7 +69786,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.867,
+    "mndwi": -0.6,
+    "nbr": 0.653,
+    "bsi": -0.343,
+    "nir": 0.415,
+    "swir22": 0.087,
+    "brillo": 0.032
+   },
+   "indices_despues": {
+    "ndvi": 0.332,
+    "mndwi": -0.479,
+    "nbr": 0.246,
+    "bsi": 0.106,
+    "nir": 0.251,
+    "swir22": 0.152,
+    "brillo": 0.09
+   },
+   "fecha_antes": "2025-07-16",
+   "fecha_despues": "2026-06-21",
+   "foto_antes": "chips/CF-202608-018_antes.jpg",
+   "foto_despues": "chips/CF-202608-018_despues.jpg",
+   "ventana_fotos": "2026-08",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202608-019",
@@ -69778,7 +70503,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.82,
+    "mndwi": -0.49,
+    "nbr": 0.585,
+    "bsi": -0.254,
+    "nir": 0.512,
+    "swir22": 0.134,
+    "brillo": 0.06
+   },
+   "indices_despues": {
+    "ndvi": 0.207,
+    "mndwi": -0.242,
+    "nbr": 0.185,
+    "bsi": 0.078,
+    "nir": 0.389,
+    "swir22": 0.275,
+    "brillo": 0.209
+   },
+   "fecha_antes": "2025-06-18",
+   "fecha_despues": "2026-06-03",
+   "foto_antes": "chips/CF-202608-020_antes.jpg",
+   "foto_despues": "chips/CF-202608-020_despues.jpg",
+   "ventana_fotos": "2026-08",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202609-001",
@@ -102447,7 +103202,37 @@
     "groupe": "Gel (surfaces gelées sans production)",
     "pradera_permanente": false,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.804,
+    "mndwi": -0.488,
+    "nbr": 0.553,
+    "bsi": -0.25,
+    "nir": 0.381,
+    "swir22": 0.111,
+    "brillo": 0.053
+   },
+   "indices_despues": {
+    "ndvi": 0.33,
+    "mndwi": -0.662,
+    "nbr": -0.136,
+    "bsi": 0.295,
+    "nir": 0.174,
+    "swir22": 0.231,
+    "brillo": 0.067
+   },
+   "fecha_antes": "2025-09-29",
+   "fecha_despues": "2026-09-14",
+   "foto_antes": "chips/CF-202609-083_antes.jpg",
+   "foto_despues": "chips/CF-202609-083_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-084",
@@ -102765,7 +103550,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.717,
+    "mndwi": -0.593,
+    "nbr": 0.415,
+    "bsi": -0.078,
+    "nir": 0.378,
+    "swir22": 0.157,
+    "brillo": 0.06
+   },
+   "indices_despues": {
+    "ndvi": 0.317,
+    "mndwi": -0.577,
+    "nbr": 0.09,
+    "bsi": 0.193,
+    "nir": 0.322,
+    "swir22": 0.261,
+    "brillo": 0.117
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-084_antes.jpg",
+   "foto_despues": "chips/CF-202609-084_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-085",
@@ -102953,7 +103768,37 @@
     "groupe": "Prairies temporaires",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.769,
+    "mndwi": -0.522,
+    "nbr": 0.467,
+    "bsi": -0.175,
+    "nir": 0.334,
+    "swir22": 0.12,
+    "brillo": 0.049
+   },
+   "indices_despues": {
+    "ndvi": 0.293,
+    "mndwi": -0.539,
+    "nbr": -0.03,
+    "bsi": 0.208,
+    "nir": 0.231,
+    "swir22": 0.244,
+    "brillo": 0.102
+   },
+   "fecha_antes": "2025-09-19",
+   "fecha_despues": "2026-09-19",
+   "foto_antes": "chips/CF-202609-085_antes.jpg",
+   "foto_despues": "chips/CF-202609-085_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-086",
@@ -104168,7 +105013,37 @@
     "groupe": "Gel (surfaces gelées sans production)",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "311",
+    "nombre": "bosque de frondosas"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.636,
+    "mndwi": -0.556,
+    "nbr": 0.337,
+    "bsi": -0.028,
+    "nir": 0.299,
+    "swir22": 0.143,
+    "brillo": 0.056
+   },
+   "indices_despues": {
+    "ndvi": 0.285,
+    "mndwi": -0.44,
+    "nbr": 0.057,
+    "bsi": 0.118,
+    "nir": 0.257,
+    "swir22": 0.232,
+    "brillo": 0.112
+   },
+   "fecha_antes": "2025-07-16",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-088_antes.jpg",
+   "foto_despues": "chips/CF-202609-088_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-089",
@@ -104441,7 +105316,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.625,
+    "mndwi": -0.572,
+    "nbr": 0.368,
+    "bsi": -0.048,
+    "nir": 0.313,
+    "swir22": 0.146,
+    "brillo": 0.062
+   },
+   "indices_despues": {
+    "ndvi": 0.311,
+    "mndwi": -0.591,
+    "nbr": -0.133,
+    "bsi": 0.22,
+    "nir": 0.187,
+    "swir22": 0.246,
+    "brillo": 0.077
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-089_antes.jpg",
+   "foto_despues": "chips/CF-202609-089_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-090",
@@ -104900,7 +105805,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.837,
+    "mndwi": -0.588,
+    "nbr": 0.559,
+    "bsi": -0.231,
+    "nir": 0.357,
+    "swir22": 0.103,
+    "brillo": 0.037
+   },
+   "indices_despues": {
+    "ndvi": 0.294,
+    "mndwi": -0.458,
+    "nbr": 0.208,
+    "bsi": 0.107,
+    "nir": 0.371,
+    "swir22": 0.243,
+    "brillo": 0.146
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-091_antes.jpg",
+   "foto_despues": "chips/CF-202609-091_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-092",
@@ -105385,7 +106320,37 @@
     "groupe": "Prairies temporaires",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.73,
+    "mndwi": -0.587,
+    "nbr": 0.392,
+    "bsi": -0.097,
+    "nir": 0.322,
+    "swir22": 0.139,
+    "brillo": 0.05
+   },
+   "indices_despues": {
+    "ndvi": 0.322,
+    "mndwi": -0.621,
+    "nbr": -0.066,
+    "bsi": 0.254,
+    "nir": 0.236,
+    "swir22": 0.27,
+    "brillo": 0.093
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-09-24",
+   "foto_antes": "chips/CF-202609-093_antes.jpg",
+   "foto_despues": "chips/CF-202609-093_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-094",
@@ -106154,7 +107119,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.695,
+    "mndwi": -0.599,
+    "nbr": 0.408,
+    "bsi": -0.078,
+    "nir": 0.321,
+    "swir22": 0.136,
+    "brillo": 0.051
+   },
+   "indices_despues": {
+    "ndvi": 0.321,
+    "mndwi": -0.612,
+    "nbr": -0.072,
+    "bsi": 0.238,
+    "nir": 0.217,
+    "swir22": 0.241,
+    "brillo": 0.083
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-096_antes.jpg",
+   "foto_despues": "chips/CF-202609-096_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-097",
@@ -106389,7 +107384,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.661,
+    "mndwi": -0.606,
+    "nbr": 0.434,
+    "bsi": -0.057,
+    "nir": 0.352,
+    "swir22": 0.146,
+    "brillo": 0.059
+   },
+   "indices_despues": {
+    "ndvi": 0.314,
+    "mndwi": -0.576,
+    "nbr": 0.105,
+    "bsi": 0.187,
+    "nir": 0.308,
+    "swir22": 0.242,
+    "brillo": 0.116
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-097_antes.jpg",
+   "foto_despues": "chips/CF-202609-097_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-098",
@@ -106576,7 +107601,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.798,
+    "mndwi": -0.496,
+    "nbr": 0.598,
+    "bsi": -0.306,
+    "nir": 0.376,
+    "swir22": 0.091,
+    "brillo": 0.044
+   },
+   "indices_despues": {
+    "ndvi": 0.229,
+    "mndwi": -0.417,
+    "nbr": 0.108,
+    "bsi": 0.145,
+    "nir": 0.322,
+    "swir22": 0.251,
+    "brillo": 0.151
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-098_antes.jpg",
+   "foto_despues": "chips/CF-202609-098_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202609-099",
@@ -106809,7 +107864,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.671,
+    "mndwi": -0.416,
+    "nbr": 0.537,
+    "bsi": -0.247,
+    "nir": 0.326,
+    "swir22": 0.1,
+    "brillo": 0.061
+   },
+   "indices_despues": {
+    "ndvi": 0.308,
+    "mndwi": -0.487,
+    "nbr": 0.071,
+    "bsi": 0.148,
+    "nir": 0.228,
+    "swir22": 0.199,
+    "brillo": 0.093
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-09-19",
+   "foto_antes": "chips/CF-202609-099_antes.jpg",
+   "foto_despues": "chips/CF-202609-099_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-100",
@@ -107062,7 +108147,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "142",
+    "nombre": "instalación deportiva"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.704,
+    "mndwi": -0.496,
+    "nbr": 0.402,
+    "bsi": -0.129,
+    "nir": 0.34,
+    "swir22": 0.148,
+    "brillo": 0.064
+   },
+   "indices_despues": {
+    "ndvi": 0.284,
+    "mndwi": -0.507,
+    "nbr": -0.039,
+    "bsi": 0.17,
+    "nir": 0.251,
+    "swir22": 0.262,
+    "brillo": 0.114
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-09-11",
+   "foto_antes": "chips/CF-202609-100_antes.jpg",
+   "foto_despues": "chips/CF-202609-100_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-101",
@@ -107232,7 +108347,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.82,
+    "mndwi": -0.574,
+    "nbr": 0.506,
+    "bsi": -0.203,
+    "nir": 0.408,
+    "swir22": 0.131,
+    "brillo": 0.045
+   },
+   "indices_despues": {
+    "ndvi": 0.16,
+    "mndwi": -0.303,
+    "nbr": 0.05,
+    "bsi": 0.118,
+    "nir": 0.191,
+    "swir22": 0.178,
+    "brillo": 0.125
+   },
+   "fecha_antes": "2025-09-06",
+   "fecha_despues": "2026-08-30",
+   "foto_antes": "chips/CF-202609-101_antes.jpg",
+   "foto_despues": "chips/CF-202609-101_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202609-102",
@@ -107262,7 +108407,7 @@
    "pixeles": 188,
    "ha": 1.88,
    "ndvi_ref": 0.696,
-   "ndvi_actual": 0.308,
+   "ndvi_actual": 0.334,
    "obs_actual": 16,
    "centro": [
     43.14745,
@@ -107976,7 +109121,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.827,
+    "mndwi": -0.512,
+    "nbr": 0.549,
+    "bsi": -0.285,
+    "nir": 0.403,
+    "swir22": 0.113,
+    "brillo": 0.044
+   },
+   "indices_despues": {
+    "ndvi": 0.303,
+    "mndwi": -0.521,
+    "nbr": 0.05,
+    "bsi": 0.161,
+    "nir": 0.254,
+    "swir22": 0.226,
+    "brillo": 0.102
+   },
+   "fecha_antes": "2025-09-19",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-103_antes.jpg",
+   "foto_despues": "chips/CF-202609-103_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-104",
@@ -108183,7 +109358,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.739,
+    "mndwi": -0.547,
+    "nbr": 0.464,
+    "bsi": -0.129,
+    "nir": 0.392,
+    "swir22": 0.142,
+    "brillo": 0.057
+   },
+   "indices_despues": {
+    "ndvi": 0.331,
+    "mndwi": -0.598,
+    "nbr": -0.023,
+    "bsi": 0.214,
+    "nir": 0.256,
+    "swir22": 0.266,
+    "brillo": 0.097
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-09-11",
+   "foto_antes": "chips/CF-202609-104_antes.jpg",
+   "foto_despues": "chips/CF-202609-104_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-105",
@@ -108994,7 +110199,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "333",
+    "nombre": "vegetación escasa"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.673,
+    "mndwi": -0.607,
+    "nbr": 0.428,
+    "bsi": -0.073,
+    "nir": 0.302,
+    "swir22": 0.12,
+    "brillo": 0.049
+   },
+   "indices_despues": {
+    "ndvi": 0.327,
+    "mndwi": -0.573,
+    "nbr": -0.066,
+    "bsi": 0.21,
+    "nir": 0.204,
+    "swir22": 0.238,
+    "brillo": 0.079
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-107_antes.jpg",
+   "foto_despues": "chips/CF-202609-107_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-108",
@@ -109024,7 +110259,7 @@
    "pixeles": 78,
    "ha": 0.78,
    "ndvi_ref": 0.76,
-   "ndvi_actual": 0.317,
+   "ndvi_actual": 0.309,
    "obs_actual": 25,
    "centro": [
     43.35943,
@@ -109718,7 +110953,37 @@
     "groupe": "Autres céréales",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "112",
+    "nombre": "tejido urbano discontinuo"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.668,
+    "mndwi": -0.518,
+    "nbr": 0.393,
+    "bsi": -0.115,
+    "nir": 0.32,
+    "swir22": 0.143,
+    "brillo": 0.06
+   },
+   "indices_despues": {
+    "ndvi": 0.252,
+    "mndwi": -0.395,
+    "nbr": 0.04,
+    "bsi": 0.116,
+    "nir": 0.26,
+    "swir22": 0.247,
+    "brillo": 0.131
+   },
+   "fecha_antes": "2025-09-03",
+   "fecha_despues": "2026-09-04",
+   "foto_antes": "chips/CF-202609-109_antes.jpg",
+   "foto_despues": "chips/CF-202609-109_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-110",
@@ -109748,7 +111013,7 @@
    "pixeles": 299,
    "ha": 2.99,
    "ndvi_ref": 0.804,
-   "ndvi_actual": 0.185,
+   "ndvi_actual": 0.194,
    "obs_actual": 24,
    "centro": [
     43.26916,
@@ -110980,7 +112245,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.685,
+    "mndwi": -0.551,
+    "nbr": 0.349,
+    "bsi": -0.052,
+    "nir": 0.317,
+    "swir22": 0.146,
+    "brillo": 0.059
+   },
+   "indices_despues": {
+    "ndvi": 0.293,
+    "mndwi": -0.572,
+    "nbr": 0.004,
+    "bsi": 0.21,
+    "nir": 0.281,
+    "swir22": 0.278,
+    "brillo": 0.114
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-112_antes.jpg",
+   "foto_despues": "chips/CF-202609-112_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-113",
@@ -111146,7 +112441,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.755,
+    "mndwi": -0.596,
+    "nbr": 0.434,
+    "bsi": -0.103,
+    "nir": 0.338,
+    "swir22": 0.133,
+    "brillo": 0.048
+   },
+   "indices_despues": {
+    "ndvi": 0.299,
+    "mndwi": -0.581,
+    "nbr": 0.036,
+    "bsi": 0.213,
+    "nir": 0.275,
+    "swir22": 0.256,
+    "brillo": 0.108
+   },
+   "fecha_antes": "2025-09-19",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-113_antes.jpg",
+   "foto_despues": "chips/CF-202609-113_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-114",
@@ -111310,7 +112635,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.712,
+    "mndwi": -0.608,
+    "nbr": 0.335,
+    "bsi": -0.054,
+    "nir": 0.085,
+    "swir22": 0.043,
+    "brillo": 0.014
+   },
+   "indices_despues": {
+    "ndvi": 0.327,
+    "mndwi": -0.566,
+    "nbr": 0.064,
+    "bsi": 0.188,
+    "nir": 0.279,
+    "swir22": 0.249,
+    "brillo": 0.107
+   },
+   "fecha_antes": "2025-09-19",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-114_antes.jpg",
+   "foto_despues": "chips/CF-202609-114_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-115",
@@ -112029,7 +113384,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.728,
+    "mndwi": -0.539,
+    "nbr": 0.453,
+    "bsi": -0.149,
+    "nir": 0.371,
+    "swir22": 0.137,
+    "brillo": 0.057
+   },
+   "indices_despues": {
+    "ndvi": 0.348,
+    "mndwi": -0.553,
+    "nbr": 0.054,
+    "bsi": 0.142,
+    "nir": 0.265,
+    "swir22": 0.227,
+    "brillo": 0.092
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-116_antes.jpg",
+   "foto_despues": "chips/CF-202609-116_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-117",
@@ -112230,7 +113615,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.668,
+    "mndwi": -0.629,
+    "nbr": 0.277,
+    "bsi": 0.018,
+    "nir": 0.303,
+    "swir22": 0.179,
+    "brillo": 0.058
+   },
+   "indices_despues": {
+    "ndvi": 0.316,
+    "mndwi": -0.604,
+    "nbr": -0.054,
+    "bsi": 0.245,
+    "nir": 0.221,
+    "swir22": 0.253,
+    "brillo": 0.09
+   },
+   "fecha_antes": "2025-09-19",
+   "fecha_despues": "2026-09-19",
+   "foto_antes": "chips/CF-202609-117_antes.jpg",
+   "foto_despues": "chips/CF-202609-117_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-118",
@@ -112449,7 +113864,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "131",
+    "nombre": "extracción minera"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.738,
+    "mndwi": -0.505,
+    "nbr": 0.464,
+    "bsi": -0.154,
+    "nir": 0.238,
+    "swir22": 0.085,
+    "brillo": 0.037
+   },
+   "indices_despues": {
+    "ndvi": 0.169,
+    "mndwi": -0.233,
+    "nbr": 0.152,
+    "bsi": 0.085,
+    "nir": 0.201,
+    "swir22": 0.141,
+    "brillo": 0.112
+   },
+   "fecha_antes": "2025-09-19",
+   "fecha_despues": "2026-08-09",
+   "foto_antes": "chips/CF-202609-118_antes.jpg",
+   "foto_despues": "chips/CF-202609-118_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202609-119",
@@ -112607,7 +114052,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.733,
+    "mndwi": -0.54,
+    "nbr": 0.458,
+    "bsi": -0.141,
+    "nir": 0.383,
+    "swir22": 0.139,
+    "brillo": 0.059
+   },
+   "indices_despues": {
+    "ndvi": 0.27,
+    "mndwi": -0.533,
+    "nbr": 0.029,
+    "bsi": 0.192,
+    "nir": 0.254,
+    "swir22": 0.234,
+    "brillo": 0.112
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-119_antes.jpg",
+   "foto_despues": "chips/CF-202609-119_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-120",
@@ -112795,7 +114270,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "333",
+    "nombre": "vegetación escasa"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.643,
+    "mndwi": -0.589,
+    "nbr": 0.404,
+    "bsi": -0.05,
+    "nir": 0.293,
+    "swir22": 0.125,
+    "brillo": 0.054
+   },
+   "indices_despues": {
+    "ndvi": 0.323,
+    "mndwi": -0.569,
+    "nbr": -0.064,
+    "bsi": 0.203,
+    "nir": 0.186,
+    "swir22": 0.213,
+    "brillo": 0.076
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-120_antes.jpg",
+   "foto_despues": "chips/CF-202609-120_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-121",
@@ -112983,7 +114488,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.745,
+    "mndwi": -0.487,
+    "nbr": 0.542,
+    "bsi": -0.25,
+    "nir": 0.36,
+    "swir22": 0.105,
+    "brillo": 0.051
+   },
+   "indices_despues": {
+    "ndvi": 0.257,
+    "mndwi": -0.471,
+    "nbr": 0.016,
+    "bsi": 0.153,
+    "nir": 0.277,
+    "swir22": 0.271,
+    "brillo": 0.125
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-121_antes.jpg",
+   "foto_despues": "chips/CF-202609-121_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-122",
@@ -113507,7 +115042,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.627,
+    "mndwi": -0.58,
+    "nbr": 0.339,
+    "bsi": -0.036,
+    "nir": 0.275,
+    "swir22": 0.134,
+    "brillo": 0.056
+   },
+   "indices_despues": {
+    "ndvi": 0.314,
+    "mndwi": -0.549,
+    "nbr": -0.063,
+    "bsi": 0.187,
+    "nir": 0.172,
+    "swir22": 0.197,
+    "brillo": 0.071
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-09-21",
+   "foto_antes": "chips/CF-202609-123_antes.jpg",
+   "foto_despues": "chips/CF-202609-123_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-124",
@@ -114365,7 +115930,37 @@
     "groupe": "Blé tendre",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.438,
+    "mndwi": -0.479,
+    "nbr": 0.236,
+    "bsi": 0.051,
+    "nir": 0.299,
+    "swir22": 0.185,
+    "brillo": 0.097
+   },
+   "indices_despues": {
+    "ndvi": 0.25,
+    "mndwi": -0.491,
+    "nbr": -0.029,
+    "bsi": 0.187,
+    "nir": 0.221,
+    "swir22": 0.235,
+    "brillo": 0.106
+   },
+   "fecha_antes": "2025-08-24",
+   "fecha_despues": "2026-09-04",
+   "foto_antes": "chips/CF-202609-126_antes.jpg",
+   "foto_despues": "chips/CF-202609-126_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-127",
@@ -114539,7 +116134,37 @@
     "groupe": "Gel (surfaces gelées sans production)",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.745,
+    "mndwi": -0.55,
+    "nbr": 0.463,
+    "bsi": -0.127,
+    "nir": 0.383,
+    "swir22": 0.137,
+    "brillo": 0.058
+   },
+   "indices_despues": {
+    "ndvi": 0.225,
+    "mndwi": -0.426,
+    "nbr": -0.012,
+    "bsi": 0.146,
+    "nir": 0.306,
+    "swir22": 0.312,
+    "brillo": 0.16
+   },
+   "fecha_antes": "2025-07-16",
+   "fecha_despues": "2026-09-21",
+   "foto_antes": "chips/CF-202609-127_antes.jpg",
+   "foto_despues": "chips/CF-202609-127_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202609-128",
@@ -115817,7 +117442,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.923,
+    "mndwi": -0.544,
+    "nbr": 0.718,
+    "bsi": -0.438,
+    "nir": 0.585,
+    "swir22": 0.093,
+    "brillo": 0.037
+   },
+   "indices_despues": {
+    "ndvi": 0.277,
+    "mndwi": -0.371,
+    "nbr": 0.137,
+    "bsi": 0.081,
+    "nir": 0.354,
+    "swir22": 0.268,
+    "brillo": 0.168
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-09-11",
+   "foto_antes": "chips/CF-202609-131_antes.jpg",
+   "foto_despues": "chips/CF-202609-131_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-132",
@@ -116005,7 +117660,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.734,
+    "mndwi": -0.493,
+    "nbr": 0.562,
+    "bsi": -0.211,
+    "nir": 0.449,
+    "swir22": 0.123,
+    "brillo": 0.069
+   },
+   "indices_despues": {
+    "ndvi": 0.323,
+    "mndwi": -0.553,
+    "nbr": 0.089,
+    "bsi": 0.167,
+    "nir": 0.297,
+    "swir22": 0.246,
+    "brillo": 0.112
+   },
+   "fecha_antes": "2025-07-08",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-132_antes.jpg",
+   "foto_despues": "chips/CF-202609-132_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-133",
@@ -116421,7 +118106,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.713,
+    "mndwi": -0.45,
+    "nbr": 0.563,
+    "bsi": -0.252,
+    "nir": 0.326,
+    "swir22": 0.09,
+    "brillo": 0.053
+   },
+   "indices_despues": {
+    "ndvi": 0.267,
+    "mndwi": -0.402,
+    "nbr": 0.034,
+    "bsi": 0.116,
+    "nir": 0.268,
+    "swir22": 0.249,
+    "brillo": 0.136
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-09-21",
+   "foto_antes": "chips/CF-202609-134_antes.jpg",
+   "foto_despues": "chips/CF-202609-134_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-135",
@@ -116721,7 +118436,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.768,
+    "mndwi": -0.61,
+    "nbr": 0.445,
+    "bsi": -0.126,
+    "nir": 0.379,
+    "swir22": 0.148,
+    "brillo": 0.051
+   },
+   "indices_despues": {
+    "ndvi": 0.303,
+    "mndwi": -0.556,
+    "nbr": 0.024,
+    "bsi": 0.197,
+    "nir": 0.247,
+    "swir22": 0.241,
+    "brillo": 0.105
+   },
+   "fecha_antes": "2025-09-19",
+   "fecha_despues": "2026-09-21",
+   "foto_antes": "chips/CF-202609-135_antes.jpg",
+   "foto_despues": "chips/CF-202609-135_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-136",
@@ -117162,7 +118907,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.727,
+    "mndwi": -0.595,
+    "nbr": 0.469,
+    "bsi": -0.101,
+    "nir": 0.376,
+    "swir22": 0.137,
+    "brillo": 0.055
+   },
+   "indices_despues": {
+    "ndvi": 0.333,
+    "mndwi": -0.583,
+    "nbr": 0.125,
+    "bsi": 0.184,
+    "nir": 0.329,
+    "swir22": 0.254,
+    "brillo": 0.118
+   },
+   "fecha_antes": "2025-07-16",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-137_antes.jpg",
+   "foto_despues": "chips/CF-202609-137_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-138",
@@ -117503,7 +119278,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "112",
+    "nombre": "tejido urbano discontinuo"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.812,
+    "mndwi": -0.503,
+    "nbr": 0.543,
+    "bsi": -0.252,
+    "nir": 0.408,
+    "swir22": 0.123,
+    "brillo": 0.055
+   },
+   "indices_despues": {
+    "ndvi": 0.33,
+    "mndwi": -0.612,
+    "nbr": -0.078,
+    "bsi": 0.243,
+    "nir": 0.21,
+    "swir22": 0.245,
+    "brillo": 0.082
+   },
+   "fecha_antes": "2025-09-29",
+   "fecha_despues": "2026-09-14",
+   "foto_antes": "chips/CF-202609-139_antes.jpg",
+   "foto_despues": "chips/CF-202609-139_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-140",
@@ -118078,7 +119883,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.676,
+    "mndwi": -0.603,
+    "nbr": 0.328,
+    "bsi": -0.026,
+    "nir": 0.321,
+    "swir22": 0.166,
+    "brillo": 0.058
+   },
+   "indices_despues": {
+    "ndvi": 0.264,
+    "mndwi": -0.557,
+    "nbr": 0.033,
+    "bsi": 0.215,
+    "nir": 0.277,
+    "swir22": 0.262,
+    "brillo": 0.12
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-142_antes.jpg",
+   "foto_despues": "chips/CF-202609-142_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-143",
@@ -118593,7 +120428,37 @@
     "groupe": "Gel (surfaces gelées sans production)",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.72,
+    "mndwi": -0.6,
+    "nbr": 0.424,
+    "bsi": -0.086,
+    "nir": 0.334,
+    "swir22": 0.134,
+    "brillo": 0.048
+   },
+   "indices_despues": {
+    "ndvi": 0.325,
+    "mndwi": -0.535,
+    "nbr": 0.081,
+    "bsi": 0.16,
+    "nir": 0.351,
+    "swir22": 0.294,
+    "brillo": 0.136
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-23",
+   "foto_antes": "chips/CF-202609-145_antes.jpg",
+   "foto_despues": "chips/CF-202609-145_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-146",
@@ -118801,7 +120666,37 @@
     "groupe": "Prairies temporaires",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.78,
+    "mndwi": -0.44,
+    "nbr": 0.536,
+    "bsi": -0.251,
+    "nir": 0.345,
+    "swir22": 0.106,
+    "brillo": 0.053
+   },
+   "indices_despues": {
+    "ndvi": 0.333,
+    "mndwi": -0.514,
+    "nbr": 0.051,
+    "bsi": 0.148,
+    "nir": 0.275,
+    "swir22": 0.245,
+    "brillo": 0.106
+   },
+   "fecha_antes": "2025-09-29",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-146_antes.jpg",
+   "foto_despues": "chips/CF-202609-146_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-147",
@@ -118978,7 +120873,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "333",
+    "nombre": "vegetación escasa"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.631,
+    "mndwi": -0.594,
+    "nbr": 0.275,
+    "bsi": 0.01,
+    "nir": 0.342,
+    "swir22": 0.194,
+    "brillo": 0.073
+   },
+   "indices_despues": {
+    "ndvi": 0.319,
+    "mndwi": -0.559,
+    "nbr": 0.076,
+    "bsi": 0.182,
+    "nir": 0.316,
+    "swir22": 0.267,
+    "brillo": 0.122
+   },
+   "fecha_antes": "2025-09-19",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-147_antes.jpg",
+   "foto_despues": "chips/CF-202609-147_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-148",
@@ -119147,7 +121072,7 @@
    "pixeles": 194,
    "ha": 1.94,
    "ndvi_ref": 0.752,
-   "ndvi_actual": 0.309,
+   "ndvi_actual": 0.341,
    "obs_actual": 27,
    "centro": [
     43.36996,
@@ -119965,7 +121890,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.703,
+    "mndwi": -0.561,
+    "nbr": 0.497,
+    "bsi": -0.146,
+    "nir": 0.428,
+    "swir22": 0.137,
+    "brillo": 0.065
+   },
+   "indices_despues": {
+    "ndvi": 0.317,
+    "mndwi": -0.581,
+    "nbr": 0.083,
+    "bsi": 0.194,
+    "nir": 0.306,
+    "swir22": 0.259,
+    "brillo": 0.114
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-151_antes.jpg",
+   "foto_despues": "chips/CF-202609-151_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-152",
@@ -120974,7 +122929,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.791,
+    "mndwi": -0.483,
+    "nbr": 0.593,
+    "bsi": -0.264,
+    "nir": 0.422,
+    "swir22": 0.108,
+    "brillo": 0.052
+   },
+   "indices_despues": {
+    "ndvi": 0.32,
+    "mndwi": -0.451,
+    "nbr": 0.14,
+    "bsi": 0.1,
+    "nir": 0.235,
+    "swir22": 0.176,
+    "brillo": 0.093
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-155_antes.jpg",
+   "foto_despues": "chips/CF-202609-155_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-156",
@@ -121140,7 +123125,37 @@
     "groupe": "Fourrage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.801,
+    "mndwi": -0.515,
+    "nbr": 0.528,
+    "bsi": -0.222,
+    "nir": 0.403,
+    "swir22": 0.124,
+    "brillo": 0.055
+   },
+   "indices_despues": {
+    "ndvi": 0.268,
+    "mndwi": -0.549,
+    "nbr": -0.041,
+    "bsi": 0.218,
+    "nir": 0.235,
+    "swir22": 0.247,
+    "brillo": 0.104
+   },
+   "fecha_antes": "2025-09-29",
+   "fecha_despues": "2026-09-11",
+   "foto_antes": "chips/CF-202609-156_antes.jpg",
+   "foto_despues": "chips/CF-202609-156_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-157",
@@ -121502,7 +123517,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.701,
+    "mndwi": -0.556,
+    "nbr": 0.398,
+    "bsi": -0.076,
+    "nir": 0.316,
+    "swir22": 0.135,
+    "brillo": 0.053
+   },
+   "indices_despues": {
+    "ndvi": 0.278,
+    "mndwi": -0.573,
+    "nbr": 0.015,
+    "bsi": 0.213,
+    "nir": 0.268,
+    "swir22": 0.254,
+    "brillo": 0.107
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-158_antes.jpg",
+   "foto_despues": "chips/CF-202609-158_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-159",
@@ -121718,7 +123763,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.724,
+    "mndwi": -0.582,
+    "nbr": 0.41,
+    "bsi": -0.1,
+    "nir": 0.362,
+    "swir22": 0.152,
+    "brillo": 0.057
+   },
+   "indices_despues": {
+    "ndvi": 0.332,
+    "mndwi": -0.568,
+    "nbr": 0.053,
+    "bsi": 0.185,
+    "nir": 0.291,
+    "swir22": 0.264,
+    "brillo": 0.111
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-159_antes.jpg",
+   "foto_despues": "chips/CF-202609-159_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-160",
@@ -121858,7 +123933,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "112",
+    "nombre": "tejido urbano discontinuo"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.854,
+    "mndwi": -0.538,
+    "nbr": 0.572,
+    "bsi": -0.292,
+    "nir": 0.446,
+    "swir22": 0.121,
+    "brillo": 0.041
+   },
+   "indices_despues": {
+    "ndvi": 0.316,
+    "mndwi": -0.633,
+    "nbr": -0.11,
+    "bsi": 0.267,
+    "nir": 0.206,
+    "swir22": 0.259,
+    "brillo": 0.078
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-09-11",
+   "foto_antes": "chips/CF-202609-160_antes.jpg",
+   "foto_despues": "chips/CF-202609-160_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-161",
@@ -122240,7 +124345,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.708,
+    "mndwi": -0.553,
+    "nbr": 0.471,
+    "bsi": -0.133,
+    "nir": 0.342,
+    "swir22": 0.123,
+    "brillo": 0.053
+   },
+   "indices_despues": {
+    "ndvi": 0.283,
+    "mndwi": -0.451,
+    "nbr": 0.01,
+    "bsi": 0.142,
+    "nir": 0.287,
+    "swir22": 0.283,
+    "brillo": 0.135
+   },
+   "fecha_antes": "2025-07-16",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-162_antes.jpg",
+   "foto_despues": "chips/CF-202609-162_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-163",
@@ -122505,7 +124640,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "142",
+    "nombre": "instalación deportiva"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.773,
+    "mndwi": -0.468,
+    "nbr": 0.477,
+    "bsi": -0.244,
+    "nir": 0.396,
+    "swir22": 0.138,
+    "brillo": 0.063
+   },
+   "indices_despues": {
+    "ndvi": 0.239,
+    "mndwi": -0.381,
+    "nbr": 0.021,
+    "bsi": 0.124,
+    "nir": 0.247,
+    "swir22": 0.24,
+    "brillo": 0.128
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-08-29",
+   "foto_antes": "chips/CF-202609-163_antes.jpg",
+   "foto_despues": "chips/CF-202609-163_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202609-164",
@@ -123030,7 +125195,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.673,
+    "mndwi": -0.598,
+    "nbr": 0.386,
+    "bsi": -0.057,
+    "nir": 0.313,
+    "swir22": 0.137,
+    "brillo": 0.053
+   },
+   "indices_despues": {
+    "ndvi": 0.296,
+    "mndwi": -0.532,
+    "nbr": -0.102,
+    "bsi": 0.188,
+    "nir": 0.2,
+    "swir22": 0.252,
+    "brillo": 0.092
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-166_antes.jpg",
+   "foto_despues": "chips/CF-202609-166_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-167",
@@ -123060,7 +125255,7 @@
    "pixeles": 215,
    "ha": 2.15,
    "ndvi_ref": 0.729,
-   "ndvi_actual": 0.256,
+   "ndvi_actual": 0.294,
    "obs_actual": 23,
    "centro": [
     43.4038,
@@ -124396,7 +126591,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "131",
+    "nombre": "extracción minera"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.733,
+    "mndwi": -0.556,
+    "nbr": 0.458,
+    "bsi": -0.15,
+    "nir": 0.303,
+    "swir22": 0.089,
+    "brillo": 0.045
+   },
+   "indices_despues": {
+    "ndvi": 0.181,
+    "mndwi": -0.254,
+    "nbr": 0.065,
+    "bsi": 0.101,
+    "nir": 0.303,
+    "swir22": 0.273,
+    "brillo": 0.187
+   },
+   "fecha_antes": "2025-07-16",
+   "fecha_despues": "2026-09-19",
+   "foto_antes": "chips/CF-202609-171_antes.jpg",
+   "foto_despues": "chips/CF-202609-171_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202609-172",
@@ -124770,7 +126995,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.703,
+    "mndwi": -0.532,
+    "nbr": 0.428,
+    "bsi": -0.12,
+    "nir": 0.362,
+    "swir22": 0.146,
+    "brillo": 0.06
+   },
+   "indices_despues": {
+    "ndvi": 0.319,
+    "mndwi": -0.552,
+    "nbr": 0.101,
+    "bsi": 0.167,
+    "nir": 0.152,
+    "swir22": 0.128,
+    "brillo": 0.059
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-09-11",
+   "foto_antes": "chips/CF-202609-173_antes.jpg",
+   "foto_despues": "chips/CF-202609-173_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-174",
@@ -124927,7 +127182,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "112",
+    "nombre": "tejido urbano discontinuo"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.856,
+    "mndwi": -0.633,
+    "nbr": 0.582,
+    "bsi": -0.252,
+    "nir": 0.385,
+    "swir22": 0.107,
+    "brillo": 0.034
+   },
+   "indices_despues": {
+    "ndvi": 0.182,
+    "mndwi": -0.301,
+    "nbr": 0.109,
+    "bsi": 0.121,
+    "nir": 0.3,
+    "swir22": 0.244,
+    "brillo": 0.155
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-174_antes.jpg",
+   "foto_despues": "chips/CF-202609-174_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202609-175",
@@ -125106,7 +127391,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.87,
+    "mndwi": -0.579,
+    "nbr": 0.628,
+    "bsi": -0.326,
+    "nir": 0.328,
+    "swir22": 0.073,
+    "brillo": 0.027
+   },
+   "indices_despues": {
+    "ndvi": 0.302,
+    "mndwi": -0.489,
+    "nbr": 0.079,
+    "bsi": 0.132,
+    "nir": 0.245,
+    "swir22": 0.209,
+    "brillo": 0.097
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-09-21",
+   "foto_antes": "chips/CF-202609-175_antes.jpg",
+   "foto_despues": "chips/CF-202609-175_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-176",
@@ -125475,7 +127790,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "333",
+    "nombre": "vegetación escasa"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.653,
+    "mndwi": -0.612,
+    "nbr": 0.311,
+    "bsi": 0.004,
+    "nir": 0.288,
+    "swir22": 0.149,
+    "brillo": 0.053
+   },
+   "indices_despues": {
+    "ndvi": 0.306,
+    "mndwi": -0.573,
+    "nbr": -0.063,
+    "bsi": 0.237,
+    "nir": 0.216,
+    "swir22": 0.237,
+    "brillo": 0.088
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-09-11",
+   "foto_antes": "chips/CF-202609-177_antes.jpg",
+   "foto_despues": "chips/CF-202609-177_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-178",
@@ -125615,7 +127960,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.678,
+    "mndwi": -0.557,
+    "nbr": 0.413,
+    "bsi": -0.081,
+    "nir": 0.353,
+    "swir22": 0.146,
+    "brillo": 0.06
+   },
+   "indices_despues": {
+    "ndvi": 0.305,
+    "mndwi": -0.54,
+    "nbr": -0.009,
+    "bsi": 0.204,
+    "nir": 0.244,
+    "swir22": 0.245,
+    "brillo": 0.099
+   },
+   "fecha_antes": "2025-09-11",
+   "fecha_despues": "2026-08-30",
+   "foto_antes": "chips/CF-202609-178_antes.jpg",
+   "foto_despues": "chips/CF-202609-178_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-179",
@@ -125773,7 +128148,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.836,
+    "mndwi": -0.529,
+    "nbr": 0.674,
+    "bsi": -0.378,
+    "nir": 0.438,
+    "swir22": 0.085,
+    "brillo": 0.04
+   },
+   "indices_despues": {
+    "ndvi": 0.308,
+    "mndwi": -0.282,
+    "nbr": 0.212,
+    "bsi": 0.018,
+    "nir": 0.296,
+    "swir22": 0.197,
+    "brillo": 0.13
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-179_antes.jpg",
+   "foto_despues": "chips/CF-202609-179_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-180",
@@ -126055,7 +128460,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "311",
+    "nombre": "bosque de frondosas"
+   },
+   "analisis_v": 2,
+   "clase": "agua",
+   "indices_antes": {
+    "ndvi": 0.653,
+    "mndwi": 0.165,
+    "nbr": 0.714,
+    "bsi": -0.461,
+    "nir": 0.088,
+    "swir22": 0.014,
+    "brillo": 0.02
+   },
+   "indices_despues": {
+    "ndvi": 0.0,
+    "mndwi": 0.239,
+    "nbr": 0.0,
+    "bsi": 0.055,
+    "nir": 0.015,
+    "swir22": 0.018,
+    "brillo": 0.022
+   },
+   "fecha_antes": "2025-09-06",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-180_antes.jpg",
+   "foto_despues": "chips/CF-202609-180_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Lámina de agua nueva"
   },
   {
    "id": "CF-202609-181",
@@ -126263,7 +128698,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.911,
+    "mndwi": -0.624,
+    "nbr": 0.716,
+    "bsi": -0.404,
+    "nir": 0.414,
+    "swir22": 0.068,
+    "brillo": 0.023
+   },
+   "indices_despues": {
+    "ndvi": 0.302,
+    "mndwi": -0.406,
+    "nbr": 0.096,
+    "bsi": 0.088,
+    "nir": 0.298,
+    "swir22": 0.253,
+    "brillo": 0.137
+   },
+   "fecha_antes": "2025-07-16",
+   "fecha_despues": "2026-09-21",
+   "foto_antes": "chips/CF-202609-181_antes.jpg",
+   "foto_despues": "chips/CF-202609-181_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-182",
@@ -126455,7 +128920,37 @@
     "groupe": "Maïs grain et ensilage",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.755,
+    "mndwi": -0.481,
+    "nbr": 0.573,
+    "bsi": -0.29,
+    "nir": 0.386,
+    "swir22": 0.103,
+    "brillo": 0.05
+   },
+   "indices_despues": {
+    "ndvi": 0.234,
+    "mndwi": -0.425,
+    "nbr": 0.095,
+    "bsi": 0.129,
+    "nir": 0.344,
+    "swir22": 0.287,
+    "brillo": 0.161
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-182_antes.jpg",
+   "foto_despues": "chips/CF-202609-182_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202609-183",
@@ -126639,7 +129134,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.689,
+    "mndwi": -0.602,
+    "nbr": 0.438,
+    "bsi": -0.089,
+    "nir": 0.296,
+    "swir22": 0.118,
+    "brillo": 0.047
+   },
+   "indices_despues": {
+    "ndvi": 0.342,
+    "mndwi": -0.598,
+    "nbr": -0.109,
+    "bsi": 0.217,
+    "nir": 0.193,
+    "swir22": 0.238,
+    "brillo": 0.076
+   },
+   "fecha_antes": "2025-07-16",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-183_antes.jpg",
+   "foto_despues": "chips/CF-202609-183_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-184",
@@ -127216,7 +129741,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.701,
+    "mndwi": -0.561,
+    "nbr": 0.428,
+    "bsi": -0.1,
+    "nir": 0.417,
+    "swir22": 0.164,
+    "brillo": 0.067
+   },
+   "indices_despues": {
+    "ndvi": 0.311,
+    "mndwi": -0.576,
+    "nbr": 0.047,
+    "bsi": 0.198,
+    "nir": 0.282,
+    "swir22": 0.251,
+    "brillo": 0.114
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-09-21",
+   "foto_antes": "chips/CF-202609-186_antes.jpg",
+   "foto_despues": "chips/CF-202609-186_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-187",
@@ -127554,7 +130109,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.684,
+    "mndwi": -0.626,
+    "nbr": 0.395,
+    "bsi": -0.056,
+    "nir": 0.277,
+    "swir22": 0.121,
+    "brillo": 0.044
+   },
+   "indices_despues": {
+    "ndvi": 0.323,
+    "mndwi": -0.617,
+    "nbr": -0.105,
+    "bsi": 0.245,
+    "nir": 0.175,
+    "swir22": 0.213,
+    "brillo": 0.071
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-188_antes.jpg",
+   "foto_despues": "chips/CF-202609-188_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-189",
@@ -127853,7 +130438,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.759,
+    "mndwi": -0.6,
+    "nbr": 0.542,
+    "bsi": -0.189,
+    "nir": 0.353,
+    "swir22": 0.102,
+    "brillo": 0.043
+   },
+   "indices_despues": {
+    "ndvi": 0.319,
+    "mndwi": -0.563,
+    "nbr": -0.105,
+    "bsi": 0.19,
+    "nir": 0.199,
+    "swir22": 0.245,
+    "brillo": 0.083
+   },
+   "fecha_antes": "2025-07-01",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-190_antes.jpg",
+   "foto_despues": "chips/CF-202609-190_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202609-191",
@@ -128035,7 +130650,37 @@
     "groupe": "Gel (surfaces gelées sans production)",
     "pradera_permanente": false,
     "uso": "rotacion"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.7,
+    "mndwi": -0.564,
+    "nbr": 0.397,
+    "bsi": -0.09,
+    "nir": 0.32,
+    "swir22": 0.141,
+    "brillo": 0.056
+   },
+   "indices_despues": {
+    "ndvi": 0.332,
+    "mndwi": -0.556,
+    "nbr": 0.006,
+    "bsi": 0.192,
+    "nir": 0.306,
+    "swir22": 0.304,
+    "brillo": 0.117
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-191_antes.jpg",
+   "foto_despues": "chips/CF-202609-191_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-192",
@@ -128734,7 +131379,7 @@
    "pixeles": 952,
    "ha": 9.52,
    "ndvi_ref": 0.672,
-   "ndvi_actual": 0.323,
+   "ndvi_actual": 0.318,
    "obs_actual": 17,
    "centro": [
     43.14148,
@@ -131807,7 +134452,37 @@
     "anio": 2025,
     "fraccion": 0.0,
     "uso": "sin_declarar"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.69,
+    "mndwi": -0.551,
+    "nbr": 0.394,
+    "bsi": -0.072,
+    "nir": 0.309,
+    "swir22": 0.135,
+    "brillo": 0.057
+   },
+   "indices_despues": {
+    "ndvi": 0.334,
+    "mndwi": -0.466,
+    "nbr": 0.05,
+    "bsi": 0.121,
+    "nir": 0.256,
+    "swir22": 0.233,
+    "brillo": 0.115
+   },
+   "fecha_antes": "2025-07-16",
+   "fecha_despues": "2026-09-19",
+   "foto_antes": "chips/CF-202609-197_antes.jpg",
+   "foto_despues": "chips/CF-202609-197_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-198",
@@ -131994,7 +134669,37 @@
     "groupe": "Estives et landes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.647,
+    "mndwi": -0.607,
+    "nbr": 0.322,
+    "bsi": -0.004,
+    "nir": 0.324,
+    "swir22": 0.167,
+    "brillo": 0.062
+   },
+   "indices_despues": {
+    "ndvi": 0.31,
+    "mndwi": -0.606,
+    "nbr": -0.019,
+    "bsi": 0.226,
+    "nir": 0.293,
+    "swir22": 0.303,
+    "brillo": 0.111
+   },
+   "fecha_antes": "2025-07-16",
+   "fecha_despues": "2026-07-06",
+   "foto_antes": "chips/CF-202609-198_antes.jpg",
+   "foto_despues": "chips/CF-202609-198_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-199",
@@ -132198,7 +134903,37 @@
     "groupe": "Prairies permanentes",
     "pradera_permanente": true,
     "uso": "pradera_permanente"
-   }
+   },
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.638,
+    "mndwi": -0.538,
+    "nbr": 0.359,
+    "bsi": -0.034,
+    "nir": 0.407,
+    "swir22": 0.19,
+    "brillo": 0.081
+   },
+   "indices_despues": {
+    "ndvi": 0.321,
+    "mndwi": -0.596,
+    "nbr": 0.006,
+    "bsi": 0.236,
+    "nir": 0.28,
+    "swir22": 0.276,
+    "brillo": 0.109
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-09-19",
+   "foto_antes": "chips/CF-202609-199_antes.jpg",
+   "foto_despues": "chips/CF-202609-199_despues.jpg",
+   "ventana_fotos": "2026-09",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202609-200",
@@ -132762,7 +135497,7 @@
    "pixeles": 2469,
    "ha": 24.69,
    "ndvi_ref": 0.722,
-   "ndvi_actual": 0.259,
+   "ndvi_actual": 0.284,
    "obs_actual": 25,
    "centro": [
     42.95293,
@@ -147124,7 +149859,7 @@
    "pixeles": 128,
    "ha": 1.28,
    "ndvi_ref": 0.664,
-   "ndvi_actual": 0.311,
+   "ndvi_actual": 0.31,
    "obs_actual": 19,
    "centro": [
     43.46233,
@@ -149302,7 +152037,7 @@
    "pixeles": 113,
    "ha": 1.13,
    "ndvi_ref": 0.649,
-   "ndvi_actual": 0.205,
+   "ndvi_actual": 0.203,
    "obs_actual": 19,
    "centro": [
     43.40314,
@@ -150402,7 +153137,7 @@
    "pixeles": 79,
    "ha": 0.79,
    "ndvi_ref": 0.655,
-   "ndvi_actual": 0.295,
+   "ndvi_actual": 0.294,
    "obs_actual": 19,
    "centro": [
     43.33079,
@@ -155772,7 +158507,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 48
+   "expedientes_municipio": 48,
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.773,
+    "mndwi": -0.636,
+    "nbr": 0.453,
+    "bsi": -0.132,
+    "nir": 0.367,
+    "swir22": 0.145,
+    "brillo": 0.043
+   },
+   "indices_despues": {
+    "ndvi": 0.269,
+    "mndwi": -0.577,
+    "nbr": -0.053,
+    "bsi": 0.259,
+    "nir": 0.088,
+    "swir22": 0.097,
+    "brillo": 0.037
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-10-11",
+   "foto_antes": "chips/CF-202610-050_antes.jpg",
+   "foto_despues": "chips/CF-202610-050_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-051",
@@ -156053,7 +158818,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 0
+   "expedientes_municipio": 0,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.587,
+    "mndwi": -0.554,
+    "nbr": 0.303,
+    "bsi": -0.002,
+    "nir": 0.308,
+    "swir22": 0.164,
+    "brillo": 0.069
+   },
+   "indices_despues": {
+    "ndvi": 0.321,
+    "mndwi": -0.576,
+    "nbr": -0.071,
+    "bsi": 0.221,
+    "nir": 0.193,
+    "swir22": 0.222,
+    "brillo": 0.079
+   },
+   "fecha_antes": "2025-10-11",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-051_antes.jpg",
+   "foto_despues": "chips/CF-202610-051_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-052",
@@ -156078,7 +158873,7 @@
    "pixeles": 76,
    "ha": 0.76,
    "ndvi_ref": 0.831,
-   "ndvi_actual": 0.327,
+   "ndvi_actual": 0.335,
    "obs_actual": 19,
    "centro": [
     43.45561,
@@ -156676,7 +159471,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9
+   "expedientes_municipio": 9,
+   "cubierta_previa": {
+    "codigo": "311",
+    "nombre": "bosque de frondosas"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.719,
+    "mndwi": -0.648,
+    "nbr": 0.361,
+    "bsi": -0.043,
+    "nir": 0.293,
+    "swir22": 0.135,
+    "brillo": 0.042
+   },
+   "indices_despues": {
+    "ndvi": 0.261,
+    "mndwi": -0.612,
+    "nbr": -0.333,
+    "bsi": 0.291,
+    "nir": 0.093,
+    "swir22": 0.206,
+    "brillo": 0.05
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-053_antes.jpg",
+   "foto_despues": "chips/CF-202610-053_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-054",
@@ -156787,7 +159612,16 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 7
+   "expedientes_municipio": 7,
+   "cubierta_previa": {
+    "codigo": "333",
+    "nombre": "vegetación escasa"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "clase_nota": "sin escena despejada para las fotos",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-055",
@@ -156985,7 +159819,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 4,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.627,
+    "mndwi": -0.528,
+    "nbr": 0.428,
+    "bsi": -0.091,
+    "nir": 0.382,
+    "swir22": 0.157,
+    "brillo": 0.078
+   },
+   "indices_despues": {
+    "ndvi": 0.3,
+    "mndwi": -0.525,
+    "nbr": 0.053,
+    "bsi": 0.176,
+    "nir": 0.283,
+    "swir22": 0.256,
+    "brillo": 0.12
+   },
+   "fecha_antes": "2025-10-06",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-055_antes.jpg",
+   "foto_despues": "chips/CF-202610-055_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-056",
@@ -157297,7 +160161,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 100
+   "expedientes_municipio": 100,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.501,
+    "mndwi": -0.46,
+    "nbr": 0.355,
+    "bsi": -0.025,
+    "nir": 0.298,
+    "swir22": 0.143,
+    "brillo": 0.078
+   },
+   "indices_despues": {
+    "ndvi": 0.288,
+    "mndwi": -0.572,
+    "nbr": -0.146,
+    "bsi": 0.238,
+    "nir": 0.19,
+    "swir22": 0.253,
+    "brillo": 0.083
+   },
+   "fecha_antes": "2025-08-04",
+   "fecha_despues": "2026-10-11",
+   "foto_antes": "chips/CF-202610-056_antes.jpg",
+   "foto_despues": "chips/CF-202610-056_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-057",
@@ -157567,7 +160461,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13
+   "expedientes_municipio": 13,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.608,
+    "mndwi": -0.46,
+    "nbr": 0.443,
+    "bsi": -0.116,
+    "nir": 0.302,
+    "swir22": 0.12,
+    "brillo": 0.066
+   },
+   "indices_despues": {
+    "ndvi": 0.293,
+    "mndwi": -0.356,
+    "nbr": 0.115,
+    "bsi": 0.08,
+    "nir": 0.197,
+    "swir22": 0.155,
+    "brillo": 0.09
+   },
+   "fecha_antes": "2025-08-04",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-057_antes.jpg",
+   "foto_despues": "chips/CF-202610-057_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-058",
@@ -157769,7 +160693,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 4,
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.734,
+    "mndwi": -0.533,
+    "nbr": 0.449,
+    "bsi": -0.137,
+    "nir": 0.317,
+    "swir22": 0.12,
+    "brillo": 0.05
+   },
+   "indices_despues": {
+    "ndvi": 0.307,
+    "mndwi": -0.381,
+    "nbr": 0.113,
+    "bsi": 0.093,
+    "nir": 0.375,
+    "swir22": 0.3,
+    "brillo": 0.163
+   },
+   "fecha_antes": "2025-09-06",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-058_antes.jpg",
+   "foto_despues": "chips/CF-202610-058_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-059",
@@ -157967,7 +160921,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6
+   "expedientes_municipio": 6,
+   "cubierta_previa": {
+    "codigo": "333",
+    "nombre": "vegetación escasa"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.765,
+    "mndwi": -0.61,
+    "nbr": 0.485,
+    "bsi": -0.142,
+    "nir": 0.337,
+    "swir22": 0.119,
+    "brillo": 0.044
+   },
+   "indices_despues": {
+    "ndvi": 0.322,
+    "mndwi": -0.586,
+    "nbr": -0.035,
+    "bsi": 0.216,
+    "nir": 0.238,
+    "swir22": 0.26,
+    "brillo": 0.096
+   },
+   "fecha_antes": "2025-10-24",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-059_antes.jpg",
+   "foto_despues": "chips/CF-202610-059_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-060",
@@ -158290,7 +161274,37 @@
      ]
     }
    ],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 5,
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.8,
+    "mndwi": -0.562,
+    "nbr": 0.505,
+    "bsi": -0.197,
+    "nir": 0.407,
+    "swir22": 0.133,
+    "brillo": 0.049
+   },
+   "indices_despues": {
+    "ndvi": 0.321,
+    "mndwi": -0.616,
+    "nbr": -0.071,
+    "bsi": 0.26,
+    "nir": 0.243,
+    "swir22": 0.275,
+    "brillo": 0.096
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-08-22",
+   "foto_antes": "chips/CF-202610-060_antes.jpg",
+   "foto_despues": "chips/CF-202610-060_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-061",
@@ -158430,7 +161444,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98
+   "expedientes_municipio": 98,
+   "cubierta_previa": {
+    "codigo": "112",
+    "nombre": "tejido urbano discontinuo"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.792,
+    "mndwi": -0.572,
+    "nbr": 0.441,
+    "bsi": -0.159,
+    "nir": 0.257,
+    "swir22": 0.103,
+    "brillo": 0.034
+   },
+   "indices_despues": {
+    "ndvi": 0.234,
+    "mndwi": -0.392,
+    "nbr": 0.054,
+    "bsi": 0.141,
+    "nir": 0.26,
+    "swir22": 0.226,
+    "brillo": 0.125
+   },
+   "fecha_antes": "2025-09-06",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-061_antes.jpg",
+   "foto_despues": "chips/CF-202610-061_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202610-062",
@@ -158455,7 +161499,7 @@
    "pixeles": 74,
    "ha": 0.74,
    "ndvi_ref": 0.721,
-   "ndvi_actual": 0.279,
+   "ndvi_actual": 0.292,
    "obs_actual": 19,
    "centro": [
     43.22761,
@@ -159393,7 +162437,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 5,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.826,
+    "mndwi": -0.628,
+    "nbr": 0.519,
+    "bsi": -0.175,
+    "nir": 0.364,
+    "swir22": 0.117,
+    "brillo": 0.038
+   },
+   "indices_despues": {
+    "ndvi": 0.264,
+    "mndwi": -0.508,
+    "nbr": 0.034,
+    "bsi": 0.187,
+    "nir": 0.193,
+    "swir22": 0.183,
+    "brillo": 0.082
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-064_antes.jpg",
+   "foto_despues": "chips/CF-202610-064_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-065",
@@ -159611,7 +162685,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 16
+   "expedientes_municipio": 16,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.724,
+    "mndwi": -0.617,
+    "nbr": 0.459,
+    "bsi": -0.099,
+    "nir": 0.396,
+    "swir22": 0.147,
+    "brillo": 0.056
+   },
+   "indices_despues": {
+    "ndvi": 0.344,
+    "mndwi": -0.511,
+    "nbr": 0.183,
+    "bsi": 0.132,
+    "nir": 0.137,
+    "swir22": 0.1,
+    "brillo": 0.05
+   },
+   "fecha_antes": "2025-10-24",
+   "fecha_despues": "2026-10-09",
+   "foto_antes": "chips/CF-202610-065_antes.jpg",
+   "foto_despues": "chips/CF-202610-065_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-066",
@@ -159809,7 +162913,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 16
+   "expedientes_municipio": 16,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.718,
+    "mndwi": -0.61,
+    "nbr": 0.411,
+    "bsi": -0.076,
+    "nir": 0.403,
+    "swir22": 0.169,
+    "brillo": 0.06
+   },
+   "indices_despues": {
+    "ndvi": 0.326,
+    "mndwi": -0.556,
+    "nbr": 0.006,
+    "bsi": 0.191,
+    "nir": 0.305,
+    "swir22": 0.301,
+    "brillo": 0.122
+   },
+   "fecha_antes": "2025-10-16",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-066_antes.jpg",
+   "foto_despues": "chips/CF-202610-066_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-067",
@@ -160035,7 +163169,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2
+   "expedientes_municipio": 2,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.726,
+    "mndwi": -0.479,
+    "nbr": 0.53,
+    "bsi": -0.202,
+    "nir": 0.375,
+    "swir22": 0.113,
+    "brillo": 0.057
+   },
+   "indices_despues": {
+    "ndvi": 0.34,
+    "mndwi": -0.402,
+    "nbr": 0.122,
+    "bsi": 0.078,
+    "nir": 0.25,
+    "swir22": 0.196,
+    "brillo": 0.105
+   },
+   "fecha_antes": "2025-08-05",
+   "fecha_despues": "2026-10-11",
+   "foto_antes": "chips/CF-202610-067_antes.jpg",
+   "foto_despues": "chips/CF-202610-067_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-068",
@@ -160297,7 +163461,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 37
+   "expedientes_municipio": 37,
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.843,
+    "mndwi": -0.565,
+    "nbr": 0.581,
+    "bsi": -0.239,
+    "nir": 0.369,
+    "swir22": 0.099,
+    "brillo": 0.039
+   },
+   "indices_despues": {
+    "ndvi": 0.219,
+    "mndwi": -0.457,
+    "nbr": -0.015,
+    "bsi": 0.207,
+    "nir": 0.222,
+    "swir22": 0.229,
+    "brillo": 0.108
+   },
+   "fecha_antes": "2025-10-11",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-068_antes.jpg",
+   "foto_despues": "chips/CF-202610-068_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202610-069",
@@ -160500,7 +163694,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 5,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.662,
+    "mndwi": -0.528,
+    "nbr": 0.442,
+    "bsi": -0.087,
+    "nir": 0.373,
+    "swir22": 0.145,
+    "brillo": 0.068
+   },
+   "indices_despues": {
+    "ndvi": 0.333,
+    "mndwi": -0.537,
+    "nbr": 0.057,
+    "bsi": 0.177,
+    "nir": 0.252,
+    "swir22": 0.22,
+    "brillo": 0.099
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-069_antes.jpg",
+   "foto_despues": "chips/CF-202610-069_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-070",
@@ -160785,7 +164009,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 0
+   "expedientes_municipio": 0,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.609,
+    "mndwi": -0.534,
+    "nbr": 0.319,
+    "bsi": -0.041,
+    "nir": 0.332,
+    "swir22": 0.17,
+    "brillo": 0.07
+   },
+   "indices_despues": {
+    "ndvi": 0.314,
+    "mndwi": -0.547,
+    "nbr": -0.025,
+    "bsi": 0.193,
+    "nir": 0.207,
+    "swir22": 0.209,
+    "brillo": 0.084
+   },
+   "fecha_antes": "2025-10-06",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-070_antes.jpg",
+   "foto_despues": "chips/CF-202610-070_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-071",
@@ -160967,7 +164221,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2
+   "expedientes_municipio": 2,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.823,
+    "mndwi": -0.382,
+    "nbr": 0.629,
+    "bsi": -0.344,
+    "nir": 0.46,
+    "swir22": 0.105,
+    "brillo": 0.059
+   },
+   "indices_despues": {
+    "ndvi": 0.304,
+    "mndwi": -0.429,
+    "nbr": 0.007,
+    "bsi": 0.115,
+    "nir": 0.163,
+    "swir22": 0.162,
+    "brillo": 0.074
+   },
+   "fecha_antes": "2025-10-16",
+   "fecha_despues": "2026-10-11",
+   "foto_antes": "chips/CF-202610-071_antes.jpg",
+   "foto_despues": "chips/CF-202610-071_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-072",
@@ -161218,7 +164502,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 31,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.712,
+    "mndwi": -0.588,
+    "nbr": 0.448,
+    "bsi": -0.099,
+    "nir": 0.365,
+    "swir22": 0.139,
+    "brillo": 0.056
+   },
+   "indices_despues": {
+    "ndvi": 0.34,
+    "mndwi": -0.583,
+    "nbr": -0.041,
+    "bsi": 0.219,
+    "nir": 0.274,
+    "swir22": 0.3,
+    "brillo": 0.11
+   },
+   "fecha_antes": "2025-10-24",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-072_antes.jpg",
+   "foto_despues": "chips/CF-202610-072_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-073",
@@ -161509,7 +164823,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 5,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.684,
+    "mndwi": -0.583,
+    "nbr": 0.403,
+    "bsi": -0.067,
+    "nir": 0.306,
+    "swir22": 0.131,
+    "brillo": 0.052
+   },
+   "indices_despues": {
+    "ndvi": 0.326,
+    "mndwi": -0.571,
+    "nbr": -0.011,
+    "bsi": 0.199,
+    "nir": 0.194,
+    "swir22": 0.204,
+    "brillo": 0.075
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-073_antes.jpg",
+   "foto_despues": "chips/CF-202610-073_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-074",
@@ -161721,7 +165065,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 100
+   "expedientes_municipio": 100,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.609,
+    "mndwi": -0.462,
+    "nbr": 0.445,
+    "bsi": -0.11,
+    "nir": 0.371,
+    "swir22": 0.141,
+    "brillo": 0.077
+   },
+   "indices_despues": {
+    "ndvi": 0.297,
+    "mndwi": -0.48,
+    "nbr": 0.073,
+    "bsi": 0.151,
+    "nir": 0.259,
+    "swir22": 0.229,
+    "brillo": 0.106
+   },
+   "fecha_antes": "2025-08-04",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-074_antes.jpg",
+   "foto_despues": "chips/CF-202610-074_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-075",
@@ -162210,7 +165584,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 20
+   "expedientes_municipio": 20,
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.712,
+    "mndwi": -0.475,
+    "nbr": 0.529,
+    "bsi": -0.21,
+    "nir": 0.405,
+    "swir22": 0.126,
+    "brillo": 0.065
+   },
+   "indices_despues": {
+    "ndvi": 0.309,
+    "mndwi": -0.427,
+    "nbr": 0.122,
+    "bsi": 0.11,
+    "nir": 0.274,
+    "swir22": 0.209,
+    "brillo": 0.111
+   },
+   "fecha_antes": "2025-08-04",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-076_antes.jpg",
+   "foto_despues": "chips/CF-202610-076_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-077",
@@ -162416,7 +165820,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9
+   "expedientes_municipio": 9,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.879,
+    "mndwi": -0.588,
+    "nbr": 0.625,
+    "bsi": -0.325,
+    "nir": 0.443,
+    "swir22": 0.102,
+    "brillo": 0.033
+   },
+   "indices_despues": {
+    "ndvi": 0.315,
+    "mndwi": -0.622,
+    "nbr": -0.082,
+    "bsi": 0.267,
+    "nir": 0.209,
+    "swir22": 0.243,
+    "brillo": 0.08
+   },
+   "fecha_antes": "2025-10-06",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-077_antes.jpg",
+   "foto_despues": "chips/CF-202610-077_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-078",
@@ -162601,7 +166035,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 4,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.602,
+    "mndwi": -0.54,
+    "nbr": 0.365,
+    "bsi": -0.04,
+    "nir": 0.335,
+    "swir22": 0.163,
+    "brillo": 0.078
+   },
+   "indices_despues": {
+    "ndvi": 0.329,
+    "mndwi": -0.563,
+    "nbr": -0.001,
+    "bsi": 0.198,
+    "nir": 0.26,
+    "swir22": 0.271,
+    "brillo": 0.104
+   },
+   "fecha_antes": "2025-10-06",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-078_antes.jpg",
+   "foto_despues": "chips/CF-202610-078_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-079",
@@ -162839,7 +166303,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 48
+   "expedientes_municipio": 48,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.645,
+    "mndwi": -0.631,
+    "nbr": 0.358,
+    "bsi": -0.014,
+    "nir": 0.226,
+    "swir22": 0.106,
+    "brillo": 0.041
+   },
+   "indices_despues": {
+    "ndvi": 0.326,
+    "mndwi": -0.618,
+    "nbr": -0.149,
+    "bsi": 0.252,
+    "nir": 0.153,
+    "swir22": 0.204,
+    "brillo": 0.063
+   },
+   "fecha_antes": "2025-10-06",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-079_antes.jpg",
+   "foto_despues": "chips/CF-202610-079_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-080",
@@ -163082,7 +166576,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 45
+   "expedientes_municipio": 45,
+   "cubierta_previa": {
+    "codigo": "333",
+    "nombre": "vegetación escasa"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.667,
+    "mndwi": -0.602,
+    "nbr": 0.38,
+    "bsi": -0.054,
+    "nir": 0.321,
+    "swir22": 0.145,
+    "brillo": 0.054
+   },
+   "indices_despues": {
+    "ndvi": 0.343,
+    "mndwi": -0.621,
+    "nbr": -0.061,
+    "bsi": 0.238,
+    "nir": 0.226,
+    "swir22": 0.258,
+    "brillo": 0.086
+   },
+   "fecha_antes": "2025-10-06",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-080_antes.jpg",
+   "foto_despues": "chips/CF-202610-080_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-081",
@@ -163291,7 +166815,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 0
+   "expedientes_municipio": 0,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.647,
+    "mndwi": -0.6,
+    "nbr": 0.303,
+    "bsi": -0.001,
+    "nir": 0.24,
+    "swir22": 0.125,
+    "brillo": 0.045
+   },
+   "indices_despues": {
+    "ndvi": 0.326,
+    "mndwi": -0.616,
+    "nbr": -0.082,
+    "bsi": 0.256,
+    "nir": 0.144,
+    "swir22": 0.169,
+    "brillo": 0.057
+   },
+   "fecha_antes": "2025-10-11",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-081_antes.jpg",
+   "foto_despues": "chips/CF-202610-081_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-082",
@@ -163499,7 +167053,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13
+   "expedientes_municipio": 13,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.672,
+    "mndwi": -0.593,
+    "nbr": 0.249,
+    "bsi": -0.029,
+    "nir": 0.181,
+    "swir22": 0.109,
+    "brillo": 0.035
+   },
+   "indices_despues": {
+    "ndvi": 0.275,
+    "mndwi": -0.351,
+    "nbr": 0.097,
+    "bsi": 0.092,
+    "nir": 0.19,
+    "swir22": 0.157,
+    "brillo": 0.094
+   },
+   "fecha_antes": "2025-09-19",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-082_antes.jpg",
+   "foto_despues": "chips/CF-202610-082_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-083",
@@ -163707,7 +167291,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 23
+   "expedientes_municipio": 23,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.737,
+    "mndwi": -0.586,
+    "nbr": 0.411,
+    "bsi": -0.073,
+    "nir": 0.28,
+    "swir22": 0.115,
+    "brillo": 0.041
+   },
+   "indices_despues": {
+    "ndvi": 0.299,
+    "mndwi": -0.538,
+    "nbr": 0.011,
+    "bsi": 0.208,
+    "nir": 0.189,
+    "swir22": 0.189,
+    "brillo": 0.074
+   },
+   "fecha_antes": "2025-10-24",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-083_antes.jpg",
+   "foto_despues": "chips/CF-202610-083_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-084",
@@ -163892,7 +167506,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 5,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.648,
+    "mndwi": -0.613,
+    "nbr": 0.331,
+    "bsi": -0.005,
+    "nir": 0.341,
+    "swir22": 0.169,
+    "brillo": 0.061
+   },
+   "indices_despues": {
+    "ndvi": 0.306,
+    "mndwi": -0.607,
+    "nbr": -0.132,
+    "bsi": 0.254,
+    "nir": 0.206,
+    "swir22": 0.281,
+    "brillo": 0.089
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-084_antes.jpg",
+   "foto_despues": "chips/CF-202610-084_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-085",
@@ -164044,7 +167688,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2
+   "expedientes_municipio": 2,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.585,
+    "mndwi": -0.5,
+    "nbr": 0.292,
+    "bsi": -0.021,
+    "nir": 0.282,
+    "swir22": 0.154,
+    "brillo": 0.07
+   },
+   "indices_despues": {
+    "ndvi": 0.257,
+    "mndwi": -0.473,
+    "nbr": 0.046,
+    "bsi": 0.156,
+    "nir": 0.266,
+    "swir22": 0.243,
+    "brillo": 0.131
+   },
+   "fecha_antes": "2025-09-03",
+   "fecha_despues": "2026-08-12",
+   "foto_antes": "chips/CF-202610-085_antes.jpg",
+   "foto_despues": "chips/CF-202610-085_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-086",
@@ -164218,7 +167892,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 14
+   "expedientes_municipio": 14,
+   "cubierta_previa": {
+    "codigo": "243",
+    "nombre": "terreno agrícola con vegetación natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.622,
+    "mndwi": -0.462,
+    "nbr": 0.413,
+    "bsi": -0.101,
+    "nir": 0.396,
+    "swir22": 0.165,
+    "brillo": 0.084
+   },
+   "indices_despues": {
+    "ndvi": 0.328,
+    "mndwi": -0.461,
+    "nbr": 0.049,
+    "bsi": 0.111,
+    "nir": 0.275,
+    "swir22": 0.247,
+    "brillo": 0.118
+   },
+   "fecha_antes": "2025-08-04",
+   "fecha_despues": "2026-10-11",
+   "foto_antes": "chips/CF-202610-086_antes.jpg",
+   "foto_despues": "chips/CF-202610-086_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-087",
@@ -164433,7 +168137,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 14
+   "expedientes_municipio": 14,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.676,
+    "mndwi": -0.551,
+    "nbr": 0.389,
+    "bsi": -0.053,
+    "nir": 0.307,
+    "swir22": 0.134,
+    "brillo": 0.058
+   },
+   "indices_despues": {
+    "ndvi": 0.319,
+    "mndwi": -0.504,
+    "nbr": 0.087,
+    "bsi": 0.161,
+    "nir": 0.343,
+    "swir22": 0.295,
+    "brillo": 0.137
+   },
+   "fecha_antes": "2025-09-19",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-087_antes.jpg",
+   "foto_despues": "chips/CF-202610-087_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-088",
@@ -164603,7 +168337,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13
+   "expedientes_municipio": 13,
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.647,
+    "mndwi": -0.565,
+    "nbr": 0.355,
+    "bsi": -0.045,
+    "nir": 0.316,
+    "swir22": 0.142,
+    "brillo": 0.064
+   },
+   "indices_despues": {
+    "ndvi": 0.27,
+    "mndwi": -0.527,
+    "nbr": 0.069,
+    "bsi": 0.202,
+    "nir": 0.32,
+    "swir22": 0.275,
+    "brillo": 0.133
+   },
+   "fecha_antes": "2025-09-29",
+   "fecha_despues": "2026-08-09",
+   "foto_antes": "chips/CF-202610-088_antes.jpg",
+   "foto_despues": "chips/CF-202610-088_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-089",
@@ -164833,7 +168597,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6
+   "expedientes_municipio": 6,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.643,
+    "mndwi": -0.658,
+    "nbr": 0.392,
+    "bsi": -0.026,
+    "nir": 0.276,
+    "swir22": 0.116,
+    "brillo": 0.044
+   },
+   "indices_despues": {
+    "ndvi": 0.298,
+    "mndwi": -0.652,
+    "nbr": -0.172,
+    "bsi": 0.308,
+    "nir": 0.141,
+    "swir22": 0.201,
+    "brillo": 0.059
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-089_antes.jpg",
+   "foto_despues": "chips/CF-202610-089_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-090",
@@ -164975,7 +168769,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 3
+   "expedientes_municipio": 3,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.755,
+    "mndwi": -0.61,
+    "nbr": 0.508,
+    "bsi": -0.139,
+    "nir": 0.421,
+    "swir22": 0.14,
+    "brillo": 0.054
+   },
+   "indices_despues": {
+    "ndvi": 0.317,
+    "mndwi": -0.581,
+    "nbr": -0.023,
+    "bsi": 0.214,
+    "nir": 0.316,
+    "swir22": 0.333,
+    "brillo": 0.124
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-090_antes.jpg",
+   "foto_despues": "chips/CF-202610-090_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-091",
@@ -165120,7 +168944,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 5,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.68,
+    "mndwi": -0.572,
+    "nbr": 0.473,
+    "bsi": -0.098,
+    "nir": 0.336,
+    "swir22": 0.115,
+    "brillo": 0.053
+   },
+   "indices_despues": {
+    "ndvi": 0.329,
+    "mndwi": -0.594,
+    "nbr": -0.052,
+    "bsi": 0.22,
+    "nir": 0.241,
+    "swir22": 0.251,
+    "brillo": 0.093
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-091_antes.jpg",
+   "foto_despues": "chips/CF-202610-091_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-092",
@@ -165339,7 +169193,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34
+   "expedientes_municipio": 34,
+   "cubierta_previa": {
+    "codigo": "333",
+    "nombre": "vegetación escasa"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.74,
+    "mndwi": -0.374,
+    "nbr": -0.447,
+    "bsi": 0.077,
+    "nir": 0.004,
+    "swir22": 0.011,
+    "brillo": 0.006
+   },
+   "indices_despues": {
+    "ndvi": 0.0,
+    "mndwi": -0.423,
+    "nbr": -0.955,
+    "bsi": -0.169,
+    "nir": 0.0,
+    "swir22": 0.004,
+    "brillo": 0.003
+   },
+   "fecha_antes": "2025-10-01",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-092_antes.jpg",
+   "foto_despues": "chips/CF-202610-092_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-093",
@@ -165546,7 +169430,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 31,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.649,
+    "mndwi": -0.43,
+    "nbr": 0.469,
+    "bsi": -0.167,
+    "nir": 0.313,
+    "swir22": 0.112,
+    "brillo": 0.062
+   },
+   "indices_despues": {
+    "ndvi": 0.256,
+    "mndwi": -0.336,
+    "nbr": 0.102,
+    "bsi": 0.089,
+    "nir": 0.202,
+    "swir22": 0.164,
+    "brillo": 0.097
+   },
+   "fecha_antes": "2025-08-04",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-093_antes.jpg",
+   "foto_despues": "chips/CF-202610-093_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-094",
@@ -165917,7 +169831,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13
+   "expedientes_municipio": 13,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.625,
+    "mndwi": -0.469,
+    "nbr": 0.343,
+    "bsi": -0.087,
+    "nir": 0.351,
+    "swir22": 0.172,
+    "brillo": 0.078
+   },
+   "indices_despues": {
+    "ndvi": 0.248,
+    "mndwi": -0.416,
+    "nbr": 0.072,
+    "bsi": 0.138,
+    "nir": 0.184,
+    "swir22": 0.16,
+    "brillo": 0.088
+   },
+   "fecha_antes": "2025-10-16",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-095_antes.jpg",
+   "foto_despues": "chips/CF-202610-095_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-096",
@@ -166094,7 +170038,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9
+   "expedientes_municipio": 9,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.642,
+    "mndwi": -0.551,
+    "nbr": 0.431,
+    "bsi": -0.073,
+    "nir": 0.329,
+    "swir22": 0.134,
+    "brillo": 0.062
+   },
+   "indices_despues": {
+    "ndvi": 0.28,
+    "mndwi": -0.581,
+    "nbr": -0.045,
+    "bsi": 0.238,
+    "nir": 0.239,
+    "swir22": 0.269,
+    "brillo": 0.106
+   },
+   "fecha_antes": "2025-10-24",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-096_antes.jpg",
+   "foto_despues": "chips/CF-202610-096_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-097",
@@ -166337,7 +170311,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 31,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.644,
+    "mndwi": -0.667,
+    "nbr": 0.36,
+    "bsi": -0.003,
+    "nir": 0.189,
+    "swir22": 0.089,
+    "brillo": 0.031
+   },
+   "indices_despues": {
+    "ndvi": 0.321,
+    "mndwi": -0.602,
+    "nbr": -0.086,
+    "bsi": 0.252,
+    "nir": 0.153,
+    "swir22": 0.182,
+    "brillo": 0.061
+   },
+   "fecha_antes": "2025-10-06",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-097_antes.jpg",
+   "foto_despues": "chips/CF-202610-097_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-098",
@@ -166532,7 +170536,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2
+   "expedientes_municipio": 2,
+   "cubierta_previa": {
+    "codigo": "322",
+    "nombre": "landas y matorral"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.767,
+    "mndwi": -0.582,
+    "nbr": 0.499,
+    "bsi": -0.179,
+    "nir": 0.389,
+    "swir22": 0.127,
+    "brillo": 0.05
+   },
+   "indices_despues": {
+    "ndvi": 0.323,
+    "mndwi": -0.608,
+    "nbr": -0.067,
+    "bsi": 0.243,
+    "nir": 0.202,
+    "swir22": 0.235,
+    "brillo": 0.08
+   },
+   "fecha_antes": "2025-09-26",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-098_antes.jpg",
+   "foto_despues": "chips/CF-202610-098_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-099",
@@ -166716,7 +170750,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 100
+   "expedientes_municipio": 100,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.71,
+    "mndwi": -0.446,
+    "nbr": 0.541,
+    "bsi": -0.213,
+    "nir": 0.399,
+    "swir22": 0.122,
+    "brillo": 0.066
+   },
+   "indices_despues": {
+    "ndvi": 0.323,
+    "mndwi": -0.451,
+    "nbr": 0.151,
+    "bsi": 0.101,
+    "nir": 0.302,
+    "swir22": 0.223,
+    "brillo": 0.116
+   },
+   "fecha_antes": "2025-08-04",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-099_antes.jpg",
+   "foto_despues": "chips/CF-202610-099_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-100",
@@ -166896,7 +170960,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 72
+   "expedientes_municipio": 72,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.814,
+    "mndwi": -0.572,
+    "nbr": 0.551,
+    "bsi": -0.215,
+    "nir": 0.405,
+    "swir22": 0.119,
+    "brillo": 0.044
+   },
+   "indices_despues": {
+    "ndvi": 0.3,
+    "mndwi": -0.455,
+    "nbr": 0.034,
+    "bsi": 0.118,
+    "nir": 0.228,
+    "swir22": 0.217,
+    "brillo": 0.096
+   },
+   "fecha_antes": "2025-10-06",
+   "fecha_despues": "2026-09-24",
+   "foto_antes": "chips/CF-202610-100_antes.jpg",
+   "foto_despues": "chips/CF-202610-100_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-101",
@@ -167028,7 +171122,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6
+   "expedientes_municipio": 6,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.665,
+    "mndwi": -0.576,
+    "nbr": 0.428,
+    "bsi": -0.081,
+    "nir": 0.294,
+    "swir22": 0.119,
+    "brillo": 0.052
+   },
+   "indices_despues": {
+    "ndvi": 0.296,
+    "mndwi": -0.591,
+    "nbr": -0.057,
+    "bsi": 0.241,
+    "nir": 0.215,
+    "swir22": 0.245,
+    "brillo": 0.089
+   },
+   "fecha_antes": "2025-10-24",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-101_antes.jpg",
+   "foto_despues": "chips/CF-202610-101_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-102",
@@ -167258,7 +171382,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 16
+   "expedientes_municipio": 16,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.724,
+    "mndwi": -0.587,
+    "nbr": 0.462,
+    "bsi": -0.115,
+    "nir": 0.449,
+    "swir22": 0.166,
+    "brillo": 0.066
+   },
+   "indices_despues": {
+    "ndvi": 0.336,
+    "mndwi": -0.585,
+    "nbr": 0.066,
+    "bsi": 0.209,
+    "nir": 0.277,
+    "swir22": 0.242,
+    "brillo": 0.102
+   },
+   "fecha_antes": "2025-10-24",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-102_antes.jpg",
+   "foto_despues": "chips/CF-202610-102_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-103",
@@ -167283,7 +171437,7 @@
    "pixeles": 68,
    "ha": 0.68,
    "ndvi_ref": 0.649,
-   "ndvi_actual": 0.316,
+   "ndvi_actual": 0.306,
    "obs_actual": 24,
    "centro": [
     43.01334,
@@ -167870,7 +172024,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2
+   "expedientes_municipio": 2,
+   "cubierta_previa": {
+    "codigo": "313",
+    "nombre": "bosque mixto"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.621,
+    "mndwi": -0.516,
+    "nbr": 0.399,
+    "bsi": -0.07,
+    "nir": 0.473,
+    "swir22": 0.192,
+    "brillo": 0.095
+   },
+   "indices_despues": {
+    "ndvi": 0.298,
+    "mndwi": -0.541,
+    "nbr": 0.012,
+    "bsi": 0.178,
+    "nir": 0.359,
+    "swir22": 0.35,
+    "brillo": 0.143
+   },
+   "fecha_antes": "2025-09-11",
+   "fecha_despues": "2026-08-09",
+   "foto_antes": "chips/CF-202610-104_antes.jpg",
+   "foto_despues": "chips/CF-202610-104_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-105",
@@ -168137,7 +172321,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 15
+   "expedientes_municipio": 15,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.599,
+    "mndwi": -0.408,
+    "nbr": 0.336,
+    "bsi": -0.097,
+    "nir": 0.294,
+    "swir22": 0.142,
+    "brillo": 0.074
+   },
+   "indices_despues": {
+    "ndvi": 0.18,
+    "mndwi": -0.244,
+    "nbr": 0.09,
+    "bsi": 0.067,
+    "nir": 0.136,
+    "swir22": 0.114,
+    "brillo": 0.082
+   },
+   "fecha_antes": "2025-10-16",
+   "fecha_despues": "2026-10-11",
+   "foto_antes": "chips/CF-202610-105_antes.jpg",
+   "foto_despues": "chips/CF-202610-105_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202610-106",
@@ -168332,7 +172546,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 31,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.864,
+    "mndwi": -0.522,
+    "nbr": 0.648,
+    "bsi": -0.335,
+    "nir": 0.407,
+    "swir22": 0.088,
+    "brillo": 0.038
+   },
+   "indices_despues": {
+    "ndvi": 0.293,
+    "mndwi": -0.393,
+    "nbr": 0.052,
+    "bsi": 0.1,
+    "nir": 0.19,
+    "swir22": 0.173,
+    "brillo": 0.088
+   },
+   "fecha_antes": "2025-10-11",
+   "fecha_despues": "2026-09-11",
+   "foto_antes": "chips/CF-202610-106_antes.jpg",
+   "foto_despues": "chips/CF-202610-106_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-107",
@@ -168472,7 +172716,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9
+   "expedientes_municipio": 9,
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.666,
+    "mndwi": -0.529,
+    "nbr": 0.317,
+    "bsi": -0.044,
+    "nir": 0.288,
+    "swir22": 0.153,
+    "brillo": 0.055
+   },
+   "indices_despues": {
+    "ndvi": 0.301,
+    "mndwi": -0.389,
+    "nbr": 0.065,
+    "bsi": 0.114,
+    "nir": 0.393,
+    "swir22": 0.342,
+    "brillo": 0.172
+   },
+   "fecha_antes": "2025-09-06",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-107_antes.jpg",
+   "foto_despues": "chips/CF-202610-107_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-108",
@@ -168638,7 +172912,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 1
+   "expedientes_municipio": 1,
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.71,
+    "mndwi": -0.482,
+    "nbr": 0.505,
+    "bsi": -0.199,
+    "nir": 0.373,
+    "swir22": 0.121,
+    "brillo": 0.057
+   },
+   "indices_despues": {
+    "ndvi": 0.297,
+    "mndwi": -0.356,
+    "nbr": 0.192,
+    "bsi": 0.076,
+    "nir": 0.328,
+    "swir22": 0.225,
+    "brillo": 0.155
+   },
+   "fecha_antes": "2025-08-10",
+   "fecha_despues": "2026-08-22",
+   "foto_antes": "chips/CF-202610-108_antes.jpg",
+   "foto_despues": "chips/CF-202610-108_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-109",
@@ -168812,7 +173116,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13
+   "expedientes_municipio": 13,
+   "cubierta_previa": {
+    "codigo": "231",
+    "nombre": "prados y praderas"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.809,
+    "mndwi": -0.539,
+    "nbr": 0.581,
+    "bsi": -0.264,
+    "nir": 0.373,
+    "swir22": 0.098,
+    "brillo": 0.043
+   },
+   "indices_despues": {
+    "ndvi": 0.326,
+    "mndwi": -0.544,
+    "nbr": -0.01,
+    "bsi": 0.185,
+    "nir": 0.206,
+    "swir22": 0.211,
+    "brillo": 0.088
+   },
+   "fecha_antes": "2025-08-05",
+   "fecha_despues": "2026-08-22",
+   "foto_antes": "chips/CF-202610-109_antes.jpg",
+   "foto_despues": "chips/CF-202610-109_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-110",
@@ -169042,7 +173376,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 42
+   "expedientes_municipio": 42,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.544,
+    "mndwi": -0.235,
+    "nbr": 0.394,
+    "bsi": -0.135,
+    "nir": 0.241,
+    "swir22": 0.112,
+    "brillo": 0.075
+   },
+   "indices_despues": {
+    "ndvi": 0.195,
+    "mndwi": -0.22,
+    "nbr": 0.086,
+    "bsi": 0.065,
+    "nir": 0.107,
+    "swir22": 0.09,
+    "brillo": 0.063
+   },
+   "fecha_antes": "2025-10-16",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-110_antes.jpg",
+   "foto_despues": "chips/CF-202610-110_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-111",
@@ -169243,7 +173607,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 5,
+   "cubierta_previa": {
+    "codigo": "333",
+    "nombre": "vegetación escasa"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.625,
+    "mndwi": -0.523,
+    "nbr": 0.345,
+    "bsi": -0.049,
+    "nir": 0.361,
+    "swir22": 0.174,
+    "brillo": 0.079
+   },
+   "indices_despues": {
+    "ndvi": 0.329,
+    "mndwi": -0.497,
+    "nbr": 0.003,
+    "bsi": 0.139,
+    "nir": 0.213,
+    "swir22": 0.212,
+    "brillo": 0.093
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-111_antes.jpg",
+   "foto_despues": "chips/CF-202610-111_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-112",
@@ -169417,7 +173811,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 20
+   "expedientes_municipio": 20,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.623,
+    "mndwi": -0.25,
+    "nbr": 0.516,
+    "bsi": -0.23,
+    "nir": 0.356,
+    "swir22": 0.113,
+    "brillo": 0.086
+   },
+   "indices_despues": {
+    "ndvi": 0.219,
+    "mndwi": -0.47,
+    "nbr": -0.065,
+    "bsi": 0.181,
+    "nir": 0.282,
+    "swir22": 0.323,
+    "brillo": 0.15
+   },
+   "fecha_antes": "2025-10-16",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-112_antes.jpg",
+   "foto_despues": "chips/CF-202610-112_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras"
   },
   {
    "id": "CF-202610-113",
@@ -169580,7 +174004,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 4,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.73,
+    "mndwi": -0.602,
+    "nbr": 0.481,
+    "bsi": -0.129,
+    "nir": 0.391,
+    "swir22": 0.138,
+    "brillo": 0.055
+   },
+   "indices_despues": {
+    "ndvi": 0.309,
+    "mndwi": -0.576,
+    "nbr": -0.009,
+    "bsi": 0.218,
+    "nir": 0.256,
+    "swir22": 0.263,
+    "brillo": 0.103
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-113_antes.jpg",
+   "foto_despues": "chips/CF-202610-113_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-114",
@@ -169875,7 +174329,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 24
+   "expedientes_municipio": 24,
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.636,
+    "mndwi": -0.447,
+    "nbr": 0.465,
+    "bsi": -0.154,
+    "nir": 0.356,
+    "swir22": 0.133,
+    "brillo": 0.07
+   },
+   "indices_despues": {
+    "ndvi": 0.293,
+    "mndwi": -0.357,
+    "nbr": 0.11,
+    "bsi": 0.086,
+    "nir": 0.345,
+    "swir22": 0.273,
+    "brillo": 0.156
+   },
+   "fecha_antes": "2025-08-05",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-115_antes.jpg",
+   "foto_despues": "chips/CF-202610-115_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-116",
@@ -170055,7 +174539,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13
+   "expedientes_municipio": 13,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.653,
+    "mndwi": -0.53,
+    "nbr": 0.321,
+    "bsi": -0.074,
+    "nir": 0.316,
+    "swir22": 0.169,
+    "brillo": 0.067
+   },
+   "indices_despues": {
+    "ndvi": 0.231,
+    "mndwi": -0.453,
+    "nbr": 0.029,
+    "bsi": 0.168,
+    "nir": 0.186,
+    "swir22": 0.174,
+    "brillo": 0.089
+   },
+   "fecha_antes": "2025-10-16",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-116_antes.jpg",
+   "foto_despues": "chips/CF-202610-116_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-117",
@@ -170218,7 +174732,37 @@
      ]
     }
    ],
-   "expedientes_municipio": 96
+   "expedientes_municipio": 96,
+   "cubierta_previa": {
+    "codigo": "121",
+    "nombre": "zona industrial o comercial"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.777,
+    "mndwi": -0.576,
+    "nbr": 0.444,
+    "bsi": -0.162,
+    "nir": 0.298,
+    "swir22": 0.132,
+    "brillo": 0.04
+   },
+   "indices_despues": {
+    "ndvi": 0.119,
+    "mndwi": -0.248,
+    "nbr": 0.019,
+    "bsi": 0.087,
+    "nir": 0.15,
+    "swir22": 0.142,
+    "brillo": 0.091
+   },
+   "fecha_antes": "2025-10-01",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-117_antes.jpg",
+   "foto_despues": "chips/CF-202610-117_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-118",
@@ -170403,7 +174947,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 31,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.64,
+    "mndwi": -0.641,
+    "nbr": 0.363,
+    "bsi": 0.001,
+    "nir": 0.177,
+    "swir22": 0.085,
+    "brillo": 0.032
+   },
+   "indices_despues": {
+    "ndvi": 0.287,
+    "mndwi": -0.6,
+    "nbr": -0.138,
+    "bsi": 0.258,
+    "nir": 0.126,
+    "swir22": 0.169,
+    "brillo": 0.054
+   },
+   "fecha_antes": "2025-10-06",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-118_antes.jpg",
+   "foto_despues": "chips/CF-202610-118_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-119",
@@ -170551,7 +175125,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 4,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.657,
+    "mndwi": -0.588,
+    "nbr": 0.37,
+    "bsi": -0.035,
+    "nir": 0.291,
+    "swir22": 0.135,
+    "brillo": 0.054
+   },
+   "indices_despues": {
+    "ndvi": 0.323,
+    "mndwi": -0.512,
+    "nbr": -0.036,
+    "bsi": 0.158,
+    "nir": 0.207,
+    "swir22": 0.224,
+    "brillo": 0.09
+   },
+   "fecha_antes": "2025-08-10",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-119_antes.jpg",
+   "foto_despues": "chips/CF-202610-119_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-120",
@@ -170693,7 +175297,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 16
+   "expedientes_municipio": 16,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.746,
+    "mndwi": -0.627,
+    "nbr": 0.521,
+    "bsi": -0.148,
+    "nir": 0.322,
+    "swir22": 0.099,
+    "brillo": 0.039
+   },
+   "indices_despues": {
+    "ndvi": 0.309,
+    "mndwi": -0.337,
+    "nbr": 0.133,
+    "bsi": 0.039,
+    "nir": 0.202,
+    "swir22": 0.157,
+    "brillo": 0.1
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-10-09",
+   "foto_antes": "chips/CF-202610-120_antes.jpg",
+   "foto_despues": "chips/CF-202610-120_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-121",
@@ -171010,7 +175644,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 4,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.71,
+    "mndwi": -0.587,
+    "nbr": 0.489,
+    "bsi": -0.137,
+    "nir": 0.363,
+    "swir22": 0.123,
+    "brillo": 0.052
+   },
+   "indices_despues": {
+    "ndvi": 0.326,
+    "mndwi": -0.553,
+    "nbr": 0.044,
+    "bsi": 0.184,
+    "nir": 0.275,
+    "swir22": 0.248,
+    "brillo": 0.109
+   },
+   "fecha_antes": "2025-10-24",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-122_antes.jpg",
+   "foto_despues": "chips/CF-202610-122_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-123",
@@ -171149,7 +175813,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 4,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.632,
+    "mndwi": -0.528,
+    "nbr": 0.344,
+    "bsi": -0.042,
+    "nir": 0.342,
+    "swir22": 0.166,
+    "brillo": 0.073
+   },
+   "indices_despues": {
+    "ndvi": 0.316,
+    "mndwi": -0.498,
+    "nbr": 0.034,
+    "bsi": 0.161,
+    "nir": 0.257,
+    "swir22": 0.24,
+    "brillo": 0.109
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-08-09",
+   "foto_antes": "chips/CF-202610-123_antes.jpg",
+   "foto_despues": "chips/CF-202610-123_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-124",
@@ -171359,7 +176053,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 5,
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.863,
+    "mndwi": -0.572,
+    "nbr": 0.608,
+    "bsi": -0.281,
+    "nir": 0.401,
+    "swir22": 0.101,
+    "brillo": 0.037
+   },
+   "indices_despues": {
+    "ndvi": 0.294,
+    "mndwi": -0.252,
+    "nbr": 0.227,
+    "bsi": 0.033,
+    "nir": 0.396,
+    "swir22": 0.242,
+    "brillo": 0.177
+   },
+   "fecha_antes": "2025-10-11",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-124_antes.jpg",
+   "foto_despues": "chips/CF-202610-124_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-125",
@@ -171541,7 +176265,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13
+   "expedientes_municipio": 13,
+   "cubierta_previa": {
+    "codigo": "311",
+    "nombre": "bosque de frondosas"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.678,
+    "mndwi": -0.535,
+    "nbr": 0.389,
+    "bsi": -0.095,
+    "nir": 0.324,
+    "swir22": 0.139,
+    "brillo": 0.055
+   },
+   "indices_despues": {
+    "ndvi": 0.321,
+    "mndwi": -0.389,
+    "nbr": 0.137,
+    "bsi": 0.079,
+    "nir": 0.38,
+    "swir22": 0.288,
+    "brillo": 0.154
+   },
+   "fecha_antes": "2025-09-06",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-125_antes.jpg",
+   "foto_despues": "chips/CF-202610-125_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-126",
@@ -171953,7 +176707,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98
+   "expedientes_municipio": 98,
+   "cubierta_previa": {
+    "codigo": "242",
+    "nombre": "mosaico de cultivos"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.535,
+    "mndwi": -0.461,
+    "nbr": 0.365,
+    "bsi": -0.049,
+    "nir": 0.335,
+    "swir22": 0.157,
+    "brillo": 0.084
+   },
+   "indices_despues": {
+    "ndvi": 0.277,
+    "mndwi": -0.447,
+    "nbr": 0.082,
+    "bsi": 0.141,
+    "nir": 0.26,
+    "swir22": 0.22,
+    "brillo": 0.109
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-128_antes.jpg",
+   "foto_despues": "chips/CF-202610-128_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-129",
@@ -172127,7 +176911,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 4,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.713,
+    "mndwi": -0.627,
+    "nbr": 0.467,
+    "bsi": -0.079,
+    "nir": 0.321,
+    "swir22": 0.115,
+    "brillo": 0.044
+   },
+   "indices_despues": {
+    "ndvi": 0.338,
+    "mndwi": -0.58,
+    "nbr": -0.028,
+    "bsi": 0.214,
+    "nir": 0.187,
+    "swir22": 0.198,
+    "brillo": 0.074
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-09-09",
+   "foto_antes": "chips/CF-202610-129_antes.jpg",
+   "foto_despues": "chips/CF-202610-129_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   },
   {
    "id": "CF-202610-130",
@@ -172272,7 +177086,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 4,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.69,
+    "mndwi": -0.651,
+    "nbr": 0.388,
+    "bsi": -0.03,
+    "nir": 0.346,
+    "swir22": 0.154,
+    "brillo": 0.052
+   },
+   "indices_despues": {
+    "ndvi": 0.283,
+    "mndwi": -0.62,
+    "nbr": -0.138,
+    "bsi": 0.281,
+    "nir": 0.241,
+    "swir22": 0.315,
+    "brillo": 0.103
+   },
+   "fecha_antes": "2025-08-07",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-130_antes.jpg",
+   "foto_despues": "chips/CF-202610-130_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-131",
@@ -172425,7 +177269,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 24
+   "expedientes_municipio": 24,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.658,
+    "mndwi": -0.58,
+    "nbr": 0.361,
+    "bsi": -0.048,
+    "nir": 0.339,
+    "swir22": 0.159,
+    "brillo": 0.062
+   },
+   "indices_despues": {
+    "ndvi": 0.316,
+    "mndwi": -0.546,
+    "nbr": 0.081,
+    "bsi": 0.174,
+    "nir": 0.321,
+    "swir22": 0.272,
+    "brillo": 0.124
+   },
+   "fecha_antes": "2025-10-06",
+   "fecha_despues": "2026-08-02",
+   "foto_antes": "chips/CF-202610-131_antes.jpg",
+   "foto_despues": "chips/CF-202610-131_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Pérdida de vegetación"
   },
   {
    "id": "CF-202610-132",
@@ -172644,7 +177518,37 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2
+   "expedientes_municipio": 2,
+   "cubierta_previa": {
+    "codigo": "321",
+    "nombre": "pastizal natural"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.63,
+    "mndwi": -0.559,
+    "nbr": 0.386,
+    "bsi": -0.05,
+    "nir": 0.35,
+    "swir22": 0.152,
+    "brillo": 0.067
+   },
+   "indices_despues": {
+    "ndvi": 0.317,
+    "mndwi": -0.576,
+    "nbr": -0.02,
+    "bsi": 0.209,
+    "nir": 0.202,
+    "swir22": 0.207,
+    "brillo": 0.08
+   },
+   "fecha_antes": "2025-10-24",
+   "fecha_despues": "2026-10-14",
+   "foto_antes": "chips/CF-202610-132_antes.jpg",
+   "foto_despues": "chips/CF-202610-132_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada"
   }
  ],
  "ejecuciones": {
@@ -172875,5 +177779,5 @@
  },
  "expedientes_desde": "2018-01-02",
  "ultima_ventana": "2026-10",
- "actualizado": "2026-10-16T10:23:46+00:00"
+ "actualizado": "2026-10-16T13:11:42+00:00"
 }

@@ -66825,7 +66825,7 @@
    "pixeles": 51,
    "ha": 0.51,
    "ndvi_ref": 0.764,
-   "ndvi_actual": 0.316,
+   "ndvi_actual": 0.313,
    "obs_actual": 20,
    "centro": [
     43.48515,
@@ -67435,7 +67435,7 @@
   },
   {
    "id": "CF-202608-010",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-08",
    "ultima": "2026-08",
    "meses": [
@@ -67446,12 +67446,18 @@
     {
      "fecha": "2026-08-31",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-19",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 43,
    "ha": 0.43,
    "ndvi_ref": 0.659,
-   "ndvi_actual": 0.338,
+   "ndvi_actual": 0.588,
    "obs_actual": 20,
    "centro": [
     43.49345,
@@ -68174,7 +68180,7 @@
    "pixeles": 43,
    "ha": 0.48,
    "ndvi_ref": 0.681,
-   "ndvi_actual": 0.333,
+   "ndvi_actual": 0.332,
    "obs_actual": 22,
    "centro": [
     43.47822,
@@ -68584,7 +68590,7 @@
   },
   {
    "id": "CF-202608-014",
-   "estado": "confirmada",
+   "estado": "revertida",
    "primera": "2026-08",
    "ultima": "2026-09",
    "meses": [
@@ -68600,12 +68606,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-10-19",
+     "estado": "revertida",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 32,
    "ha": 0.32,
    "ndvi_ref": 0.788,
-   "ndvi_actual": 0.301,
+   "ndvi_actual": 0.522,
    "obs_actual": 22,
    "centro": [
     43.45611,
@@ -116432,7 +116444,7 @@
    "pixeles": 127,
    "ha": 1.35,
    "ndvi_ref": 0.619,
-   "ndvi_actual": 0.299,
+   "ndvi_actual": 0.298,
    "obs_actual": 23,
    "centro": [
     43.4624,
@@ -142492,7 +142504,7 @@
    "pixeles": 291,
    "ha": 2.91,
    "ndvi_ref": 0.798,
-   "ndvi_actual": 0.315,
+   "ndvi_actual": 0.318,
    "obs_actual": 19,
    "centro": [
     43.47492,
@@ -144217,7 +144229,7 @@
    "pixeles": 258,
    "ha": 2.58,
    "ndvi_ref": 0.713,
-   "ndvi_actual": 0.271,
+   "ndvi_actual": 0.273,
    "obs_actual": 19,
    "centro": [
     43.46013,
@@ -145786,7 +145798,7 @@
    "pixeles": 150,
    "ha": 1.5,
    "ndvi_ref": 0.688,
-   "ndvi_actual": 0.31,
+   "ndvi_actual": 0.309,
    "obs_actual": 20,
    "centro": [
     43.47234,
@@ -146242,7 +146254,7 @@
    "pixeles": 143,
    "ha": 1.43,
    "ndvi_ref": 0.691,
-   "ndvi_actual": 0.283,
+   "ndvi_actual": 0.281,
    "obs_actual": 20,
    "centro": [
     43.46024,
@@ -149859,7 +149871,7 @@
    "pixeles": 128,
    "ha": 1.28,
    "ndvi_ref": 0.664,
-   "ndvi_actual": 0.31,
+   "ndvi_actual": 0.311,
    "obs_actual": 19,
    "centro": [
     43.46233,
@@ -150827,7 +150839,7 @@
    "pixeles": 68,
    "ha": 0.68,
    "ndvi_ref": 0.83,
-   "ndvi_actual": 0.343,
+   "ndvi_actual": 0.347,
    "obs_actual": 19,
    "centro": [
     43.4696,
@@ -153918,7 +153930,7 @@
    "pixeles": 57,
    "ha": 0.57,
    "ndvi_ref": 0.872,
-   "ndvi_actual": 0.327,
+   "ndvi_actual": 0.344,
    "obs_actual": 18,
    "centro": [
     43.44211,
@@ -154588,7 +154600,7 @@
    "pixeles": 55,
    "ha": 0.55,
    "ndvi_ref": 0.746,
-   "ndvi_actual": 0.325,
+   "ndvi_actual": 0.324,
    "obs_actual": 18,
    "centro": [
     43.45442,
@@ -155581,7 +155593,7 @@
    "pixeles": 52,
    "ha": 0.52,
    "ndvi_ref": 0.69,
-   "ndvi_actual": 0.316,
+   "ndvi_actual": 0.315,
    "obs_actual": 17,
    "centro": [
     43.43591,
@@ -159869,7 +159881,7 @@
    "pixeles": 42,
    "ha": 0.42,
    "ndvi_ref": 0.635,
-   "ndvi_actual": 0.3,
+   "ndvi_actual": 0.303,
    "obs_actual": 18,
    "centro": [
     43.47351,
@@ -160511,7 +160523,7 @@
    "pixeles": 38,
    "ha": 0.38,
    "ndvi_ref": 0.748,
-   "ndvi_actual": 0.316,
+   "ndvi_actual": 0.318,
    "obs_actual": 20,
    "centro": [
     43.47145,
@@ -164873,7 +164885,7 @@
    "pixeles": 32,
    "ha": 0.32,
    "ndvi_ref": 0.769,
-   "ndvi_actual": 0.301,
+   "ndvi_actual": 0.332,
    "obs_actual": 20,
    "centro": [
     43.47986,
@@ -168187,7 +168199,7 @@
    "pixeles": 29,
    "ha": 0.29,
    "ndvi_ref": 0.666,
-   "ndvi_actual": 0.298,
+   "ndvi_actual": 0.3,
    "obs_actual": 18,
    "centro": [
     43.44053,
@@ -176103,7 +176115,7 @@
    "pixeles": 20,
    "ha": 0.2,
    "ndvi_ref": 0.727,
-   "ndvi_actual": 0.323,
+   "ndvi_actual": 0.33,
    "obs_actual": 18,
    "centro": [
     43.44752,
@@ -177768,16 +177780,16 @@
     "2026-10"
    ],
    "pixeles_zona": 23154169,
-   "pixeles_evaluables": 22228579,
+   "pixeles_evaluables": 22228624,
    "fraccion_evaluable": 0.96,
    "pixeles_agua_previa": 868435,
    "meses_agua": 24,
-   "pixeles_candidatos": 26886,
-   "cambios": 219,
-   "ha_cambios": 174.5
+   "pixeles_candidatos": 26491,
+   "cambios": 218,
+   "ha_cambios": 172.5
   }
  },
  "expedientes_desde": "2018-01-02",
  "ultima_ventana": "2026-10",
- "actualizado": "2026-10-18T12:11:48+00:00"
+ "actualizado": "2026-10-19T14:50:29+00:00"
 }

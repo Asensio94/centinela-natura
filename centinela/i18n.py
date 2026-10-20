@@ -3,7 +3,8 @@
 Cada país se publica en su idioma: Cantabria en castellano, los Pirineos Atlánticos en
 francés. Los datos (alertas.json, alertas.geojson, signals.json) no dependen del idioma:
 guardan claves (clase, estado, cruce, código CORINE, estado de la autorización) y aquí se
-les pone nombre. Mismo patrón que humedales/i18n.py en vigilancia-humedales.
+les pone nombre. La excepción es el título y el permiso de cada señal de signals.json, que
+el contrato de estado-iba quiere en la lengua del país (signals.py los toma de aquí). Mismo patrón que humedales/i18n.py en vigilancia-humedales.
 
 Tipografía francesa: espacio fino irrompible (U+202F) como separador de miles y ante
 «%», «:», «;», «?» y «!», y dentro de las comillas latinas. En los textos franceses se

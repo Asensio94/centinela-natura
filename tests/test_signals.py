@@ -79,3 +79,16 @@ def test_document_header():
 def test_current_states_are_the_active_ones():
     alertas = pytest.importorskip("centinela.alertas")   # needs the whole satellite stack
     assert set(signals.CURRENT) == set(alertas.ACTIVAS)
+
+
+def test_french_alerts_have_their_title_and_permit_in_french(monkeypatch):
+    from centinela import config
+    monkeypatch.setattr(config, "PAIS", "FR")
+    f = _feature("CF-202609-001", "confirmada", clase="quemado", clase_nombre="Superficie quemada",
+                 cruce_nombre="Sin autorización conocida", espacios=[{"codigo": "FR7212010"}])
+    d = _doc(f, _feature("CF-202609-002", "provisional", cruce="pendiente"), sites=("FR7212010",))
+    burnt, unknown = d["signals"]
+    assert burnt["title"] == "Surface brûlée" and burnt["details"]["permit"] == "Sans autorisation connue"
+    assert unknown["title"] == "Changement de couverture" and unknown["details"]["permit"] == "Parcelles à consulter"
+    assert burnt["status"] == "confirmada"  # values stay canonical
+    assert d["coverage"]["note"].startswith("Changements de végétation")

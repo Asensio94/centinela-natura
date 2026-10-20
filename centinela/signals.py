@@ -11,17 +11,23 @@ Each country builds its part (`document`) and leaves it in its cache; the publis
 the parts of every country (`combine`). Every signal says its `country`; French
 municipalities go with their INSEE code, Spanish ones by name only. Spain alone is a version 1
 file; with France it is version 2, whose coverage goes by country.
+
+The contract wants each signal's title in its country's language, so French alerts take their
+title and permit from i18n, the same names the French web shows. Status and the other values
+stay canonical, as in the data files.
 """
 from __future__ import annotations
 
 from datetime import datetime
 from pathlib import Path
 
-from . import config
+from . import config, i18n
 
 # Pressure on the ground today, as alertas.ACTIVAS: descartada, revertida and fusionada are not.
 CURRENT = ("provisional", "confirmada")
-COVERAGE_NOTE = "Cambios de vegetación con Sentinel-2, revisados cada mes."
+COVERAGE_NOTE = {"ES": "Cambios de vegetación con Sentinel-2, revisados cada mes.",
+                 "FR": "Changements de végétation avec Sentinel-2, revus chaque mois."}
+UNKNOWN_CLASS = {"es": "Cambio de cubierta", "fr": "Changement de couverture"}
 
 
 def signal(p: dict, web_url: str) -> dict:
@@ -29,12 +35,19 @@ def signal(p: dict, web_url: str) -> dict:
     def link(path: str | None) -> str | None:
         return web_url + path if path else None
 
+    lang = i18n.lang_of(config.PAIS)
+    if lang == "es":
+        title, permit = p.get("clase_nombre"), p.get("cruce_nombre")
+    else:
+        title = i18n.CLASES[lang].get(p.get("clase") or "")
+        permit = i18n.CRUCES[lang].get(p.get("cruce") or "", p.get("cruce_nombre"))
+
     return {
         "id": p["id"],
         "kind": "land_change",
         "country": config.PAIS,
         "date": p["detectada"],
-        "title": p.get("clase_nombre") or "Cambio de cubierta",
+        "title": title or UNKNOWN_CLASS[lang],
         "url": f"{web_url}#{p['id']}",
         "sites": [{"code": e["codigo"]} for e in p.get("espacios") or []],
         # Spain: only names; the hub turns them into INE codes with the IGN layer. France:
@@ -47,7 +60,7 @@ def signal(p: dict, web_url: str) -> dict:
         "status": p["estado"],
         "value": {"amount": p["ha"], "unit": "ha"},
         "details": {
-            "permit": p.get("cruce_nombre"),
+            "permit": permit,
             "before": link(p.get("foto_antes")),
             "after": link(p.get("foto_despues")),
             "before_date": p.get("fecha_antes"),
@@ -67,7 +80,7 @@ def document(alertas: dict, sites: list[str], now: datetime, web_url: str) -> di
         "source": "centinela-natura",
         "version": 1,
         "generated": now.strftime("%Y-%m-%dT%H:%MZ"),
-        "coverage": {"label": config.REGION, "sites": sorted(set(sites)), "note": COVERAGE_NOTE},
+        "coverage": {"label": config.REGION, "sites": sorted(set(sites)), "note": COVERAGE_NOTE[config.PAIS]},
         "signals": signals,
     }
 

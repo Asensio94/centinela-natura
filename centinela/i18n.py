@@ -70,7 +70,7 @@ PROYECTOS = [  # (slug, nombre, nom, página francesa)
     ("grafo-promotores", "Grafo de promotores", "Graphe des porteurs de projet", ""),
     ("vigilancia-humedales", "Vigilancia de humedales", "Veille des zones humides", "france.html"),
     ("caudal-ecologico", "Caudal ecológico", "Débit écologique", ""),
-    ("acuiferos-francia", "Acuíferos de Francia", "Nappes de France", ""),
+    ("acuiferos-francia", "Acuíferos de Francia", "Nappes de France", "fr/"),
     ("depuracion-y-bano", "Depuración y baño", "Épuration et baignade", "fr/"),
     ("zona-inundable", "Construir en zona inundable", "Construire en zone inondable", ""),
 ]

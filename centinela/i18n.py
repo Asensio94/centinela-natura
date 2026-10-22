@@ -54,17 +54,42 @@ MESES_CORTOS = {
     "fr": ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."],
 }
 
-SIBLINGS = """    <li><a href="https://asensio94.github.io/observatorio-alegaciones/">Observatorio de alegaciones</a></li>
-    <li><a href="https://asensio94.github.io/vigia-incendios/">Vigía de incendios</a></li>
-    <li aria-current="page"><a href="https://asensio94.github.io/centinela-natura/">Centinela Natura</a></li>
-    <li><a href="https://asensio94.github.io/vigilancia-humedales/">Vigilancia de humedales</a></li>
-    <li><a href="https://asensio94.github.io/sub-nocte/">Sub Nocte</a></li>
-    <li><a href="https://asensio94.github.io/riesgo-tendidos-aves/">Riesgo de tendidos para aves</a></li>
-    <li><a href="https://asensio94.github.io/grafo-promotores/">Grafo de promotores</a></li>
-    <li><a href="https://asensio94.github.io/cartera-cotizadas/">Cartera de las cotizadas</a></li>
-    <li><a href="https://asensio94.github.io/cuaderno-campo/">Cuaderno de campo</a></li>
-    <li><a href="https://asensio94.github.io/caudal-ecologico/">Caudal ecológico</a></li>
-    <li><a href="https://asensio94.github.io/estado-iba/">Estado de las IBA</a></li>"""
+# El pie común de los proyectos de Terra Aperta, en el orden de su menú. Centinela va como texto,
+# sin enlace. En francés, nombres en francés y la página francesa de cada proyecto si la tiene.
+HUB = {"es": ("https://asensio94.github.io/terra-aperta/", "← Terra Aperta: todos los proyectos",
+              "Proyectos hermanos"),
+       "fr": ("https://asensio94.github.io/terra-aperta/fr/", "← Terra Aperta : tous les projets",
+              "Projets frères")}
+PROYECTOS = [  # (slug, nombre, nom, página francesa)
+    ("sub-nocte", "Sub Nocte", "Sub Nocte", ""),
+    ("vigia-incendios", "Vigía de incendios", "Vigie des incendies", "fr/"),
+    ("centinela-natura", "Centinela Natura", "Centinela Natura", "fr/"),
+    ("estado-iba", "Estado de las IBA", "État des IBA", "fr/"),
+    ("riesgo-tendidos-aves", "Riesgo de tendidos para aves", "Risque des lignes pour les oiseaux", "regions.fr.html"),
+    ("observatorio-alegaciones", "Observatorio de alegaciones", "Observatoire des consultations", ""),
+    ("grafo-promotores", "Grafo de promotores", "Graphe des porteurs de projet", ""),
+    ("vigilancia-humedales", "Vigilancia de humedales", "Veille des zones humides", "france.html"),
+    ("caudal-ecologico", "Caudal ecológico", "Débit écologique", ""),
+    ("acuiferos-francia", "Acuíferos de Francia", "Nappes de France", ""),
+    ("depuracion-y-bano", "Depuración y baño", "Épuration et baignade", "fr/"),
+    ("zona-inundable", "Construir en zona inundable", "Construire en zone inondable", ""),
+]
+
+
+def siblings(lang: str) -> str:
+    """La vuelta al hub y la lista de proyectos hermanos del pie."""
+    hub, volver, etiqueta = HUB[lang]
+    items = []
+    for slug, es, fr, pagina_fr in PROYECTOS:
+        nombre = fr if lang == "fr" else es
+        if slug == "centinela-natura":
+            items.append(f'    <li aria-current="page">{nombre}</li>')
+        else:
+            href = f"https://asensio94.github.io/{slug}/" + (pagina_fr if lang == "fr" else "")
+            items.append(f'    <li><a href="{href}">{nombre}</a></li>')
+    return (f'  <p><a href="{hub}">{volver}</a></p>\n  <nav aria-label="{etiqueta}"><ul class="siblings">\n'
+            + "\n".join(items) + "\n  </ul></nav>")
+
 
 # ── Castellano: los textos de siempre, letra por letra ───────────────────────────────────
 
@@ -125,8 +150,6 @@ ES = {
     <p><a href="alertas.geojson">alertas.geojson</a> con todas las alertas y su historial · <a href="feed.xml">fuente Atom</a> de las activas · compuestos mensuales en GeoTIFF en las <a href="https://github.com/Asensio94/centinela-natura/releases/tag/compuestos">releases del repositorio</a> · <a href="https://github.com/Asensio94/centinela-natura">código</a>.</p>""",
     "principio": "Datos públicos, reglas a la vista y cada cifra enlazada a su fuente. Indicios, no veredictos.",
     "creditos": "Contiene datos modificados de Copernicus Sentinel procesados por Earth Search (Element 84) · Límites de la Red Natura 2000 y CORINE Land Cover 2018: Agencia Europea de Medio Ambiente · Municipios: © colaboradores de OpenStreetMap (ODbL) · Ortofoto PNOA: CC BY 4.0 scne.es · Parcelas: © Dirección General del Catastro · Expedientes: observatorio de alegaciones ambientales, a partir del BOE y el BOC · Código bajo licencia MIT.",
-    "hermanos": "Proyectos hermanos",
-    "hermanos_lang": "",
     "estados": {"provisional": "Provisional", "confirmada": "Confirmada", "revertida": "Revertida",
                 "descartada": "Descartada", "fusionada": "Fusionada"},
     "cambio": "Cambio",
@@ -259,8 +282,6 @@ FR = _fr({
     <p>Images~: <a href="https://dataspace.copernicus.eu/">Copernicus Sentinel-2</a> via <a href="https://element84.com/earth-search/">Earth Search</a> · Sites Natura 2000 et CORINE Land Cover~: <a href="https://www.eea.europa.eu/">Agence européenne pour l’environnement</a> · Communes~: <a href="https://geo.api.gouv.fr/decoupage-administratif">API Découpage administratif</a> · Parcelles~: <a href="https://cadastre.data.gouv.fr/">cadastre Etalab</a> (PCI vectoriel, DGFiP) · Usage agricole~: <a href="https://geoservices.ign.fr/rpg">Registre parcellaire graphique</a> (ASP, IGN) · Autorisations~: <a href="https://www.statistiques.developpement-durable.gouv.fr/donnees-des-permis-de-construire-et-autres-autorisations-durbanisme">Sitadel</a> (SDES) · Orthophotos~: <a href="https://geoservices.ign.fr/bdortho">IGN</a>.</p>""",
     "principio": "Données publiques, règles visibles et chaque chiffre relié à sa source. Des indices, pas des verdicts.",
     "creditos": "Contient des données Copernicus Sentinel modifiées, traitées par Earth Search (Element 84) · Sites Natura 2000 et CORINE Land Cover 2018~: Agence européenne pour l’environnement · Communes, orthophotos et RPG~: IGN, Licence Ouverte 2.0 · Parcelles~: DGFiP, cadastre Etalab, Licence Ouverte 2.0 · Autorisations d’urbanisme~: SDES, Sitadel, Licence Ouverte 2.0 · Code sous licence MIT.",
-    "hermanos": "Projets associés",
-    "hermanos_lang": ' lang="es"',
     "estados": {"provisional": "Provisoire", "confirmada": "Confirmée", "revertida": "Résorbée",
                 "descartada": "Écartée", "fusionada": "Fusionnée"},
     "cambio": "Changement",

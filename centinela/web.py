@@ -251,10 +251,9 @@ def construir() -> None:
     }
     textos = {k: t[k] for k in ("html_lang", "description", "feed_alt", "label", "lede", "fig_activas",
                                 "fig_confirmadas", "fig_ha", "fig_expediente", "fig_meta", "mapa_aria",
-                                "filtros", "metodo", "parametros", "datos", "principio", "creditos",
-                                "hermanos", "hermanos_lang")}
+                                "filtros", "metodo", "parametros", "datos", "principio", "creditos")}
     textos["paises"] = _paises_nav()
-    textos["siblings"] = i18n.SIBLINGS
+    textos["siblings"] = i18n.siblings(lang)
     html_txt = PLANTILLA
     for k, v in textos.items():
         html_txt = html_txt.replace(f"__T_{k.upper()}__", v)
@@ -437,9 +436,7 @@ __T_DATOS__
 <footer class="site-footer">
   <p class="principle">__T_PRINCIPIO__</p>
   <p>__T_CREDITOS__</p>
-  <nav aria-label="__T_HERMANOS__"><ul class="siblings"__T_HERMANOS_LANG__>
 __T_SIBLINGS__
-  </ul></nav>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>

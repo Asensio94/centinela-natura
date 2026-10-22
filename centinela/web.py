@@ -248,10 +248,17 @@ def construir() -> None:
         "actualizado": _fecha_txt((reg.get("actualizado") or ahora)[:10]),
         "zona_ha": _num(zona.mascara().sum() * config.PIXEL_HA, 0),
         "n_espacios": len(esp["features"]),
+        "uma_ha": _num(config.UMA_PIXELES * config.PIXEL_HA, 1),
     }
     textos = {k: t[k] for k in ("html_lang", "description", "feed_alt", "label", "lede", "fig_activas",
+<<<<<<< HEAD
+                                "fig_confirmadas", "fig_ha", "fig_expediente", "alcance", "fig_meta", "mapa_aria",
+                                "filtros", "metodo", "parametros", "datos", "principio", "creditos",
+                                "hermanos", "hermanos_lang")}
+=======
                                 "fig_confirmadas", "fig_ha", "fig_expediente", "fig_meta", "mapa_aria",
                                 "filtros", "metodo", "parametros", "datos", "principio", "creditos")}
+>>>>>>> origin/main
     textos["paises"] = _paises_nav()
     textos["siblings"] = i18n.siblings(lang)
     html_txt = PLANTILLA
@@ -409,6 +416,7 @@ table.params th{width:38%}
     <div><b>__CON_EXPEDIENTE__</b><span>__T_FIG_EXPEDIENTE__</span></div>
     <div class="meta"><b>__VENTANA__</b><span>__T_FIG_META__</span></div>
   </div>
+  <p class="note alcance">__T_ALCANCE__</p>
 </header>
 
 <main>

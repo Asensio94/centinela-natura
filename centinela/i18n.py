@@ -84,7 +84,20 @@ _ES_METODO = """    <h2>Cómo se calcula</h2>
     <h3>Validación</h3>
     <p>Pendiente: todavía no se ha contrastado con otra fuente. Cada alerta publica las dos fotos que compara el detector, para que se pueda comprobar a simple vista.</p>
     <h3>Qué no ve</h3>
-    <p>Todo lo que ocupe menos de la unidad mínima: una casa aislada, una pista estrecha o un vallado. Tampoco ve lo que ocurre bajo cubierta arbórea sin quitarla, ni los cambios en zonas que no eran vegetación densa (roquedo, arenales, láminas de agua), ni las orillas que el agua cubre y descubre (embalses, marismas), ni los meses de nieve, sombra invernal o nube persistente, que se quedan sin evaluar. Las alertas en tierras de cultivo pueden ser rotaciones.</p>"""
+    <p>Todo lo que ocupe menos de la unidad mínima: una casa aislada, una pista estrecha o un vallado. Tampoco ve lo que ocurre bajo cubierta arbórea sin quitarla, ni los cambios en zonas que no eran vegetación densa (roquedo, arenales, láminas de agua), ni las orillas que el agua cubre y descubre (embalses, marismas), ni los meses de nieve, sombra invernal o nube persistente, que se quedan sin evaluar. Las alertas en tierras de cultivo pueden ser rotaciones.</p>
+    <h3>Siglas y términos</h3>
+    <ul class="glosario">
+      <li><strong>Red Natura 2000</strong>: la red europea de espacios protegidos por las directivas de Hábitats y de Aves. En España se divide en <strong>ZEC</strong> (Zonas Especiales de Conservación, por sus hábitats y especies) y <strong>ZEPA</strong> (Zonas de Especial Protección para las Aves).</li>
+      <li><strong>Sentinel-2</strong>: los satélites del programa europeo Copernicus que fotografían la misma zona cada pocos días con 10 metros por píxel. <strong>L2A</strong> es el nivel de proceso con la corrección atmosférica ya hecha.</li>
+      <li><strong>NDVI</strong> (índice de vegetación de diferencia normalizada): compara el infrarrojo cercano con el rojo. Va de −1 a 1; la vegetación densa pasa de 0,6 y el suelo desnudo, el asfalto o el agua quedan cerca de 0 o por debajo.</li>
+      <li><strong>NDSI</strong> (índice de nieve de diferencia normalizada): compara el verde con el infrarrojo de onda corta para reconocer la nieve. <strong>SNOMAP</strong> es la regla clásica que lo usa.</li>
+      <li><strong>SCL</strong> (Scene Classification Layer): la capa que acompaña a cada imagen y dice, píxel a píxel, si es nube, sombra, nieve, agua, vegetación o suelo. La calcula <strong>Sen2Cor</strong>, el programa de la Agencia Espacial Europea que prepara las imágenes L2A.</li>
+      <li><strong>Catastro</strong>: el registro público de las fincas. Cada parcela tiene una <strong>referencia catastral</strong>; en suelo rústico se nombra también por su <strong>polígono y parcela</strong>, dos números dentro del municipio. Este sitio no guarda titulares.</li>
+      <li><strong>Expediente</strong>: un procedimiento administrativo publicado (una autorización, una evaluación ambiental, una concesión) cuyo anuncio o resolución sale en el <strong>BOE</strong> (Boletín Oficial del Estado) o el <strong>BOC</strong> (Boletín Oficial de Cantabria).</li>
+      <li><strong>CORINE Land Cover</strong>: el mapa europeo de usos del suelo; aquí dice si una alerta cae en monte, cultivo o zona urbana.</li>
+      <li><strong>PNOA</strong>: las ortofotos aéreas del Plan Nacional de Ortofotografía Aérea, que el mapa usa de fondo.</li>
+      <li><strong>WGS84 / UTM 30N</strong>: el sistema de coordenadas de la malla, en metros, que corresponde a la franja de Cantabria.</li>
+    </ul>"""
 
 ES = {
     "html_lang": "es",
@@ -96,7 +109,8 @@ ES = {
     "fig_activas": "alertas activas",
     "fig_confirmadas": "confirmadas",
     "fig_ha": "hectáreas afectadas",
-    "fig_expediente": "con un expediente que cita sus parcelas",
+    "fig_expediente": "con un expediente publicado que cita sus parcelas",
+    "alcance": "Piloto: vigila solo la Red Natura 2000 de Cantabria (en España) y la de Pirineos Atlánticos (en Francia). No ve cambios de menos de __UMA_HA__ ha, como una casa aislada, una pista estrecha o un vallado. «Con expediente» quiere decir que algún anuncio o resolución publicado en el BOE o el Boletín Oficial de Cantabria desde el __EXPEDIENTES_DESDE__ cita una de sus parcelas. Un 0 no quiere decir que las obras sean ilegales: quiere decir que nuestro cruce no ha encontrado ningún permiso publicado, y muchas licencias municipales y autorizaciones forestales no salen en los boletines.",
     "fig_meta": "ventana comparada · __EVALUABLE__ de la zona con cielo suficiente · actualizado el __ACTUALIZADO__",
     "mapa_aria": "Mapa de alertas",
     "filtros": """      <label>Estado <select id="f-estado">
@@ -180,13 +194,15 @@ _FR_METODO = """    <h2>Comment c’est calculé</h2>
     </ol>
     <p>«~Sans autorisation connue~» veut dire qu’aucune autorisation d’urbanisme de Sitadel ne cite ses parcelles, pas que les travaux sont illégaux~: beaucoup de travaux en zone naturelle ne relèvent pas de l’urbanisme (voir plus bas), Sitadel ne donne que trois parcelles par autorisation et presque jamais le préfixe de section. Le nombre d’autres autorisations dans la même commune sur la période est indiqué dans chaque alerte.</p>
     <h3>Équivalences avec l’Espagne</h3>
+    <p>À gauche, ce que la version espagnole croise en Cantabrie~; à droite, son équivalent en France.</p>
     <table class="params">
-      <tr><th scope="row">Expedientes publiés au BOE et au BOC</th><td>Autorisations d’urbanisme de Sitadel, par parcelle</td></tr>
-      <tr><th scope="row">Catastro (Sede Electrónica)</th><td>Cadastre Etalab (PCI vectoriel)</td></tr>
-      <tr><th scope="row">Autorisations forestales</th><td>Autorisations de défrichement~: <strong>sans équivalent</strong>, aucun fichier ouvert par parcelle</td></tr>
+      <tr><th scope="col">Espagne</th><th scope="col">France</th></tr>
+      <tr><th scope="row">Procédures publiées au BOE et au BOC (expedientes)</th><td>Autorisations d’urbanisme de Sitadel, par parcelle</td></tr>
+      <tr><th scope="row">Cadastre espagnol (Catastro, Sede Electrónica)</th><td>Cadastre Etalab (PCI vectoriel)</td></tr>
+      <tr><th scope="row">Autorisations forestières (autorizaciones forestales)</th><td>Autorisations de défrichement~: <strong>sans équivalent</strong>, aucun fichier ouvert par parcelle</td></tr>
       <tr><th scope="row">Évaluation des effets sur Natura 2000</th><td>Évaluations des incidences Natura 2000~: <strong>sans équivalent</strong>, les décisions ne sont pas publiées en données ouvertes</td></tr>
-      <tr><th scope="row">Planes de gestión forestal</th><td>Plans simples de gestion~: <strong>sans équivalent</strong>, non publiés</td></tr>
-      <tr><th scope="row">Evaluación de impacto ambiental</th><td>Projets soumis à étude d’impact (projets-environnement)~: <strong>sans équivalent</strong> exploitable, seule une archive de 2021 existe, sans API</td></tr>
+      <tr><th scope="row">Plans de gestion forestière (planes de gestión forestal)</th><td>Plans simples de gestion~: <strong>sans équivalent</strong>, non publiés</td></tr>
+      <tr><th scope="row">Évaluation d’impact environnemental (evaluación de impacto ambiental)</th><td>Projets soumis à étude d’impact (projets-environnement)~: <strong>sans équivalent</strong> exploitable, seule une archive de 2021 existe, sans API</td></tr>
       <tr><th scope="row">—</th><td>Usage agricole déclaré (RPG)~: <strong>propre à la France</strong></td></tr>
     </table>
     <h3>Ce qui reste hors champ, et pourquoi</h3>
@@ -197,7 +213,22 @@ _FR_METODO = """    <h2>Comment c’est calculé</h2>
     <h3>Validation</h3>
     <p>En attente~: pas encore confrontée à une autre source. Chaque alerte publie les deux images que compare le détecteur, pour qu’on puisse vérifier à l’œil nu.</p>
     <h3>Limites</h3>
-    <p>Rien de plus petit que l’unité minimale~: une maison isolée, une piste étroite ou une clôture. Rien sous un couvert arboré qu’on n’enlève pas, ni dans des zones qui n’étaient pas en végétation dense (rochers, sables, plans d’eau), ni sur les rives que l’eau couvre et découvre, ni pendant les mois de neige, d’ombre hivernale ou de nuage persistant, qui restent non évalués. Le RPG ne couvre que les exploitants qui demandent des aides PAC. Dans les estives et les communaux de montagne, une seule parcelle peut faire des centaines d’hectares~: tomber dans la même parcelle qu’une autorisation ne prouve pas qu’il s’agit des mêmes travaux.</p>"""
+    <p>Rien de plus petit que l’unité minimale~: une maison isolée, une piste étroite ou une clôture. Rien sous un couvert arboré qu’on n’enlève pas, ni dans des zones qui n’étaient pas en végétation dense (rochers, sables, plans d’eau), ni sur les rives que l’eau couvre et découvre, ni pendant les mois de neige, d’ombre hivernale ou de nuage persistant, qui restent non évalués. Le RPG ne couvre que les exploitants qui demandent des aides PAC. Dans les estives et les communaux de montagne, une seule parcelle peut faire des centaines d’hectares~: tomber dans la même parcelle qu’une autorisation ne prouve pas qu’il s’agit des mêmes travaux.</p>
+    <h3>Sigles et termes</h3>
+    <ul class="glosario">
+      <li><strong>Natura 2000</strong>~: le réseau européen de sites protégés au titre des directives Habitats et Oiseaux. Il se divise en <strong>ZSC</strong> (zones spéciales de conservation, pour les habitats et les espèces) et <strong>ZPS</strong> (zones de protection spéciale, pour les oiseaux). En Espagne, on parle de ZEC et de ZEPA.</li>
+      <li><strong>Sentinel-2</strong>~: les satellites du programme européen Copernicus, qui photographient la même zone tous les quelques jours à 10 mètres par pixel. <strong>L2A</strong> est le niveau de traitement où la correction atmosphérique est déjà faite.</li>
+      <li><strong>NDVI</strong> (indice de végétation par différence normalisée)~: compare le proche infrarouge au rouge. Il va de −1 à 1~; la végétation dense dépasse 0,6, le sol nu, le bitume ou l’eau restent près de 0 ou en dessous.</li>
+      <li><strong>NDSI</strong> (indice de neige par différence normalisée)~: compare le vert à l’infrarouge à ondes courtes pour reconnaître la neige. <strong>SNOMAP</strong> est la règle classique qui l’utilise.</li>
+      <li><strong>SCL</strong> (Scene Classification Layer)~: la couche qui accompagne chaque image et dit, pixel par pixel, s’il s’agit de nuage, d’ombre, de neige, d’eau, de végétation ou de sol. Elle est calculée par <strong>Sen2Cor</strong>, le logiciel de l’Agence spatiale européenne qui prépare les images L2A.</li>
+      <li><strong>PCI</strong> (plan cadastral informatisé)~: le plan cadastral de la <strong>DGFiP</strong> (direction générale des Finances publiques), publié en données ouvertes par <strong>Etalab</strong>. Il ne contient aucun propriétaire.</li>
+      <li><strong>PAC</strong>~: la politique agricole commune de l’Union européenne. Le <strong>RPG</strong> (registre parcellaire graphique) est la carte des parcelles que les exploitants déclarent chaque année pour ses aides. La <strong>BCAE~9</strong> (bonne condition agricole et environnementale n°~9) interdit de retourner les prairies permanentes sensibles, notamment en site Natura 2000.</li>
+      <li><strong>Sitadel</strong>~: le fichier des autorisations d’urbanisme (permis de construire, d’aménager, de démolir, déclarations préalables) tenu par le <strong>SDES</strong>, le service statistique du ministère de la Transition écologique.</li>
+      <li><strong>ICPE</strong>~: installations classées pour la protection de l’environnement (usines, carrières, élevages…), recensées dans Géorisques. <strong>SIREN</strong> et <strong>SIRET</strong> sont les numéros d’identification des entreprises et de leurs établissements.</li>
+      <li><strong>Estive</strong>~: pâturage d’altitude utilisé l’été. <strong>Écobuage</strong>~: brûlage dirigé de la végétation pour entretenir les pâturages.</li>
+      <li><strong>BOE</strong> et <strong>BOC</strong>~: le Journal officiel de l’État espagnol (Boletín Oficial del Estado) et celui de la Cantabrie (Boletín Oficial de Cantabria), où la version espagnole cherche les procédures publiées.</li>
+      <li><strong>WGS84 / UTM 30N</strong>~: le système de coordonnées de la grille, en mètres.</li>
+    </ul>"""
 
 FR = _fr({
     "html_lang": "fr",
@@ -209,7 +240,8 @@ FR = _fr({
     "fig_activas": "alertes actives",
     "fig_confirmadas": "confirmées",
     "fig_ha": "hectares touchés",
-    "fig_expediente": "avec une autorisation d’urbanisme sur leurs parcelles",
+    "fig_expediente": "avec une autorisation d’urbanisme connue sur leurs parcelles",
+    "alcance": "Projet pilote~: seuls les sites Natura 2000 des Pyrénées-Atlantiques (en France) et de Cantabrie (en Espagne) sont surveillés. Les changements de moins de __UMA_HA__~ha, comme une maison isolée, une piste étroite ou une clôture, ne sont pas détectés. «~Avec une autorisation~» veut dire qu’une autorisation d’urbanisme de Sitadel (permis de construire, d’aménager, de démolir ou déclaration préalable) cite une de ses parcelles. Les autres alertes ne sont pas pour autant illégales~: notre croisement n’a trouvé aucune autorisation, et beaucoup de travaux en zone naturelle ne relèvent pas de l’urbanisme.",
     "fig_meta": "fenêtre comparée · __EVALUABLE__ de la zone avec un ciel suffisant · mis à jour le __ACTUALIZADO__",
     "mapa_aria": "Carte des alertes",
     "filtros": """      <label>État <select id="f-estado">

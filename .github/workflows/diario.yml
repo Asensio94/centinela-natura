@@ -2,6 +2,8 @@ name: Vigilancia diaria
 
 # Una pasada al día: rehace el compuesto del mes en curso con las escenas nuevas, busca
 # cambios, analiza los nuevos, los cruza con los expedientes del observatorio y publica.
+# Primero España (Cantabria) y después Francia (Pirineos Atlánticos), que se cruza con el
+# catastro de Etalab, el RPG y Sitadel. Si Francia falla, la web de España sale igual.
 #
 # A las 07:10 UTC: las escenas de la mañana anterior ya están en el catálogo y el
 # observatorio de alegaciones ya ha leído el BOE y el BOC del día.
@@ -41,16 +43,23 @@ jobs:
         if: inputs.historico_desde != ''
         run: |
           hasta=$(date -u -d "$(date -u +%Y-%m-01) -1 day" +%Y-%m)
-          python -m centinela historico ${{ inputs.historico_desde }} "$hasta"
+          for pais in ES FR; do
+            python -m centinela --pais $pais historico ${{ inputs.historico_desde }} "$hasta"
+          done
 
       - name: Rehacer el mes, detectar y generar la web
         run: python -m centinela diario
+
+      - name: Lo mismo en Francia
+        continue-on-error: true
+        run: python -m centinela --pais FR diario
 
       - name: Guardar alertas y fotos
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/alertas.json data/expedientes_parcelas.json data/chips
+          git add data/fr/alertas.json data/fr/sitadel_parcelles.json data/fr/chips 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Sin cambios en el registro."
           else
@@ -79,18 +88,21 @@ jobs:
         run: |
           python - >> "$GITHUB_STEP_SUMMARY" <<'PY'
           import json, pathlib
-          p = pathlib.Path("data/alertas.json")
           print("### Centinela Natura\n")
-          if not p.exists():
-              print("Sin registro de alertas."); raise SystemExit
-          r = json.loads(p.read_text(encoding="utf-8"))
-          act = [a for a in r["alertas"] if a["estado"] in ("provisional", "confirmada")]
-          ej = r["ejecuciones"].get(r.get("ultima_ventana"), {})
-          print(f"Ventana {' · '.join(ej.get('ventana', []))}: {ej.get('cambios', 0)} cambios, "
-                f"{round(100 * ej.get('fraccion_evaluable', 0))} % de la zona evaluable.\n")
-          print(f"**{len(act)} alertas activas**, {sum(a.get('cruce') == 'sin_expediente' for a in act)} sin expediente conocido.\n")
-          for a in sorted(act, key=lambda a: a["detectada"], reverse=True)[:15]:
-              print(f"- `{a['id']}` {a['estado']} · {a.get('clase_nombre', 'sin analizar')} · "
-                    f"{a['ha']} ha · {', '.join(a['municipios'])}")
-          print("\nhttps://asensio94.github.io/centinela-natura/")
+          for nombre, ruta, web in (("Cantabria", "data/alertas.json", ""),
+                                    ("Pirineos Atlánticos", "data/fr/alertas.json", "fr/")):
+              print(f"#### {nombre}\n")
+              p = pathlib.Path(ruta)
+              if not p.exists():
+                  print("Sin registro de alertas.\n"); continue
+              r = json.loads(p.read_text(encoding="utf-8"))
+              act = [a for a in r["alertas"] if a["estado"] in ("provisional", "confirmada")]
+              ej = r["ejecuciones"].get(r.get("ultima_ventana"), {})
+              print(f"Ventana {' · '.join(ej.get('ventana', []))}: {ej.get('cambios', 0)} cambios, "
+                    f"{round(100 * ej.get('fraccion_evaluable', 0))} % de la zona evaluable.\n")
+              print(f"**{len(act)} alertas activas**, {sum(a.get('cruce') == 'sin_expediente' for a in act)} sin expediente conocido.\n")
+              for a in sorted(act, key=lambda a: a["detectada"], reverse=True)[:15]:
+                  print(f"- `{a['id']}` {a['estado']} · {a.get('clase_nombre', 'sin analizar')} · "
+                        f"{a['ha']} ha · {', '.join(a['municipios'])}")
+              print(f"\nhttps://asensio94.github.io/centinela-natura/{web}\n")
           PY

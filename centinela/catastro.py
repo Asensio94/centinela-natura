@@ -33,7 +33,8 @@ _UA = {"User-Agent": "centinela-natura (+https://github.com/Asensio94/centinela-
 _NS = {"a": "http://www.w3.org/2005/Atom", "georss": "http://www.georss.org/georss"}
 _CP = "{http://inspire.ec.europa.eu/schemas/cp/4.0}"
 _GML = "{http://www.opengis.net/gml/3.2}"
-DIR = config.CACHE_DIR / "catastro"
+def _dir():
+    return config.CACHE_DIR / "catastro"   # según el país activo
 # Una parcela cuenta si la alerta le quita al menos dos píxeles, o si cae casi entera dentro
 # (las urbanas pequeñas). Con menos, es el borde en escalera del polígono de 10 m.
 MIN_M2 = 200
@@ -64,8 +65,8 @@ def norm_municipio(s: str) -> str:
 @lru_cache(maxsize=1)
 def municipios() -> list[dict]:
     """Municipios del ATOM con su caja en UTM, su zip y la fecha de la última versión."""
-    DIR.mkdir(parents=True, exist_ok=True)
-    cache = DIR / "atom_39.xml"
+    _dir().mkdir(parents=True, exist_ok=True)
+    cache = _dir() / "atom_39.xml"
     try:
         cache.write_bytes(_get(ATOM).content)
     except requests.RequestException:
@@ -132,9 +133,9 @@ def _leer_gml(f) -> tuple[list[str], list[float], list]:
 def _parcelas_municipio(codigo: str):
     """Parcelas de un municipio con un índice espacial. Se guarda el zip del mes en caché."""
     m = next(x for x in municipios() if x["codigo"] == codigo)
-    zp = DIR / f"{codigo}_{m['actualizado']}.zip"
+    zp = _dir() / f"{codigo}_{m['actualizado']}.zip"
     if not zp.exists():
-        for viejo in DIR.glob(f"{codigo}_*.zip"):
+        for viejo in _dir().glob(f"{codigo}_*.zip"):
             viejo.unlink()
         con.log(f"catastro: bajando {codigo} {m['nombre']}")
         zp.write_bytes(_get(m["url"]).content)

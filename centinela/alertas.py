@@ -25,7 +25,7 @@ from shapely.geometry import mapping, shape
 from shapely.ops import unary_union
 from rich.console import Console
 
-from . import catastro, clasificacion, compuestos, config, deteccion, expedientes, zona
+from . import cadastre, catastro, clasificacion, compuestos, config, deteccion, expedientes, rpg, sitadel, zona
 
 con = Console()
 ACTIVAS = ("provisional", "confirmada")
@@ -64,7 +64,7 @@ def _geojson(geom_utm) -> dict:
 
 
 def _nuevo_id(reg: dict, mes: str) -> str:
-    pref = f"CN-{mes.replace('-', '')}-"
+    pref = f"{config.PREFIJO_ID}-{mes.replace('-', '')}-"
     n = sum(1 for a in reg["alertas"] if a["id"].startswith(pref))
     return f"{pref}{n + 1:03d}"
 
@@ -174,6 +174,16 @@ def analizar_pendientes(alertas: list[dict], hoy: date, minutos: float = ANALISI
     return hechas
 
 
+def permisos():
+    """Registro de autorizaciones del país activo: expedientes publicados en España, Sitadel en Francia."""
+    return sitadel if config.PAIS == "FR" else expedientes
+
+
+def _catastro():
+    """El catastro del país activo: Sede Electrónica en España, Etalab en Francia."""
+    return cadastre if config.PAIS == "FR" else catastro
+
+
 def parcelas_pendientes(alertas: list[dict], minutos: float = CATASTRO_MINUTOS) -> int:
     """Parcelas catastrales de las alertas que no las tienen o que han crecido desde entonces.
 
@@ -187,7 +197,10 @@ def parcelas_pendientes(alertas: list[dict], minutos: float = CATASTRO_MINUTOS) 
             con.log(f"[yellow]{len(pend) - hechas} alertas sin parcelas; siguen mañana")
             break
         try:
-            a.update(catastro.parcelas_de(_geom_utm(a)), parcelas_px=a["pixeles"])
+            g = _geom_utm(a)
+            a.update(_catastro().parcelas_de(g), parcelas_px=a["pixeles"])
+            if config.PAIS == "FR":                 # uso agrícola declarado antes del cambio
+                a["rpg"] = rpg.uso_de(g, a["primera"])
             hechas += 1
         except Exception as e:                      # sin Catastro, la vigilancia sigue
             con.log(f"[yellow]{a['id']}: sin parcelas ({e})")
@@ -254,13 +267,13 @@ def fusionar(alertas: list[dict], hoy: date) -> int:
 
 def cruzar(reg: dict, registros: list[dict]) -> None:
     """Cruza todas las alertas con las parcelas que citan los expedientes."""
-    hs = expedientes.huellas(registros)
+    hs = permisos().huellas(registros)
     for a in reg["alertas"]:
-        cr = expedientes.cruzar(a, registros, hs)
+        cr = permisos().cruzar(a, registros, hs)
         a["cruce"] = cr["estado"]
         a["expedientes"] = cr["expedientes"]
         a["expedientes_municipio"] = cr["en_municipio"]
-    reg["expedientes_desde"] = expedientes.cobertura(registros)
+    reg["expedientes_desde"] = permisos().cobertura(registros)
 
 
 def procesar(mes_fin: str, cambios: list, stats: dict, capas: dict, registros: list[dict],

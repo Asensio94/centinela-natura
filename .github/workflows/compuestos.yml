@@ -14,6 +14,11 @@ on:
       hasta:
         description: "Último mes (AAAA-MM)"
         required: true
+      pais:
+        description: "País: ES (Cantabria) o FR (Pyrénées-Atlantiques)"
+        type: choice
+        options: [ES, FR]
+        default: ES
       rehacer:
         description: "Rehacer también los meses que ya están en la release"
         type: boolean
@@ -41,7 +46,7 @@ jobs:
       - id: m
         run: |
           flag=$([ "${{ inputs.rehacer }}" = "true" ] && echo "--no-solo-faltan" || echo "--solo-faltan")
-          echo "meses=$(python -m centinela matriz ${{ inputs.desde }} ${{ inputs.hasta }} $flag)" >> "$GITHUB_OUTPUT"
+          echo "meses=$(python -m centinela --pais ${{ inputs.pais }} matriz ${{ inputs.desde }} ${{ inputs.hasta }} $flag)" >> "$GITHUB_OUTPUT"
 
   construir:
     needs: plan
@@ -58,4 +63,4 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12", cache: pip}
       - run: pip install -r requirements.txt
-      - run: python -m centinela compuesto ${{ matrix.mes }} --subir
+      - run: python -m centinela --pais ${{ inputs.pais }} compuesto ${{ matrix.mes }} --subir

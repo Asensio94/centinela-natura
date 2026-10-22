@@ -62851,7 +62851,7 @@
    "pixeles": 109,
    "ha": 1.13,
    "ndvi_ref": 0.846,
-   "ndvi_actual": 0.302,
+   "ndvi_actual": 0.315,
    "obs_actual": 22,
    "centro": [
     43.45411,
@@ -68180,7 +68180,7 @@
    "pixeles": 43,
    "ha": 0.48,
    "ndvi_ref": 0.681,
-   "ndvi_actual": 0.332,
+   "ndvi_actual": 0.34,
    "obs_actual": 22,
    "centro": [
     43.47822,
@@ -100113,7 +100113,7 @@
   },
   {
    "id": "CF-202609-072",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -100124,12 +100124,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-22",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 50,
    "ha": 0.5,
    "ndvi_ref": 0.682,
-   "ndvi_actual": 0.327,
+   "ndvi_actual": 0.625,
    "obs_actual": 15,
    "centro": [
     43.29372,
@@ -100357,7 +100363,7 @@
   },
   {
    "id": "CF-202609-073",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -100368,12 +100374,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-22",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 50,
    "ha": 0.5,
    "ndvi_ref": 0.748,
-   "ndvi_actual": 0.341,
+   "ndvi_actual": 0.601,
    "obs_actual": 15,
    "centro": [
     43.25696,
@@ -100672,7 +100684,7 @@
   },
   {
    "id": "CF-202609-074",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -100683,12 +100695,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-22",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 50,
    "ha": 0.5,
    "ndvi_ref": 0.841,
-   "ndvi_actual": 0.328,
+   "ndvi_actual": 0.53,
    "obs_actual": 16,
    "centro": [
     43.09679,
@@ -109167,7 +109185,7 @@
   },
   {
    "id": "CF-202609-104",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -109178,12 +109196,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-22",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 35,
    "ha": 0.35,
    "ndvi_ref": 0.729,
-   "ndvi_actual": 0.331,
+   "ndvi_actual": 0.559,
    "obs_actual": 15,
    "centro": [
     43.25537,
@@ -120204,7 +120228,7 @@
   },
   {
    "id": "CF-202609-145",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -120215,12 +120239,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-22",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 26,
    "ha": 0.26,
    "ndvi_ref": 0.707,
-   "ndvi_actual": 0.333,
+   "ndvi_actual": 0.699,
    "obs_actual": 25,
    "centro": [
     43.46343,
@@ -123809,7 +123839,7 @@
   },
   {
    "id": "CF-202609-160",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -123820,12 +123850,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-22",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 24,
    "ha": 0.24,
    "ndvi_ref": 0.815,
-   "ndvi_actual": 0.33,
+   "ndvi_actual": 0.567,
    "obs_actual": 16,
    "centro": [
     43.08684,
@@ -126832,7 +126868,7 @@
   },
   {
    "id": "CF-202609-173",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -126843,12 +126879,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-22",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 22,
    "ha": 0.22,
    "ndvi_ref": 0.705,
-   "ndvi_actual": 0.338,
+   "ndvi_actual": 0.503,
    "obs_actual": 16,
    "centro": [
     43.25457,
@@ -130484,7 +130526,7 @@
   },
   {
    "id": "CF-202609-191",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -130495,12 +130537,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-22",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 20,
    "ha": 0.2,
    "ndvi_ref": 0.7,
-   "ndvi_actual": 0.343,
+   "ndvi_actual": 0.671,
    "obs_actual": 25,
    "centro": [
     43.46592,
@@ -142504,7 +142552,7 @@
    "pixeles": 291,
    "ha": 2.91,
    "ndvi_ref": 0.798,
-   "ndvi_actual": 0.318,
+   "ndvi_actual": 0.325,
    "obs_actual": 19,
    "centro": [
     43.47492,
@@ -144229,7 +144277,7 @@
    "pixeles": 258,
    "ha": 2.58,
    "ndvi_ref": 0.713,
-   "ndvi_actual": 0.273,
+   "ndvi_actual": 0.279,
    "obs_actual": 19,
    "centro": [
     43.46013,
@@ -144579,7 +144627,7 @@
    "pixeles": 238,
    "ha": 2.38,
    "ndvi_ref": 0.702,
-   "ndvi_actual": 0.312,
+   "ndvi_actual": 0.309,
    "obs_actual": 19,
    "centro": [
     43.45554,
@@ -146254,7 +146302,7 @@
    "pixeles": 143,
    "ha": 1.43,
    "ndvi_ref": 0.691,
-   "ndvi_actual": 0.281,
+   "ndvi_actual": 0.292,
    "obs_actual": 20,
    "centro": [
     43.46024,
@@ -149871,7 +149919,7 @@
    "pixeles": 128,
    "ha": 1.28,
    "ndvi_ref": 0.664,
-   "ndvi_actual": 0.311,
+   "ndvi_actual": 0.328,
    "obs_actual": 19,
    "centro": [
     43.46233,
@@ -151446,7 +151494,7 @@
    "pixeles": 62,
    "ha": 0.62,
    "ndvi_ref": 0.749,
-   "ndvi_actual": 0.341,
+   "ndvi_actual": 0.339,
    "obs_actual": 19,
    "centro": [
     43.46535,
@@ -152732,7 +152780,7 @@
    "pixeles": 59,
    "ha": 0.59,
    "ndvi_ref": 0.696,
-   "ndvi_actual": 0.334,
+   "ndvi_actual": 0.335,
    "obs_actual": 19,
    "centro": [
     43.45866,
@@ -157597,7 +157645,7 @@
    "pixeles": 47,
    "ha": 0.47,
    "ndvi_ref": 0.666,
-   "ndvi_actual": 0.334,
+   "ndvi_actual": 0.336,
    "obs_actual": 14,
    "centro": [
     43.22291,
@@ -158885,7 +158933,7 @@
    "pixeles": 76,
    "ha": 0.76,
    "ndvi_ref": 0.831,
-   "ndvi_actual": 0.335,
+   "ndvi_actual": 0.331,
    "obs_actual": 19,
    "centro": [
     43.45561,
@@ -160523,7 +160571,7 @@
    "pixeles": 38,
    "ha": 0.38,
    "ndvi_ref": 0.748,
-   "ndvi_actual": 0.318,
+   "ndvi_actual": 0.325,
    "obs_actual": 20,
    "centro": [
     43.47145,
@@ -177780,16 +177828,16 @@
     "2026-10"
    ],
    "pixeles_zona": 23154169,
-   "pixeles_evaluables": 22228624,
+   "pixeles_evaluables": 22228755,
    "fraccion_evaluable": 0.96,
    "pixeles_agua_previa": 868435,
    "meses_agua": 24,
-   "pixeles_candidatos": 26491,
-   "cambios": 218,
-   "ha_cambios": 172.5
+   "pixeles_candidatos": 24765,
+   "cambios": 201,
+   "ha_cambios": 160.1
   }
  },
  "expedientes_desde": "2018-01-02",
  "ultima_ventana": "2026-10",
- "actualizado": "2026-10-21T13:04:09+00:00"
+ "actualizado": "2026-10-22T10:22:15+00:00"
 }

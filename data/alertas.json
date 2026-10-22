@@ -201114,16 +201114,16 @@
     "2026-10"
    ],
    "pixeles_zona": 14699109,
-   "pixeles_evaluables": 12428714,
+   "pixeles_evaluables": 12428735,
    "fraccion_evaluable": 0.846,
    "pixeles_agua_previa": 701790,
    "meses_agua": 24,
-   "pixeles_candidatos": 16060,
+   "pixeles_candidatos": 16046,
    "cambios": 78,
    "ha_cambios": 134.0
   }
  },
  "expedientes_desde": "2026-07-10",
  "ultima_ventana": "2026-10",
- "actualizado": "2026-10-21T12:57:55+00:00"
+ "actualizado": "2026-10-22T10:14:23+00:00"
 }

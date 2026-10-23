@@ -3923,7 +3923,7 @@
    "pixeles": 4017,
    "ha": 40.17,
    "ndvi_ref": 0.688,
-   "ndvi_actual": 0.191,
+   "ndvi_actual": 0.193,
    "obs_actual": 11,
    "centro": [
     43.22317,
@@ -22629,7 +22629,7 @@
    "pixeles": 180,
    "ha": 1.8,
    "ndvi_ref": 0.661,
-   "ndvi_actual": 0.247,
+   "ndvi_actual": 0.251,
    "obs_actual": 10,
    "centro": [
     43.0933,
@@ -31088,7 +31088,7 @@
    "pixeles": 33,
    "ha": 0.33,
    "ndvi_ref": 0.689,
-   "ndvi_actual": 0.299,
+   "ndvi_actual": 0.3,
    "obs_actual": 7,
    "centro": [
     43.22773,
@@ -34041,7 +34041,7 @@
    "pixeles": 468,
    "ha": 4.74,
    "ndvi_ref": 0.654,
-   "ndvi_actual": 0.261,
+   "ndvi_actual": 0.26,
    "obs_actual": 8,
    "centro": [
     43.09505,
@@ -122035,7 +122035,7 @@
    "pixeles": 188,
    "ha": 1.88,
    "ndvi_ref": 0.774,
-   "ndvi_actual": 0.318,
+   "ndvi_actual": 0.321,
    "obs_actual": 4,
    "centro": [
     43.13874,
@@ -147132,7 +147132,7 @@
    "pixeles": 574,
    "ha": 5.74,
    "ndvi_ref": 0.634,
-   "ndvi_actual": 0.309,
+   "ndvi_actual": 0.308,
    "obs_actual": 5,
    "centro": [
     43.24573,
@@ -154989,7 +154989,7 @@
    "pixeles": 73,
    "ha": 0.73,
    "ndvi_ref": 0.637,
-   "ndvi_actual": 0.261,
+   "ndvi_actual": 0.26,
    "obs_actual": 8,
    "centro": [
     43.09526,
@@ -156508,7 +156508,7 @@
    "pixeles": 51,
    "ha": 0.51,
    "ndvi_ref": 0.652,
-   "ndvi_actual": 0.263,
+   "ndvi_actual": 0.264,
    "obs_actual": 9,
    "centro": [
     43.22837,
@@ -166942,7 +166942,7 @@
    "pixeles": 51,
    "ha": 0.61,
    "ndvi_ref": 0.797,
-   "ndvi_actual": 0.303,
+   "ndvi_actual": 0.321,
    "obs_actual": 15,
    "centro": [
     43.1585,
@@ -184517,7 +184517,7 @@
    "pixeles": 235,
    "ha": 2.35,
    "ndvi_ref": 0.755,
-   "ndvi_actual": 0.327,
+   "ndvi_actual": 0.336,
    "obs_actual": 11,
    "centro": [
     43.13776,
@@ -201114,16 +201114,16 @@
     "2026-10"
    ],
    "pixeles_zona": 14699109,
-   "pixeles_evaluables": 12428735,
+   "pixeles_evaluables": 12430252,
    "fraccion_evaluable": 0.846,
    "pixeles_agua_previa": 701790,
    "meses_agua": 24,
-   "pixeles_candidatos": 16046,
+   "pixeles_candidatos": 15561,
    "cambios": 78,
-   "ha_cambios": 134.0
+   "ha_cambios": 128.6
   }
  },
  "expedientes_desde": "2026-07-10",
  "ultima_ventana": "2026-10",
- "actualizado": "2026-10-22T13:01:30+00:00"
+ "actualizado": "2026-10-23T12:41:03+00:00"
 }

@@ -20356,7 +20356,7 @@
    "pixeles": 78,
    "ha": 0.78,
    "ndvi_ref": 0.954,
-   "ndvi_actual": 0.242,
+   "ndvi_actual": 0.279,
    "obs_actual": 11,
    "centro": [
     42.86009,
@@ -169054,7 +169054,7 @@
    "pixeles": 28,
    "ha": 0.28,
    "ndvi_ref": 0.761,
-   "ndvi_actual": 0.125,
+   "ndvi_actual": 0.152,
    "obs_actual": 14,
    "centro": [
     42.83858,
@@ -177828,16 +177828,16 @@
     "2026-10"
    ],
    "pixeles_zona": 23154169,
-   "pixeles_evaluables": 22228755,
+   "pixeles_evaluables": 22228961,
    "fraccion_evaluable": 0.96,
    "pixeles_agua_previa": 868435,
    "meses_agua": 24,
-   "pixeles_candidatos": 24765,
-   "cambios": 201,
-   "ha_cambios": 160.1
+   "pixeles_candidatos": 24610,
+   "cambios": 198,
+   "ha_cambios": 159.4
   }
  },
  "expedientes_desde": "2018-01-02",
  "ultima_ventana": "2026-10",
- "actualizado": "2026-10-24T12:11:35+00:00"
+ "actualizado": "2026-10-25T12:44:41+00:00"
 }

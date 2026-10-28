@@ -3923,7 +3923,7 @@
    "pixeles": 4017,
    "ha": 40.17,
    "ndvi_ref": 0.688,
-   "ndvi_actual": 0.193,
+   "ndvi_actual": 0.191,
    "obs_actual": 11,
    "centro": [
     43.22317,
@@ -15085,7 +15085,7 @@
    "pixeles": 1990,
    "ha": 19.9,
    "ndvi_ref": 0.645,
-   "ndvi_actual": 0.27,
+   "ndvi_actual": 0.272,
    "obs_actual": 8,
    "centro": [
     43.23033,
@@ -22629,7 +22629,7 @@
    "pixeles": 180,
    "ha": 1.8,
    "ndvi_ref": 0.661,
-   "ndvi_actual": 0.251,
+   "ndvi_actual": 0.254,
    "obs_actual": 10,
    "centro": [
     43.0933,
@@ -24046,7 +24046,7 @@
    "pixeles": 373,
    "ha": 4.13,
    "ndvi_ref": 0.645,
-   "ndvi_actual": 0.308,
+   "ndvi_actual": 0.31,
    "obs_actual": 8,
    "centro": [
     43.236,
@@ -30431,7 +30431,7 @@
    "pixeles": 66,
    "ha": 0.72,
    "ndvi_ref": 0.634,
-   "ndvi_actual": 0.28,
+   "ndvi_actual": 0.281,
    "obs_actual": 13,
    "centro": [
     43.22188,
@@ -31088,7 +31088,7 @@
    "pixeles": 33,
    "ha": 0.33,
    "ndvi_ref": 0.689,
-   "ndvi_actual": 0.3,
+   "ndvi_actual": 0.298,
    "obs_actual": 7,
    "centro": [
     43.22773,
@@ -85848,7 +85848,7 @@
    "pixeles": 11147,
    "ha": 111.47,
    "ndvi_ref": 0.681,
-   "ndvi_actual": 0.334,
+   "ndvi_actual": 0.335,
    "obs_actual": 3,
    "centro": [
     43.15862,
@@ -133144,7 +133144,7 @@
    "pixeles": 107,
    "ha": 1.07,
    "ndvi_ref": 0.65,
-   "ndvi_actual": 0.283,
+   "ndvi_actual": 0.28,
    "obs_actual": 3,
    "centro": [
     43.17199,
@@ -158157,7 +158157,7 @@
    "pixeles": 45,
    "ha": 0.49,
    "ndvi_ref": 0.623,
-   "ndvi_actual": 0.312,
+   "ndvi_actual": 0.313,
    "obs_actual": 10,
    "centro": [
     43.23523,
@@ -162679,7 +162679,7 @@
    "pixeles": 183,
    "ha": 1.83,
    "ndvi_ref": 0.669,
-   "ndvi_actual": 0.305,
+   "ndvi_actual": 0.307,
    "obs_actual": 16,
    "centro": [
     43.26179,
@@ -165150,7 +165150,7 @@
    "pixeles": 54,
    "ha": 0.57,
    "ndvi_ref": 0.642,
-   "ndvi_actual": 0.237,
+   "ndvi_actual": 0.238,
    "obs_actual": 9,
    "centro": [
     43.09361,
@@ -165480,7 +165480,7 @@
    "pixeles": 75,
    "ha": 0.75,
    "ndvi_ref": 0.646,
-   "ndvi_actual": 0.231,
+   "ndvi_actual": 0.236,
    "obs_actual": 13,
    "centro": [
     43.22078,
@@ -170098,7 +170098,7 @@
    "pixeles": 67,
    "ha": 0.67,
    "ndvi_ref": 0.733,
-   "ndvi_actual": 0.246,
+   "ndvi_actual": 0.248,
    "obs_actual": 13,
    "centro": [
     43.081,
@@ -184517,7 +184517,7 @@
    "pixeles": 235,
    "ha": 2.35,
    "ndvi_ref": 0.755,
-   "ndvi_actual": 0.336,
+   "ndvi_actual": 0.339,
    "obs_actual": 11,
    "centro": [
     43.13776,
@@ -185191,7 +185191,7 @@
    "pixeles": 144,
    "ha": 1.44,
    "ndvi_ref": 0.807,
-   "ndvi_actual": 0.306,
+   "ndvi_actual": 0.321,
    "obs_actual": 9,
    "centro": [
     43.25768,
@@ -189395,7 +189395,7 @@
    "pixeles": 49,
    "ha": 0.49,
    "ndvi_ref": 0.676,
-   "ndvi_actual": 0.32,
+   "ndvi_actual": 0.317,
    "obs_actual": 9,
    "centro": [
     43.05117,
@@ -200895,6 +200895,177 @@
    "cruce": "sin_expediente",
    "expedientes": [],
    "expedientes_municipio": 2
+  },
+  {
+   "id": "CN-202610-066",
+   "estado": "provisional",
+   "primera": "2026-10",
+   "ultima": "2026-10",
+   "meses": [
+    "2026-10"
+   ],
+   "detectada": "2026-10-28",
+   "historial": [
+    {
+     "fecha": "2026-10-28",
+     "estado": "provisional"
+    }
+   ],
+   "pixeles": 22,
+   "ha": 0.22,
+   "ndvi_ref": 0.727,
+   "ndvi_actual": 0.332,
+   "obs_actual": 14,
+   "centro": [
+    43.1539,
+    -4.49172
+   ],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -4.491422,
+       43.154126
+      ],
+      [
+       -4.49142,
+       43.154036
+      ],
+      [
+       -4.491789,
+       43.154031
+      ],
+      [
+       -4.491787,
+       43.153941
+      ],
+      [
+       -4.49191,
+       43.153939
+      ],
+      [
+       -4.491908,
+       43.153849
+      ],
+      [
+       -4.491785,
+       43.153851
+      ],
+      [
+       -4.491778,
+       43.153581
+      ],
+      [
+       -4.491409,
+       43.153586
+      ],
+      [
+       -4.491411,
+       43.153676
+      ],
+      [
+       -4.491288,
+       43.153677
+      ],
+      [
+       -4.491291,
+       43.153767
+      ],
+      [
+       -4.491168,
+       43.153769
+      ],
+      [
+       -4.49117,
+       43.153859
+      ],
+      [
+       -4.491539,
+       43.153854
+      ],
+      [
+       -4.491541,
+       43.153944
+      ],
+      [
+       -4.491172,
+       43.153949
+      ],
+      [
+       -4.491176,
+       43.154129
+      ],
+      [
+       -4.491422,
+       43.154126
+      ]
+     ]
+    ]
+   },
+   "espacios": [
+    {
+     "codigo": "ES0000249",
+     "nombre": "Sierra de Peña Sagra",
+     "tipo": "ZEPA"
+    },
+    {
+     "codigo": "ES1300001",
+     "nombre": "Liébana",
+     "tipo": "ZEC"
+    }
+   ],
+   "municipios": [
+    "Cabezón de Liébana"
+   ],
+   "ultima_vegetacion": "2025-10",
+   "reconstruida": false,
+   "cubierta_previa": null,
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.772,
+    "mndwi": -0.644,
+    "nbr": 0.438,
+    "bsi": -0.106,
+    "nir": 0.28,
+    "swir22": 0.103,
+    "brillo": 0.037
+   },
+   "indices_despues": {
+    "ndvi": 0.32,
+    "mndwi": -0.557,
+    "nbr": -0.122,
+    "bsi": 0.171,
+    "nir": 0.146,
+    "swir22": 0.188,
+    "brillo": 0.062
+   },
+   "fecha_antes": "2025-08-03",
+   "fecha_despues": "2026-10-27",
+   "foto_antes": "chips/CN-202610-066_antes.jpg",
+   "foto_despues": "chips/CN-202610-066_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada",
+   "parcelas": [
+    {
+     "refcat": "39013A00710281",
+     "municipio": "39013",
+     "municipio_nombre": "CABEZON DE LIEBANA",
+     "tipo": "rustica",
+     "poligono": 7,
+     "parcela": 10281,
+     "ha_parcela": 115.46,
+     "ha_alerta": 0.22
+    }
+   ],
+   "n_parcelas": 1,
+   "fraccion_parcelada": 1.0,
+   "catastro_fecha": "2026-08-21",
+   "parcelas_px": 22,
+   "cruce": "sin_expediente",
+   "expedientes": [],
+   "expedientes_municipio": 0
   }
  ],
  "ejecuciones": {
@@ -201114,16 +201285,16 @@
     "2026-10"
    ],
    "pixeles_zona": 14699109,
-   "pixeles_evaluables": 12430252,
+   "pixeles_evaluables": 12430357,
    "fraccion_evaluable": 0.846,
    "pixeles_agua_previa": 701790,
    "meses_agua": 24,
-   "pixeles_candidatos": 15561,
-   "cambios": 78,
-   "ha_cambios": 128.6
+   "pixeles_candidatos": 14885,
+   "cambios": 76,
+   "ha_cambios": 122.8
   }
  },
  "expedientes_desde": "2026-07-10",
  "ultima_ventana": "2026-10",
- "actualizado": "2026-10-27T13:18:51+00:00"
+ "actualizado": "2026-10-28T14:05:11+00:00"
 }

@@ -3318,7 +3318,7 @@
    "pixeles": 63,
    "ha": 0.74,
    "ndvi_ref": 0.71,
-   "ndvi_actual": 0.301,
+   "ndvi_actual": 0.302,
    "obs_actual": 23,
    "centro": [
     43.34684,
@@ -26081,7 +26081,7 @@
    "pixeles": 244,
    "ha": 2.52,
    "ndvi_ref": 0.674,
-   "ndvi_actual": 0.248,
+   "ndvi_actual": 0.247,
    "obs_actual": 8,
    "centro": [
     43.39871,
@@ -28902,7 +28902,7 @@
    "pixeles": 190,
    "ha": 2.29,
    "ndvi_ref": 0.776,
-   "ndvi_actual": 0.164,
+   "ndvi_actual": 0.158,
    "obs_actual": 9,
    "centro": [
     43.32611,
@@ -51721,7 +51721,7 @@
    "pixeles": 51,
    "ha": 0.51,
    "ndvi_ref": 0.665,
-   "ndvi_actual": 0.285,
+   "ndvi_actual": 0.298,
    "obs_actual": 14,
    "centro": [
     43.33957,
@@ -63423,7 +63423,7 @@
    "pixeles": 146,
    "ha": 1.56,
    "ndvi_ref": 0.778,
-   "ndvi_actual": 0.293,
+   "ndvi_actual": 0.321,
    "obs_actual": 20,
    "centro": [
     43.33016,
@@ -64801,7 +64801,7 @@
    "pixeles": 285,
    "ha": 3.04,
    "ndvi_ref": 0.871,
-   "ndvi_actual": 0.296,
+   "ndvi_actual": 0.334,
    "obs_actual": 24,
    "centro": [
     43.34739,
@@ -70582,7 +70582,7 @@
    "pixeles": 410,
    "ha": 4.1,
    "ndvi_ref": 0.785,
-   "ndvi_actual": 0.319,
+   "ndvi_actual": 0.334,
    "obs_actual": 22,
    "centro": [
     43.3488,
@@ -73325,7 +73325,7 @@
    "pixeles": 217,
    "ha": 2.17,
    "ndvi_ref": 0.691,
-   "ndvi_actual": 0.271,
+   "ndvi_actual": 0.283,
    "obs_actual": 25,
    "centro": [
     43.32916,
@@ -80135,7 +80135,7 @@
    "pixeles": 128,
    "ha": 1.28,
    "ndvi_ref": 0.739,
-   "ndvi_actual": 0.306,
+   "ndvi_actual": 0.309,
    "obs_actual": 23,
    "centro": [
     43.33134,
@@ -80941,7 +80941,7 @@
   },
   {
    "id": "CF-202609-017",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -80952,12 +80952,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-29",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 120,
    "ha": 1.2,
    "ndvi_ref": 0.732,
-   "ndvi_actual": 0.269,
+   "ndvi_actual": 0.524,
    "obs_actual": 22,
    "centro": [
     43.35139,
@@ -82713,7 +82719,7 @@
    "pixeles": 102,
    "ha": 1.02,
    "ndvi_ref": 0.737,
-   "ndvi_actual": 0.324,
+   "ndvi_actual": 0.325,
    "obs_actual": 22,
    "centro": [
     43.35001,
@@ -95694,7 +95700,7 @@
    "pixeles": 56,
    "ha": 0.56,
    "ndvi_ref": 0.676,
-   "ndvi_actual": 0.244,
+   "ndvi_actual": 0.249,
    "obs_actual": 24,
    "centro": [
     43.3889,
@@ -97192,7 +97198,7 @@
    "pixeles": 74,
    "ha": 0.74,
    "ndvi_ref": 0.787,
-   "ndvi_actual": 0.319,
+   "ndvi_actual": 0.32,
    "obs_actual": 23,
    "centro": [
     43.47105,
@@ -98864,7 +98870,7 @@
   },
   {
    "id": "CF-202609-068",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -98875,12 +98881,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-29",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 51,
    "ha": 0.51,
    "ndvi_ref": 0.691,
-   "ndvi_actual": 0.338,
+   "ndvi_actual": 0.648,
    "obs_actual": 23,
    "centro": [
     43.35442,
@@ -99437,7 +99449,7 @@
    "pixeles": 62,
    "ha": 0.68,
    "ndvi_ref": 0.724,
-   "ndvi_actual": 0.303,
+   "ndvi_actual": 0.302,
    "obs_actual": 23,
    "centro": [
     43.32469,
@@ -101021,7 +101033,7 @@
   },
   {
    "id": "CF-202609-075",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -101032,12 +101044,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-29",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 49,
    "ha": 0.49,
    "ndvi_ref": 0.687,
-   "ndvi_actual": 0.33,
+   "ndvi_actual": 0.548,
    "obs_actual": 24,
    "centro": [
     43.39473,
@@ -107559,7 +107577,7 @@
    "pixeles": 38,
    "ha": 0.38,
    "ndvi_ref": 0.816,
-   "ndvi_actual": 0.301,
+   "ndvi_actual": 0.299,
    "obs_actual": 23,
    "centro": [
     43.33668,
@@ -110926,7 +110944,7 @@
    "pixeles": 34,
    "ha": 0.34,
    "ndvi_ref": 0.695,
-   "ndvi_actual": 0.293,
+   "ndvi_actual": 0.298,
    "obs_actual": 24,
    "centro": [
     43.35538,
@@ -120612,7 +120630,7 @@
   },
   {
    "id": "CF-202609-146",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -120623,12 +120641,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-29",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 26,
    "ha": 0.26,
    "ndvi_ref": 0.713,
-   "ndvi_actual": 0.336,
+   "ndvi_actual": 0.669,
    "obs_actual": 24,
    "centro": [
     43.35465,
@@ -128662,7 +128686,7 @@
   },
   {
    "id": "CF-202609-181",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-09",
    "ultima": "2026-09",
    "meses": [
@@ -128673,12 +128697,18 @@
     {
      "fecha": "2026-09-30",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-10-29",
+     "estado": "descartada",
+     "ventana": "2026-10",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 21,
    "ha": 0.21,
    "ndvi_ref": 0.885,
-   "ndvi_actual": 0.306,
+   "ndvi_actual": 0.518,
    "obs_actual": 26,
    "centro": [
     43.3703,
@@ -144391,7 +144421,7 @@
    "pixeles": 258,
    "ha": 2.58,
    "ndvi_ref": 0.713,
-   "ndvi_actual": 0.279,
+   "ndvi_actual": 0.298,
    "obs_actual": 19,
    "centro": [
     43.46013,
@@ -146416,7 +146446,7 @@
    "pixeles": 143,
    "ha": 1.43,
    "ndvi_ref": 0.691,
-   "ndvi_actual": 0.292,
+   "ndvi_actual": 0.301,
    "obs_actual": 20,
    "centro": [
     43.46024,
@@ -149758,7 +149788,7 @@
    "pixeles": 78,
    "ha": 0.78,
    "ndvi_ref": 0.682,
-   "ndvi_actual": 0.314,
+   "ndvi_actual": 0.313,
    "obs_actual": 18,
    "centro": [
     43.47829,
@@ -155755,7 +155785,7 @@
    "pixeles": 52,
    "ha": 0.52,
    "ndvi_ref": 0.69,
-   "ndvi_actual": 0.315,
+   "ndvi_actual": 0.32,
    "obs_actual": 17,
    "centro": [
     43.43591,
@@ -155999,7 +156029,7 @@
    "pixeles": 52,
    "ha": 0.52,
    "ndvi_ref": 0.646,
-   "ndvi_actual": 0.149,
+   "ndvi_actual": 0.151,
    "obs_actual": 20,
    "centro": [
     43.40474,
@@ -159047,7 +159077,7 @@
    "pixeles": 76,
    "ha": 0.76,
    "ndvi_ref": 0.831,
-   "ndvi_actual": 0.331,
+   "ndvi_actual": 0.33,
    "obs_actual": 19,
    "centro": [
     43.45561,
@@ -160385,7 +160415,7 @@
    "pixeles": 39,
    "ha": 0.39,
    "ndvi_ref": 0.665,
-   "ndvi_actual": 0.304,
+   "ndvi_actual": 0.31,
    "obs_actual": 17,
    "centro": [
     43.3444,
@@ -172248,7 +172278,7 @@
    "pixeles": 24,
    "ha": 0.24,
    "ndvi_ref": 0.637,
-   "ndvi_actual": 0.193,
+   "ndvi_actual": 0.195,
    "obs_actual": 20,
    "centro": [
     43.40556,
@@ -177723,6 +177753,350 @@
    "foto_despues": "chips/CF-202610-132_despues.jpg",
    "ventana_fotos": "2026-10",
    "clase_nombre": "Superficie quemada"
+  },
+  {
+   "id": "CF-202610-133",
+   "estado": "provisional",
+   "primera": "2026-10",
+   "ultima": "2026-10",
+   "meses": [
+    "2026-10"
+   ],
+   "detectada": "2026-10-29",
+   "historial": [
+    {
+     "fecha": "2026-10-29",
+     "estado": "provisional"
+    }
+   ],
+   "pixeles": 45,
+   "ha": 0.45,
+   "ndvi_ref": 0.633,
+   "ndvi_actual": 0.31,
+   "obs_actual": 17,
+   "centro": [
+    43.35594,
+    -0.49308
+   ],
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        -0.492643,
+        43.356157
+       ],
+       [
+        -0.492766,
+        43.35616
+       ],
+       [
+        -0.49277,
+        43.35607
+       ],
+       [
+        -0.493016,
+        43.356075
+       ],
+       [
+        -0.49302,
+        43.355986
+       ],
+       [
+        -0.492897,
+        43.355983
+       ],
+       [
+        -0.492908,
+        43.355713
+       ],
+       [
+        -0.493031,
+        43.355716
+       ],
+       [
+        -0.493035,
+        43.355626
+       ],
+       [
+        -0.493158,
+        43.355628
+       ],
+       [
+        -0.493151,
+        43.355808
+       ],
+       [
+        -0.493397,
+        43.355814
+       ],
+       [
+        -0.493394,
+        43.355904
+       ],
+       [
+        -0.49327,
+        43.355901
+       ],
+       [
+        -0.493263,
+        43.356081
+       ],
+       [
+        -0.493386,
+        43.356084
+       ],
+       [
+        -0.493383,
+        43.356174
+       ],
+       [
+        -0.492889,
+        43.356163
+       ],
+       [
+        -0.492886,
+        43.356253
+       ],
+       [
+        -0.492639,
+        43.356247
+       ],
+       [
+        -0.492643,
+        43.356157
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        -0.492026,
+        43.356144
+       ],
+       [
+        -0.492396,
+        43.356152
+       ],
+       [
+        -0.492393,
+        43.356242
+       ],
+       [
+        -0.492023,
+        43.356234
+       ],
+       [
+        -0.492026,
+        43.356144
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        -0.492617,
+        43.356787
+       ],
+       [
+        -0.492494,
+        43.356784
+       ],
+       [
+        -0.492486,
+        43.356964
+       ],
+       [
+        -0.492363,
+        43.356962
+       ],
+       [
+        -0.492359,
+        43.357052
+       ],
+       [
+        -0.492236,
+        43.357049
+       ],
+       [
+        -0.49224,
+        43.356959
+       ],
+       [
+        -0.491993,
+        43.356953
+       ],
+       [
+        -0.492004,
+        43.356684
+       ],
+       [
+        -0.492128,
+        43.356686
+       ],
+       [
+        -0.492131,
+        43.356596
+       ],
+       [
+        -0.492255,
+        43.356599
+       ],
+       [
+        -0.492258,
+        43.356509
+       ],
+       [
+        -0.492381,
+        43.356512
+       ],
+       [
+        -0.492393,
+        43.356242
+       ],
+       [
+        -0.492639,
+        43.356247
+       ],
+       [
+        -0.492632,
+        43.356427
+       ],
+       [
+        -0.492508,
+        43.356425
+       ],
+       [
+        -0.492501,
+        43.356604
+       ],
+       [
+        -0.492624,
+        43.356607
+       ],
+       [
+        -0.492617,
+        43.356787
+       ]
+      ],
+      [
+       [
+        -0.492378,
+        43.356602
+       ],
+       [
+        -0.492374,
+        43.356692
+       ],
+       [
+        -0.492497,
+        43.356694
+       ],
+       [
+        -0.492501,
+        43.356604
+       ],
+       [
+        -0.492378,
+        43.356602
+       ]
+      ],
+      [
+       [
+        -0.492251,
+        43.356689
+       ],
+       [
+        -0.492247,
+        43.356779
+       ],
+       [
+        -0.49237,
+        43.356782
+       ],
+       [
+        -0.492374,
+        43.356692
+       ],
+       [
+        -0.492251,
+        43.356689
+       ]
+      ]
+     ]
+    ]
+   },
+   "espacios": [
+    {
+     "codigo": "FR7212010",
+     "nombre": "Barrage d'Artix et saligue du Gave de Pau",
+     "tipo": "ZPS"
+    }
+   ],
+   "municipios": [
+    "Denguin"
+   ],
+   "ultima_vegetacion": "2026-06",
+   "reconstruida": false,
+   "cubierta_previa": {
+    "codigo": "211",
+    "nombre": "labor de secano"
+   },
+   "analisis_v": 2,
+   "clase": "quemado",
+   "indices_antes": {
+    "ndvi": 0.633,
+    "mndwi": -0.505,
+    "nbr": 0.309,
+    "bsi": -0.051,
+    "nir": 0.313,
+    "swir22": 0.164,
+    "brillo": 0.069
+   },
+   "indices_despues": {
+    "ndvi": 0.303,
+    "mndwi": -0.383,
+    "nbr": 0.001,
+    "bsi": 0.098,
+    "nir": 0.144,
+    "swir22": 0.146,
+    "brillo": 0.069
+   },
+   "fecha_antes": "2025-09-19",
+   "fecha_despues": "2026-10-28",
+   "foto_antes": "chips/CF-202610-133_antes.jpg",
+   "foto_despues": "chips/CF-202610-133_despues.jpg",
+   "ventana_fotos": "2026-10",
+   "clase_nombre": "Superficie quemada",
+   "parcelas": [
+    {
+     "refcat": "64198000ZH0028",
+     "municipio": "64198",
+     "municipio_nombre": "Denguin",
+     "prefixe": "000",
+     "section": "ZH",
+     "numero": 28,
+     "ha_parcela": 10.38,
+     "ha_alerta": 0.45
+    }
+   ],
+   "n_parcelas": 1,
+   "fraccion_parcelada": 1.0,
+   "catastro_fecha": "2026-09-01",
+   "parcelas_px": 45,
+   "rpg": {
+    "anio": 2025,
+    "fraccion": 1.0,
+    "codigo": "CZH",
+    "libelle": "Colza d’hiver",
+    "groupe": "Colza",
+    "pradera_permanente": false,
+    "uso": "rotacion"
+   },
+   "cruce": "sin_expediente",
+   "expedientes": [],
+   "expedientes_municipio": 23
   }
  ],
  "ejecuciones": {
@@ -177942,16 +178316,16 @@
     "2026-10"
    ],
    "pixeles_zona": 23154169,
-   "pixeles_evaluables": 22229129,
+   "pixeles_evaluables": 22229383,
    "fraccion_evaluable": 0.96,
    "pixeles_agua_previa": 868435,
    "meses_agua": 24,
-   "pixeles_candidatos": 22022,
-   "cambios": 165,
-   "ha_cambios": 142.6
+   "pixeles_candidatos": 20598,
+   "cambios": 149,
+   "ha_cambios": 131.1
   }
  },
  "expedientes_desde": "2018-01-02",
  "ultima_ventana": "2026-10",
- "actualizado": "2026-10-28T14:13:27+00:00"
+ "actualizado": "2026-10-29T14:25:28+00:00"
 }

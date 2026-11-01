@@ -26904,7 +26904,7 @@
   },
   {
    "id": "CN-202511-015",
-   "estado": "confirmada",
+   "estado": "revertida",
    "primera": "2025-11",
    "ultima": "2026-10",
    "meses": [
@@ -26939,12 +26939,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "revertida",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 479,
    "ha": 5.67,
    "ndvi_ref": 0.872,
-   "ndvi_actual": 0.293,
+   "ndvi_actual": 0.565,
    "obs_actual": 13,
    "centro": [
     43.14217,
@@ -29487,7 +29493,7 @@
   },
   {
    "id": "CN-202511-022",
-   "estado": "confirmada",
+   "estado": "revertida",
    "primera": "2025-11",
    "ultima": "2026-04",
    "meses": [
@@ -29504,12 +29510,18 @@
     {
      "fecha": "2026-01-31",
      "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "revertida",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 65,
    "ha": 0.71,
    "ndvi_ref": 0.656,
-   "ndvi_actual": 0.326,
+   "ndvi_actual": 0.568,
    "obs_actual": 8,
    "centro": [
     42.87118,
@@ -44524,7 +44536,7 @@
   },
   {
    "id": "CN-202601-005",
-   "estado": "confirmada",
+   "estado": "revertida",
    "primera": "2026-01",
    "ultima": "2026-10",
    "meses": [
@@ -44561,12 +44573,18 @@
      "fecha": "2026-10-06",
      "estado": "confirmada",
      "motivo": "unida con CN-202601-067, CN-202601-042, CN-202601-088"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "revertida",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 4047,
    "ha": 40.47,
    "ndvi_ref": 0.769,
-   "ndvi_actual": 0.31,
+   "ndvi_actual": 0.534,
    "obs_actual": 3,
    "centro": [
     43.04203,
@@ -85817,7 +85835,7 @@
    "id": "CN-202602-008",
    "estado": "confirmada",
    "primera": "2026-02",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
     "2026-02",
     "2026-03",
@@ -85827,7 +85845,8 @@
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-02-28",
    "historial": [
@@ -85848,7 +85867,7 @@
    "pixeles": 11147,
    "ha": 111.47,
    "ndvi_ref": 0.681,
-   "ndvi_actual": 0.335,
+   "ndvi_actual": 0.324,
    "obs_actual": 3,
    "centro": [
     43.15862,
@@ -131371,7 +131390,7 @@
   },
   {
    "id": "CN-202603-032",
-   "estado": "confirmada",
+   "estado": "revertida",
    "primera": "2026-03",
    "ultima": "2026-04",
    "meses": [
@@ -131387,12 +131406,18 @@
     {
      "fecha": "2026-04-30",
      "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "revertida",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 35,
    "ha": 0.35,
    "ndvi_ref": 0.8,
-   "ndvi_actual": 0.314,
+   "ndvi_actual": 0.509,
    "obs_actual": 3,
    "centro": [
     42.98764,
@@ -133114,7 +133139,7 @@
    "id": "CN-202603-038",
    "estado": "confirmada",
    "primera": "2026-03",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
     "2026-03",
     "2026-04",
@@ -133123,7 +133148,8 @@
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-03-31",
    "historial": [
@@ -133144,7 +133170,7 @@
    "pixeles": 107,
    "ha": 1.07,
    "ndvi_ref": 0.65,
-   "ndvi_actual": 0.28,
+   "ndvi_actual": 0.266,
    "obs_actual": 3,
    "centro": [
     43.17199,
@@ -157375,11 +157401,12 @@
    "id": "CN-202605-010",
    "estado": "confirmada",
    "primera": "2026-05",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
     "2026-05",
     "2026-06",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-05-31",
    "historial": [
@@ -157395,7 +157422,7 @@
    "pixeles": 43,
    "ha": 0.43,
    "ndvi_ref": 0.738,
-   "ndvi_actual": 0.322,
+   "ndvi_actual": 0.325,
    "obs_actual": 9,
    "centro": [
     43.22771,
@@ -170375,12 +170402,13 @@
    "id": "CN-202607-003",
    "estado": "confirmada",
    "primera": "2026-07",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-07-31",
    "historial": [
@@ -170401,7 +170429,7 @@
    "pixeles": 204,
    "ha": 2.04,
    "ndvi_ref": 0.835,
-   "ndvi_actual": 0.316,
+   "ndvi_actual": 0.276,
    "obs_actual": 17,
    "centro": [
     43.16023,
@@ -172907,11 +172935,12 @@
    "id": "CN-202608-001",
    "estado": "confirmada",
    "primera": "2026-08",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-08-31",
    "historial": [
@@ -172932,7 +172961,7 @@
    "pixeles": 965,
    "ha": 9.65,
    "ndvi_ref": 0.715,
-   "ndvi_actual": 0.329,
+   "ndvi_actual": 0.331,
    "obs_actual": 15,
    "centro": [
     43.21164,
@@ -175502,11 +175531,12 @@
    "id": "CN-202608-002",
    "estado": "confirmada",
    "primera": "2026-08",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-08-31",
    "historial": [
@@ -175527,7 +175557,7 @@
    "pixeles": 274,
    "ha": 2.74,
    "ndvi_ref": 0.694,
-   "ndvi_actual": 0.323,
+   "ndvi_actual": 0.326,
    "obs_actual": 16,
    "centro": [
     43.20963,
@@ -177521,7 +177551,7 @@
   },
   {
    "id": "CN-202608-006",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-08",
    "ultima": "2026-08",
    "meses": [
@@ -177532,6 +177562,12 @@
     {
      "fecha": "2026-08-31",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "no se volvió a ver"
     }
    ],
    "pixeles": 75,
@@ -177723,11 +177759,12 @@
    "id": "CN-202608-007",
    "estado": "confirmada",
    "primera": "2026-08",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-08-31",
    "historial": [
@@ -177743,7 +177780,7 @@
    "pixeles": 53,
    "ha": 0.53,
    "ndvi_ref": 0.777,
-   "ndvi_actual": 0.32,
+   "ndvi_actual": 0.325,
    "obs_actual": 15,
    "centro": [
     43.21077,
@@ -178003,11 +178040,12 @@
    "id": "CN-202608-008",
    "estado": "confirmada",
    "primera": "2026-08",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-08-31",
    "historial": [
@@ -178355,7 +178393,7 @@
   },
   {
    "id": "CN-202608-009",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-08",
    "ultima": "2026-08",
    "meses": [
@@ -178366,6 +178404,12 @@
     {
      "fecha": "2026-08-31",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "no se volvió a ver"
     }
    ],
    "pixeles": 42,
@@ -179691,7 +179735,7 @@
   },
   {
    "id": "CN-202608-013",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-08",
    "ultima": "2026-08",
    "meses": [
@@ -179702,6 +179746,12 @@
     {
      "fecha": "2026-08-31",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "no se volvió a ver"
     }
    ],
    "pixeles": 23,
@@ -180931,10 +180981,11 @@
    "id": "CN-202609-001",
    "estado": "confirmada",
    "primera": "2026-09",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-09-23",
    "historial": [
@@ -180950,7 +181001,7 @@
    "pixeles": 845,
    "ha": 8.45,
    "ndvi_ref": 0.802,
-   "ndvi_actual": 0.339,
+   "ndvi_actual": 0.318,
    "obs_actual": 15,
    "centro": [
     43.08849,
@@ -182578,10 +182629,11 @@
    "id": "CN-202609-004",
    "estado": "confirmada",
    "primera": "2026-09",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-09-23",
    "historial": [
@@ -182597,7 +182649,7 @@
    "pixeles": 95,
    "ha": 0.95,
    "ndvi_ref": 0.701,
-   "ndvi_actual": 0.243,
+   "ndvi_actual": 0.313,
    "obs_actual": 17,
    "centro": [
     42.87937,
@@ -183954,7 +184006,7 @@
   },
   {
    "id": "CN-202610-001",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -183965,12 +184017,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 284,
    "ha": 2.84,
    "ndvi_ref": 0.816,
-   "ndvi_actual": 0.334,
+   "ndvi_actual": 0.672,
    "obs_actual": 16,
    "centro": [
     43.21663,
@@ -185175,23 +185233,28 @@
   },
   {
    "id": "CN-202610-003",
-   "estado": "provisional",
+   "estado": "confirmada",
    "primera": "2026-10",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-10-01",
    "historial": [
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "confirmada"
     }
    ],
    "pixeles": 144,
    "ha": 1.44,
    "ndvi_ref": 0.807,
-   "ndvi_actual": 0.321,
+   "ndvi_actual": 0.325,
    "obs_actual": 9,
    "centro": [
     43.25768,
@@ -185837,7 +185900,7 @@
   },
   {
    "id": "CN-202610-005",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -185848,12 +185911,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 87,
    "ha": 0.87,
    "ndvi_ref": 0.693,
-   "ndvi_actual": 0.327,
+   "ndvi_actual": 0.5,
    "obs_actual": 11,
    "centro": [
     43.20349,
@@ -186251,7 +186320,7 @@
   },
   {
    "id": "CN-202610-006",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -186262,12 +186331,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 84,
    "ha": 0.84,
    "ndvi_ref": 0.684,
-   "ndvi_actual": 0.318,
+   "ndvi_actual": 0.559,
    "obs_actual": 16,
    "centro": [
     43.22991,
@@ -186720,7 +186795,7 @@
   },
   {
    "id": "CN-202610-007",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -186731,12 +186806,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 81,
    "ha": 0.81,
    "ndvi_ref": 0.659,
-   "ndvi_actual": 0.333,
+   "ndvi_actual": 0.643,
    "obs_actual": 11,
    "centro": [
     43.16892,
@@ -187294,7 +187375,7 @@
   },
   {
    "id": "CN-202610-009",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -187305,12 +187386,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 77,
    "ha": 0.77,
    "ndvi_ref": 0.649,
-   "ndvi_actual": 0.323,
+   "ndvi_actual": 0.665,
    "obs_actual": 10,
    "centro": [
     43.17322,
@@ -187994,23 +188081,28 @@
   },
   {
    "id": "CN-202610-011",
-   "estado": "provisional",
+   "estado": "confirmada",
    "primera": "2026-10",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-10-01",
    "historial": [
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "confirmada"
     }
    ],
    "pixeles": 61,
    "ha": 0.61,
    "ndvi_ref": 0.752,
-   "ndvi_actual": 0.317,
+   "ndvi_actual": 0.332,
    "obs_actual": 10,
    "centro": [
     43.17375,
@@ -188179,7 +188271,7 @@
   },
   {
    "id": "CN-202610-012",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -188195,12 +188287,18 @@
      "fecha": "2026-10-06",
      "estado": "provisional",
      "motivo": "unida con CN-202610-019"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 94,
    "ha": 0.94,
    "ndvi_ref": 0.64,
-   "ndvi_actual": 0.331,
+   "ndvi_actual": 0.661,
    "obs_actual": 10,
    "centro": [
     43.16326,
@@ -188811,7 +188909,7 @@
   },
   {
    "id": "CN-202610-013",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -188822,12 +188920,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 51,
    "ha": 0.51,
    "ndvi_ref": 0.66,
-   "ndvi_actual": 0.322,
+   "ndvi_actual": 0.623,
    "obs_actual": 10,
    "centro": [
     43.16711,
@@ -189035,7 +189139,7 @@
   },
   {
    "id": "CN-202610-014",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -189046,12 +189150,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 51,
    "ha": 0.51,
    "ndvi_ref": 0.682,
-   "ndvi_actual": 0.334,
+   "ndvi_actual": 0.677,
    "obs_actual": 10,
    "centro": [
     43.16605,
@@ -189585,7 +189695,7 @@
   },
   {
    "id": "CN-202610-016",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -189596,12 +189706,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 46,
    "ha": 0.46,
    "ndvi_ref": 0.638,
-   "ndvi_actual": 0.322,
+   "ndvi_actual": 0.665,
    "obs_actual": 11,
    "centro": [
     43.1725,
@@ -190009,7 +190125,7 @@
   },
   {
    "id": "CN-202610-017",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -190020,12 +190136,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 43,
    "ha": 0.43,
    "ndvi_ref": 0.678,
-   "ndvi_actual": 0.328,
+   "ndvi_actual": 0.57,
    "obs_actual": 9,
    "centro": [
     43.10109,
@@ -190218,7 +190340,7 @@
   },
   {
    "id": "CN-202610-018",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -190229,12 +190351,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 42,
    "ha": 0.42,
    "ndvi_ref": 0.747,
-   "ndvi_actual": 0.331,
+   "ndvi_actual": 0.535,
    "obs_actual": 10,
    "centro": [
     43.1613,
@@ -190783,7 +190911,7 @@
   },
   {
    "id": "CN-202610-020",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -190794,12 +190922,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 41,
    "ha": 0.41,
    "ndvi_ref": 0.755,
-   "ndvi_actual": 0.324,
+   "ndvi_actual": 0.551,
    "obs_actual": 9,
    "centro": [
     43.12758,
@@ -191056,7 +191190,7 @@
   },
   {
    "id": "CN-202610-021",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -191067,12 +191201,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 40,
    "ha": 0.4,
    "ndvi_ref": 0.703,
-   "ndvi_actual": 0.339,
+   "ndvi_actual": 0.661,
    "obs_actual": 9,
    "centro": [
     43.14782,
@@ -191254,7 +191394,7 @@
   },
   {
    "id": "CN-202610-022",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -191265,12 +191405,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 38,
    "ha": 0.38,
    "ndvi_ref": 0.672,
-   "ndvi_actual": 0.315,
+   "ndvi_actual": 0.537,
    "obs_actual": 11,
    "centro": [
     43.20414,
@@ -191421,7 +191567,7 @@
   },
   {
    "id": "CN-202610-023",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -191432,12 +191578,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 37,
    "ha": 0.37,
    "ndvi_ref": 0.723,
-   "ndvi_actual": 0.336,
+   "ndvi_actual": 0.715,
    "obs_actual": 17,
    "centro": [
     43.2175,
@@ -191654,7 +191806,7 @@
   },
   {
    "id": "CN-202610-024",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -191665,12 +191817,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 36,
    "ha": 0.36,
    "ndvi_ref": 0.667,
-   "ndvi_actual": 0.33,
+   "ndvi_actual": 0.819,
    "obs_actual": 12,
    "centro": [
     42.99905,
@@ -192154,7 +192312,7 @@
   },
   {
    "id": "CN-202610-026",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -192170,12 +192328,18 @@
      "fecha": "2026-10-06",
      "estado": "provisional",
      "motivo": "unida con CN-202610-033"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 63,
    "ha": 0.63,
    "ndvi_ref": 0.63,
-   "ndvi_actual": 0.294,
+   "ndvi_actual": 0.687,
    "obs_actual": 10,
    "centro": [
     43.15523,
@@ -192593,7 +192757,7 @@
   },
   {
    "id": "CN-202610-027",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -192604,12 +192768,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 33,
    "ha": 0.33,
    "ndvi_ref": 0.652,
-   "ndvi_actual": 0.328,
+   "ndvi_actual": 0.58,
    "obs_actual": 10,
    "centro": [
     43.1685,
@@ -192934,7 +193104,7 @@
   },
   {
    "id": "CN-202610-028",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -192945,12 +193115,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 33,
    "ha": 0.33,
    "ndvi_ref": 0.702,
-   "ndvi_actual": 0.325,
+   "ndvi_actual": 0.6,
    "obs_actual": 11,
    "centro": [
     43.13787,
@@ -193328,7 +193504,7 @@
   },
   {
    "id": "CN-202610-030",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -193339,12 +193515,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 31,
    "ha": 0.31,
    "ndvi_ref": 0.721,
-   "ndvi_actual": 0.342,
+   "ndvi_actual": 0.84,
    "obs_actual": 10,
    "centro": [
     43.15312,
@@ -193534,7 +193716,7 @@
   },
   {
    "id": "CN-202610-031",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -193545,12 +193727,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 28,
    "ha": 0.28,
    "ndvi_ref": 0.653,
-   "ndvi_actual": 0.316,
+   "ndvi_actual": 0.504,
    "obs_actual": 12,
    "centro": [
     43.20227,
@@ -193798,7 +193986,7 @@
   },
   {
    "id": "CN-202610-032",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -193809,12 +193997,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 28,
    "ha": 0.28,
    "ndvi_ref": 0.768,
-   "ndvi_actual": 0.296,
+   "ndvi_actual": 0.5,
    "obs_actual": 10,
    "centro": [
     43.17921,
@@ -194246,7 +194440,7 @@
   },
   {
    "id": "CN-202610-034",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -194257,12 +194451,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 28,
    "ha": 0.28,
    "ndvi_ref": 0.703,
-   "ndvi_actual": 0.343,
+   "ndvi_actual": 0.568,
    "obs_actual": 9,
    "centro": [
     43.15027,
@@ -194626,7 +194826,7 @@
   },
   {
    "id": "CN-202610-036",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -194637,12 +194837,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 27,
    "ha": 0.27,
    "ndvi_ref": 0.763,
-   "ndvi_actual": 0.333,
+   "ndvi_actual": 0.543,
    "obs_actual": 10,
    "centro": [
     43.1531,
@@ -194816,7 +195022,7 @@
   },
   {
    "id": "CN-202610-037",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -194827,12 +195033,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 27,
    "ha": 0.27,
    "ndvi_ref": 0.664,
-   "ndvi_actual": 0.337,
+   "ndvi_actual": 0.519,
    "obs_actual": 11,
    "centro": [
     43.04788,
@@ -195021,7 +195233,7 @@
   },
   {
    "id": "CN-202610-038",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -195032,12 +195244,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 27,
    "ha": 0.27,
    "ndvi_ref": 0.649,
-   "ndvi_actual": 0.322,
+   "ndvi_actual": 0.683,
    "obs_actual": 10,
    "centro": [
     43.03712,
@@ -195198,7 +195416,7 @@
   },
   {
    "id": "CN-202610-039",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -195209,12 +195427,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 26,
    "ha": 0.26,
    "ndvi_ref": 0.753,
-   "ndvi_actual": 0.33,
+   "ndvi_actual": 0.888,
    "obs_actual": 10,
    "centro": [
     43.17344,
@@ -195453,7 +195677,7 @@
   },
   {
    "id": "CN-202610-040",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -195464,12 +195688,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 26,
    "ha": 0.26,
    "ndvi_ref": 0.697,
-   "ndvi_actual": 0.343,
+   "ndvi_actual": 0.55,
    "obs_actual": 9,
    "centro": [
     43.14941,
@@ -195847,7 +196077,7 @@
   },
   {
    "id": "CN-202610-042",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -195858,12 +196088,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 25,
    "ha": 0.25,
    "ndvi_ref": 0.77,
-   "ndvi_actual": 0.337,
+   "ndvi_actual": 0.582,
    "obs_actual": 9,
    "centro": [
     43.09937,
@@ -196338,7 +196574,7 @@
   },
   {
    "id": "CN-202610-044",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -196349,12 +196585,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 24,
    "ha": 0.24,
    "ndvi_ref": 0.67,
-   "ndvi_actual": 0.341,
+   "ndvi_actual": 0.641,
    "obs_actual": 15,
    "centro": [
     43.22805,
@@ -196547,7 +196789,7 @@
   },
   {
    "id": "CN-202610-045",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -196558,12 +196800,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 24,
    "ha": 0.24,
    "ndvi_ref": 0.711,
-   "ndvi_actual": 0.327,
+   "ndvi_actual": 0.565,
    "obs_actual": 10,
    "centro": [
     43.16618,
@@ -196938,7 +197186,7 @@
   },
   {
    "id": "CN-202610-047",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -196949,12 +197197,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 24,
    "ha": 0.24,
    "ndvi_ref": 0.656,
-   "ndvi_actual": 0.34,
+   "ndvi_actual": 0.706,
    "obs_actual": 10,
    "centro": [
     43.04158,
@@ -197149,7 +197403,7 @@
   },
   {
    "id": "CN-202610-048",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -197160,12 +197414,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 24,
    "ha": 0.24,
    "ndvi_ref": 0.63,
-   "ndvi_actual": 0.313,
+   "ndvi_actual": 0.631,
    "obs_actual": 11,
    "centro": [
     43.03697,
@@ -197374,181 +197634,304 @@
   },
   {
    "id": "CN-202610-049",
-   "estado": "provisional",
+   "estado": "confirmada",
    "primera": "2026-10",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-10-01",
    "historial": [
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "confirmada"
     }
    ],
-   "pixeles": 24,
-   "ha": 0.24,
+   "pixeles": 43,
+   "ha": 0.43,
    "ndvi_ref": 0.644,
-   "ndvi_actual": 0.268,
+   "ndvi_actual": 0.271,
    "obs_actual": 12,
    "centro": [
     42.79167,
     -4.07895
    ],
    "geometry": {
-    "type": "MultiPolygon",
+    "type": "Polygon",
     "coordinates": [
      [
       [
-       [
-        -4.0787,
-        42.791628
-       ],
-       [
-        -4.078822,
-        42.791626
-       ],
-       [
-        -4.078821,
-        42.791536
-       ],
-       [
-        -4.078943,
-        42.791535
-       ],
-       [
-        -4.078941,
-        42.791445
-       ],
-       [
-        -4.079064,
-        42.791444
-       ],
-       [
-        -4.079062,
-        42.791354
-       ],
-       [
-        -4.079307,
-        42.791352
-       ],
-       [
-        -4.079305,
-        42.791262
-       ],
-       [
-        -4.079427,
-        42.79126
-       ],
-       [
-        -4.07943,
-        42.791441
-       ],
-       [
-        -4.079308,
-        42.791442
-       ],
-       [
-        -4.07931,
-        42.791532
-       ],
-       [
-        -4.079188,
-        42.791533
-       ],
-       [
-        -4.079191,
-        42.791713
-       ],
-       [
-        -4.079068,
-        42.791714
-       ],
-       [
-        -4.07907,
-        42.791804
-       ],
-       [
-        -4.078948,
-        42.791805
-       ],
-       [
-        -4.078949,
-        42.791895
-       ],
-       [
-        -4.078827,
-        42.791896
-       ],
-       [
-        -4.078829,
-        42.791987
-       ],
-       [
-        -4.078706,
-        42.791988
-       ],
-       [
-        -4.0787,
-        42.791628
-       ]
-      ]
-     ],
-     [
+       -4.07859,
+       42.792349
+      ],
       [
-       [
-        -4.078706,
-        42.791988
-       ],
-       [
-        -4.078708,
-        42.792078
-       ],
-       [
-        -4.078586,
-        42.792079
-       ],
-       [
-        -4.078587,
-        42.792169
-       ],
-       [
-        -4.078465,
-        42.79217
-       ],
-       [
-        -4.078462,
-        42.79199
-       ],
-       [
-        -4.078706,
-        42.791988
-       ]
-      ]
-     ],
-     [
+       -4.078346,
+       42.792351
+      ],
       [
-       [
-        -4.078344,
-        42.792261
-       ],
-       [
-        -4.078343,
-        42.792171
-       ],
-       [
-        -4.078465,
-        42.79217
-       ],
-       [
-        -4.078467,
-        42.79226
-       ],
-       [
-        -4.078344,
-        42.792261
-       ]
+       -4.078344,
+       42.792261
+      ],
+      [
+       -4.078344,
+       42.792261
+      ],
+      [
+       -4.078344,
+       42.792216
+      ],
+      [
+       -4.078343,
+       42.792171
+      ],
+      [
+       -4.078343,
+       42.792171
+      ],
+      [
+       -4.078343,
+       42.792171
+      ],
+      [
+       -4.078465,
+       42.79217
+      ],
+      [
+       -4.07846,
+       42.7919
+      ],
+      [
+       -4.078583,
+       42.791899
+      ],
+      [
+       -4.078579,
+       42.791719
+      ],
+      [
+       -4.078701,
+       42.791718
+      ],
+      [
+       -4.0787,
+       42.791628
+      ],
+      [
+       -4.0787,
+       42.791628
+      ],
+      [
+       -4.0787,
+       42.791628
+      ],
+      [
+       -4.078768,
+       42.791627
+      ],
+      [
+       -4.078822,
+       42.791626
+      ],
+      [
+       -4.078821,
+       42.791571
+      ],
+      [
+       -4.078821,
+       42.791536
+      ],
+      [
+       -4.078821,
+       42.791536
+      ],
+      [
+       -4.078821,
+       42.791536
+      ],
+      [
+       -4.078943,
+       42.791535
+      ],
+      [
+       -4.078941,
+       42.791445
+      ],
+      [
+       -4.079058,
+       42.791444
+      ],
+      [
+       -4.079064,
+       42.791444
+      ],
+      [
+       -4.079063,
+       42.791388
+      ],
+      [
+       -4.079062,
+       42.791354
+      ],
+      [
+       -4.079062,
+       42.791354
+      ],
+      [
+       -4.079062,
+       42.791354
+      ],
+      [
+       -4.079184,
+       42.791353
+      ],
+      [
+       -4.07918,
+       42.791083
+      ],
+      [
+       -4.079302,
+       42.791082
+      ],
+      [
+       -4.0793,
+       42.790991
+      ],
+      [
+       -4.079423,
+       42.79099
+      ],
+      [
+       -4.079421,
+       42.7909
+      ],
+      [
+       -4.079666,
+       42.790898
+      ],
+      [
+       -4.079669,
+       42.791078
+      ],
+      [
+       -4.079546,
+       42.791079
+      ],
+      [
+       -4.07955,
+       42.791259
+      ],
+      [
+       -4.079427,
+       42.79126
+      ],
+      [
+       -4.07943,
+       42.791441
+      ],
+      [
+       -4.07943,
+       42.791441
+      ],
+      [
+       -4.07943,
+       42.791441
+      ],
+      [
+       -4.079308,
+       42.791442
+      ],
+      [
+       -4.079309,
+       42.791491
+      ],
+      [
+       -4.07931,
+       42.791532
+      ],
+      [
+       -4.079188,
+       42.791533
+      ],
+      [
+       -4.079191,
+       42.791713
+      ],
+      [
+       -4.079155,
+       42.791713
+      ],
+      [
+       -4.079068,
+       42.791714
+      ],
+      [
+       -4.07907,
+       42.7918
+      ],
+      [
+       -4.07907,
+       42.791804
+      ],
+      [
+       -4.07907,
+       42.791804
+      ],
+      [
+       -4.07907,
+       42.791804
+      ],
+      [
+       -4.078948,
+       42.791805
+      ],
+      [
+       -4.078948,
+       42.791849
+      ],
+      [
+       -4.078949,
+       42.791895
+      ],
+      [
+       -4.078827,
+       42.791896
+      ],
+      [
+       -4.078827,
+       42.791903
+      ],
+      [
+       -4.078829,
+       42.791987
+      ],
+      [
+       -4.078706,
+       42.791988
+      ],
+      [
+       -4.078708,
+       42.792062
+      ],
+      [
+       -4.078708,
+       42.792078
+      ],
+      [
+       -4.078586,
+       42.792079
+      ],
+      [
+       -4.078587,
+       42.792132
+      ],
+      [
+       -4.07859,
+       42.792349
       ]
      ]
     ]
@@ -197604,13 +197987,13 @@
      "poligono": 201,
      "parcela": 68,
      "ha_parcela": 1.65,
-     "ha_alerta": 0.24
+     "ha_alerta": 0.43
     }
    ],
    "n_parcelas": 1,
-   "fraccion_parcelada": 1.0,
+   "fraccion_parcelada": 0.988,
    "catastro_fecha": "2026-08-21",
-   "parcelas_px": 24,
+   "parcelas_px": 43,
    "cruce": "sin_expediente",
    "expedientes": [],
    "expedientes_municipio": 2
@@ -198049,7 +198432,7 @@
   },
   {
    "id": "CN-202610-052",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -198060,12 +198443,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 22,
    "ha": 0.22,
    "ndvi_ref": 0.84,
-   "ndvi_actual": 0.342,
+   "ndvi_actual": 0.724,
    "obs_actual": 11,
    "centro": [
     43.2214,
@@ -198921,7 +199310,7 @@
   },
   {
    "id": "CN-202610-056",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -198932,12 +199321,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 22,
    "ha": 0.22,
    "ndvi_ref": 0.66,
-   "ndvi_actual": 0.326,
+   "ndvi_actual": 0.762,
    "obs_actual": 10,
    "centro": [
     43.01421,
@@ -199308,7 +199703,7 @@
   },
   {
    "id": "CN-202610-058",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -199319,12 +199714,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 21,
    "ha": 0.21,
    "ndvi_ref": 0.781,
-   "ndvi_actual": 0.344,
+   "ndvi_actual": 0.779,
    "obs_actual": 10,
    "centro": [
     43.21733,
@@ -199576,7 +199977,7 @@
   },
   {
    "id": "CN-202610-059",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -199587,12 +199988,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 21,
    "ha": 0.21,
    "ndvi_ref": 0.683,
-   "ndvi_actual": 0.326,
+   "ndvi_actual": 0.663,
    "obs_actual": 9,
    "centro": [
     43.14494,
@@ -199768,7 +200175,7 @@
   },
   {
    "id": "CN-202610-060",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -199779,12 +200186,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 21,
    "ha": 0.21,
    "ndvi_ref": 0.696,
-   "ndvi_actual": 0.324,
+   "ndvi_actual": 0.84,
    "obs_actual": 10,
    "centro": [
     43.11403,
@@ -199968,7 +200381,7 @@
   },
   {
    "id": "CN-202610-061",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -199979,12 +200392,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 21,
    "ha": 0.21,
    "ndvi_ref": 0.635,
-   "ndvi_actual": 0.314,
+   "ndvi_actual": 0.799,
    "obs_actual": 10,
    "centro": [
     43.08461,
@@ -200194,23 +200613,28 @@
   },
   {
    "id": "CN-202610-062",
-   "estado": "provisional",
+   "estado": "confirmada",
    "primera": "2026-10",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-10-01",
    "historial": [
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "confirmada"
     }
    ],
    "pixeles": 20,
    "ha": 0.2,
    "ndvi_ref": 0.677,
-   "ndvi_actual": 0.308,
+   "ndvi_actual": 0.307,
    "obs_actual": 11,
    "centro": [
     43.21351,
@@ -200361,7 +200785,7 @@
   },
   {
    "id": "CN-202610-063",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -200372,12 +200796,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 20,
    "ha": 0.2,
    "ndvi_ref": 0.717,
-   "ndvi_actual": 0.306,
+   "ndvi_actual": 0.661,
    "obs_actual": 10,
    "centro": [
     43.1515,
@@ -200679,7 +201109,7 @@
   },
   {
    "id": "CN-202610-065",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -200690,12 +201120,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 20,
    "ha": 0.2,
    "ndvi_ref": 0.79,
-   "ndvi_actual": 0.258,
+   "ndvi_actual": 0.638,
    "obs_actual": 10,
    "centro": [
     42.8028,
@@ -200898,23 +201334,28 @@
   },
   {
    "id": "CN-202610-066",
-   "estado": "provisional",
+   "estado": "confirmada",
    "primera": "2026-10",
-   "ultima": "2026-10",
+   "ultima": "2026-11",
    "meses": [
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "detectada": "2026-10-28",
    "historial": [
     {
      "fecha": "2026-10-28",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-01",
+     "estado": "confirmada"
     }
    ],
    "pixeles": 22,
    "ha": 0.22,
    "ndvi_ref": 0.727,
-   "ndvi_actual": 0.332,
+   "ndvi_actual": 0.327,
    "obs_actual": 14,
    "centro": [
     43.1539,
@@ -201063,6 +201504,332 @@
    "fraccion_parcelada": 1.0,
    "catastro_fecha": "2026-08-21",
    "parcelas_px": 22,
+   "cruce": "sin_expediente",
+   "expedientes": [],
+   "expedientes_municipio": 0
+  },
+  {
+   "id": "CN-202611-001",
+   "estado": "provisional",
+   "primera": "2026-11",
+   "ultima": "2026-11",
+   "meses": [
+    "2026-11"
+   ],
+   "detectada": "2026-11-01",
+   "historial": [
+    {
+     "fecha": "2026-11-01",
+     "estado": "provisional"
+    }
+   ],
+   "pixeles": 25,
+   "ha": 0.25,
+   "ndvi_ref": 0.66,
+   "ndvi_actual": 0.179,
+   "obs_actual": 13,
+   "centro": [
+    43.41709,
+    -3.44482
+   ],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -3.444941,
+       43.417362
+      ],
+      [
+       -3.44494,
+       43.417272
+      ],
+      [
+       -3.445064,
+       43.417272
+      ],
+      [
+       -3.445063,
+       43.417182
+      ],
+      [
+       -3.445187,
+       43.417181
+      ],
+      [
+       -3.445185,
+       43.417001
+      ],
+      [
+       -3.445062,
+       43.417002
+      ],
+      [
+       -3.445061,
+       43.416822
+      ],
+      [
+       -3.44469,
+       43.416823
+      ],
+      [
+       -3.444691,
+       43.416913
+      ],
+      [
+       -3.444567,
+       43.416914
+      ],
+      [
+       -3.444568,
+       43.417004
+      ],
+      [
+       -3.444444,
+       43.417004
+      ],
+      [
+       -3.444446,
+       43.417184
+      ],
+      [
+       -3.444569,
+       43.417184
+      ],
+      [
+       -3.44457,
+       43.417274
+      ],
+      [
+       -3.444693,
+       43.417273
+      ],
+      [
+       -3.444694,
+       43.417363
+      ],
+      [
+       -3.444941,
+       43.417362
+      ]
+     ]
+    ]
+   },
+   "espacios": [
+    {
+     "codigo": "ES0000143",
+     "nombre": "Marismas de Santoña, Victoria y Joyel y Ría de Ajo",
+     "tipo": "ZEPA"
+    }
+   ],
+   "municipios": [
+    "Laredo"
+   ],
+   "ultima_vegetacion": "2026-05",
+   "reconstruida": false,
+   "cubierta_previa": {
+    "codigo": "322",
+    "nombre": "landas y matorral"
+   },
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "indices_antes": {
+    "ndvi": 0.649,
+    "mndwi": -0.423,
+    "nbr": 0.397,
+    "bsi": -0.143,
+    "nir": 0.328,
+    "swir22": 0.145,
+    "brillo": 0.071
+   },
+   "indices_despues": {
+    "ndvi": 0.172,
+    "mndwi": -0.112,
+    "nbr": 0.279,
+    "bsi": -0.008,
+    "nir": 0.188,
+    "swir22": 0.105,
+    "brillo": 0.114
+   },
+   "fecha_antes": "2025-11-28",
+   "fecha_despues": "2026-10-21",
+   "foto_antes": "chips/CN-202611-001_antes.jpg",
+   "foto_despues": "chips/CN-202611-001_despues.jpg",
+   "ventana_fotos": "2026-11",
+   "clase_nombre": "Pérdida de vegetación",
+   "parcelas": [
+    {
+     "refcat": "3972601VP6037S",
+     "municipio": "39035",
+     "municipio_nombre": "LAREDO",
+     "tipo": "urbana",
+     "ha_parcela": 0.37,
+     "ha_alerta": 0.24
+    }
+   ],
+   "n_parcelas": 1,
+   "fraccion_parcelada": 0.961,
+   "catastro_fecha": "2026-08-21",
+   "parcelas_px": 25,
+   "cruce": "sin_expediente",
+   "expedientes": [],
+   "expedientes_municipio": 0
+  },
+  {
+   "id": "CN-202611-002",
+   "estado": "provisional",
+   "primera": "2026-11",
+   "ultima": "2026-11",
+   "meses": [
+    "2026-11"
+   ],
+   "detectada": "2026-11-01",
+   "historial": [
+    {
+     "fecha": "2026-11-01",
+     "estado": "provisional"
+    }
+   ],
+   "pixeles": 20,
+   "ha": 0.2,
+   "ndvi_ref": 0.747,
+   "ndvi_actual": 0.186,
+   "obs_actual": 13,
+   "centro": [
+    43.41781,
+    -3.44569
+   ],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -3.445687,
+       43.41799
+      ],
+      [
+       -3.445686,
+       43.4179
+      ],
+      [
+       -3.445933,
+       43.417899
+      ],
+      [
+       -3.445931,
+       43.417629
+      ],
+      [
+       -3.445808,
+       43.417629
+      ],
+      [
+       -3.445807,
+       43.417539
+      ],
+      [
+       -3.445683,
+       43.41754
+      ],
+      [
+       -3.445683,
+       43.41745
+      ],
+      [
+       -3.445436,
+       43.41745
+      ],
+      [
+       -3.445436,
+       43.417541
+      ],
+      [
+       -3.445313,
+       43.417541
+      ],
+      [
+       -3.445314,
+       43.417721
+      ],
+      [
+       -3.445438,
+       43.417721
+      ],
+      [
+       -3.445439,
+       43.417901
+      ],
+      [
+       -3.445563,
+       43.4179
+      ],
+      [
+       -3.445563,
+       43.41799
+      ],
+      [
+       -3.445687,
+       43.41799
+      ]
+     ]
+    ]
+   },
+   "espacios": [
+    {
+     "codigo": "ES0000143",
+     "nombre": "Marismas de Santoña, Victoria y Joyel y Ría de Ajo",
+     "tipo": "ZEPA"
+    }
+   ],
+   "municipios": [
+    "Laredo"
+   ],
+   "ultima_vegetacion": "2026-06",
+   "reconstruida": false,
+   "cubierta_previa": {
+    "codigo": "322",
+    "nombre": "landas y matorral"
+   },
+   "analisis_v": 2,
+   "clase": "suelo",
+   "indices_antes": {
+    "ndvi": 0.779,
+    "mndwi": -0.53,
+    "nbr": 0.513,
+    "bsi": -0.212,
+    "nir": 0.372,
+    "swir22": 0.121,
+    "brillo": 0.047
+   },
+   "indices_despues": {
+    "ndvi": 0.15,
+    "mndwi": -0.184,
+    "nbr": 0.278,
+    "bsi": 0.065,
+    "nir": 0.283,
+    "swir22": 0.16,
+    "brillo": 0.161
+   },
+   "fecha_antes": "2025-11-03",
+   "fecha_despues": "2026-10-21",
+   "foto_antes": "chips/CN-202611-002_antes.jpg",
+   "foto_despues": "chips/CN-202611-002_despues.jpg",
+   "ventana_fotos": "2026-11",
+   "clase_nombre": "Suelo desnudo o movimiento de tierras",
+   "parcelas": [
+    {
+     "refcat": "3973101VP6037S",
+     "municipio": "39035",
+     "municipio_nombre": "LAREDO",
+     "tipo": "urbana",
+     "ha_parcela": 0.35,
+     "ha_alerta": 0.19
+    }
+   ],
+   "n_parcelas": 1,
+   "fraccion_parcelada": 0.944,
+   "catastro_fecha": "2026-08-21",
+   "parcelas_px": 20,
    "cruce": "sin_expediente",
    "expedientes": [],
    "expedientes_municipio": 0
@@ -201285,16 +202052,32 @@
     "2026-10"
    ],
    "pixeles_zona": 14699109,
-   "pixeles_evaluables": 12430364,
+   "pixeles_evaluables": 12430366,
    "fraccion_evaluable": 0.846,
    "pixeles_agua_previa": 701790,
    "meses_agua": 24,
-   "pixeles_candidatos": 14878,
+   "pixeles_candidatos": 14875,
    "cambios": 76,
    "ha_cambios": 122.8
+  },
+  "2026-11": {
+   "mes_fin": "2026-11",
+   "ventana": [
+    "2026-09",
+    "2026-10",
+    "2026-11"
+   ],
+   "pixeles_zona": 14699109,
+   "pixeles_evaluables": 9489478,
+   "fraccion_evaluable": 0.646,
+   "pixeles_agua_previa": 702378,
+   "meses_agua": 24,
+   "pixeles_candidatos": 4097,
+   "cambios": 38,
+   "ha_cambios": 26.3
   }
  },
  "expedientes_desde": "2026-07-10",
- "ultima_ventana": "2026-10",
- "actualizado": "2026-10-31T13:44:59+00:00"
+ "ultima_ventana": "2026-11",
+ "actualizado": "2026-11-01T14:25:50+00:00"
 }

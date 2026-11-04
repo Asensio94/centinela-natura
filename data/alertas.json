@@ -44599,6 +44599,16 @@
      "estado": "revertida",
      "ventana": "2026-11",
      "motivo": "volvió la vegetación"
+    },
+    {
+     "fecha": "2026-10-31",
+     "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-11-04",
+     "estado": "revertida",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 4047,
@@ -202088,7 +202098,7 @@
     "2026-11"
    ],
    "pixeles_zona": 14699109,
-   "pixeles_evaluables": 9489478,
+   "pixeles_evaluables": 9489483,
    "fraccion_evaluable": 0.646,
    "pixeles_agua_previa": 702378,
    "meses_agua": 24,
@@ -202099,5 +202109,5 @@
  },
  "expedientes_desde": "2026-07-10",
  "ultima_ventana": "2026-11",
- "actualizado": "2026-11-03T15:16:03+00:00"
+ "actualizado": "2026-11-04T15:31:10+00:00"
 }

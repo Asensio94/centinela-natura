@@ -44609,6 +44609,16 @@
      "estado": "revertida",
      "ventana": "2026-11",
      "motivo": "volvió la vegetación"
+    },
+    {
+     "fecha": "2026-10-31",
+     "estado": "confirmada"
+    },
+    {
+     "fecha": "2026-11-05",
+     "estado": "revertida",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 4047,
@@ -202109,5 +202119,5 @@
  },
  "expedientes_desde": "2026-07-10",
  "ultima_ventana": "2026-11",
- "actualizado": "2026-11-04T15:31:10+00:00"
+ "actualizado": "2026-11-05T15:31:53+00:00"
 }

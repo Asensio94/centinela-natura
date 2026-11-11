@@ -64434,7 +64434,7 @@
    "pixeles": 39,
    "ha": 0.39,
    "ndvi_ref": 0.822,
-   "ndvi_actual": 0.229,
+   "ndvi_actual": 0.231,
    "obs_actual": 12,
    "centro": [
     43.27751,
@@ -80805,7 +80805,7 @@
    "pixeles": 372,
    "ha": 5.54,
    "ndvi_ref": 0.666,
-   "ndvi_actual": 0.317,
+   "ndvi_actual": 0.319,
    "obs_actual": 16,
    "centro": [
     43.15373,
@@ -87893,7 +87893,7 @@
    "pixeles": 113,
    "ha": 1.64,
    "ndvi_ref": 0.68,
-   "ndvi_actual": 0.32,
+   "ndvi_actual": 0.326,
    "obs_actual": 16,
    "centro": [
     43.14781,
@@ -88690,7 +88690,7 @@
    "pixeles": 92,
    "ha": 0.92,
    "ndvi_ref": 0.704,
-   "ndvi_actual": 0.327,
+   "ndvi_actual": 0.328,
    "obs_actual": 13,
    "centro": [
     43.30842,
@@ -94487,7 +94487,7 @@
    "pixeles": 74,
    "ha": 0.82,
    "ndvi_ref": 0.706,
-   "ndvi_actual": 0.316,
+   "ndvi_actual": 0.34,
    "obs_actual": 15,
    "centro": [
     43.30497,
@@ -217156,7 +217156,7 @@
    "pixeles": 89,
    "ha": 0.89,
    "ndvi_ref": 0.814,
-   "ndvi_actual": 0.326,
+   "ndvi_actual": 0.329,
    "obs_actual": 8,
    "centro": [
     43.26831,
@@ -236714,7 +236714,7 @@
    "pixeles": 41,
    "ha": 0.41,
    "ndvi_ref": 0.894,
-   "ndvi_actual": 0.303,
+   "ndvi_actual": 0.302,
    "obs_actual": 16,
    "centro": [
     43.23377,
@@ -238014,7 +238014,7 @@
    "pixeles": 40,
    "ha": 0.4,
    "ndvi_ref": 0.897,
-   "ndvi_actual": 0.301,
+   "ndvi_actual": 0.319,
    "obs_actual": 12,
    "centro": [
     43.32786,
@@ -245799,7 +245799,7 @@
    "pixeles": 29,
    "ha": 0.29,
    "ndvi_ref": 0.883,
-   "ndvi_actual": 0.28,
+   "ndvi_actual": 0.31,
    "obs_actual": 9,
    "centro": [
     43.32793,
@@ -261471,16 +261471,16 @@
     "2026-11"
    ],
    "pixeles_zona": 23154169,
-   "pixeles_evaluables": 22001827,
+   "pixeles_evaluables": 22001904,
    "fraccion_evaluable": 0.95,
    "pixeles_agua_previa": 867729,
    "meses_agua": 24,
-   "pixeles_candidatos": 37472,
-   "cambios": 305,
-   "ha_cambios": 275.9
+   "pixeles_candidatos": 36978,
+   "cambios": 300,
+   "ha_cambios": 273.0
   }
  },
  "expedientes_desde": "2018-01-02",
  "ultima_ventana": "2026-11",
- "actualizado": "2026-11-10T15:41:25+00:00"
+ "actualizado": "2026-11-11T15:14:49+00:00"
 }

@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Centinela Natura : alertes dans le réseau Natura 2000 des Pyrénées-Atlantiques</title>
+  <id>https://asensio94.github.io/centinela-natura/fr/</id>
+  <link href="https://asensio94.github.io/centinela-natura/fr/"/>
+  <link rel="self" href="https://asensio94.github.io/centinela-natura/fr/feed.xml"/>
+  <updated>2026-11-14T14:13:34Z</updated>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-222</id>
+    <title>Perte de végétation: 0,73 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Accous)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-222"/>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,82 à 0,26. Parcelles : 640060000C0044.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-223</id>
+    <title>Perte de végétation: 0,32 ha dans Massif du Moulle de Jaout, Pènes du Moulle de Jaout (Aste-Béon)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-223"/>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,79 à 0,32. Parcelles : 64069000AC0003.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-224</id>
+    <title>Perte de végétation: 0,31 ha dans Massif du Ger et du Lurien, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Eaux-Bonnes)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-224"/>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,72 à 0,24. Parcelles : 64204000AL0003, 64204000AL0072, 64204000AL0071.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-225</id>
+    <title>Perte de végétation: 0,28 ha dans Massif du Ger et du Lurien, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-225"/>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,96 à 0,22. Parcelles : 64320000BP0029.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-226</id>
+    <title>Perte de végétation: 0,27 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-226"/>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 1,00 à 0,20. Parcelles : 64320000CK0024.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-227</id>
+    <title>Perte de végétation: 0,21 ha dans Massif du Ger et du Lurien, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-227"/>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,81 à 0,17. Parcelles : 64320000BP0031.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-213</id>
+    <title>Perte de végétation: 0,56 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-213"/>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,74 à 0,17. Parcelles : 64320000CL0041, 64320000CL0040.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-214</id>
+    <title>Perte de végétation: 0,52 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-214"/>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,93 à 0,15. Parcelles : 64320000CE0022, 64320000CE0021.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-215</id>
+    <title>Perte de végétation: 0,35 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-215"/>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,81 à 0,27. Parcelles : 64320000CE0033, 64320000CE0032.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-216</id>
+    <title>Perte de végétation: 0,32 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-216"/>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 1,00 à 0,12. Parcelles : 64320000CE0022.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-217</id>
+    <title>Perte de végétation: 0,27 ha dans Massif de Sesques et de l&#x27;Ossau (Accous)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-217"/>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,78 à 0,24. Parcelles : 640060000E0351.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-218</id>
+    <title>Perte de végétation: 0,25 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Accous)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-218"/>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,78 à 0,24. Parcelles : 640060000C0042.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-219</id>
+    <title>Perte de végétation: 0,21 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Accous)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-219"/>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,70 à 0,22. Parcelles : 640060000B0038.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-220</id>
+    <title>Perte de végétation: 0,20 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Accous)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-220"/>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,73 à 0,23. Parcelles : 640060000B0038.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-221</id>
+    <title>Perte de végétation: 0,20 ha dans Massif du Ger et du Lurien, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-221"/>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,77 à 0,23. Parcelles : 64320000BZ0007.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-212</id>
+    <title>Perte de végétation: 0,74 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-212"/>
+    <updated>2026-11-08T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,99 à 0,26. Parcelles : 64320000CE0002.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-211</id>
+    <title>Perte de végétation: 0,63 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-211"/>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,82 à 0,17. Parcelles : 64320000CL0010.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-001</id>
+    <title>Perte de végétation: 17,92 ha dans Gave de Pau (Parbayse)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-001"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,82 à 0,30. Parcelles : 644420000C0031, 644420000C0097, 644420000C0020, 644420000C0022, 644420000C0074.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-002</id>
+    <title>Surface brûlée: 7,83 ha dans Barthes de l&#x27;Adour (Guiche)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-002"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,84 à 0,25. Parcelles : 64250000ZB0121.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-003</id>
+    <title>Sol nu ou terrassement: 7,77 ha dans Barthes de l&#x27;Adour (Guiche)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-003"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,85 à 0,22. Parcelles : 64250000ZE0244, 64250000ZE0014, 64250000ZE0068, 64250000ZE0195.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-004</id>
+    <title>Surface brûlée: 7,70 ha dans Barthes de l&#x27;Adour (Guiche)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-004"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,80 à 0,28. Parcelles : 64250000ZB0100, 64250000ZB0141, 64250000ZB0142, 64250000ZB0014.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-006</id>
+    <title>Surface brûlée: 7,02 ha dans La Nive (Bassussarry)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-006"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,88 à 0,29. Parcelles : 64100000AM0034, 64100000AM0010, 64100000AM0033, 64100000AM0011, 64100000AM0014.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-007</id>
+    <title>Perte de végétation: 4,67 ha dans Château d&#x27;Orthez et bords du gave (Salles-Mongiscard)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-007"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,84 à 0,31. Parcelles : 645000000A0614, 645000000A0663, 645000000A0028, 645000000A0539, 645000000A0671.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-008</id>
+    <title>Surface brûlée: 4,51 ha dans La Nivelle (estuaire, barthes et cours d&#x27;eau) (Ciboure)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-008"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,85 à 0,32. Parcelles : 64189000AP0101, 64189000AP0104, 64189000AP0103, 64189000AP0128, 64189000AP0127.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-009</id>
+    <title>Perte de végétation: 6,05 ha dans Gave de Pau (Pardies)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-009"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,90 à 0,30. Parcelles : 64443000AD0133, 64443000AD0134, 64443000AL0006, 64443000AL0005, 64443000AD0135.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-010</id>
+    <title>Surface brûlée: 4,13 ha dans Château d&#x27;Orthez et bords du gave (Bérenx)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-010"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,92 à 0,31. Parcelles : 641120000C0091, 641120000C0092, 64112000ZA0035, 641120000C0093, 64112000ZA0066.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-011</id>
+    <title>Perte de végétation: 3,57 ha dans La Joyeuse (cours d&#x27;eau), Barthes de l&#x27;Adour (Guiche, Bardos)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-011"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,87 à 0,28. Parcelles : 64250000ZC0081, 64250000ZC0035, 64250000ZC0091.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-012</id>
+    <title>Surface brûlée: 3,54 ha dans Barthes de l&#x27;Adour (Guiche)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-012"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,83 à 0,21. Parcelles : 64250000ZE0227, 64250000ZE0123, 64250000ZE0119, 64250000ZE0232, 64250000ZE0228.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-013</id>
+    <title>Surface brûlée: 3,33 ha dans La Nive (Villefranque)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-013"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,87 à 0,24. Parcelles : 64558000ZC0023, 64558000ZC0022, 64558000ZC0024.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-014</id>
+    <title>Perte de végétation: 2,74 ha dans Gave de Pau (Bordes)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-014"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,79 à 0,30. Parcelles : 64138000ZD0109, 64138000ZD0068, 64138000ZD0076, 64138000ZD0107, 64138000ZD0077.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-015</id>
+    <title>Surface brûlée: 3,03 ha dans Château d&#x27;Orthez et bords du gave (Orthez, Laà-Mondrans)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-015"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,79 à 0,31. Parcelles : 644304970A1170, 644304970A1167, 644304970A0565, 644304970A0566, 642860000A0374.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-016</id>
+    <title>Surface brûlée: 2,42 ha dans Barrage d&#x27;Artix et saligue du Gave de Pau (Labastide-Cézéracq)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-016"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,81 à 0,30. Parcelles : 64288000ZC0021, 64288000ZC0023, 64288000ZC0020, 64288000ZC0025, 64288000ZC0024.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-017</id>
+    <title>Surface brûlée: 2,38 ha dans Gave de Pau, Barrage d&#x27;Artix et saligue du Gave de Pau (Artix)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-017"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,71 à 0,25. Parcelles : 64061000AI0109, 64061000AI0112, 64061000AI0113, 64061000AI0110.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-018</id>
+    <title>Surface brûlée: 2,03 ha dans Château d&#x27;Orthez et bords du gave (Bérenx)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-018"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,75 à 0,31. Parcelles : 641120000D1126, 641120000D1064, 641120000D1062, 641120000D1063, 641120000D1061.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-020</id>
+    <title>Perte de végétation: 1,88 ha dans Gave de Pau (Pardies, Noguères)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-020"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,87 à 0,29. Parcelles : 64443000AL0001, 64443000AL0003, 64418000AC0039.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-021</id>
+    <title>Surface brûlée: 1,77 ha dans Barrage d&#x27;Artix et saligue du Gave de Pau (Lescar)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-021"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,77 à 0,27. Parcelles : 64335000AP0246, 64335000AP0249.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-022</id>
+    <title>Sol nu ou terrassement: 2,61 ha dans La Bidouze (cours d&#x27;eau) (Méharin)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-022"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,86 à 0,31. Parcelles : 643750000B0418, 643750000B0724, 643750000B0419, 643750000B0423.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-023</id>
+    <title>Sol nu ou terrassement: 1,73 ha dans La Nive (Arcangues)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-023"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,89 à 0,28. Parcelles : 64038000AY0004.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-024</id>
+    <title>Surface brûlée: 1,61 ha dans La Bidouze (cours d&#x27;eau) (Méharin)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-024"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,79 à 0,27. Parcelles : 643750000B0535, 643750000B0325, 643750000B0326, 643750000B0728.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-025</id>
+    <title>Surface brûlée: 1,56 ha dans Le Gave d&#x27;Oloron (cours d&#x27;eau) et marais de Labastide-Villefranche (Araux, Araujuzon)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-025"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,71 à 0,32. Parcelles : 64033000AB0228, 64032000AD0176.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-026</id>
+    <title>Sol nu ou terrassement: 1,49 ha dans La Nivelle (estuaire, barthes et cours d&#x27;eau) (Ciboure)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-026"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,82 à 0,29. Parcelles : 64189000AP0105.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-027</id>
+    <title>Perte de végétation: 1,96 ha dans Château d&#x27;Orthez et bords du gave (Loubieng)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-027"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,86 à 0,32. Parcelles : 64349000AC0306, 64349000AC0100, 64349000AC0093, 64349000AC0091, 64349000AC0092.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-028</id>
+    <title>Surface brûlée: 1,22 ha dans Barrage d&#x27;Artix et saligue du Gave de Pau (Aussevielle)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-028"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,70 à 0,30. Parcelles : 64080000AA0035, 64080000AA0031, 64080000AA0033.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-029</id>
+    <title>Perte de végétation: 1,21 ha dans La Bidouze (cours d&#x27;eau) (Armendarits)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-029"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,86 à 0,27. Parcelles : 640460000E0863, 640460000E0608.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-030</id>
+    <title>Surface brûlée: 1,19 ha dans Barthes de l&#x27;Adour (Guiche)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-030"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,82 à 0,28. Parcelles : 64250000ZE0226, 64250000ZE0024.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-031</id>
+    <title>Surface brûlée: 1,11 ha dans Barthes de l&#x27;Adour (Guiche)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-031"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,86 à 0,28. Parcelles : 64250000ZD0133, 64250000ZD0139.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-032</id>
+    <title>Perte de végétation: 1,09 ha dans Gave de Pau (Monein)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-032"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,78 à 0,32. Parcelles : 64393000AT0059, 64393000AT0061, 64393000AT0060, 64393000AT0284.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-033</id>
+    <title>Surface brûlée: 1,07 ha dans Gave de Pau (Artix)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-033"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,78 à 0,30. Parcelles : 64061000AI0121, 64061000AI0123, 64061000AI0122, 64061000AI0120.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-034</id>
+    <title>Perte de végétation: 1,03 ha dans Gave de Pau (Pardies)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-034"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,68 à 0,31. Parcelles : 64443000AL0088.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-035</id>
+    <title>Perte de végétation: 1,02 ha dans Château d&#x27;Orthez et bords du gave (Loubieng)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-035"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,75 à 0,32. Parcelles : 64349000AC0061, 64349000AC0339.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-036</id>
+    <title>Surface brûlée: 0,97 ha dans Château d&#x27;Orthez et bords du gave (Bérenx, Salles-Mongiscard)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-036"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,89 à 0,32. Parcelles : 641120000C0088, 641120000C0089, 641120000C0090.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-037</id>
+    <title>Perte de végétation: 0,97 ha dans Barrage d&#x27;Artix et saligue du Gave de Pau (Artix, Labastide-Cézéracq)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-037"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,84 à 0,31. Parcelles : 64288000ZC0003, 64061000ZE0002, 64061000AI0029.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-038</id>
+    <title>Surface brûlée: 0,96 ha dans Barrage d&#x27;Artix et saligue du Gave de Pau (Labastide-Cézéracq)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-038"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,75 à 0,23. Parcelles : 64288000ZC0033.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-039</id>
+    <title>Surface brûlée: 0,89 ha dans Massif du Baygoura (Bidarray)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-039"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,81 à 0,33. Parcelles : 641240000B0336.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-040</id>
+    <title>Perte de végétation: 0,89 ha dans Massif du Ger et du Lurien, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Eaux-Bonnes)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-040"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 1,00 à 0,27. Parcelles : 64204000AM0069, 64204000AM0028.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-041</id>
+    <title>Surface brûlée: 0,88 ha dans La Bidouze (cours d&#x27;eau) (Saint-Palais)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-041"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,82 à 0,29. Parcelles : 644930000B0105, 644930000B0095, 644930000B0104.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-042</id>
+    <title>Perte de végétation: 0,86 ha dans La Bidouze (cours d&#x27;eau) (La Bastide-Clairence)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-042"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,90 à 0,29. Parcelles : 642890000B0413, 642890000B0412, 642890000B0411.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-044</id>
+    <title>Surface brûlée: 1,13 ha dans La Nive (Villefranque)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-044"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,90 à 0,31. Parcelles : 64558000ZB0020, 64558000ZB0021.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-045</id>
+    <title>Surface brûlée: 0,84 ha dans La Nive (Cambo-les-Bains)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-045"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,90 à 0,30. Parcelles : 64160000AD0120.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-046</id>
+    <title>Surface brûlée: 0,83 ha dans Le Saison (cours d&#x27;eau) (Osserain-Rivareyte)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-046"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,70 à 0,29. Parcelles : 644350000D0176, 644350000D0184, 644350000D0180, 644350000D0175, 644350000D0181.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-047</id>
+    <title>Surface brûlée: 0,78 ha dans Château d&#x27;Orthez et bords du gave (Ozenx-Montestrucq)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-047"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,79 à 0,34. Parcelles : 644404020B0541, 644404020B0003, 644404020B0517.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-048</id>
+    <title>Surface brûlée: 0,78 ha dans Château d&#x27;Orthez et bords du gave (Ozenx-Montestrucq)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-048"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,78 à 0,33. Parcelles : 644404020B0051, 644404020B0053, 644404020B0040.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-049</id>
+    <title>Surface brûlée: 0,78 ha dans La Bidouze (cours d&#x27;eau) (Bardos)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-049"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,89 à 0,24. Parcelles : 64094000YA0017, 64094000YA0028.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-050</id>
+    <title>Surface brûlée: 0,77 ha dans La Nive (Bassussarry)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-050"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,89 à 0,27. Parcelles : 64100000AM0025.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-051</id>
+    <title>Perte de végétation: 0,75 ha dans Château d&#x27;Orthez et bords du gave (Biron)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-051"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,83 à 0,30. Parcelles : 641310000B0228, 641310000B0227.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-052</id>
+    <title>Surface brûlée: 0,73 ha dans Gave de Pau, Barrage d&#x27;Artix et saligue du Gave de Pau (Artix)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-052"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,72 à 0,27. Parcelles : 64061000AI0127.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-054</id>
+    <title>Perte de végétation: 0,69 ha dans Gave de Pau (Abos)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-054"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,73 à 0,28. Parcelles : 64005000ZB0004, 64005000ZB0006, 64005000ZB0003, 64005000ZB0002.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-055</id>
+    <title>Surface brûlée: 0,68 ha dans Gave de Pau (Nousty)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-055"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,73 à 0,29. Parcelles : 64419000AC0010.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-056</id>
+    <title>Surface brûlée: 0,67 ha dans La Nive (Macaye)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-056"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,91 à 0,33. Parcelles : 643640000A0705, 643640000A1138.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-057</id>
+    <title>Perte de végétation: 0,65 ha dans Gave de Pau, Barrage d&#x27;Artix et saligue du Gave de Pau (Tarsacq)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-057"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,81 à 0,32. Parcelles : 645350000A0341.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-058</id>
+    <title>Surface brûlée: 0,64 ha dans La Bidouze (cours d&#x27;eau) (Isturits)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-058"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,84 à 0,23. Parcelles : 642770000C0015, 642770000C0003, 642770000C0014.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-059</id>
+    <title>Surface brûlée: 0,63 ha dans La Nive (Arcangues)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-059"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,80 à 0,30. Parcelles : 64038000AZ0009.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-060</id>
+    <title>Surface brûlée: 0,63 ha dans La Nive (Larressore)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-060"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,91 à 0,30. Parcelles : 64317000ZC0037.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-061</id>
+    <title>Surface brûlée: 0,63 ha dans La Bidouze (cours d&#x27;eau) (Gabat)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-061"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,85 à 0,29. Parcelles : 64228000ZE0050.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-062</id>
+    <title>Perte de végétation: 0,62 ha dans Gave de Pau (Assat)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-062"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,72 à 0,22. Parcelles : 64067000ZH0033, 64067000ZH0032, 64067000ZH0034.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-063</id>
+    <title>Surface brûlée: 0,62 ha dans Montagnes des Aldudes, Vallée de la Nive des Aldudes, Col de Lindux (Saint-Étienne-de-Baïgorry)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-063"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,72 à 0,32. Parcelles : 644770000H0004, 644770000H0002.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-064</id>
+    <title>Perte de végétation: 0,62 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-064"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,85 à 0,27. Parcelles : 64320000CE0029, 64320000CE0030.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-065</id>
+    <title>Surface brûlée: 0,61 ha dans Le Gave d&#x27;Oloron (cours d&#x27;eau) et marais de Labastide-Villefranche (Araujuzon)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-065"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,78 à 0,33. Parcelles : 64032000AD0258.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-066</id>
+    <title>Surface brûlée: 0,60 ha dans Montagnes des Aldudes (Banca)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-066"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,71 à 0,31. Parcelles : 640920000C0138.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-067</id>
+    <title>Surface brûlée: 0,59 ha dans La Bidouze (cours d&#x27;eau) (Armendarits)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-067"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,92 à 0,31. Parcelles : 640460000E0548, 640460000E0534.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-068</id>
+    <title>Surface brûlée: 0,57 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-068"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,65 à 0,28. Parcelles : 64320000CM0089.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-069</id>
+    <title>Surface brûlée: 0,56 ha dans Gave de Pau, Barrage d&#x27;Artix et saligue du Gave de Pau (Poey-de-Lescar, Siros)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-069"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,80 à 0,34. Parcelles : 64448000AA0047, 64448000AA0034, 64525000AC0224, 64448000AA0032, 64448000AA0049.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-070</id>
+    <title>Perte de végétation: 0,55 ha dans Château d&#x27;Orthez et bords du gave (Orthez)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-070"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,65 à 0,31. Parcelles : 644300000D0236, 644300000D0234.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-071</id>
+    <title>Surface brûlée: 0,55 ha dans Barrage d&#x27;Artix et saligue du Gave de Pau (Arbus)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-071"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,79 à 0,29. Parcelles : 64037000AB0149, 64037000AB0148.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-072</id>
+    <title>Perte de végétation: 0,59 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-072"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,86 à 0,24. Parcelles : 64320000CM0083.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-073</id>
+    <title>Surface brûlée: 0,53 ha dans Gave de Pau (Monein)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-073"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,78 à 0,32. Parcelles : 64393000AN0143, 64393000AN0152.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-074</id>
+    <title>Surface brûlée: 0,52 ha dans Le Saison (cours d&#x27;eau) (Charre)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-074"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,85 à 0,34. Parcelles : 64186000ZK0025.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-075</id>
+    <title>Perte de végétation: 0,51 ha dans Château d&#x27;Orthez et bords du gave (Lanneplaà)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-075"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,69 à 0,34. Parcelles : 64312000ZB0006.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-076</id>
+    <title>Perte de végétation: 0,51 ha dans Gave de Pau, Barrage d&#x27;Artix et saligue du Gave de Pau (Siros)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-076"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,71 à 0,31. Parcelles : 64525000AC0015, 64525000AC0311, 64525000AC0016, 64525000AC0310.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-077</id>
+    <title>Surface brûlée: 0,74 ha dans Massif de Sesques et de l&#x27;Ossau, Hautes vallées d&#x27;Aspe et d&#x27;Ossau (Laruns)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-077"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,65 à 0,29. Parcelles : 64320000CM0089.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-079</id>
+    <title>Surface brûlée: 0,50 ha dans La Nive (Bassussarry)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-079"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,88 à 0,31. Parcelles : 64100000BA0024.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-080</id>
+    <title>Perte de végétation: 0,50 ha dans La Bidouze (cours d&#x27;eau) (Armendarits)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-080"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,88 à 0,34. Parcelles : 640460000A0885.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-081</id>
+    <title>Surface brûlée: 0,49 ha dans Barrage d&#x27;Artix et saligue du Gave de Pau (Arbus)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-081"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,67 à 0,26. Parcelles : 64037000AC0004, 64037000AC0003.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-082</id>
+    <title>Surface brûlée: 0,49 ha dans La Bidouze (cours d&#x27;eau) (Juxue)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-082"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,85 à 0,26. Parcelles : 642850000A0062.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-083</id>
+    <title>Surface brûlée: 0,48 ha dans Château d&#x27;Orthez et bords du gave (Salies-de-Béarn)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-083"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,73 à 0,32. Parcelles : 644990000E0860, 644990000E0852.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-084</id>
+    <title>Surface brûlée: 0,48 ha dans Château d&#x27;Orthez et bords du gave (L&#x27;Hôpital-d&#x27;Orion)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-084"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,86 à 0,32. Parcelles : 642630000A0158, 642630000A0160.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-085</id>
+    <title>Sol nu ou terrassement: 0,48 ha dans La Joyeuse (cours d&#x27;eau) (Hasparren)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-085"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,85 à 0,24. Parcelles : 642560000C0271.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-086</id>
+    <title>Surface brûlée: 0,48 ha dans Gave de Pau, Barrage d&#x27;Artix et saligue du Gave de Pau (Artix)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-086"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,86 à 0,33. Parcelles : 64061000AK0120, 64061000AK0119.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-087</id>
+    <title>Perte de végétation: 0,48 ha dans Gave de Pau (Abos)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-087"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,77 à 0,33. Parcelles : 64005000ZB0036.</summary>
+  </entry>
+  <entry>
+    <id>https://asensio94.github.io/centinela-natura/fr/#CF-202611-088</id>
+    <title>Surface brûlée: 0,48 ha dans Barrage d&#x27;Artix et saligue du Gave de Pau (Artiguelouve)</title>
+    <link href="https://asensio94.github.io/centinela-natura/fr/#CF-202611-088"/>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Provisoire. Sans autorisation connue. NDVI de 0,74 à 0,28. Parcelles : 64060000AD0436.</summary>
+  </entry>
+</feed>

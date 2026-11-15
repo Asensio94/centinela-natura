@@ -571,7 +571,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 133,
+   "expedientes_municipio": 134,
    "cubierta_previa": {
     "codigo": "121",
     "nombre": "zona industrial o comercial"
@@ -2375,7 +2375,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 30,
+   "expedientes_municipio": 31,
    "parcelas": [
     {
      "refcat": "64198000AM0814",
@@ -3614,7 +3614,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 16,
+   "expedientes_municipio": 15,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -5767,7 +5767,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "parcelas": [
     {
      "refcat": "645420000C0128",
@@ -6868,7 +6868,7 @@
      ]
     }
    ],
-   "expedientes_municipio": 124,
+   "expedientes_municipio": 125,
    "cubierta_previa": {
     "codigo": "121",
     "nombre": "zona industrial o comercial"
@@ -7506,7 +7506,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 52,
+   "expedientes_municipio": 58,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -8463,7 +8463,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 52,
+   "expedientes_municipio": 58,
    "unidas": [
     "CF-202511-007"
    ],
@@ -9276,7 +9276,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 16,
+   "expedientes_municipio": 15,
    "parcelas": [
     {
      "refcat": "64037000AB0217",
@@ -10322,7 +10322,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 27,
+   "expedientes_municipio": 28,
    "parcelas": [
     {
      "refcat": "64005000AB0041",
@@ -11454,7 +11454,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 32,
+   "expedientes_municipio": 34,
    "parcelas": [
     {
      "refcat": "644360000A0213",
@@ -12261,7 +12261,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 16,
+   "expedientes_municipio": 15,
    "parcelas": [
     {
      "refcat": "64037000AB0145",
@@ -13290,7 +13290,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 35,
+   "expedientes_municipio": 36,
    "parcelas": [
     {
      "refcat": "64320000BO0001",
@@ -13648,7 +13648,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 115,
+   "expedientes_municipio": 119,
    "parcelas": [
     {
      "refcat": "645450000K0178",
@@ -14200,7 +14200,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4,
+   "expedientes_municipio": 5,
    "parcelas": [
     {
      "refcat": "64525000AC0041",
@@ -14744,7 +14744,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 35,
+   "expedientes_municipio": 36,
    "parcelas": [
     {
      "refcat": "64320000BO0001",
@@ -15060,7 +15060,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 35,
+   "expedientes_municipio": 36,
    "parcelas": [
     {
      "refcat": "64320000BV0075",
@@ -15965,7 +15965,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 119,
+   "expedientes_municipio": 125,
    "parcelas": [
     {
      "refcat": "64430497ZE0059",
@@ -16526,7 +16526,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 48,
+   "expedientes_municipio": 53,
    "parcelas": [
     {
      "refcat": "644990000E0344",
@@ -17024,7 +17024,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 121,
+   "expedientes_municipio": 122,
    "parcelas": [
     {
      "refcat": "64335000AR0543",
@@ -17770,7 +17770,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 92,
+   "expedientes_municipio": 100,
    "parcelas": [
     {
      "refcat": "64547000ZK0018",
@@ -18266,7 +18266,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -18724,7 +18724,7 @@
      ]
     }
    ],
-   "expedientes_municipio": 121,
+   "expedientes_municipio": 122,
    "cubierta_previa": {
     "codigo": "121",
     "nombre": "zona industrial o comercial"
@@ -19291,7 +19291,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 80,
+   "expedientes_municipio": 81,
    "parcelas": [
     {
      "refcat": "64160000BB0009",
@@ -19624,7 +19624,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5,
+   "expedientes_municipio": 6,
    "parcelas": [
     {
      "refcat": "643160000A0009",
@@ -20308,7 +20308,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 16,
+   "expedientes_municipio": 15,
    "parcelas": [
     {
      "refcat": "64037000AE0101",
@@ -20818,7 +20818,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 35,
+   "expedientes_municipio": 36,
    "parcelas": [
     {
      "refcat": "64320000BY0026",
@@ -21456,7 +21456,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 134,
+   "expedientes_municipio": 140,
    "unidas": [
     "CF-202601-022"
    ],
@@ -22444,7 +22444,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 93,
+   "expedientes_municipio": 95,
    "parcelas": [
     {
      "refcat": "64558000ZA0102",
@@ -22927,7 +22927,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 35,
+   "expedientes_municipio": 36,
    "parcelas": [
     {
      "refcat": "64320000BY0026",
@@ -23387,7 +23387,7 @@
    "analisis_v": null,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 119,
+   "expedientes_municipio": 125,
    "parcelas": [
     {
      "refcat": "644304970B0316",
@@ -24307,7 +24307,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 45,
+   "expedientes_municipio": 46,
    "parcelas": [
     {
      "refcat": "644210000E0023",
@@ -25049,7 +25049,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 93,
+   "expedientes_municipio": 95,
    "parcelas": [
     {
      "refcat": "64558000ZA0095",
@@ -25492,7 +25492,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 37,
+   "expedientes_municipio": 38,
    "parcelas": [
     {
      "refcat": "64230000BM0177",
@@ -25774,7 +25774,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 93,
+   "expedientes_municipio": 95,
    "parcelas": [
     {
      "refcat": "64558000ZA0094",
@@ -27250,7 +27250,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "parcelas": [
     {
      "refcat": "644750000H0137",
@@ -28712,7 +28712,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 119,
+   "expedientes_municipio": 125,
    "parcelas": [
     {
      "refcat": "64312000ZA0037",
@@ -28956,7 +28956,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 117,
+   "expedientes_municipio": 123,
    "parcelas": [
     {
      "refcat": "64430497ZE0014",
@@ -30429,7 +30429,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 117,
+   "expedientes_municipio": 123,
    "parcelas": [
     {
      "refcat": "644304970A1398",
@@ -31836,7 +31836,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 29,
+   "expedientes_municipio": 30,
    "parcelas": [
     {
      "refcat": "64198000ZH0029",
@@ -32113,7 +32113,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5,
+   "expedientes_municipio": 6,
    "parcelas": [
     {
      "refcat": "642630000A0833",
@@ -32838,7 +32838,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 29,
+   "expedientes_municipio": 30,
    "unidas": [
     "CF-202602-032"
    ],
@@ -33485,7 +33485,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5,
+   "expedientes_municipio": 6,
    "parcelas": [
     {
      "refcat": "642630000A0218",
@@ -33793,7 +33793,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 12,
+   "expedientes_municipio": 13,
    "parcelas": [
     {
      "refcat": "64559000AE0123",
@@ -35252,7 +35252,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 117,
+   "expedientes_municipio": 123,
    "parcelas": [
     {
      "refcat": "644300000D0235",
@@ -35508,7 +35508,7 @@
      ]
     }
    ],
-   "expedientes_municipio": 50,
+   "expedientes_municipio": 52,
    "parcelas": [
     {
      "refcat": "64138000ZD0128",
@@ -35879,7 +35879,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 47,
+   "expedientes_municipio": 53,
    "parcelas": [
     {
      "refcat": "64067000ZH0026",
@@ -37641,7 +37641,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 35,
+   "expedientes_municipio": 36,
    "parcelas": [
     {
      "refcat": "64320000CI0001",
@@ -42227,7 +42227,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 89,
+   "expedientes_municipio": 97,
    "parcelas": [
     {
      "refcat": "64547000ZK0018",
@@ -43498,7 +43498,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 115,
+   "expedientes_municipio": 121,
    "parcelas": [
     {
      "refcat": "64430497ZD0024",
@@ -45036,7 +45036,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 107,
+   "expedientes_municipio": 111,
    "parcelas": [
     {
      "refcat": "645450000G0090",
@@ -48625,7 +48625,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 115,
+   "expedientes_municipio": 121,
    "parcelas": [
     {
      "refcat": "64430497ZH0003",
@@ -50176,7 +50176,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 28,
+   "expedientes_municipio": 29,
    "parcelas": [
     {
      "refcat": "642590000F0249",
@@ -52217,7 +52217,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 28,
+   "expedientes_municipio": 29,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -55415,7 +55415,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 117,
+   "expedientes_municipio": 118,
    "parcelas": [
     {
      "refcat": "64335000AP0283",
@@ -56191,7 +56191,7 @@
      ]
     }
    ],
-   "expedientes_municipio": 36,
+   "expedientes_municipio": 37,
    "parcelas": [
     {
      "refcat": "644770000F1376",
@@ -58640,7 +58640,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 53,
+   "expedientes_municipio": 56,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -63671,7 +63671,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 47,
+   "expedientes_municipio": 53,
    "parcelas": [
     {
      "refcat": "64067000ZH0041",
@@ -64031,7 +64031,7 @@
    ],
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "64320000BL0023",
@@ -65732,7 +65732,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5,
+   "expedientes_municipio": 6,
    "parcelas": [
     {
      "refcat": "642630000A0777",
@@ -67297,7 +67297,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 21,
+   "expedientes_municipio": 22,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -67870,7 +67870,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4,
+   "expedientes_municipio": 5,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -68488,7 +68488,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 26,
+   "expedientes_municipio": 28,
    "cubierta_previa": {
     "codigo": "324",
     "nombre": "matorral boscoso de transición"
@@ -69147,7 +69147,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 26,
+   "expedientes_municipio": 28,
    "parcelas": [
     {
      "refcat": "644360000C0539",
@@ -69982,7 +69982,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 1,
+   "expedientes_municipio": 2,
    "cubierta_previa": {
     "codigo": "231",
     "nombre": "prados y praderas"
@@ -70706,7 +70706,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 33,
+   "expedientes_municipio": 34,
    "parcelas": [
     {
      "refcat": "642730000C0653",
@@ -71635,7 +71635,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 21,
+   "expedientes_municipio": 22,
    "parcelas": [
     {
      "refcat": "64288000ZC0038",
@@ -71832,7 +71832,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 21,
+   "expedientes_municipio": 22,
    "parcelas": [
     {
      "refcat": "64288000ZD0008",
@@ -72096,7 +72096,7 @@
      ]
     }
    ],
-   "expedientes_municipio": 23,
+   "expedientes_municipio": 24,
    "parcelas": [
     {
      "refcat": "64198000ZH0109",
@@ -72972,7 +72972,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 104,
+   "expedientes_municipio": 105,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -73160,7 +73160,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4,
+   "expedientes_municipio": 5,
    "parcelas": [
     {
      "refcat": "640470000C1179",
@@ -74072,7 +74072,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 24,
+   "expedientes_municipio": 26,
    "parcelas": [
     {
      "refcat": "64080000AA0033",
@@ -76911,7 +76911,7 @@
    ],
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98,
+   "expedientes_municipio": 99,
    "parcelas": [
     {
      "refcat": "64335000AP0359",
@@ -78604,7 +78604,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -79056,7 +79056,7 @@
      ]
     }
    ],
-   "expedientes_municipio": 45,
+   "expedientes_municipio": 51,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -79615,7 +79615,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -82445,7 +82445,7 @@
    ],
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "cubierta_previa": {
     "codigo": "333",
     "nombre": "vegetación escasa"
@@ -84038,7 +84038,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98,
+   "expedientes_municipio": 99,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -84457,7 +84457,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -85741,7 +85741,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 1,
+   "expedientes_municipio": 2,
    "cubierta_previa": {
     "codigo": "231",
     "nombre": "prados y praderas"
@@ -87161,7 +87161,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 11,
+   "expedientes_municipio": 12,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -88284,7 +88284,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -89657,7 +89657,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "cubierta_previa": {
     "codigo": "231",
     "nombre": "prados y praderas"
@@ -90569,7 +90569,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98,
+   "expedientes_municipio": 99,
    "cubierta_previa": {
     "codigo": "142",
     "nombre": "instalación deportiva"
@@ -91451,7 +91451,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "cubierta_previa": {
     "codigo": "231",
     "nombre": "prados y praderas"
@@ -94150,7 +94150,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98,
+   "expedientes_municipio": 99,
    "parcelas": [
     {
      "refcat": "64335000AP0190",
@@ -95573,7 +95573,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9,
+   "expedientes_municipio": 10,
    "parcelas": [
     {
      "refcat": "640920000A0470",
@@ -95898,7 +95898,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4,
+   "expedientes_municipio": 5,
    "parcelas": [
     {
      "refcat": "64525000AB0201",
@@ -96304,7 +96304,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9,
+   "expedientes_municipio": 10,
    "parcelas": [
     {
      "refcat": "640920000F0130",
@@ -96891,7 +96891,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000E0334",
@@ -97471,7 +97471,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000A0484",
@@ -97752,7 +97752,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000A0626",
@@ -98438,7 +98438,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98,
+   "expedientes_municipio": 99,
    "parcelas": [
     {
      "refcat": "64335000AP0021",
@@ -101239,9 +101239,24 @@
    ],
    "ultima_vegetacion": "2026-06",
    "reconstruida": true,
-   "cruce": "sin_expediente",
-   "expedientes": [],
-   "expedientes_municipio": 9,
+   "cruce": "resolucion",
+   "expedientes": [
+    {
+     "id": "PC 064 322 24 B0005",
+     "fecha": "2025-01-28",
+     "titulo": "PC 064 322 24 B0005",
+     "url": "https://www.statistiques.developpement-durable.gouv.fr/donnees-des-permis-de-construire-et-autres-autorisations-durbanisme",
+     "fuente": "Sitadel",
+     "grupo": "resoluciones",
+     "tipo": "PC",
+     "etat": "2",
+     "destination": "1",
+     "parcelas": [
+      "643220000B0577"
+     ]
+    }
+   ],
+   "expedientes_municipio": 10,
    "parcelas": [
     {
      "refcat": "643220000B0578",
@@ -102252,7 +102267,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 18,
+   "expedientes_municipio": 19,
    "parcelas": [
     {
      "refcat": "640570000E0095",
@@ -102818,7 +102833,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000H0565",
@@ -103852,7 +103867,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 23,
+   "expedientes_municipio": 24,
    "parcelas": [
     {
      "refcat": "64198000ZI0088",
@@ -104126,7 +104141,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98,
+   "expedientes_municipio": 99,
    "parcelas": [
     {
      "refcat": "64335000AR0317",
@@ -105119,7 +105134,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 26,
+   "expedientes_municipio": 27,
    "parcelas": [
     {
      "refcat": "642590000E0035",
@@ -105430,7 +105445,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 28,
+   "expedientes_municipio": 27,
    "parcelas": [
     {
      "refcat": "641240000D0122",
@@ -107589,7 +107604,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000H0395",
@@ -108040,7 +108055,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 39,
+   "expedientes_municipio": 47,
    "parcelas": [
     {
      "refcat": "64448000AA0027",
@@ -108389,7 +108404,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 40,
+   "expedientes_municipio": 42,
    "parcelas": [
     {
      "refcat": "644770000D0597",
@@ -108828,7 +108843,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000A0529",
@@ -109579,7 +109594,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 15,
+   "expedientes_municipio": 17,
    "parcelas": [
     {
      "refcat": "643220000C0015",
@@ -109864,7 +109879,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 132,
+   "expedientes_municipio": 135,
    "parcelas": [
     {
      "refcat": "64348000AK0308",
@@ -110432,7 +110447,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000E0714",
@@ -110662,7 +110677,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9,
+   "expedientes_municipio": 10,
    "parcelas": [
     {
      "refcat": "640920000D0193",
@@ -111197,7 +111212,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 67,
+   "expedientes_municipio": 68,
    "parcelas": [
     {
      "refcat": "64393000BC0083",
@@ -111418,7 +111433,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000H0777",
@@ -111790,7 +111805,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "parcelas": [
     {
      "refcat": "640260000B0353",
@@ -112753,7 +112768,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98,
+   "expedientes_municipio": 99,
    "parcelas": [
     {
      "refcat": "64335000AP0190",
@@ -113223,7 +113238,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000H1229",
@@ -113826,7 +113841,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000C1084",
@@ -114267,7 +114282,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 28,
+   "expedientes_municipio": 27,
    "parcelas": [
     {
      "refcat": "641240000D0121",
@@ -114643,7 +114658,7 @@
    "analisis_v": null,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000C1084",
@@ -114897,7 +114912,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 40,
+   "expedientes_municipio": 42,
    "parcelas": [
     {
      "refcat": "644770000D0018",
@@ -116722,7 +116737,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 25,
+   "expedientes_municipio": 27,
    "parcelas": [
     {
      "refcat": "64550000AB0066",
@@ -117072,7 +117087,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000A0660",
@@ -117333,7 +117348,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000E0291",
@@ -117525,7 +117540,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000F1110",
@@ -118103,7 +118118,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 51,
+   "expedientes_municipio": 54,
    "parcelas": [
     {
      "refcat": "64100000AM0037",
@@ -118549,7 +118564,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98,
+   "expedientes_municipio": 99,
    "parcelas": [
     {
      "refcat": "64335000AR0312",
@@ -118776,7 +118791,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 28,
+   "expedientes_municipio": 27,
    "parcelas": [
     {
      "refcat": "641240000D1400",
@@ -119044,7 +119059,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 11,
+   "expedientes_municipio": 12,
    "parcelas": [
     {
      "refcat": "643860000B1317",
@@ -119224,7 +119239,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000D0699",
@@ -119675,7 +119690,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 21,
+   "expedientes_municipio": 22,
    "parcelas": [
     {
      "refcat": "64288000ZC0008",
@@ -120426,7 +120441,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000D0559",
@@ -121318,7 +121333,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 67,
+   "expedientes_municipio": 68,
    "parcelas": [
     {
      "refcat": "64393000AP0366",
@@ -121591,7 +121606,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000A0418",
@@ -122335,7 +122350,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000A0531",
@@ -122648,7 +122663,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000B1190",
@@ -122862,7 +122877,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 20,
+   "expedientes_municipio": 21,
    "parcelas": [
     {
      "refcat": "645380000C0621",
@@ -123620,7 +123635,7 @@
      ]
     }
    ],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000A0589",
@@ -123868,7 +123883,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "parcelas": [
     {
      "refcat": "640260000B0233",
@@ -124132,7 +124147,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "parcelas": [
     {
      "refcat": "640260000B0341",
@@ -124503,7 +124518,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4,
+   "expedientes_municipio": 5,
    "parcelas": [
     {
      "refcat": "64525000AB0332",
@@ -125095,7 +125110,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000F1112",
@@ -126031,7 +126046,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 23,
+   "expedientes_municipio": 24,
    "parcelas": [
     {
      "refcat": "64198000ZI0098",
@@ -126248,7 +126263,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 28,
+   "expedientes_municipio": 27,
    "parcelas": [
     {
      "refcat": "641240000D1400",
@@ -127095,7 +127110,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9,
+   "expedientes_municipio": 10,
    "parcelas": [
     {
      "refcat": "640920000D0361",
@@ -127271,7 +127286,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9,
+   "expedientes_municipio": 10,
    "parcelas": [
     {
      "refcat": "640920000D0177",
@@ -128057,7 +128072,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98,
+   "expedientes_municipio": 99,
    "parcelas": [
     {
      "refcat": "64335000AR0070",
@@ -128375,7 +128390,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 26,
+   "expedientes_municipio": 27,
    "parcelas": [
     {
      "refcat": "642590000E0020",
@@ -128571,7 +128586,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 27,
+   "expedientes_municipio": 29,
    "parcelas": [
     {
      "refcat": "64059000ZD0045",
@@ -128783,7 +128798,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000H0532",
@@ -128959,7 +128974,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000F1110",
@@ -130301,7 +130316,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000A0782",
@@ -130456,7 +130471,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "parcelas": [
     {
      "refcat": "640260000B0211",
@@ -132910,7 +132925,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 28,
+   "expedientes_municipio": 27,
    "parcelas": [
     {
      "refcat": "641240000D0121",
@@ -133520,7 +133535,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000F0109",
@@ -134065,7 +134080,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 20,
+   "expedientes_municipio": 22,
    "parcelas": [
     {
      "refcat": "64396000BK0159",
@@ -134371,7 +134386,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 26,
+   "expedientes_municipio": 28,
    "parcelas": [
     {
      "refcat": "641170000B0127",
@@ -135402,7 +135417,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000A1044",
@@ -135580,7 +135595,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 18,
+   "expedientes_municipio": 19,
    "parcelas": [
     {
      "refcat": "642750000A0167",
@@ -135776,7 +135791,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000C0364",
@@ -135994,7 +136009,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000D0464",
@@ -136144,7 +136159,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9,
+   "expedientes_municipio": 10,
    "parcelas": [
     {
      "refcat": "640920000D0177",
@@ -136990,7 +137005,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000A0134",
@@ -137229,7 +137244,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000G0192",
@@ -137390,7 +137405,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "parcelas": [
     {
      "refcat": "644770000E0707",
@@ -140284,7 +140299,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 15,
+   "expedientes_municipio": 17,
    "parcelas": [
     {
      "refcat": "640260000B0353",
@@ -140498,7 +140513,7 @@
    "reconstruida": true,
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 1,
+   "expedientes_municipio": 2,
    "parcelas": [
     {
      "refcat": "640150000C0004",
@@ -145203,7 +145218,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34
+   "expedientes_municipio": 35
   },
   {
    "id": "CF-202610-002",
@@ -147223,7 +147238,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34
+   "expedientes_municipio": 35
   },
   {
    "id": "CF-202610-003",
@@ -148571,7 +148586,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 8
+   "expedientes_municipio": 9
   },
   {
    "id": "CF-202610-005",
@@ -150657,7 +150672,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 36
+   "expedientes_municipio": 41
   },
   {
    "id": "CF-202610-008",
@@ -151540,7 +151555,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 6
   },
   {
    "id": "CF-202610-009",
@@ -152982,7 +152997,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 36
+   "expedientes_municipio": 41
   },
   {
    "id": "CF-202610-013",
@@ -153801,7 +153816,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 3
+   "expedientes_municipio": 4
   },
   {
    "id": "CF-202610-015",
@@ -154093,7 +154108,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 6
   },
   {
    "id": "CF-202610-016",
@@ -155004,7 +155019,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9
+   "expedientes_municipio": 10
   },
   {
    "id": "CF-202610-018",
@@ -156348,7 +156363,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9
+   "expedientes_municipio": 10
   },
   {
    "id": "CF-202610-021",
@@ -156912,7 +156927,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34
+   "expedientes_municipio": 35
   },
   {
    "id": "CF-202610-022",
@@ -157187,7 +157202,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 36
+   "expedientes_municipio": 41
   },
   {
    "id": "CF-202610-023",
@@ -157867,7 +157882,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 113
+   "expedientes_municipio": 119
   },
   {
    "id": "CF-202610-024",
@@ -158783,7 +158798,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9
+   "expedientes_municipio": 10
   },
   {
    "id": "CF-202610-027",
@@ -160085,7 +160100,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 46
+   "expedientes_municipio": 50
   },
   {
    "id": "CF-202610-030",
@@ -161118,7 +161133,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 96
+   "expedientes_municipio": 97
   },
   {
    "id": "CF-202610-032",
@@ -161410,7 +161425,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 3
+   "expedientes_municipio": 4
   },
   {
    "id": "CF-202610-033",
@@ -161610,7 +161625,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 6
   },
   {
    "id": "CF-202610-034",
@@ -162281,7 +162296,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 6
   },
   {
    "id": "CF-202610-037",
@@ -162634,7 +162649,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202610-038",
@@ -163715,7 +163730,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 15
+   "expedientes_municipio": 19
   },
   {
    "id": "CF-202610-042",
@@ -163991,7 +164006,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 5
   },
   {
    "id": "CF-202610-043",
@@ -166189,7 +166204,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202610-048",
@@ -166731,7 +166746,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 28
+   "expedientes_municipio": 27
   },
   {
    "id": "CF-202610-050",
@@ -167687,7 +167702,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5
+   "expedientes_municipio": 6
   },
   {
    "id": "CF-202610-053",
@@ -167891,7 +167906,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9,
+   "expedientes_municipio": 10,
    "cubierta_previa": {
     "codigo": "311",
     "nombre": "bosque de frondosas"
@@ -168781,7 +168796,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 100,
+   "expedientes_municipio": 106,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -169552,7 +169567,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "cubierta_previa": {
     "codigo": "333",
     "nombre": "vegetación escasa"
@@ -170177,7 +170192,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98,
+   "expedientes_municipio": 101,
    "cubierta_previa": {
     "codigo": "112",
     "nombre": "tejido urbano discontinuo"
@@ -170811,7 +170826,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 47
+   "expedientes_municipio": 49
   },
   {
    "id": "CF-202610-063",
@@ -172277,7 +172292,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 37,
+   "expedientes_municipio": 38,
    "cubierta_previa": {
     "codigo": "231",
     "nombre": "prados y praderas"
@@ -173324,7 +173339,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31,
+   "expedientes_municipio": 32,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -173893,7 +173908,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 100,
+   "expedientes_municipio": 106,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -174412,7 +174427,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 20,
+   "expedientes_municipio": 22,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -174654,7 +174669,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9,
+   "expedientes_municipio": 10,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -176667,7 +176682,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 23,
+   "expedientes_municipio": 25,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -177235,7 +177250,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2,
+   "expedientes_municipio": 3,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -178162,7 +178177,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -178334,7 +178349,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 3,
+   "expedientes_municipio": 4,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -178897,7 +178912,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 34,
+   "expedientes_municipio": 35,
    "cubierta_previa": {
     "codigo": "333",
     "nombre": "vegetación escasa"
@@ -179886,7 +179901,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9,
+   "expedientes_municipio": 10,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -180683,7 +180698,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31,
+   "expedientes_municipio": 32,
    "unidas": [
     "CF-202610-118"
    ],
@@ -180917,7 +180932,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2,
+   "expedientes_municipio": 3,
    "cubierta_previa": {
     "codigo": "322",
     "nombre": "landas y matorral"
@@ -181137,7 +181152,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 100,
+   "expedientes_municipio": 106,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -181518,7 +181533,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 72,
+   "expedientes_municipio": 78,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -181745,7 +181760,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -182962,7 +182977,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2,
+   "expedientes_municipio": 3,
    "cubierta_previa": {
     "codigo": "313",
     "nombre": "bosque mixto"
@@ -183259,7 +183274,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 15,
+   "expedientes_municipio": 19,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -183898,7 +183913,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9,
+   "expedientes_municipio": 10,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -184564,7 +184579,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 42,
+   "expedientes_municipio": 48,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -184999,7 +185014,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 20,
+   "expedientes_municipio": 21,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -185523,7 +185538,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 24,
+   "expedientes_municipio": 26,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -186019,7 +186034,7 @@
      ]
     }
    ],
-   "expedientes_municipio": 96,
+   "expedientes_municipio": 97,
    "cubierta_previa": {
     "codigo": "121",
     "nombre": "zona industrial o comercial"
@@ -186244,7 +186259,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31,
+   "expedientes_municipio": 32,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -187475,7 +187490,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 5,
+   "expedientes_municipio": 6,
    "unidas": [
     "CF-202611-185"
    ],
@@ -188138,7 +188153,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 98,
+   "expedientes_municipio": 101,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -188949,7 +188964,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2,
+   "expedientes_municipio": 3,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -189328,7 +189343,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 23
+   "expedientes_municipio": 24
   },
   {
    "id": "CF-202611-001",
@@ -200463,7 +200478,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 48
+   "expedientes_municipio": 51
   },
   {
    "id": "CF-202611-007",
@@ -202799,7 +202814,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 41
+   "expedientes_municipio": 40
   },
   {
    "id": "CF-202611-009",
@@ -203593,7 +203608,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 24
+   "expedientes_municipio": 26
   },
   {
    "id": "CF-202611-010",
@@ -206113,7 +206128,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 70
+   "expedientes_municipio": 72
   },
   {
    "id": "CF-202611-014",
@@ -207467,7 +207482,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 45
+   "expedientes_municipio": 47
   },
   {
    "id": "CF-202611-015",
@@ -208144,7 +208159,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 112
+   "expedientes_municipio": 118
   },
   {
    "id": "CF-202611-016",
@@ -208716,7 +208731,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 20
+   "expedientes_municipio": 21
   },
   {
    "id": "CF-202611-017",
@@ -210221,7 +210236,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 25
+   "expedientes_municipio": 27
   },
   {
    "id": "CF-202611-021",
@@ -210609,7 +210624,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 91
+   "expedientes_municipio": 92
   },
   {
    "id": "CF-202611-022",
@@ -211371,7 +211386,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 48
+   "expedientes_municipio": 49
   },
   {
    "id": "CF-202611-024",
@@ -212266,7 +212281,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 11
+   "expedientes_municipio": 12
   },
   {
    "id": "CF-202611-026",
@@ -212628,7 +212643,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 41
+   "expedientes_municipio": 40
   },
   {
    "id": "CF-202611-027",
@@ -213184,7 +213199,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6
+   "expedientes_municipio": 7
   },
   {
    "id": "CF-202611-028",
@@ -213536,7 +213551,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 20
+   "expedientes_municipio": 21
   },
   {
    "id": "CF-202611-029",
@@ -213930,7 +213945,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13
+   "expedientes_municipio": 14
   },
   {
    "id": "CF-202611-030",
@@ -215168,7 +215183,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 62
+   "expedientes_municipio": 63
   },
   {
    "id": "CF-202611-033",
@@ -215874,7 +215889,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 24
+   "expedientes_municipio": 26
   },
   {
    "id": "CF-202611-035",
@@ -216190,7 +216205,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6
+   "expedientes_municipio": 7
   },
   {
    "id": "CF-202611-036",
@@ -216900,7 +216915,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 51
+   "expedientes_municipio": 52
   },
   {
    "id": "CF-202611-038",
@@ -217142,7 +217157,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 20
+   "expedientes_municipio": 21
   },
   {
    "id": "CF-202611-039",
@@ -217566,7 +217581,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 28
+   "expedientes_municipio": 27
   },
   {
    "id": "CF-202611-040",
@@ -218254,7 +218269,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 49
+   "expedientes_municipio": 48
   },
   {
    "id": "CF-202611-042",
@@ -218524,7 +218539,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 41
+   "expedientes_municipio": 43
   },
   {
    "id": "CF-202611-043",
@@ -218971,7 +218986,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 70
+   "expedientes_municipio": 72
   },
   {
    "id": "CF-202611-045",
@@ -219335,7 +219350,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 60
+   "expedientes_municipio": 61
   },
   {
    "id": "CF-202611-046",
@@ -220893,7 +220908,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 48
+   "expedientes_municipio": 51
   },
   {
    "id": "CF-202611-051",
@@ -221161,7 +221176,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 17
+   "expedientes_municipio": 18
   },
   {
    "id": "CF-202611-052",
@@ -222181,7 +222196,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 24
+   "expedientes_municipio": 25
   },
   {
    "id": "CF-202611-055",
@@ -222439,7 +222454,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 9
+   "expedientes_municipio": 10
   },
   {
    "id": "CF-202611-056",
@@ -223534,7 +223549,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 48
+   "expedientes_municipio": 49
   },
   {
    "id": "CF-202611-060",
@@ -224355,7 +224370,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 41
+   "expedientes_municipio": 47
   },
   {
    "id": "CF-202611-063",
@@ -224610,7 +224625,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 30
+   "expedientes_municipio": 31
   },
   {
    "id": "CF-202611-064",
@@ -224847,7 +224862,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-065",
@@ -225379,7 +225394,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 8
+   "expedientes_municipio": 9
   },
   {
    "id": "CF-202611-067",
@@ -225653,7 +225668,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13
+   "expedientes_municipio": 14
   },
   {
    "id": "CF-202611-068",
@@ -226036,7 +226051,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-069",
@@ -226438,7 +226453,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 37
+   "expedientes_municipio": 46
   },
   {
    "id": "CF-202611-070",
@@ -226692,7 +226707,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 100
+   "expedientes_municipio": 106
   },
   {
    "id": "CF-202611-071",
@@ -227272,7 +227287,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-073",
@@ -227468,7 +227483,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 62
+   "expedientes_municipio": 63
   },
   {
    "id": "CF-202611-074",
@@ -228205,7 +228220,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 5
   },
   {
    "id": "CF-202611-077",
@@ -228566,7 +228581,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-078",
@@ -229011,7 +229026,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 48
+   "expedientes_municipio": 51
   },
   {
    "id": "CF-202611-080",
@@ -229243,7 +229258,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13
+   "expedientes_municipio": 14
   },
   {
    "id": "CF-202611-081",
@@ -230087,7 +230102,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 35
+   "expedientes_municipio": 40
   },
   {
    "id": "CF-202611-084",
@@ -230357,7 +230372,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4
+   "expedientes_municipio": 5
   },
   {
    "id": "CF-202611-085",
@@ -230575,7 +230590,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 110
+   "expedientes_municipio": 112
   },
   {
    "id": "CF-202611-086",
@@ -231080,7 +231095,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 24
+   "expedientes_municipio": 25
   },
   {
    "id": "CF-202611-088",
@@ -232744,7 +232759,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 8
+   "expedientes_municipio": 9
   },
   {
    "id": "CF-202611-094",
@@ -233168,7 +233183,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 11
+   "expedientes_municipio": 12
   },
   {
    "id": "CF-202611-096",
@@ -233387,7 +233402,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-097",
@@ -234860,7 +234875,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-102",
@@ -235461,7 +235476,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 8
+   "expedientes_municipio": 9
   },
   {
    "id": "CF-202611-104",
@@ -236292,7 +236307,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 40
+   "expedientes_municipio": 41
   },
   {
    "id": "CF-202611-106",
@@ -236670,7 +236685,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "cubierta_previa": {
     "codigo": "231",
     "nombre": "prados y praderas"
@@ -236986,7 +237001,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 10,
+   "expedientes_municipio": 9,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -237612,7 +237627,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 35,
+   "expedientes_municipio": 40,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -237832,7 +237847,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 35,
+   "expedientes_municipio": 40,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -239070,7 +239085,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 24,
+   "expedientes_municipio": 26,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -239718,7 +239733,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 100,
+   "expedientes_municipio": 106,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -240230,7 +240245,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 11,
+   "expedientes_municipio": 12,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -240961,7 +240976,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 20
+   "expedientes_municipio": 21
   },
   {
    "id": "CF-202611-125",
@@ -241777,7 +241792,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 23,
+   "expedientes_municipio": 24,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -242011,7 +242026,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 91,
+   "expedientes_municipio": 92,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -242912,7 +242927,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13,
+   "expedientes_municipio": 14,
    "cubierta_previa": {
     "codigo": "243",
     "nombre": "terreno agrícola con vegetación natural"
@@ -243116,7 +243131,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 8,
+   "expedientes_municipio": 9,
    "cubierta_previa": {
     "codigo": "311",
     "nombre": "bosque de frondosas"
@@ -243372,7 +243387,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2,
+   "expedientes_municipio": 3,
    "cubierta_previa": {
     "codigo": "311",
     "nombre": "bosque de frondosas"
@@ -243606,7 +243621,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 91,
+   "expedientes_municipio": 92,
    "cubierta_previa": {
     "codigo": "112",
     "nombre": "tejido urbano discontinuo"
@@ -243989,7 +244004,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 24,
+   "expedientes_municipio": 26,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -244547,7 +244562,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 35,
+   "expedientes_municipio": 40,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -244749,7 +244764,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 36,
+   "expedientes_municipio": 38,
    "cubierta_previa": {
     "codigo": "311",
     "nombre": "bosque de frondosas"
@@ -245097,7 +245112,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 4,
+   "expedientes_municipio": 5,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -245511,7 +245526,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 15,
+   "expedientes_municipio": 16,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -246264,7 +246279,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 14,
+   "expedientes_municipio": 16,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -246459,7 +246474,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 8,
+   "expedientes_municipio": 9,
    "cubierta_previa": {
     "codigo": "332",
     "nombre": "roquedo"
@@ -246882,7 +246897,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 33,
+   "expedientes_municipio": 41,
    "cubierta_previa": {
     "codigo": "112",
     "nombre": "tejido urbano discontinuo"
@@ -247679,7 +247694,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 15,
+   "expedientes_municipio": 16,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -248274,7 +248289,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 30,
+   "expedientes_municipio": 31,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -249464,7 +249479,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 8,
+   "expedientes_municipio": 9,
    "cubierta_previa": {
     "codigo": "332",
     "nombre": "roquedo"
@@ -249821,7 +249836,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 91,
+   "expedientes_municipio": 92,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -250123,7 +250138,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-167",
@@ -250449,7 +250464,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 48,
+   "expedientes_municipio": 51,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -250785,7 +250800,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 30,
+   "expedientes_municipio": 31,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -251118,7 +251133,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31,
+   "expedientes_municipio": 32,
    "cubierta_previa": {
     "codigo": "333",
     "nombre": "vegetación escasa"
@@ -251308,7 +251323,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 2,
+   "expedientes_municipio": 3,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -251478,7 +251493,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 70,
+   "expedientes_municipio": 72,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -251640,7 +251655,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -251828,7 +251843,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 6,
+   "expedientes_municipio": 7,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -252022,7 +252037,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 48,
+   "expedientes_municipio": 51,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -252420,7 +252435,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 24,
+   "expedientes_municipio": 26,
    "cubierta_previa": {
     "codigo": "242",
     "nombre": "mosaico de cultivos"
@@ -252600,7 +252615,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 62,
+   "expedientes_municipio": 63,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -253369,7 +253384,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31,
+   "expedientes_municipio": 32,
    "cubierta_previa": {
     "codigo": "312",
     "nombre": "bosque de coníferas"
@@ -254266,7 +254281,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 64,
+   "expedientes_municipio": 67,
    "cubierta_previa": {
     "codigo": "333",
     "nombre": "vegetación escasa"
@@ -254567,7 +254582,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31,
+   "expedientes_municipio": 32,
    "cubierta_previa": {
     "codigo": "313",
     "nombre": "bosque mixto"
@@ -254729,7 +254744,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31,
+   "expedientes_municipio": 32,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -255780,7 +255795,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 8,
+   "expedientes_municipio": 9,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -256243,7 +256258,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 100,
+   "expedientes_municipio": 106,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -256431,7 +256446,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 70,
+   "expedientes_municipio": 72,
    "cubierta_previa": {
     "codigo": "211",
     "nombre": "labor de secano"
@@ -257157,7 +257172,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 91,
+   "expedientes_municipio": 92,
    "cubierta_previa": {
     "codigo": "121",
     "nombre": "zona industrial o comercial"
@@ -257571,7 +257586,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 13,
+   "expedientes_municipio": 14,
    "cubierta_previa": {
     "codigo": "243",
     "nombre": "terreno agrícola con vegetación natural"
@@ -258157,7 +258172,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 8,
+   "expedientes_municipio": 9,
    "cubierta_previa": {
     "codigo": "321",
     "nombre": "pastizal natural"
@@ -258861,7 +258876,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-212",
@@ -259148,9 +259163,24 @@
     "pradera_permanente": true,
     "uso": "sin_declarar"
    },
-   "cruce": "sin_expediente",
-   "expedientes": [],
-   "expedientes_municipio": 31
+   "cruce": "resolucion",
+   "expedientes": [
+    {
+     "id": "PC 064 320 26 L0007",
+     "fecha": "2026-09-30",
+     "titulo": "PC 064 320 26 L0007",
+     "url": "https://www.statistiques.developpement-durable.gouv.fr/donnees-des-permis-de-construire-et-autres-autorisations-durbanisme",
+     "fuente": "Sitadel",
+     "grupo": "resoluciones",
+     "tipo": "PC",
+     "etat": "2",
+     "destination": "1",
+     "parcelas": [
+      "64320000CE0002"
+     ]
+    }
+   ],
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-213",
@@ -259349,7 +259379,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-214",
@@ -259493,7 +259523,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-215",
@@ -259691,7 +259721,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-216",
@@ -259825,7 +259855,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-217",
@@ -260491,7 +260521,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-222",
@@ -261121,7 +261151,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-226",
@@ -261247,7 +261277,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   },
   {
    "id": "CF-202611-227",
@@ -261373,7 +261403,7 @@
    },
    "cruce": "sin_expediente",
    "expedientes": [],
-   "expedientes_municipio": 31
+   "expedientes_municipio": 32
   }
  ],
  "ejecuciones": {
@@ -261620,5 +261650,5 @@
  },
  "expedientes_desde": "2018-01-02",
  "ultima_ventana": "2026-11",
- "actualizado": "2026-11-14T14:13:33+00:00"
+ "actualizado": "2026-11-15T14:46:55+00:00"
 }

@@ -172034,7 +172034,7 @@
   },
   {
    "id": "CF-202610-068",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -172045,12 +172045,18 @@
     {
      "fecha": "2026-10-16",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-23",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 36,
    "ha": 0.36,
    "ndvi_ref": 0.841,
-   "ndvi_actual": 0.301,
+   "ndvi_actual": 0.761,
    "obs_actual": 21,
    "centro": [
     43.14444,
@@ -214931,7 +214937,7 @@
    "pixeles": 109,
    "ha": 1.09,
    "ndvi_ref": 0.783,
-   "ndvi_actual": 0.319,
+   "ndvi_actual": 0.334,
    "obs_actual": 15,
    "centro": [
     43.2928,
@@ -227307,7 +227313,7 @@
    "pixeles": 53,
    "ha": 0.53,
    "ndvi_ref": 0.776,
-   "ndvi_actual": 0.323,
+   "ndvi_actual": 0.326,
    "obs_actual": 16,
    "centro": [
     43.31252,
@@ -236329,8 +236335,8 @@
      "motivo": "unida con CF-202611-219"
     }
    ],
-   "pixeles": 149,
-   "ha": 1.49,
+   "pixeles": 161,
+   "ha": 1.61,
    "ndvi_ref": 0.693,
    "ndvi_actual": 0.227,
    "obs_actual": 3,
@@ -236342,6 +236348,294 @@
     "type": "Polygon",
     "coordinates": [
      [
+      [
+       -0.527016,
+       42.973504
+      ],
+      [
+       -0.527008,
+       42.973684
+      ],
+      [
+       -0.526273,
+       42.973668
+      ],
+      [
+       -0.526273,
+       42.973668
+      ],
+      [
+       -0.526028,
+       42.973663
+      ],
+      [
+       -0.526035,
+       42.973483
+      ],
+      [
+       -0.525934,
+       42.973481
+      ],
+      [
+       -0.52579,
+       42.973477
+      ],
+      [
+       -0.52579,
+       42.973477
+      ],
+      [
+       -0.52579,
+       42.973477
+      ],
+      [
+       -0.525794,
+       42.973378
+      ],
+      [
+       -0.525798,
+       42.973297
+      ],
+      [
+       -0.525553,
+       42.973292
+      ],
+      [
+       -0.52556,
+       42.973112
+      ],
+      [
+       -0.52535,
+       42.973108
+      ],
+      [
+       -0.525315,
+       42.973107
+      ],
+      [
+       -0.525308,
+       42.973287
+      ],
+      [
+       -0.525063,
+       42.973282
+      ],
+      [
+       -0.525058,
+       42.973398
+      ],
+      [
+       -0.525057,
+       42.973421
+      ],
+      [
+       -0.525055,
+       42.973462
+      ],
+      [
+       -0.525055,
+       42.973462
+      ],
+      [
+       -0.525055,
+       42.973462
+      ],
+      [
+       -0.524933,
+       42.973459
+      ],
+      [
+       -0.524931,
+       42.973512
+      ],
+      [
+       -0.52493,
+       42.973537
+      ],
+      [
+       -0.524929,
+       42.973549
+      ],
+      [
+       -0.525006,
+       42.973551
+      ],
+      [
+       -0.525052,
+       42.973551
+      ],
+      [
+       -0.525049,
+       42.973619
+      ],
+      [
+       -0.525049,
+       42.973623
+      ],
+      [
+       -0.525048,
+       42.973641
+      ],
+      [
+       -0.524489,
+       42.973629
+      ],
+      [
+       -0.524313,
+       42.973626
+      ],
+      [
+       -0.524313,
+       42.973626
+      ],
+      [
+       -0.524313,
+       42.973626
+      ],
+      [
+       -0.524335,
+       42.973086
+      ],
+      [
+       -0.52441,
+       42.973087
+      ],
+      [
+       -0.524457,
+       42.973088
+      ],
+      [
+       -0.524458,
+       42.973077
+      ],
+      [
+       -0.524461,
+       42.972998
+      ],
+      [
+       -0.524461,
+       42.972998
+      ],
+      [
+       -0.524461,
+       42.972998
+      ],
+      [
+       -0.524583,
+       42.973001
+      ],
+      [
+       -0.524583,
+       42.973001
+      ],
+      [
+       -0.524583,
+       42.973001
+      ],
+      [
+       -0.524583,
+       42.973019
+      ],
+      [
+       -0.524582,
+       42.973041
+      ],
+      [
+       -0.52458,
+       42.973091
+      ],
+      [
+       -0.524587,
+       42.973091
+      ],
+      [
+       -0.52507,
+       42.973102
+      ],
+      [
+       -0.525077,
+       42.972922
+      ],
+      [
+       -0.525321,
+       42.972927
+      ],
+      [
+       -0.525322,
+       42.972927
+      ],
+      [
+       -0.525567,
+       42.972932
+      ],
+      [
+       -0.52557,
+       42.972865
+      ],
+      [
+       -0.525578,
+       42.972662
+      ],
+      [
+       -0.525578,
+       42.972662
+      ],
+      [
+       -0.525578,
+       42.972662
+      ],
+      [
+       -0.525725,
+       42.972666
+      ],
+      [
+       -0.525823,
+       42.972668
+      ],
+      [
+       -0.525834,
+       42.972398
+      ],
+      [
+       -0.525981,
+       42.972401
+      ],
+      [
+       -0.526324,
+       42.972408
+      ],
+      [
+       -0.526317,
+       42.972588
+      ],
+      [
+       -0.526749,
+       42.972598
+      ],
+      [
+       -0.526807,
+       42.972599
+      ],
+      [
+       -0.526807,
+       42.972599
+      ],
+      [
+       -0.526807,
+       42.972599
+      ],
+      [
+       -0.526803,
+       42.972682
+      ],
+      [
+       -0.526799,
+       42.972779
+      ],
+      [
+       -0.526799,
+       42.972779
+      ],
       [
        -0.526799,
        42.972779
@@ -236363,8 +236657,28 @@
        42.973155
       ],
       [
+       -0.52752,
+       42.973155
+      ],
+      [
+       -0.52752,
+       42.973155
+      ],
+      [
+       -0.527231,
+       42.973148
+      ],
+      [
        -0.526908,
        42.973141
+      ],
+      [
+       -0.526904,
+       42.973231
+      ],
+      [
+       -0.526904,
+       42.973231
       ],
       [
        -0.526904,
@@ -236375,6 +236689,10 @@
        42.973226
       ],
       [
+       -0.526658,
+       42.973255
+      ],
+      [
        -0.526655,
        42.973316
       ],
@@ -236383,191 +236701,61 @@
        42.973313
       ],
       [
+       -0.526531,
+       42.973368
+      ],
+      [
        -0.526529,
        42.973403
+      ],
+      [
+       -0.526651,
+       42.973406
       ],
       [
        -0.526774,
        42.973409
       ],
       [
+       -0.526773,
+       42.973433
+      ],
+      [
        -0.526771,
        42.973499
       ],
       [
-       -0.52628,
-       42.973488
-      ],
+       -0.527016,
+       42.973504
+      ]
+     ],
+     [
       [
-       -0.526273,
-       42.973668
-      ],
-      [
-       -0.526028,
-       42.973663
-      ],
-      [
-       -0.526035,
-       42.973483
-      ],
-      [
-       -0.52579,
-       42.973477
-      ],
-      [
-       -0.525798,
-       42.973297
-      ],
-      [
-       -0.525553,
-       42.973292
-      ],
-      [
-       -0.52556,
-       42.973112
-      ],
-      [
-       -0.525315,
-       42.973107
-      ],
-      [
-       -0.525308,
-       42.973287
+       -0.525063,
+       42.973282
       ],
       [
        -0.525063,
        42.973282
       ],
       [
-       -0.525058,
-       42.973398
+       -0.525063,
+       42.973282
       ],
       [
-       -0.525055,
-       42.973462
+       -0.525063,
+       42.973282
       ],
       [
-       -0.524933,
-       42.973459
-      ],
-      [
-       -0.524931,
-       42.973512
-      ],
-      [
-       -0.524929,
-       42.973549
-      ],
-      [
-       -0.52496,
-       42.97355
-      ],
-      [
-       -0.525052,
-       42.973551
-      ],
-      [
-       -0.525049,
-       42.973619
-      ],
-      [
-       -0.525048,
-       42.973641
-      ],
-      [
-       -0.52468,
-       42.973633
-      ],
-      [
-       -0.524313,
-       42.973626
-      ],
-      [
-       -0.524335,
-       42.973086
-      ],
-      [
-       -0.524382,
-       42.973087
-      ],
-      [
-       -0.524457,
-       42.973088
-      ],
-      [
-       -0.524459,
-       42.973051
-      ],
-      [
-       -0.524461,
-       42.972998
-      ],
-      [
-       -0.524583,
-       42.973001
-      ],
-      [
-       -0.524582,
-       42.973041
-      ],
-      [
-       -0.52458,
-       42.973091
-      ],
-      [
-       -0.524647,
-       42.973093
-      ],
-      [
-       -0.52507,
-       42.973102
-      ],
-      [
-       -0.525077,
-       42.972922
-      ],
-      [
-       -0.525307,
-       42.972927
-      ],
-      [
-       -0.525322,
-       42.972927
-      ],
-      [
-       -0.525567,
-       42.972932
-      ],
-      [
-       -0.525578,
-       42.972662
-      ],
-      [
-       -0.525823,
-       42.972668
-      ],
-      [
-       -0.525834,
-       42.972398
-      ],
-      [
-       -0.526324,
-       42.972408
-      ],
-      [
-       -0.526317,
-       42.972588
-      ],
-      [
-       -0.526807,
-       42.972599
-      ],
-      [
-       -0.526799,
-       42.972779
+       -0.525063,
+       42.973282
       ]
      ],
      [
+      [
+       -0.525064,
+       42.973244
+      ],
       [
        -0.525065,
        42.973208
@@ -236589,8 +236777,30 @@
        42.973282
       ],
       [
-       -0.525065,
-       42.973208
+       -0.525064,
+       42.973244
+      ]
+     ],
+     [
+      [
+       -0.525823,
+       42.972668
+      ],
+      [
+       -0.525823,
+       42.972668
+      ],
+      [
+       -0.525823,
+       42.972668
+      ],
+      [
+       -0.525823,
+       42.972668
+      ],
+      [
+       -0.525823,
+       42.972668
       ]
      ],
      [
@@ -236603,12 +236813,20 @@
        42.972845
       ],
       [
+       -0.525692,
+       42.972868
+      ],
+      [
        -0.52569,
        42.972935
       ],
       [
        -0.52618,
        42.972946
+      ],
+      [
+       -0.526185,
+       42.972817
       ],
       [
        -0.52619,
@@ -236651,7 +236869,7 @@
      "section": "B",
      "numero": 38,
      "ha_parcela": 291.72,
-     "ha_alerta": 1.44
+     "ha_alerta": 1.56
     },
     {
      "refcat": "640060000B0037",
@@ -236667,7 +236885,7 @@
    "n_parcelas": 2,
    "fraccion_parcelada": 1.0,
    "catastro_fecha": "2026-09-01",
-   "parcelas_px": 149,
+   "parcelas_px": 161,
    "rpg": {
     "anio": 2025,
     "fraccion": 0.0,
@@ -264507,6 +264725,733 @@
    "cruce": "sin_expediente",
    "expedientes": [],
    "expedientes_municipio": 32
+  },
+  {
+   "id": "CF-202611-242",
+   "estado": "provisional",
+   "primera": "2026-11",
+   "ultima": "2026-11",
+   "meses": [
+    "2026-11"
+   ],
+   "detectada": "2026-11-23",
+   "historial": [
+    {
+     "fecha": "2026-11-23",
+     "estado": "provisional"
+    }
+   ],
+   "pixeles": 29,
+   "ha": 0.29,
+   "ndvi_ref": 0.962,
+   "ndvi_actual": 0.181,
+   "obs_actual": 3,
+   "centro": [
+    42.90235,
+    -0.38251
+   ],
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        -0.382651,
+        42.902038
+       ],
+       [
+        -0.382658,
+        42.901858
+       ],
+       [
+        -0.382903,
+        42.901863
+       ],
+       [
+        -0.382895,
+        42.902043
+       ],
+       [
+        -0.382651,
+        42.902038
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        -0.38314,
+        42.902049
+       ],
+       [
+        -0.383132,
+        42.902229
+       ],
+       [
+        -0.382888,
+        42.902223
+       ],
+       [
+        -0.382895,
+        42.902043
+       ],
+       [
+        -0.38314,
+        42.902049
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        -0.382383,
+        42.902572
+       ],
+       [
+        -0.382391,
+        42.902392
+       ],
+       [
+        -0.382146,
+        42.902386
+       ],
+       [
+        -0.382153,
+        42.902206
+       ],
+       [
+        -0.382398,
+        42.902212
+       ],
+       [
+        -0.382406,
+        42.902032
+       ],
+       [
+        -0.382528,
+        42.902035
+       ],
+       [
+        -0.382517,
+        42.902305
+       ],
+       [
+        -0.382639,
+        42.902308
+       ],
+       [
+        -0.382643,
+        42.902218
+       ],
+       [
+        -0.382888,
+        42.902223
+       ],
+       [
+        -0.382872,
+        42.902583
+       ],
+       [
+        -0.382383,
+        42.902572
+       ]
+      ]
+     ]
+    ]
+   },
+   "espacios": [
+    {
+     "codigo": "FR7200743",
+     "nombre": "Massif du Ger et du Lurien",
+     "tipo": "ZSC"
+    },
+    {
+     "codigo": "FR7210087",
+     "nombre": "Hautes vallées d'Aspe et d'Ossau",
+     "tipo": "ZPS"
+    }
+   ],
+   "municipios": [
+    "Laruns"
+   ],
+   "ultima_vegetacion": "2026-08",
+   "reconstruida": false,
+   "cubierta_previa": null,
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "clase_nota": "sin escena despejada para las fotos",
+   "ventana_fotos": "2026-11",
+   "clase_nombre": "Pérdida de vegetación",
+   "parcelas": [
+    {
+     "refcat": "64320000BO0015",
+     "municipio": "64320",
+     "municipio_nombre": "Laruns",
+     "prefixe": "000",
+     "section": "BO",
+     "numero": 15,
+     "ha_parcela": 19.57,
+     "ha_alerta": 0.29
+    }
+   ],
+   "n_parcelas": 1,
+   "fraccion_parcelada": 1.0,
+   "catastro_fecha": "2026-09-01",
+   "parcelas_px": 29,
+   "rpg": {
+    "anio": 2025,
+    "fraccion": 0.0,
+    "uso": "sin_declarar"
+   },
+   "cruce": "sin_expediente",
+   "expedientes": [],
+   "expedientes_municipio": 32
+  },
+  {
+   "id": "CF-202611-243",
+   "estado": "provisional",
+   "primera": "2026-11",
+   "ultima": "2026-11",
+   "meses": [
+    "2026-11"
+   ],
+   "detectada": "2026-11-23",
+   "historial": [
+    {
+     "fecha": "2026-11-23",
+     "estado": "provisional"
+    }
+   ],
+   "pixeles": 27,
+   "ha": 0.27,
+   "ndvi_ref": 0.742,
+   "ndvi_actual": 0.241,
+   "obs_actual": 3,
+   "centro": [
+    42.96802,
+    -0.53594
+   ],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -0.536298,
+       42.968301
+      ],
+      [
+       -0.536312,
+       42.967942
+      ],
+      [
+       -0.536067,
+       42.967936
+      ],
+      [
+       -0.536074,
+       42.967756
+      ],
+      [
+       -0.535707,
+       42.967748
+      ],
+      [
+       -0.535703,
+       42.967838
+      ],
+      [
+       -0.535581,
+       42.967836
+      ],
+      [
+       -0.53557,
+       42.968106
+      ],
+      [
+       -0.535815,
+       42.968111
+      ],
+      [
+       -0.535808,
+       42.968291
+      ],
+      [
+       -0.536298,
+       42.968301
+      ]
+     ]
+    ]
+   },
+   "espacios": [
+    {
+     "codigo": "FR7200744",
+     "nombre": "Massif de Sesques et de l'Ossau",
+     "tipo": "ZSC"
+    }
+   ],
+   "municipios": [
+    "Accous"
+   ],
+   "ultima_vegetacion": "2026-08",
+   "reconstruida": false,
+   "cubierta_previa": null,
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "clase_nota": "sin escena despejada para las fotos",
+   "ventana_fotos": "2026-11",
+   "clase_nombre": "Pérdida de vegetación",
+   "parcelas": [
+    {
+     "refcat": "640060000B0038",
+     "municipio": "64006",
+     "municipio_nombre": "Accous",
+     "prefixe": "000",
+     "section": "B",
+     "numero": 38,
+     "ha_parcela": 291.72,
+     "ha_alerta": 0.27
+    }
+   ],
+   "n_parcelas": 1,
+   "fraccion_parcelada": 1.0,
+   "catastro_fecha": "2026-09-01",
+   "parcelas_px": 27,
+   "rpg": {
+    "anio": 2025,
+    "fraccion": 0.0,
+    "uso": "sin_declarar"
+   },
+   "cruce": "sin_expediente",
+   "expedientes": [],
+   "expedientes_municipio": 22
+  },
+  {
+   "id": "CF-202611-244",
+   "estado": "provisional",
+   "primera": "2026-11",
+   "ultima": "2026-11",
+   "meses": [
+    "2026-11"
+   ],
+   "detectada": "2026-11-23",
+   "historial": [
+    {
+     "fecha": "2026-11-23",
+     "estado": "provisional"
+    }
+   ],
+   "pixeles": 24,
+   "ha": 0.24,
+   "ndvi_ref": 0.999,
+   "ndvi_actual": 0.147,
+   "obs_actual": 3,
+   "centro": [
+    42.90627,
+    -0.38676
+   ],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -0.387118,
+       42.906462
+      ],
+      [
+       -0.387133,
+       42.906102
+      ],
+      [
+       -0.386399,
+       42.906085
+      ],
+      [
+       -0.386384,
+       42.906445
+      ],
+      [
+       -0.387118,
+       42.906462
+      ]
+     ]
+    ]
+   },
+   "espacios": [
+    {
+     "codigo": "FR7200743",
+     "nombre": "Massif du Ger et du Lurien",
+     "tipo": "ZSC"
+    },
+    {
+     "codigo": "FR7210087",
+     "nombre": "Hautes vallées d'Aspe et d'Ossau",
+     "tipo": "ZPS"
+    }
+   ],
+   "municipios": [
+    "Laruns"
+   ],
+   "ultima_vegetacion": "2026-08",
+   "reconstruida": false,
+   "cubierta_previa": null,
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "clase_nota": "sin escena despejada para las fotos",
+   "ventana_fotos": "2026-11",
+   "clase_nombre": "Pérdida de vegetación",
+   "parcelas": [
+    {
+     "refcat": "64320000BO0021",
+     "municipio": "64320",
+     "municipio_nombre": "Laruns",
+     "prefixe": "000",
+     "section": "BO",
+     "numero": 21,
+     "ha_parcela": 11.6,
+     "ha_alerta": 0.24
+    }
+   ],
+   "n_parcelas": 1,
+   "fraccion_parcelada": 1.0,
+   "catastro_fecha": "2026-09-01",
+   "parcelas_px": 24,
+   "rpg": {
+    "anio": 2025,
+    "fraccion": 0.0,
+    "uso": "sin_declarar"
+   },
+   "cruce": "sin_expediente",
+   "expedientes": [],
+   "expedientes_municipio": 32
+  },
+  {
+   "id": "CF-202611-245",
+   "estado": "provisional",
+   "primera": "2026-11",
+   "ultima": "2026-11",
+   "meses": [
+    "2026-11"
+   ],
+   "detectada": "2026-11-23",
+   "historial": [
+    {
+     "fecha": "2026-11-23",
+     "estado": "provisional"
+    }
+   ],
+   "pixeles": 24,
+   "ha": 0.24,
+   "ndvi_ref": 1.0,
+   "ndvi_actual": 0.191,
+   "obs_actual": 3,
+   "centro": [
+    42.90024,
+    -0.40673
+   ],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -0.40697,
+       42.90043
+      ],
+      [
+       -0.406985,
+       42.900071
+      ],
+      [
+       -0.40674,
+       42.900065
+      ],
+      [
+       -0.406755,
+       42.899705
+      ],
+      [
+       -0.40651,
+       42.8997
+      ],
+      [
+       -0.40648,
+       42.900419
+      ],
+      [
+       -0.40697,
+       42.90043
+      ]
+     ]
+    ]
+   },
+   "espacios": [
+    {
+     "codigo": "FR7200743",
+     "nombre": "Massif du Ger et du Lurien",
+     "tipo": "ZSC"
+    },
+    {
+     "codigo": "FR7210087",
+     "nombre": "Hautes vallées d'Aspe et d'Ossau",
+     "tipo": "ZPS"
+    }
+   ],
+   "municipios": [
+    "Laruns"
+   ],
+   "ultima_vegetacion": "2026-08",
+   "reconstruida": false,
+   "cubierta_previa": null,
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "clase_nota": "sin escena despejada para las fotos",
+   "ventana_fotos": "2026-11",
+   "clase_nombre": "Pérdida de vegetación",
+   "parcelas": [
+    {
+     "refcat": "64320000BP0024",
+     "municipio": "64320",
+     "municipio_nombre": "Laruns",
+     "prefixe": "000",
+     "section": "BP",
+     "numero": 24,
+     "ha_parcela": 14.97,
+     "ha_alerta": 0.23
+    }
+   ],
+   "n_parcelas": 1,
+   "fraccion_parcelada": 0.953,
+   "catastro_fecha": "2026-09-01",
+   "parcelas_px": 24,
+   "rpg": {
+    "anio": 2025,
+    "fraccion": 0.0,
+    "uso": "sin_declarar"
+   },
+   "cruce": "sin_expediente",
+   "expedientes": [],
+   "expedientes_municipio": 32
+  },
+  {
+   "id": "CF-202611-246",
+   "estado": "provisional",
+   "primera": "2026-11",
+   "ultima": "2026-11",
+   "meses": [
+    "2026-11"
+   ],
+   "detectada": "2026-11-23",
+   "historial": [
+    {
+     "fecha": "2026-11-23",
+     "estado": "provisional"
+    }
+   ],
+   "pixeles": 20,
+   "ha": 0.2,
+   "ndvi_ref": 1.0,
+   "ndvi_actual": 0.222,
+   "obs_actual": 3,
+   "centro": [
+    42.92628,
+    -0.47156
+   ],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -0.471803,
+       42.926374
+      ],
+      [
+       -0.471818,
+       42.926014
+      ],
+      [
+       -0.471083,
+       42.925998
+      ],
+      [
+       -0.471076,
+       42.926178
+      ],
+      [
+       -0.471321,
+       42.926183
+      ],
+      [
+       -0.471313,
+       42.926363
+      ],
+      [
+       -0.471803,
+       42.926374
+      ]
+     ]
+    ]
+   },
+   "espacios": [
+    {
+     "codigo": "FR7200744",
+     "nombre": "Massif de Sesques et de l'Ossau",
+     "tipo": "ZSC"
+    },
+    {
+     "codigo": "FR7210087",
+     "nombre": "Hautes vallées d'Aspe et d'Ossau",
+     "tipo": "ZPS"
+    }
+   ],
+   "municipios": [
+    "Laruns"
+   ],
+   "ultima_vegetacion": "2026-08",
+   "reconstruida": false,
+   "cubierta_previa": null,
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "clase_nota": "sin escena despejada para las fotos",
+   "ventana_fotos": "2026-11",
+   "clase_nombre": "Pérdida de vegetación",
+   "parcelas": [
+    {
+     "refcat": "64320000CM0004",
+     "municipio": "64320",
+     "municipio_nombre": "Laruns",
+     "prefixe": "000",
+     "section": "CM",
+     "numero": 4,
+     "ha_parcela": 64.8,
+     "ha_alerta": 0.2
+    }
+   ],
+   "n_parcelas": 1,
+   "fraccion_parcelada": 1.0,
+   "catastro_fecha": "2026-09-01",
+   "parcelas_px": 20,
+   "rpg": {
+    "anio": 2025,
+    "fraccion": 0.0,
+    "uso": "sin_declarar"
+   },
+   "cruce": "sin_expediente",
+   "expedientes": [],
+   "expedientes_municipio": 32
+  },
+  {
+   "id": "CF-202611-247",
+   "estado": "provisional",
+   "primera": "2026-11",
+   "ultima": "2026-11",
+   "meses": [
+    "2026-11"
+   ],
+   "detectada": "2026-11-23",
+   "historial": [
+    {
+     "fecha": "2026-11-23",
+     "estado": "provisional"
+    }
+   ],
+   "pixeles": 20,
+   "ha": 0.2,
+   "ndvi_ref": 1.0,
+   "ndvi_actual": 0.224,
+   "obs_actual": 4,
+   "centro": [
+    42.90339,
+    -0.39864
+   ],
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -0.398995,
+       42.903671
+      ],
+      [
+       -0.39901,
+       42.903311
+      ],
+      [
+       -0.39852,
+       42.9033
+      ],
+      [
+       -0.398528,
+       42.90312
+      ],
+      [
+       -0.398283,
+       42.903115
+      ],
+      [
+       -0.398268,
+       42.903474
+      ],
+      [
+       -0.398757,
+       42.903486
+      ],
+      [
+       -0.39875,
+       42.903666
+      ],
+      [
+       -0.398995,
+       42.903671
+      ]
+     ]
+    ]
+   },
+   "espacios": [
+    {
+     "codigo": "FR7200743",
+     "nombre": "Massif du Ger et du Lurien",
+     "tipo": "ZSC"
+    },
+    {
+     "codigo": "FR7210087",
+     "nombre": "Hautes vallées d'Aspe et d'Ossau",
+     "tipo": "ZPS"
+    }
+   ],
+   "municipios": [
+    "Laruns"
+   ],
+   "ultima_vegetacion": "2026-08",
+   "reconstruida": false,
+   "cubierta_previa": null,
+   "analisis_v": 2,
+   "clase": "vegetacion",
+   "clase_nota": "sin escena despejada para las fotos",
+   "ventana_fotos": "2026-11",
+   "clase_nombre": "Pérdida de vegetación",
+   "parcelas": [
+    {
+     "refcat": "64320000BP0032",
+     "municipio": "64320",
+     "municipio_nombre": "Laruns",
+     "prefixe": "000",
+     "section": "BP",
+     "numero": 32,
+     "ha_parcela": 14.6,
+     "ha_alerta": 0.2
+    }
+   ],
+   "n_parcelas": 1,
+   "fraccion_parcelada": 1.0,
+   "catastro_fecha": "2026-09-01",
+   "parcelas_px": 20,
+   "rpg": {
+    "anio": 2025,
+    "fraccion": 0.0,
+    "uso": "sin_declarar"
+   },
+   "cruce": "sin_expediente",
+   "expedientes": [],
+   "expedientes_municipio": 32
   }
  ],
  "ejecuciones": {
@@ -264742,16 +265687,16 @@
     "2026-11"
    ],
    "pixeles_zona": 23154169,
-   "pixeles_evaluables": 22005193,
+   "pixeles_evaluables": 22005733,
    "fraccion_evaluable": 0.95,
    "pixeles_agua_previa": 867729,
    "meses_agua": 24,
-   "pixeles_candidatos": 37679,
-   "cambios": 312,
-   "ha_cambios": 278.0
+   "pixeles_candidatos": 37757,
+   "cambios": 318,
+   "ha_cambios": 278.9
   }
  },
  "expedientes_desde": "2018-01-02",
  "ultima_ventana": "2026-11",
- "actualizado": "2026-11-22T15:21:40+00:00"
+ "actualizado": "2026-11-23T19:29:47+00:00"
 }

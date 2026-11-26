@@ -170485,7 +170485,7 @@
    "pixeles": 204,
    "ha": 2.04,
    "ndvi_ref": 0.835,
-   "ndvi_actual": 0.277,
+   "ndvi_actual": 0.275,
    "obs_actual": 17,
    "centro": [
     43.16023,
@@ -185659,7 +185659,7 @@
   },
   {
    "id": "CN-202610-004",
-   "estado": "provisional",
+   "estado": "descartada",
    "primera": "2026-10",
    "ultima": "2026-10",
    "meses": [
@@ -185670,12 +185670,18 @@
     {
      "fecha": "2026-10-01",
      "estado": "provisional"
+    },
+    {
+     "fecha": "2026-11-26",
+     "estado": "descartada",
+     "ventana": "2026-11",
+     "motivo": "volvió la vegetación"
     }
    ],
    "pixeles": 120,
    "ha": 1.2,
    "ndvi_ref": 0.69,
-   "ndvi_actual": 0.33,
+   "ndvi_actual": 0.515,
    "obs_actual": 9,
    "centro": [
     43.19896,
@@ -197735,7 +197741,7 @@
    "pixeles": 43,
    "ha": 0.43,
    "ndvi_ref": 0.644,
-   "ndvi_actual": 0.272,
+   "ndvi_actual": 0.325,
    "obs_actual": 12,
    "centro": [
     42.79167,
@@ -202160,16 +202166,16 @@
     "2026-11"
    ],
    "pixeles_zona": 14699109,
-   "pixeles_evaluables": 9489629,
+   "pixeles_evaluables": 9489779,
    "fraccion_evaluable": 0.646,
    "pixeles_agua_previa": 702378,
    "meses_agua": 24,
-   "pixeles_candidatos": 3351,
+   "pixeles_candidatos": 3277,
    "cambios": 26,
-   "ha_cambios": 20.2
+   "ha_cambios": 20.0
   }
  },
  "expedientes_desde": "2026-07-10",
  "ultima_ventana": "2026-11",
- "actualizado": "2026-11-25T18:00:07+00:00"
+ "actualizado": "2026-11-26T17:45:03+00:00"
 }
